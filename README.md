@@ -1,5 +1,15 @@
-# Control Toolbox
+<div id="control-toolbox-logo" align="center">
+    <br />
+    <img src="#" alt="Control ToolBox Logo" width="200"/>
+    <h1>Control Toolbox</h1>
+    <h3></h3>
+</div>
 
-![Testing badge](https://github.com/tschmoderer/control-toolbox/actions/workflows/cmake.yml/badge.svg)
+<div id="badges" align="center">
+![Build Status](https://github.com/tschmoderer/control-toolbox/actions/workflows/cmake.yml/badge.svg)
+&nbsp;
+[![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/tschmoderer/control-toolbox/blob/master/LICENSE)
 
-A c++ toolbox for the computation of trajectories of control systems.
+</div>
+
+A C++ toolbox for the computation of trajectories of control systems.
