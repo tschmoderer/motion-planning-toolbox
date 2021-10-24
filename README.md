@@ -5,11 +5,7 @@
     <h3></h3>
 </div>
 
-<div id="badges" align="center">
 ![Build Status](https://github.com/tschmoderer/control-toolbox/actions/workflows/cmake.yml/badge.svg)
-&nbsp;
 [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/tschmoderer/control-toolbox/blob/master/LICENSE)
-
-</div>
 
 A C++ toolbox for the computation of trajectories of control systems.
