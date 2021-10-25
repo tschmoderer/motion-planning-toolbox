@@ -1,0 +1,25 @@
+name: docs
+
+on:
+  push:
+    branches:
+      - main
+    paths: 
+      - '**.cpp'
+      - '**.hpp'
+      - '**.c'
+      - '**.h'
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Doxygenize
+        uses: langroodi/doxygenize@v1.4
+        with: 
+          doxygenconf: ./docs/doxyconfig.in # default is ./Doxyfile
+          htmloutput: ./docs/               # default is ./docs/
+          ghpagesbranch: main               # default is gh-pages
+          ghpagesdir: ./                    # default is ./ 
+    
