@@ -22,4 +22,4 @@ jobs:
           doxygenconf: './docs/doxyconfig.in' # default is ./Doxyfile
           htmloutput: './docs/html/'          # default is ./docs/
           ghpagesbranch: 'main'               # default is gh-pages
-          ghpagesdir: './docs/html'           # default is ./ 
+          ghpagesdir: './docs/html/'           # default is ./ 
