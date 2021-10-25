@@ -18,8 +18,8 @@ jobs:
       - name: Doxygenize
         uses: langroodi/doxygenize@v1.4
         with: 
-          doxygenconf: ./docs/doxyconfig.in # default is ./Doxyfile
-          htmloutput: ./docs/               # default is ./docs/
-          ghpagesbranch: main               # default is gh-pages
-          ghpagesdir: ./                    # default is ./ 
+          doxygenconf: './docs/doxyconfig.in' # default is ./Doxyfile
+          htmloutput: './docs/html/'          # default is ./docs/
+          ghpagesbranch: 'main'               # default is gh-pages
+          ghpagesdir: './docs/'               # default is ./ 
     
