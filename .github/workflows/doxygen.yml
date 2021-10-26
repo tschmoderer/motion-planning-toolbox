@@ -20,7 +20,7 @@ jobs:
       - name: Doxygenize
         uses: langroodi/doxygenize@v1.4
         with: 
-          doxygenconf: './docs/doxyconfig.in' # default is ./Doxyfile
+          doxygenconf: './docs/doxyfile.conf' # default is ./Doxyfile
           htmloutput: './docs/html/'          # default is ./docs/
           ghpagesbranch: 'gh-pages'               # default is gh-pages
           ghpagesdir: './docs/html/'           # default is ./ 
