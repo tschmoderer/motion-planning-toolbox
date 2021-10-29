@@ -55,5 +55,6 @@ jobs:
       - name: Memcheck 
         shell: bash 
         run: |
+          apt install -y valgrind 
           cd build
           make memcheck
