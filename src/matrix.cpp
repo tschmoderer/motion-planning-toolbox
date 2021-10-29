@@ -23,7 +23,8 @@ Matrix::Matrix() {
 }
 
 /**
- * @brief Construct a new Matrix object
+ * @brief Construct a Matrix object.
+ * Construct a matrix of size n rows times m columns
  * 
  * @param n number of rows (must be greater or equal than 1)
  * @param m number of colums (must be greater or equal than 1)
@@ -42,9 +43,10 @@ Matrix::Matrix(uint8_t n, uint8_t m) {
 }
 
 /**
- * @brief Construct a new Matrix object
- * 
- * @param n 
+ * @brief Construct a Matrix object.
+ * Construct a square matrix of size n rows times n columns
+ *
+ * @param n number of rows and columns (must be greater or equal than 1)
  */
 Matrix::Matrix(uint8_t n) {
     assert(n > 0);
@@ -60,9 +62,10 @@ Matrix::Matrix(uint8_t n) {
 }
 
 /**
- * @brief Construct a new Matrix object
+ * @brief Construct a Matrix object.
+ * Copy contructor
  * 
- * @param in 
+ * @param in Matrix to be copied
  */
 Matrix::Matrix(const Matrix & in) {
     this->n_rows = in.n_rows; 
@@ -76,25 +79,24 @@ Matrix::Matrix(const Matrix & in) {
 
 /**
  * @brief Destroy the Matrix object
- * 
  */
 Matrix::~Matrix() {
     delete [] this->data;
 }
 
 /**
- * @brief 
+ * @brief Accessor to the number of rows.
  * 
- * @return uint8_t 
+ * @return uint8_t Number of rows of the matrix (is greater or equal than 1)
  */
 uint8_t Matrix::get_n_rows() const {
     return this->n_rows;
 }
 
 /**
- * @brief 
+ * @brief Accessor to the number of columns.
  * 
- * @return uint8_t 
+ * @return uint8_t Number of columns of the matrix (is greater or equal than 1)
  */
 uint8_t Matrix::get_n_cols() const {
     return this->n_cols;
@@ -103,8 +105,8 @@ uint8_t Matrix::get_n_cols() const {
 /**
  * @brief Access given element of a matrix 
  * 
- * @param i Row number (Must be greater or equal than 1)
- * @param j Column number (Must be gretaer or equal than 1)
+ * @param i Row number (must be greater or equal than 1)
+ * @param j Column number (must be gretaer or equal than 1)
  * @return double & address of the (i,j)-th element of the matrix
  * 
  * @warning Indices are 1-based
@@ -117,16 +119,26 @@ double & Matrix::at(uint8_t i, uint16_t j) const {
 }
 
 /**
- * @brief 
+ * @brief Overload of operator (i,j). 
  * 
- * @param i 
- * @param j 
- * @return double 
+ * @param i Row number (must be greater or equal than 1)
+ * @param j Column number (must be gretaer or equal than 1)
+ * @return double & address of the (i,j)-th element of the matrix
+ * 
+ * @warning Indices are 1-based
  */
 double & Matrix::operator()(uint8_t i, uint8_t j) const {
     return this->at(i, j);
 }
 
+/**
+ * @brief Overload of operator ==
+ * Two matrices are equal if and only they have the same dimensions and the same elements. 
+ *
+ * @param B Matrix to be tested with
+ * @return true if this matrix is equal to B
+ * @return false if this matrix is different than B
+ */
 bool Matrix::operator==(const Matrix & B) const {
     if (this->n_rows != B.n_rows) {
         return false;
@@ -292,6 +304,10 @@ Matrix & Matrix::operator/=(const double & k) {
     return *this;
 }
 
+/**
+ * @brief Helper to display a Matrix object
+ * 
+ */
 void Matrix::show() const {
     for (int i = 0; i < this->n_rows; i++) {
         for (int j = 0; j < this->n_cols; j++) {
@@ -302,15 +318,15 @@ void Matrix::show() const {
 }
 
 /**
- * @brief 
+ * @brief Construct the identity Matrix of size n
  * 
- * @param n 
- * @return Matrix 
+ * @param n Size of the Matrix
+ * @return Matrix Identity matrix of dimension n times n 
  */
 Matrix eye(uint8_t n) {
     Matrix A(n);
 
-    for (int i = 0; i < n; i++ ) {
+    for (int i = 1; i <= n; i++ ) {
             A(i,i) = 1.0;
     }
 
@@ -318,10 +334,10 @@ Matrix eye(uint8_t n) {
 }
 
 /**
- * @brief 
+ * @brief Construct the zeors matrix of size n
  * 
- * @param n 
- * @return Matrix 
+ * @param n Size of the Matrix
+ * @return Matrix of dimension n times n composed with only zeros
  */
 Matrix zeros(uint8_t n) {
     Matrix A(n);
