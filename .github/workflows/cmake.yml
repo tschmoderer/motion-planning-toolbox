@@ -40,14 +40,20 @@ jobs:
       # Build 
       - name: Build 
         shell: bash
-        run: make
+        run: |
+          cd build
+          make
 
       # Test 
       - name: Test 
         shell: bash 
-        run: make test 
+        run: |
+          cd build
+          make test 
 
       # Memcheck
       - name: Memcheck 
         shell: bash 
-        run: make memcheck
+        run: |
+          cd build
+          make memcheck
