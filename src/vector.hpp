@@ -17,7 +17,7 @@
 
 /**
  * @class Vector
- * @brief A class describing a vector object. 
+ * @brief A class describing a Vector object. 
  * Vectors are array of size n (>0) dynamically constructed.
  * 
  * @warning Indices are 0-based. Math formulae must be adpted consequently.
