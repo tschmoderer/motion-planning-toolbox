@@ -27,6 +27,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      # Install dependencies
+      - name: Dependencies
+        shell: bash
+        run: | 
+          sudo apt install -y valgrind
 
       # Configure cmake
       - name: Configure
@@ -55,6 +61,5 @@ jobs:
       - name: Memcheck 
         shell: bash 
         run: |
-          sudo apt install -y valgrind 
           cd build
           make memcheck
