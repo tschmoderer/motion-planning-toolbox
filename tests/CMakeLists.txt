@@ -1,4 +1,14 @@
 add_executable(test_matrix test_matrix.cpp)
 target_link_libraries (test_matrix LINK_PUBLIC matrix)
 
+add_executable(test_vector test_vector.cpp)
+target_link_libraries (test_vector LINK_PUBLIC matrix)
+
 add_test(test_matrix test_matrix)
+add_test(test_vector test_vector)
+
+add_custom_target(memcheck
+    COMMAND ${CMAKE_CTEST_COMMAND} 
+        --force-new-ctest-process --test-action memcheck
+    COMMAND cat "${CMAKE_BINARY_DIR}/Testing/Temporary/MemoryChecker.*.log"
+    WORKING_DIRECTORY "${CMAKE_BINARY_DIR}")
