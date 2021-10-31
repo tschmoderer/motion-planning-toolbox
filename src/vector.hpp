@@ -14,6 +14,7 @@
 #include <cstdint>
 #include <math.h>
 #include <cassert>
+#include <iostream>
 
 /**
  * @class Vector
@@ -286,6 +287,13 @@ class Vector {
                 res += this->data[i] * v.data[i];
             }
             return res;
+        }
+
+        friend std::ostream & operator<< (std::ostream & os, const Vector & v) {
+            for (int i = 0; i < v.dim; i++) {
+                os << v.data[i] << std::endl; 
+            }
+            return os;
         }
 
         /* Methods */
