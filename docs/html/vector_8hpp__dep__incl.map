@@ -1,5 +1,7 @@
 <map id="src/vector.hpp" name="src/vector.hpp">
-<area shape="rect" id="node1" title="Header file for Vector class." alt="" coords="5,5,109,32"/>
-<area shape="rect" id="node2" href="$matrix_8h.html" title="Header file for Matrix class." alt="" coords="13,80,102,107"/>
-<area shape="rect" id="node3" href="$matrix_8cpp.html" title="Implémentation of the Matrix class." alt="" coords="6,155,109,181"/>
+<area shape="rect" id="node1" title="Header file for Vector class." alt="" coords="48,5,152,32"/>
+<area shape="rect" id="node2" href="$control_8h.html" title="Header file for Control class." alt="" coords="12,155,105,181"/>
+<area shape="rect" id="node4" href="$matrix_8h.html" title="Header file for Matrix class." alt="" coords="97,80,186,107"/>
+<area shape="rect" id="node3" href="$control_8cpp.html" title="Implementation of control class." alt="" coords="5,229,112,256"/>
+<area shape="rect" id="node5" href="$matrix_8cpp.html" title="Implémentation of the Matrix class." alt="" coords="130,155,233,181"/>
 </map>

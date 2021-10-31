@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['n_5fcols_10',['n_cols',['../class_matrix.html#a35b2e0764389c45181b395508effc4d9',1,'Matrix']]],
-  ['n_5felements_11',['n_elements',['../class_matrix.html#a99d978a71ed34cfd8dd652d146d71465',1,'Matrix']]],
-  ['n_5frows_12',['n_rows',['../class_matrix.html#affc7193ce6ea5d0e858fee704e470cd5',1,'Matrix']]],
-  ['norm_13',['norm',['../class_vector.html#ab5599209f3fdcb5662194aefab5b9394',1,'Vector']]],
-  ['norm1_14',['norm1',['../class_matrix.html#abf79f9e27f3bfcf2cc8e5cfc1f02fdf8',1,'Matrix::norm1()'],['../class_vector.html#a2ec8fea78d48174ac2cde94060f2285e',1,'Vector::norm1()']]],
-  ['norm2_15',['norm2',['../class_vector.html#a36fca83a79477c6367cc8ea5987e1100',1,'Vector']]],
-  ['normfrob_16',['normFrob',['../class_matrix.html#a1f4744c7b2882abaee6b70f6f15a6bd6',1,'Matrix']]],
-  ['norminf_17',['normInf',['../class_matrix.html#a66fdb5c8533b884ccb6e9a1d9ebd7f37',1,'Matrix::normInf()'],['../class_vector.html#a8c03705e581b2f66df2d1f132e833efa',1,'Vector::normInf()']]],
-  ['normp_18',['normp',['../class_vector.html#ace4cb201fb065182b0a3d84e02206e60',1,'Vector']]]
+  ['interp_5fconstant_5fleft_10',['INTERP_CONSTANT_LEFT',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25ab7ccea8ae0457c69704c0835f6480e18',1,'control.h']]],
+  ['interp_5fconstant_5fright_11',['INTERP_CONSTANT_RIGHT',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a5e9da5b99456219f1c0560c7e85be262',1,'control.h']]],
+  ['interp_5flinear_12',['INTERP_LINEAR',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a17abedd2e487446bf814c9da0b7791de',1,'control.h']]],
+  ['interp_5fnearest_13',['INTERP_NEAREST',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a5dc1c99b5e803daf350345d519b58b67',1,'control.h']]],
+  ['interp_5ft_14',['interp_t',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25',1,'control.h']]]
 ];

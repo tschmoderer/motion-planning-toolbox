@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vector_2ehpp_43',['vector.hpp',['../vector_8hpp.html',1,'']]]
+  ['matrix_2ecpp_54',['matrix.cpp',['../matrix_8cpp.html',1,'']]],
+  ['matrix_2eh_55',['matrix.h',['../matrix_8h.html',1,'']]]
 ];

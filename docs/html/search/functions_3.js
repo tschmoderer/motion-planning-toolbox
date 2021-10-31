@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['get_5fdim_47',['get_dim',['../class_vector.html#ad96574185a2f02f92b9fa4415d46763f',1,'Vector']]],
-  ['get_5fn_5fcols_48',['get_n_cols',['../class_matrix.html#a35419482bee088ea46803dabcbde2c3d',1,'Matrix']]],
-  ['get_5fn_5frows_49',['get_n_rows',['../class_matrix.html#a956eb388e83fd3b72f76080d733ac325',1,'Matrix']]]
+  ['eye_60',['eye',['../matrix_8cpp.html#aa490052b51eb7ef084574eb313d6913c',1,'eye(uint8_t n):&#160;matrix.cpp'],['../matrix_8h.html#ad7a43141e5682ec35171de18d3b5fc99',1,'eye(uint8_t):&#160;matrix.cpp']]]
 ];

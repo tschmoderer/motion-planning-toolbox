@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['data_2',['data',['../class_matrix.html#a7097cbd5ded96225e7f1fecb1c39936f',1,'Matrix']]]
+  ['control_2',['Control',['../class_control.html',1,'Control'],['../class_control.html#aa730aeda4517f40bc48ba1e46ebded77',1,'Control::Control()'],['../class_control.html#a78d57c1de7e0a6a1572082d2eda29a45',1,'Control::Control(uint8_t, double, double, uint8_t)'],['../class_control.html#a2c2cb5a17c8a125350c543097b188f67',1,'Control::Control(const Control &amp;)']]],
+  ['control_2ecpp_3',['control.cpp',['../control_8cpp.html',1,'']]],
+  ['control_2eh_4',['control.h',['../control_8h.html',1,'']]]
 ];

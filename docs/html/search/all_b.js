@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['zeros_36',['zeros',['../matrix_8cpp.html#a2512827c9917db16f59927cbd5d6e7c8',1,'zeros(uint8_t n):&#160;matrix.cpp'],['../matrix_8h.html#a60afd17f71cbc89e027b04dceb80ee20',1,'zeros(uint8_t):&#160;matrix.cpp']]]
+  ['tr_40',['tr',['../matrix_8h.html#a7de70530911322b71f50df3fe3f27956',1,'matrix.h']]],
+  ['trace_41',['trace',['../class_matrix.html#ab583aa60184abad002a2c2b72197a879',1,'Matrix']]],
+  ['transpose_42',['transpose',['../class_matrix.html#a759661b75b9681f3a89ff75e27933b3a',1,'Matrix']]]
 ];
