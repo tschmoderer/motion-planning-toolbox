@@ -130,6 +130,9 @@ class Vector {
          * @return Vector& A copy of vector v. 
          */
         Vector & operator=(const Vector & v) {
+            if (v == *this) {
+                return *this;
+            }
             if (this->dim != v.dim) {
                 this->dim = v.dim; 
                 delete [] this->data; 
