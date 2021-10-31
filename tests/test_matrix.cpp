@@ -9,8 +9,8 @@ void test_contructors() {
     Matrix M4(5); 
     Matrix I3 = eye(3); 
 
-    for (int i = 1; i <= 3; i++) {
-        for (int j = 1; j <= 3; j++) {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
             if (i == j) {
                 assert(I3(i,j) == 1); 
             } else {
@@ -42,9 +42,18 @@ void test_operators() {
 
 }
 
+void test_methods() {
+    Matrix M(2,5); 
+    Vector v(5); 
+
+    Vector w = M*v;
+}
+
 int main(int argc, char * argv[]) {
     test_contructors(); 
     test_accessors();
+    test_operators(); 
+    test_methods(); 
 
     return 0; 
 }
