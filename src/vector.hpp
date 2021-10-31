@@ -70,18 +70,37 @@ class Vector {
         }
 
         /* ACCESSORS */
+        /**
+         * @brief Get the dimension of a Vector object.
+         * 
+         * @return uint8_t Dimension of the Vector. 
+         */
+        uint8_t get_dim() const {
+            return this->dim; 
+        }
+
+        /**
+         * @brief Get the value of the n-th component of a Vector object.
+         * 
+         * @param n Index of the required value (must be between 0 and dim-1)
+         * @return double& address of the n-th element of the Vector object. 
+         * @warning Indices are 0-based
+         */
+        double & at(uint8_t n) const {
+            assert(n >= 0); assert(n < this->dim); 
+            return this->data[n]; 
+        }
 
         /* OEPRATORS */
         /**
-         * @brief Access the n-th value of the vector.
+         * @brief Access the n-th value of a Vector object.
          * 
-         * @param n index of the required value (must be between 0 and n-1)
+         * @param n index of the required value (must be between 0 and dim-1)
          * @return double& address of the n-th element of the Vector object.
          * @warning indices are 0-based. 
          */
         double & operator()(uint8_t n) const {
-            assert(n >= 0); 
-            assert(n < this->dim); 
+            assert(n >= 0); assert(n < this->dim); 
             return this->data[n]; 
         }
 
@@ -122,6 +141,13 @@ class Vector {
             return *this;
         }
 
+        /**
+         * @brief Overload operator += for vectors objects
+         * 
+         * @param v RHS
+         * @return Vector& Addition of current object with rhs
+         * @warning Both vector must be of the same dimension
+         */
         Vector & operator+=(const Vector & v) {
             assert(this->dim == v.dim); 
             for (int i=0; i < this->dim; i++) {
@@ -130,6 +156,13 @@ class Vector {
             return *this;
         }
 
+        /**
+         * @brief Overload operator -= for vectors objects
+         * 
+         * @param v RHS
+         * @return Vector& Difference of current object with rhs
+         * @warning Both vector must be of the same dimension
+         */
         Vector & operator-=(const Vector & v) {
             assert(this->dim == v.dim); 
             for (int i=0; i < this->dim; i++) {
@@ -137,52 +170,104 @@ class Vector {
             }
             return *this;
         }
-
+        
         /**
-         * @brief Multiplication of a vector by a scalar
-         * v * d = d * v : produces a new vector with the same dimension as v and with components equla to d * v[i]
-         * @param d Double value to multiply the vector
-         * @return Vector
-         */
-        Vector operator*(double & d) {
-            Vector res(this->dim); 
-            for (int i = 0; i < this->dim; i++) {
-                res.data[i] = this->data[i] * d; 
-            }
-            return res; 
-        }
-
-        /**
-         * @brief Addition of a vector by a scalar
+         * @brief Operator of multiplication of a Vector object by a scalar.
          * 
-         * @param d Double value to add to the vector 
-         * @return Vector 
+         * @param d Double value to multiply v with
+         * @param v Vector to be multiplied
+         * @return Vector whose components are v[i]*d
          */
-        Vector operator+(double & d) {
-            Vector res(this->dim); 
-            for (int i = 0; i < this->dim; i++) {
-                res.data[i] = this->data[i] + d; 
+        friend Vector operator*(const double & d, const Vector & v) {
+            Vector res(v.dim); 
+            for (int i = 0; i < v.dim; i++) {
+                res.data[i] = v.data[i] * d; 
             }
             return res; 
         }
 
-        Vector operator-(double & d) {
-            Vector res(this->dim); 
-            for (int i = 0; i < this->dim; i++) {
-                res.data[i] = this->data[i] - d; 
+        /**
+         * @brief Operator of multiplication of a Vector object by a scalar.
+         * 
+         * @param v Vector to be multiplied
+         * @param d Double value to multiply v with
+         * @return Vector whose components are v[i]*d
+         */
+        friend Vector operator*(const Vector & v, const double & d) {
+            // Call previous operator
+            return d * v;
+        }
+
+        /**
+         * @brief Operator of addition of a Vector object with a scalar.
+         * 
+         * @param d Double value added to v
+         * @param v Vector to be additioned
+         * @return Vector whose components are v[i] + d
+         */
+        friend Vector operator+(const double & d, const Vector & v) {
+            Vector res(v.dim); 
+            for (int i = 0; i < v.dim; i++) {
+                res.data[i] = v.data[i] + d; 
             }
             return res; 
         }
 
-        Vector operator/(double & d) {
+        /**
+         * @brief Operator of addition of a Vector object with a scalar.
+         * 
+         * @param v Vector to be additioned
+         * @param d Double value added to v
+         * @return Vector whose components are v[i] + d
+         */
+        friend Vector operator+(const Vector & v, const double & d) {
+            // Call previous operator
+            return d + v;
+        }
+
+        /**
+         * @brief Operator of remove a scalar to a Vector. 
+         * 
+         * @param d Double value to remove to v
+         * @param v Vector to be dimished
+         * @return Vector whose components are v[i] - d
+         */
+        friend Vector operator-(const double & d, const Vector & v) {
+            Vector res(v.dim); 
+            for (int i = 0; i < v.dim; i++) {
+                res.data[i] = v.data[i] - d; 
+            }
+            return res; 
+        }
+
+        /**
+         * @brief Operator of remove a scalar to a Vector.
+         * 
+         * @param v Vector to be dimished
+         * @param d Double value to remove to v
+         * @return Vector whose components are v[i] - d
+         */
+        friend Vector operator-(const Vector & v, const double & d) {
+            // Call previous operator
+            return d - v;
+        }
+
+        /**
+         * @brief Operator to divide a Vector by a scalar.
+         * 
+         * @param v Vector v
+         * @param d Double value to divide v (must be non-zero)
+         * @return Vector whose components are v[i] / d
+         * @warning d must me non-zero
+         */
+        friend Vector operator/(const Vector & v, const double & d) {
             assert(d != 0.); 
-            Vector res(this->dim); 
-            for (int i = 0; i < this->dim; i++) {
-                res.data[i] = this->data[i] / d; 
+            Vector res(v.dim); 
+            for (int i = 0; i < v.dim; i++) {
+                res.data[i] = v.data[i] / d; 
             }
             return res; 
         }
-
 
         /**
          * @brief Dot product between vectors
@@ -191,7 +276,7 @@ class Vector {
          * @return double Dot product between vetcor object and v
          * @warning Both vectors must be of the same dimension.
          */
-        double operator*(const Vector & v) {
+        double operator*(const Vector & v) const {
             assert(this->dim == v.dim); 
             double res = 0.; 
             for (int i=0; i < this->dim; i++) {
@@ -202,26 +287,22 @@ class Vector {
 
         /* Methods */
         /**
-         * @brief Construct vector of the canonical basis of R^n
+         * @brief Compute the L^1 norm of a Vector object.
          * 
-         * @param n Dimension of the vector space (must be greater or equal than 1)
-         * @param k Number of the basis vector.
-         * @return Vector k-th vector of the canonical basis of R^n.
-         * @warning Indices are 0-based.
+         * @return double L^1 norm of the Vector.
          */
-        Vector basis(uint8_t n, uint16_t k) {
-            assert(n > 0); 
-            assert(k >= 0); 
-            assert(k < n); 
-            Vector v(n); 
-            v(k) = 1; 
-            return v; 
+        double norm1() {
+            double res = 0.; 
+            for (int i=0; i < this->dim; i++) {
+                res += abs(this->data[i]);
+            }
+            return res; 
         }
 
         /**
-         * @brief Compute the Euclidean norm of a vector. 
+         * @brief Compute the Euclidean norm of a Vector object. 
          * 
-         * @return double Euclidean of the vector. 
+         * @return double Euclidean of the Vector. 
          */
         double norm2() {
             double res = 0.; 
@@ -231,9 +312,80 @@ class Vector {
             return sqrt(res);
         }
 
+        /**
+         * @brief Compute the L^p norm of a Vector object. 
+         * 
+         * @param p Order of the norm 
+         * @return double L^p norm of the Vector.
+         */
+        double normp(uint8_t p) {
+            double res = 0.;
+            for (int i=0; i < this->dim; i++) {
+                res += pow(abs(this->data[i]), p);
+            }
+            return pow(res, 1./p); 
+        }
+
+        /**
+         * @brief Compute the L^{\infty} norm of a Vector object. 
+         * 
+         * @return double L^{\infty} norm of the Vector. 
+         */
+        double normInf() {
+            double res = abs(this->data[0]); 
+            for (int i=1; i < this->dim; i++) {
+                if (res < abs(this->data[i])) {
+                    res = abs(this->data[i]);
+                }
+            }
+            return res;
+        }
+
+        /**
+         * @brief A general method to compute the norm of a Vector object. 
+         * 
+         * @param type Integer to decide the norm to choose:
+         * type = -1 compute the L^{\infty} norm 
+         * type >= 1 Compute the L^p norm 
+         * @return double L^p norm of the Vector. 
+         */
+        double norm(int type) {
+            assert(type >= -1); assert(type != 0);
+
+            if (type == -1) {
+                return this->normInf(); 
+            }
+
+            if (type == 1) {
+                return this->norm1(); 
+            }
+
+            if (type == 2) {
+                return this->norm2(); 
+            }
+
+            return this->normp(type); 
+        }
+
     private:
         uint8_t dim; 
         double * data;
 };
+
+/* Non Members Functions */
+/**
+    * @brief Construct vector of the canonical basis of R^n
+    * 
+    * @param n Dimension of the vector space (must be greater or equal than 1)
+    * @param k Number of the basis vector.
+    * @return Vector k-th vector of the canonical basis of R^n.
+    * @warning Indices are 0-based.
+    */
+Vector basis(uint8_t n, uint16_t k) {
+    assert(n > 0); assert(k >= 0); assert(k < n); 
+    Vector v(n); 
+    v(k) = 1; 
+    return v; 
+}
 
 #endif
