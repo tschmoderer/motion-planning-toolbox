@@ -36,10 +36,15 @@ class Matrix {
 		virtual ~Matrix();
 
 		/* ACCESSORS */
-		uint8_t get_n_rows(void) const; 
-		uint8_t get_n_cols(void) const;
+		uint8_t get_n_rows() const; 
+		uint8_t get_n_cols() const;
 
 		/* CLASS METHODS */
+		double norm1() const;
+		double normInf() const; 
+		double normFrob() const; 
+		double trace() const;  
+		Matrix transpose() const;
 
 		/* OPERATORS */
 		double & operator()(uint8_t, uint8_t) const;
@@ -85,5 +90,6 @@ class Matrix {
 /* Non Members Methods */
 Matrix eye(uint8_t );
 Matrix zeros(uint8_t );
+double tr(const Matrix & );
 
 #endif

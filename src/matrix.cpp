@@ -131,6 +131,66 @@ double & Matrix::operator()(uint8_t i, uint8_t j) const {
     return this->at(i, j);
 }
 
+double Matrix::norm1() const { 
+    // Maximum column sum 
+    double res = 0.; double s; 
+    for (int i=0; i < this->n_cols; i++) {
+        s = 0.; 
+        for (int j=0; j < this->n_rows; j++) {
+            s += abs(this->at(i,j)); 
+        }
+        if (s > res) {
+            res = s; 
+        }
+    }
+    return res; 
+}
+
+double Matrix::normInf() const {
+    // Maximum line sum 
+    double res = 0.; double s; 
+    for (int j=0; j < this->n_rows; j++) {
+        s = 0.; 
+        for (int i=0; i < this->n_cols; i++) {
+            s += abs(this->at(i,j)); 
+        }
+        if (s > res) {
+            res = s; 
+        }
+    }
+    return res; 
+}
+
+double Matrix::normFrob() const {
+    double res = 0.; 
+    for (int i=0; i < this->n_rows; i++) {
+        for (int j=0; j < this->n_cols; j++) {
+            res += this->at(i,j) * this->at(i,j); 
+        }
+    }
+    res = sqrt(res); 
+    return res; 
+}
+
+double Matrix::trace() const {
+    assert(this->n_cols == this->n_rows); 
+    double res = 0.;
+    for (int i = 0; i < this->n_rows; i++) {
+        res += this->at(i,i); 
+    }
+    return res; 
+}
+
+Matrix Matrix::transpose() const {
+    Matrix res(this->n_cols, this->n_rows); 
+    for (int i=0; i < this->n_cols; i++) {
+        for (int j=0; j < this->n_rows; j++) {
+            res(i,j) = this->at(j,i); 
+        }
+    }
+    return res; 
+}
+
 /**
  * @brief Overload of operator ==
  * Two matrices are equal if and only they have the same dimensions and the same elements. 
