@@ -4,8 +4,12 @@ target_link_libraries (test_matrix LINK_PUBLIC matrix)
 add_executable(test_vector test_vector.cpp)
 target_link_libraries (test_vector LINK_PUBLIC matrix)
 
+add_executable(test_control test_control.cpp)
+target_link_libraries (test_control LINK_PUBLIC matrix)
+
 add_test(test_matrix test_matrix)
 add_test(test_vector test_vector)
+add_test(test_control test_control)
 
 add_custom_target(memcheck
     COMMAND ${CMAKE_CTEST_COMMAND} 
