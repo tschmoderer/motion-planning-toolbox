@@ -8,8 +8,8 @@
  * @copyright Copyright (c) 2021
  */
 
-#ifndef Vector_HPP
-#define Vector_HPP
+#ifndef VECTOR_HPP
+#define VECTOR_HPP
 
 #include <cstdint>
 #include <math.h>
@@ -384,7 +384,7 @@ class Vector {
     * @return Vector k-th vector of the canonical basis of R^n.
     * @warning Indices are 0-based.
     */
-Vector basis(uint8_t n, uint16_t k) {
+inline Vector basis(uint8_t n, uint8_t k) {
     assert(n > 0); assert(k >= 0); assert(k < n); 
     Vector v(n); 
     v(k) = 1; 
