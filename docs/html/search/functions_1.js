@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['basis_41',['basis',['../vector_8hpp.html#ac1dd47748788067afd8cf1e2d772f153',1,'vector.hpp']]]
+  ['basis_45',['basis',['../vector_8hpp.html#afafd01c767b3d293d349512b881430d7',1,'vector.hpp']]]
 ];

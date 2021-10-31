@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zeros_32',['zeros',['../matrix_8cpp.html#a2512827c9917db16f59927cbd5d6e7c8',1,'zeros(uint8_t n):&#160;matrix.cpp'],['../matrix_8h.html#a60afd17f71cbc89e027b04dceb80ee20',1,'zeros(uint8_t):&#160;matrix.cpp']]]
+  ['vector_34',['Vector',['../class_vector.html',1,'Vector'],['../class_vector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5',1,'Vector::Vector()'],['../class_vector.html#ac33152ff0909d6b40ef7018bc35b2b43',1,'Vector::Vector(uint8_t n)'],['../class_vector.html#a5f04e343b7306ad11f8a82c89b486764',1,'Vector::Vector(const Vector &amp;v)']]],
+  ['vector_2ehpp_35',['vector.hpp',['../vector_8hpp.html',1,'']]]
 ];

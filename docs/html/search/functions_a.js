@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7ematrix_66',['~Matrix',['../class_matrix.html#a9b1c3627f573d78a2f08623fdfef990f',1,'Matrix']]],
-  ['_7evector_67',['~Vector',['../class_vector.html#a2eb3c49587a4f12cade7895ccb73f6a0',1,'Vector']]]
+  ['zeros_73',['zeros',['../matrix_8cpp.html#a2512827c9917db16f59927cbd5d6e7c8',1,'zeros(uint8_t n):&#160;matrix.cpp'],['../matrix_8h.html#a60afd17f71cbc89e027b04dceb80ee20',1,'zeros(uint8_t):&#160;matrix.cpp']]]
 ];

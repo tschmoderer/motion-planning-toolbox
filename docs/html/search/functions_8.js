@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['vector_64',['Vector',['../class_vector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5',1,'Vector::Vector()'],['../class_vector.html#ac33152ff0909d6b40ef7018bc35b2b43',1,'Vector::Vector(uint8_t n)'],['../class_vector.html#a5f04e343b7306ad11f8a82c89b486764',1,'Vector::Vector(const Vector &amp;v)']]]
+  ['tr_69',['tr',['../matrix_8h.html#a7de70530911322b71f50df3fe3f27956',1,'matrix.h']]],
+  ['trace_70',['trace',['../class_matrix.html#ab583aa60184abad002a2c2b72197a879',1,'Matrix']]],
+  ['transpose_71',['transpose',['../class_matrix.html#a759661b75b9681f3a89ff75e27933b3a',1,'Matrix']]]
 ];
