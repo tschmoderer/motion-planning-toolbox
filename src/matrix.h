@@ -14,14 +14,14 @@
 #include <iostream>
 #include <cstdint>
 #include <cassert>
+#include "vector.hpp"
 
 /**
  * @class Matrix
  * @brief A class describing a Matrix object. 
  * Matrices are array of size (n,m) whre n and m are integer greater or equal than 1. 
  * Notice that in general a matrix is not square. 
- * This class is intended to be used a simply as with math formulae. 
- * @warning Indices are 1-based (use them as you would do in math formulae)
+ * @warning Indices are 0-based (Math Formulae must be adapted consequently)
  */
 class Matrix {
 	public: 
@@ -65,6 +65,8 @@ class Matrix {
 		friend Matrix operator+(const Matrix & , const double & );
 			/* Division scalar with matrix */
 		friend Matrix operator/(const Matrix & , const double & );
+			/* Multiplication Matrix Vector */
+		friend Vector operator*(const Matrix & , const Vector & ); 
 
 		/* HELPERS */
 		void show() const;

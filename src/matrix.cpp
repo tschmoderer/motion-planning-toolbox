@@ -105,27 +105,27 @@ uint8_t Matrix::get_n_cols() const {
 /**
  * @brief Access given element of a matrix 
  * 
- * @param i Row number (must be greater or equal than 1)
- * @param j Column number (must be gretaer or equal than 1)
+ * @param i Row number (must be greater or equal than 0)
+ * @param j Column number (must be gretaer or equal than 0)
  * @return double & address of the (i,j)-th element of the matrix
  * 
- * @warning Indices are 1-based
+ * @warning Indices are 0-based
  */
 double & Matrix::at(uint8_t i, uint16_t j) const {
-    assert((0 < i) && (i <= this->n_rows));
-    assert((0 < j) && (j <= this->n_cols));
+    assert((0 <= i) && (i < this->n_rows));
+    assert((0 <= j) && (j < this->n_cols));
 
-    return this->data[((i-1) * this->n_cols) + j-1]; // TODO : check this formulae.
+    return this->data[(i * this->n_cols) + j];
 }
 
 /**
  * @brief Overload of operator (i,j). 
  * 
- * @param i Row number (must be greater or equal than 1)
- * @param j Column number (must be gretaer or equal than 1)
+ * @param i Row number (must be greater or equal than 0)
+ * @param j Column number (must be gretaer or equal than 0)
  * @return double & address of the (i,j)-th element of the matrix
  * 
- * @warning Indices are 1-based
+ * @warning Indices are 0-based
  */
 double & Matrix::operator()(uint8_t i, uint8_t j) const {
     return this->at(i, j);
@@ -148,8 +148,10 @@ bool Matrix::operator==(const Matrix & B) const {
         return false;
     }
 
-    if (this->data != B.data) {
-        return false;
+    for (int i=0; i < this->n_elements; i++) {
+        if (this->data[i] != B.data[i]) {
+            return false;
+        }
     }
 
     return true;
@@ -164,7 +166,7 @@ Matrix & Matrix::operator=(const Matrix & B) {
     this->n_cols = B.n_cols;
     this->n_elements = this->n_rows * this->n_cols;
     delete [] this->data;
-    this->data = new  double[this->n_elements];
+    this->data = new double[this->n_elements];
 
     for (int i = 0; i < this->n_elements; i++) {
         this->data[i] = B.data[i];
@@ -304,6 +306,19 @@ Matrix & Matrix::operator/=(const double & k) {
     return *this;
 }
 
+Vector operator*(const Matrix & A, const Vector & v) {
+    assert(A.n_cols == v.get_dim()); 
+    Vector res(A.n_rows); 
+
+    for (int i=0; i < A.n_rows; i++) {
+        for (int k=0; k < A.n_cols; k++) {
+            res(i) += A(i,k) * v(k); 
+        }
+    }
+
+    return res;
+}
+
 /**
  * @brief Helper to display a Matrix object
  * 
@@ -326,7 +341,7 @@ void Matrix::show() const {
 Matrix eye(uint8_t n) {
     Matrix A(n);
 
-    for (int i = 1; i <= n; i++ ) {
+    for (int i = 0; i < n; i++ ) {
             A(i,i) = 1.0;
     }
 
