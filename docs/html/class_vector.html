@@ -111,6 +111,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adec8bfb032fb32c97c18367d7c7eaa8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#adec8bfb032fb32c97c18367d7c7eaa8a">operator-=</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;v)</td></tr>
 <tr class="memdesc:adec8bfb032fb32c97c18367d7c7eaa8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload operator -= for vectors objects.  <a href="class_vector.html#adec8bfb032fb32c97c18367d7c7eaa8a">More...</a><br /></td></tr>
 <tr class="separator:adec8bfb032fb32c97c18367d7c7eaa8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8637b86f5bc628b496f767b968587d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#aae8637b86f5bc628b496f767b968587d">operator-</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;v)</td></tr>
+<tr class="memdesc:aae8637b86f5bc628b496f767b968587d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator to get the opposite vector.  <a href="class_vector.html#aae8637b86f5bc628b496f767b968587d">More...</a><br /></td></tr>
+<tr class="separator:aae8637b86f5bc628b496f767b968587d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea357642d7c4217dcf2dc30e6bab9bab"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#aea357642d7c4217dcf2dc30e6bab9bab">operator*</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;v) const</td></tr>
 <tr class="memdesc:aea357642d7c4217dcf2dc30e6bab9bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dot product between vectors.  <a href="class_vector.html#aea357642d7c4217dcf2dc30e6bab9bab">More...</a><br /></td></tr>
 <tr class="separator:aea357642d7c4217dcf2dc30e6bab9bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,6 +157,7 @@ Friends</h2></td></tr>
 <tr class="memdesc:a9193b1ea8aa7920201fdd74f36afa3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator to divide a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> by a scalar.  <a href="class_vector.html#a9193b1ea8aa7920201fdd74f36afa3d3">More...</a><br /></td></tr>
 <tr class="separator:a9193b1ea8aa7920201fdd74f36afa3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac254b27efeb8486ee2f67821e3a21a60"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#ac254b27efeb8486ee2f67821e3a21a60">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="class_vector.html">Vector</a> &amp;v)</td></tr>
+<tr class="memdesc:ac254b27efeb8486ee2f67821e3a21a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload output stream operator for <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object.  <a href="class_vector.html#ac254b27efeb8486ee2f67821e3a21a60">More...</a><br /></td></tr>
 <tr class="separator:ac254b27efeb8486ee2f67821e3a21a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -609,6 +613,41 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="aae8637b86f5bc628b496f767b968587d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae8637b86f5bc628b496f767b968587d">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector.html">Vector</a> Vector::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operator to get the opposite vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> the opposite of v, i.e. -v </dd></dl>
+
+</div>
+</div>
 <a id="adec8bfb032fb32c97c18367d7c7eaa8a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adec8bfb032fb32c97c18367d7c7eaa8a">&#9670;&nbsp;</a></span>operator-=()</h2>
 
@@ -944,7 +983,7 @@ false If at least of the value of the two vectors differ. </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> whose components are v[i] - d </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> whose components are d - v[i] </dd></dl>
 
 </div>
 </div>
@@ -1074,6 +1113,16 @@ false If at least of the value of the two vectors differ. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Overload output stream operator for <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>output stream </td></tr>
+    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; updated output stream </dd></dl>
 
 </div>
 </div>

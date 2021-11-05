@@ -166,165 +166,177 @@ $(function() {
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            }</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        </div>
-<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="class_vector.html#a6818c73c2e33b67e86a9dc6cf2b8dde8">  185</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#a6818c73c2e33b67e86a9dc6cf2b8dde8">operator*</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v) {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <a class="code" href="class_vector.html">Vector</a> res(v.dim); </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; v.dim; i++) {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                res.data[i] = v.data[i] * d; </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">return</span> res; </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="class_vector.html#aa57640d4ebaeb904da9ffde92517d9a6">  200</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#aa57640d4ebaeb904da9ffde92517d9a6">operator*</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d) {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="comment">// Call previous operator</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">return</span> d * v;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="class_vector.html#afd10217cb3fd325a4a930373bc3a980f">  212</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#afd10217cb3fd325a4a930373bc3a980f">operator+</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v) {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <a class="code" href="class_vector.html">Vector</a> res(v.dim); </div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; v.dim; i++) {</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                res.data[i] = v.data[i] + d; </div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordflow">return</span> res; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="class_vector.html#abfd7fa7cfca1b96a162b6b18acc05bee">  227</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#abfd7fa7cfca1b96a162b6b18acc05bee">operator+</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d) {</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="comment">// Call previous operator</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordflow">return</span> d + v;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        }</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="class_vector.html#a87e3d153b84eb64da06b54159a67159c">  239</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#a87e3d153b84eb64da06b54159a67159c">operator-</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v) {</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <a class="code" href="class_vector.html">Vector</a> res(v.dim); </div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; v.dim; i++) {</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                res.data[i] = v.data[i] - d; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="keywordflow">return</span> res; </div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        }</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="class_vector.html#ab4b04b4e787773ec71361d27a7ce27e8">  254</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#ab4b04b4e787773ec71361d27a7ce27e8">operator-</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d) {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="comment">// Call previous operator</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="keywordflow">return</span> d - v;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        }</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="class_vector.html#a9193b1ea8aa7920201fdd74f36afa3d3">  267</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#a9193b1ea8aa7920201fdd74f36afa3d3">operator/</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d) {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            assert(d != 0.); </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="class_vector.html#aae8637b86f5bc628b496f767b968587d">  184</a></span>&#160;        <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#aae8637b86f5bc628b496f767b968587d">operator-</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <a class="code" href="class_vector.html">Vector</a> res(v.dim); </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i &lt; this-&gt;dim; i++) {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                res.data[i] = -v.data[i];</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="class_vector.html#a6818c73c2e33b67e86a9dc6cf2b8dde8">  199</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#a6818c73c2e33b67e86a9dc6cf2b8dde8">operator*</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v) {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <a class="code" href="class_vector.html">Vector</a> res(v.dim); </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; v.dim; i++) {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                res.data[i] = v.data[i] * d; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keywordflow">return</span> res; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="class_vector.html#aa57640d4ebaeb904da9ffde92517d9a6">  214</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#aa57640d4ebaeb904da9ffde92517d9a6">operator*</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d) {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="comment">// Call previous operator</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">return</span> d * v;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="class_vector.html#afd10217cb3fd325a4a930373bc3a980f">  226</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#afd10217cb3fd325a4a930373bc3a980f">operator+</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v) {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <a class="code" href="class_vector.html">Vector</a> res(v.dim); </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; v.dim; i++) {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                res.data[i] = v.data[i] + d; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordflow">return</span> res; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="class_vector.html#abfd7fa7cfca1b96a162b6b18acc05bee">  241</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#abfd7fa7cfca1b96a162b6b18acc05bee">operator+</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d) {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="comment">// Call previous operator</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">return</span> d + v;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="class_vector.html#a87e3d153b84eb64da06b54159a67159c">  253</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#a87e3d153b84eb64da06b54159a67159c">operator-</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v) {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <a class="code" href="class_vector.html">Vector</a> res(v.dim); </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; v.dim; i++) {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                res.data[i] = d - v.data[i]; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordflow">return</span> res; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="class_vector.html#ab4b04b4e787773ec71361d27a7ce27e8">  268</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#ab4b04b4e787773ec71361d27a7ce27e8">operator-</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d) {</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <a class="code" href="class_vector.html">Vector</a> res(v.dim); </div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; v.dim; i++) {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                res.data[i] = v.data[i] / d; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                res.data[i] = v.data[i] - d; </div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            }</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="keywordflow">return</span> res; </div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        }</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00283"></a><span class="lineno"><a class="line" href="class_vector.html#aea357642d7c4217dcf2dc30e6bab9bab">  283</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_vector.html#aea357642d7c4217dcf2dc30e6bab9bab">operator*</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            assert(this-&gt;dim == v.dim); </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordtype">double</span> res = 0.; </div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i &lt; this-&gt;dim; i++) {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                res += this-&gt;data[i] * v.data[i];</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            }</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00292"></a><span class="lineno"><a class="line" href="class_vector.html#ac254b27efeb8486ee2f67821e3a21a60">  292</a></span>&#160;        <span class="keyword">friend</span> std::ostream &amp; <a class="code" href="class_vector.html#ac254b27efeb8486ee2f67821e3a21a60">operator&lt;&lt; </a>(std::ostream &amp; os, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v) {</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; v.dim; i++) {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                os &lt;&lt; v.data[i] &lt;&lt; std::endl; </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            }</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keywordflow">return</span> os;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="comment">/* Methods */</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="class_vector.html#a2ec8fea78d48174ac2cde94060f2285e">  305</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_vector.html#a2ec8fea78d48174ac2cde94060f2285e">norm1</a>() {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keywordtype">double</span> res = 0.; </div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i &lt; this-&gt;dim; i++) {</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                res += abs(this-&gt;data[i]);</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            }</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keywordflow">return</span> res; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
-<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="class_vector.html#a36fca83a79477c6367cc8ea5987e1100">  318</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_vector.html#a36fca83a79477c6367cc8ea5987e1100">norm2</a>() {</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <span class="keywordtype">double</span> res = 0.; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i &lt; this-&gt;dim; i++) {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                res += this-&gt;data[i] * this-&gt;data[i];</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            }</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="keywordflow">return</span> sqrt(res);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        }</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00332"></a><span class="lineno"><a class="line" href="class_vector.html#ace4cb201fb065182b0a3d84e02206e60">  332</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_vector.html#ace4cb201fb065182b0a3d84e02206e60">normp</a>(uint8_t p) {</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keywordtype">double</span> res = 0.;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i &lt; this-&gt;dim; i++) {</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                res += pow(abs(this-&gt;data[i]), p);</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            }</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            <span class="keywordflow">return</span> pow(res, 1./p); </div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        }</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
-<div class="line"><a name="l00345"></a><span class="lineno"><a class="line" href="class_vector.html#a8c03705e581b2f66df2d1f132e833efa">  345</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_vector.html#a8c03705e581b2f66df2d1f132e833efa">normInf</a>() {</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            <span class="keywordtype">double</span> res = abs(this-&gt;data[0]); </div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i &lt; this-&gt;dim; i++) {</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                <span class="keywordflow">if</span> (res &lt; abs(this-&gt;data[i])) {</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                    res = abs(this-&gt;data[i]);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                }</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            }</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        }</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
-<div class="line"><a name="l00363"></a><span class="lineno"><a class="line" href="class_vector.html#ab5599209f3fdcb5662194aefab5b9394">  363</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_vector.html#ab5599209f3fdcb5662194aefab5b9394">norm</a>(<span class="keywordtype">int</span> type) {</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            assert(type &gt;= -1); assert(type != 0);</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            <span class="keywordflow">if</span> (type == -1) {</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_vector.html#a8c03705e581b2f66df2d1f132e833efa">normInf</a>(); </div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            }</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            <span class="keywordflow">if</span> (type == 1) {</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_vector.html#a2ec8fea78d48174ac2cde94060f2285e">norm1</a>(); </div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            }</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            <span class="keywordflow">if</span> (type == 2) {</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_vector.html#a36fca83a79477c6367cc8ea5987e1100">norm2</a>(); </div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            }</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_vector.html#ace4cb201fb065182b0a3d84e02206e60">normp</a>(type); </div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        }</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        uint8_t dim; </div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordtype">double</span> * data;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;};</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="comment">/* Non Members Functions */</span></div>
-<div class="line"><a name="l00395"></a><span class="lineno"><a class="line" href="vector_8hpp.html#afafd01c767b3d293d349512b881430d7">  395</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="vector_8hpp.html#afafd01c767b3d293d349512b881430d7">basis</a>(uint8_t n, uint8_t k) {</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    assert(n &gt; 0); assert(k &gt;= 0); assert(k &lt; n); </div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <a class="code" href="class_vector.html">Vector</a> v(n); </div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    v(k) = 1; </div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordflow">return</span> v; </div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;}</div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="class_vector.html#a9193b1ea8aa7920201fdd74f36afa3d3">  284</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#a9193b1ea8aa7920201fdd74f36afa3d3">operator/</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp; d) {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            assert(d != 0.); </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <a class="code" href="class_vector.html">Vector</a> res(v.dim); </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; v.dim; i++) {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                res.data[i] = v.data[i] / (1. * d); </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            <span class="keywordflow">return</span> res; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="class_vector.html#aea357642d7c4217dcf2dc30e6bab9bab">  300</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_vector.html#aea357642d7c4217dcf2dc30e6bab9bab">operator*</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            assert(this-&gt;dim == v.dim); </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordtype">double</span> res = 0.; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i &lt; this-&gt;dim; i++) {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                res += this-&gt;data[i] * v.data[i];</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno"><a class="line" href="class_vector.html#ac254b27efeb8486ee2f67821e3a21a60">  316</a></span>&#160;        <span class="keyword">friend</span> std::ostream &amp; <a class="code" href="class_vector.html#ac254b27efeb8486ee2f67821e3a21a60">operator&lt;&lt; </a>(std::ostream &amp; os, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a> &amp; v) {</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; v.dim; i++) {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                os &lt;&lt; v.data[i] &lt;&lt; std::endl; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="comment">/* Methods */</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="class_vector.html#a2ec8fea78d48174ac2cde94060f2285e">  329</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_vector.html#a2ec8fea78d48174ac2cde94060f2285e">norm1</a>() {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <span class="keywordtype">double</span> res = 0.; </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i &lt; this-&gt;dim; i++) {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                res += abs(this-&gt;data[i]);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            <span class="keywordflow">return</span> res; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00342"></a><span class="lineno"><a class="line" href="class_vector.html#a36fca83a79477c6367cc8ea5987e1100">  342</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_vector.html#a36fca83a79477c6367cc8ea5987e1100">norm2</a>() {</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <span class="keywordtype">double</span> res = 0.; </div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i &lt; this-&gt;dim; i++) {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                res += this-&gt;data[i] * this-&gt;data[i];</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            }</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            <span class="keywordflow">return</span> sqrt(res);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        }</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00356"></a><span class="lineno"><a class="line" href="class_vector.html#ace4cb201fb065182b0a3d84e02206e60">  356</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_vector.html#ace4cb201fb065182b0a3d84e02206e60">normp</a>(uint8_t p) {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <span class="keywordtype">double</span> res = 0.;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i &lt; this-&gt;dim; i++) {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                res += pow(abs(this-&gt;data[i]), p);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keywordflow">return</span> pow(res, 1./p); </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        }</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
+<div class="line"><a name="l00369"></a><span class="lineno"><a class="line" href="class_vector.html#a8c03705e581b2f66df2d1f132e833efa">  369</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_vector.html#a8c03705e581b2f66df2d1f132e833efa">normInf</a>() {</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            <span class="keywordtype">double</span> res = abs(this-&gt;data[0]); </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i &lt; this-&gt;dim; i++) {</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                <span class="keywordflow">if</span> (res &lt; abs(this-&gt;data[i])) {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                    res = abs(this-&gt;data[i]);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                }</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
+<div class="line"><a name="l00387"></a><span class="lineno"><a class="line" href="class_vector.html#ab5599209f3fdcb5662194aefab5b9394">  387</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_vector.html#ab5599209f3fdcb5662194aefab5b9394">norm</a>(<span class="keywordtype">int</span> type) {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            assert(type &gt;= -1); assert(type != 0);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160; </div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            <span class="keywordflow">if</span> (type == -1) {</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_vector.html#a8c03705e581b2f66df2d1f132e833efa">normInf</a>(); </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            }</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            <span class="keywordflow">if</span> (type == 1) {</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_vector.html#a2ec8fea78d48174ac2cde94060f2285e">norm1</a>(); </div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            }</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            <span class="keywordflow">if</span> (type == 2) {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_vector.html#a36fca83a79477c6367cc8ea5987e1100">norm2</a>(); </div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            }</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_vector.html#ace4cb201fb065182b0a3d84e02206e60">normp</a>(type); </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        }</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        uint8_t  dim;  </div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordtype">double</span> * data; </div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;};</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="comment">/* Non Members Functions */</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno"><a class="line" href="vector_8hpp.html#afafd01c767b3d293d349512b881430d7">  419</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_vector.html">Vector</a> <a class="code" href="vector_8hpp.html#afafd01c767b3d293d349512b881430d7">basis</a>(uint8_t n, uint8_t k) {</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    assert(n &gt; 0); assert(k &gt;= 0); assert(k &lt; n); </div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <a class="code" href="class_vector.html">Vector</a> v(n); </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    v(k) = 1; </div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">return</span> v; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;}</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.</div><div class="ttdef"><b>Definition:</b> vector.hpp:26</div></div>
 <div class="ttc" id="aclass_vector_html_a0ebbef346b37f0a6c7791ac4962103c5"><div class="ttname"><a href="class_vector.html#a0ebbef346b37f0a6c7791ac4962103c5">Vector::operator+=</a></div><div class="ttdeci">Vector &amp; operator+=(const Vector &amp;v)</div><div class="ttdoc">Overload operator += for vectors objects.</div><div class="ttdef"><b>Definition:</b> vector.hpp:155</div></div>
 <div class="ttc" id="aclass_vector_html_a2eb3c49587a4f12cade7895ccb73f6a0"><div class="ttname"><a href="class_vector.html#a2eb3c49587a4f12cade7895ccb73f6a0">Vector::~Vector</a></div><div class="ttdeci">~Vector()</div><div class="ttdoc">Destroy the Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:69</div></div>
-<div class="ttc" id="aclass_vector_html_a2ec8fea78d48174ac2cde94060f2285e"><div class="ttname"><a href="class_vector.html#a2ec8fea78d48174ac2cde94060f2285e">Vector::norm1</a></div><div class="ttdeci">double norm1()</div><div class="ttdoc">Compute the L^1 norm of a Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:305</div></div>
+<div class="ttc" id="aclass_vector_html_a2ec8fea78d48174ac2cde94060f2285e"><div class="ttname"><a href="class_vector.html#a2ec8fea78d48174ac2cde94060f2285e">Vector::norm1</a></div><div class="ttdeci">double norm1()</div><div class="ttdoc">Compute the L^1 norm of a Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:329</div></div>
 <div class="ttc" id="aclass_vector_html_a35ef4509e23fcf1ffed2bd76f019007e"><div class="ttname"><a href="class_vector.html#a35ef4509e23fcf1ffed2bd76f019007e">Vector::at</a></div><div class="ttdeci">double &amp; at(uint8_t n) const</div><div class="ttdoc">Get the value of the n-th component of a Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:90</div></div>
-<div class="ttc" id="aclass_vector_html_a36fca83a79477c6367cc8ea5987e1100"><div class="ttname"><a href="class_vector.html#a36fca83a79477c6367cc8ea5987e1100">Vector::norm2</a></div><div class="ttdeci">double norm2()</div><div class="ttdoc">Compute the Euclidean norm of a Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:318</div></div>
+<div class="ttc" id="aclass_vector_html_a36fca83a79477c6367cc8ea5987e1100"><div class="ttname"><a href="class_vector.html#a36fca83a79477c6367cc8ea5987e1100">Vector::norm2</a></div><div class="ttdeci">double norm2()</div><div class="ttdoc">Compute the Euclidean norm of a Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:342</div></div>
 <div class="ttc" id="aclass_vector_html_a5f04e343b7306ad11f8a82c89b486764"><div class="ttname"><a href="class_vector.html#a5f04e343b7306ad11f8a82c89b486764">Vector::Vector</a></div><div class="ttdeci">Vector(const Vector &amp;v)</div><div class="ttdoc">Construct a new Vector object. Copy constructor.</div><div class="ttdef"><b>Definition:</b> vector.hpp:57</div></div>
-<div class="ttc" id="aclass_vector_html_a6818c73c2e33b67e86a9dc6cf2b8dde8"><div class="ttname"><a href="class_vector.html#a6818c73c2e33b67e86a9dc6cf2b8dde8">Vector::operator*</a></div><div class="ttdeci">friend Vector operator*(const double &amp;d, const Vector &amp;v)</div><div class="ttdoc">Operator of multiplication of a Vector object by a scalar.</div><div class="ttdef"><b>Definition:</b> vector.hpp:185</div></div>
+<div class="ttc" id="aclass_vector_html_a6818c73c2e33b67e86a9dc6cf2b8dde8"><div class="ttname"><a href="class_vector.html#a6818c73c2e33b67e86a9dc6cf2b8dde8">Vector::operator*</a></div><div class="ttdeci">friend Vector operator*(const double &amp;d, const Vector &amp;v)</div><div class="ttdoc">Operator of multiplication of a Vector object by a scalar.</div><div class="ttdef"><b>Definition:</b> vector.hpp:199</div></div>
 <div class="ttc" id="aclass_vector_html_a6f80c73b5f18dcf3f8e36065bdc8b9e5"><div class="ttname"><a href="class_vector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5">Vector::Vector</a></div><div class="ttdeci">Vector()</div><div class="ttdoc">Construct a new Vector object. Default constructor. Return an empty vector of 0 dimension.</div><div class="ttdef"><b>Definition:</b> vector.hpp:34</div></div>
 <div class="ttc" id="aclass_vector_html_a853b1a689faf0dfb2d6e915b52feb7bc"><div class="ttname"><a href="class_vector.html#a853b1a689faf0dfb2d6e915b52feb7bc">Vector::operator()</a></div><div class="ttdeci">double &amp; operator()(uint8_t n) const</div><div class="ttdoc">Access the n-th value of a Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:103</div></div>
-<div class="ttc" id="aclass_vector_html_a87e3d153b84eb64da06b54159a67159c"><div class="ttname"><a href="class_vector.html#a87e3d153b84eb64da06b54159a67159c">Vector::operator-</a></div><div class="ttdeci">friend Vector operator-(const double &amp;d, const Vector &amp;v)</div><div class="ttdoc">Operator of remove a scalar to a Vector.</div><div class="ttdef"><b>Definition:</b> vector.hpp:239</div></div>
-<div class="ttc" id="aclass_vector_html_a8c03705e581b2f66df2d1f132e833efa"><div class="ttname"><a href="class_vector.html#a8c03705e581b2f66df2d1f132e833efa">Vector::normInf</a></div><div class="ttdeci">double normInf()</div><div class="ttdoc">Compute the L^{\infty} norm of a Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:345</div></div>
-<div class="ttc" id="aclass_vector_html_a9193b1ea8aa7920201fdd74f36afa3d3"><div class="ttname"><a href="class_vector.html#a9193b1ea8aa7920201fdd74f36afa3d3">Vector::operator/</a></div><div class="ttdeci">friend Vector operator/(const Vector &amp;v, const double &amp;d)</div><div class="ttdoc">Operator to divide a Vector by a scalar.</div><div class="ttdef"><b>Definition:</b> vector.hpp:267</div></div>
+<div class="ttc" id="aclass_vector_html_a87e3d153b84eb64da06b54159a67159c"><div class="ttname"><a href="class_vector.html#a87e3d153b84eb64da06b54159a67159c">Vector::operator-</a></div><div class="ttdeci">friend Vector operator-(const double &amp;d, const Vector &amp;v)</div><div class="ttdoc">Operator of remove a scalar to a Vector.</div><div class="ttdef"><b>Definition:</b> vector.hpp:253</div></div>
+<div class="ttc" id="aclass_vector_html_a8c03705e581b2f66df2d1f132e833efa"><div class="ttname"><a href="class_vector.html#a8c03705e581b2f66df2d1f132e833efa">Vector::normInf</a></div><div class="ttdeci">double normInf()</div><div class="ttdoc">Compute the L^{\infty} norm of a Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:369</div></div>
+<div class="ttc" id="aclass_vector_html_a9193b1ea8aa7920201fdd74f36afa3d3"><div class="ttname"><a href="class_vector.html#a9193b1ea8aa7920201fdd74f36afa3d3">Vector::operator/</a></div><div class="ttdeci">friend Vector operator/(const Vector &amp;v, const double &amp;d)</div><div class="ttdoc">Operator to divide a Vector by a scalar.</div><div class="ttdef"><b>Definition:</b> vector.hpp:284</div></div>
 <div class="ttc" id="aclass_vector_html_a97dec78717eb41caeb199272f2fd0326"><div class="ttname"><a href="class_vector.html#a97dec78717eb41caeb199272f2fd0326">Vector::operator=</a></div><div class="ttdeci">Vector &amp; operator=(const Vector &amp;v)</div><div class="ttdoc">Overload the assignement operator. Acts like a copy constructor.</div><div class="ttdef"><b>Definition:</b> vector.hpp:133</div></div>
-<div class="ttc" id="aclass_vector_html_aa57640d4ebaeb904da9ffde92517d9a6"><div class="ttname"><a href="class_vector.html#aa57640d4ebaeb904da9ffde92517d9a6">Vector::operator*</a></div><div class="ttdeci">friend Vector operator*(const Vector &amp;v, const double &amp;d)</div><div class="ttdoc">Operator of multiplication of a Vector object by a scalar.</div><div class="ttdef"><b>Definition:</b> vector.hpp:200</div></div>
-<div class="ttc" id="aclass_vector_html_ab4b04b4e787773ec71361d27a7ce27e8"><div class="ttname"><a href="class_vector.html#ab4b04b4e787773ec71361d27a7ce27e8">Vector::operator-</a></div><div class="ttdeci">friend Vector operator-(const Vector &amp;v, const double &amp;d)</div><div class="ttdoc">Operator of remove a scalar to a Vector.</div><div class="ttdef"><b>Definition:</b> vector.hpp:254</div></div>
-<div class="ttc" id="aclass_vector_html_ab5599209f3fdcb5662194aefab5b9394"><div class="ttname"><a href="class_vector.html#ab5599209f3fdcb5662194aefab5b9394">Vector::norm</a></div><div class="ttdeci">double norm(int type)</div><div class="ttdoc">A general method to compute the norm of a Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:363</div></div>
-<div class="ttc" id="aclass_vector_html_abfd7fa7cfca1b96a162b6b18acc05bee"><div class="ttname"><a href="class_vector.html#abfd7fa7cfca1b96a162b6b18acc05bee">Vector::operator+</a></div><div class="ttdeci">friend Vector operator+(const Vector &amp;v, const double &amp;d)</div><div class="ttdoc">Operator of addition of a Vector object with a scalar.</div><div class="ttdef"><b>Definition:</b> vector.hpp:227</div></div>
-<div class="ttc" id="aclass_vector_html_ac254b27efeb8486ee2f67821e3a21a60"><div class="ttname"><a href="class_vector.html#ac254b27efeb8486ee2f67821e3a21a60">Vector::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Vector &amp;v)</div><div class="ttdef"><b>Definition:</b> vector.hpp:292</div></div>
+<div class="ttc" id="aclass_vector_html_aa57640d4ebaeb904da9ffde92517d9a6"><div class="ttname"><a href="class_vector.html#aa57640d4ebaeb904da9ffde92517d9a6">Vector::operator*</a></div><div class="ttdeci">friend Vector operator*(const Vector &amp;v, const double &amp;d)</div><div class="ttdoc">Operator of multiplication of a Vector object by a scalar.</div><div class="ttdef"><b>Definition:</b> vector.hpp:214</div></div>
+<div class="ttc" id="aclass_vector_html_aae8637b86f5bc628b496f767b968587d"><div class="ttname"><a href="class_vector.html#aae8637b86f5bc628b496f767b968587d">Vector::operator-</a></div><div class="ttdeci">Vector operator-(const Vector &amp;v)</div><div class="ttdoc">Operator to get the opposite vector.</div><div class="ttdef"><b>Definition:</b> vector.hpp:184</div></div>
+<div class="ttc" id="aclass_vector_html_ab4b04b4e787773ec71361d27a7ce27e8"><div class="ttname"><a href="class_vector.html#ab4b04b4e787773ec71361d27a7ce27e8">Vector::operator-</a></div><div class="ttdeci">friend Vector operator-(const Vector &amp;v, const double &amp;d)</div><div class="ttdoc">Operator of remove a scalar to a Vector.</div><div class="ttdef"><b>Definition:</b> vector.hpp:268</div></div>
+<div class="ttc" id="aclass_vector_html_ab5599209f3fdcb5662194aefab5b9394"><div class="ttname"><a href="class_vector.html#ab5599209f3fdcb5662194aefab5b9394">Vector::norm</a></div><div class="ttdeci">double norm(int type)</div><div class="ttdoc">A general method to compute the norm of a Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:387</div></div>
+<div class="ttc" id="aclass_vector_html_abfd7fa7cfca1b96a162b6b18acc05bee"><div class="ttname"><a href="class_vector.html#abfd7fa7cfca1b96a162b6b18acc05bee">Vector::operator+</a></div><div class="ttdeci">friend Vector operator+(const Vector &amp;v, const double &amp;d)</div><div class="ttdoc">Operator of addition of a Vector object with a scalar.</div><div class="ttdef"><b>Definition:</b> vector.hpp:241</div></div>
+<div class="ttc" id="aclass_vector_html_ac254b27efeb8486ee2f67821e3a21a60"><div class="ttname"><a href="class_vector.html#ac254b27efeb8486ee2f67821e3a21a60">Vector::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Vector &amp;v)</div><div class="ttdoc">Overload output stream operator for Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:316</div></div>
 <div class="ttc" id="aclass_vector_html_ac33152ff0909d6b40ef7018bc35b2b43"><div class="ttname"><a href="class_vector.html#ac33152ff0909d6b40ef7018bc35b2b43">Vector::Vector</a></div><div class="ttdeci">Vector(uint8_t n)</div><div class="ttdoc">Construct a new Vector object. Return a zeros-vector of dimension n.</div><div class="ttdef"><b>Definition:</b> vector.hpp:44</div></div>
-<div class="ttc" id="aclass_vector_html_ace4cb201fb065182b0a3d84e02206e60"><div class="ttname"><a href="class_vector.html#ace4cb201fb065182b0a3d84e02206e60">Vector::normp</a></div><div class="ttdeci">double normp(uint8_t p)</div><div class="ttdoc">Compute the L^p norm of a Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:332</div></div>
+<div class="ttc" id="aclass_vector_html_ace4cb201fb065182b0a3d84e02206e60"><div class="ttname"><a href="class_vector.html#ace4cb201fb065182b0a3d84e02206e60">Vector::normp</a></div><div class="ttdeci">double normp(uint8_t p)</div><div class="ttdoc">Compute the L^p norm of a Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:356</div></div>
 <div class="ttc" id="aclass_vector_html_ad96574185a2f02f92b9fa4415d46763f"><div class="ttname"><a href="class_vector.html#ad96574185a2f02f92b9fa4415d46763f">Vector::get_dim</a></div><div class="ttdeci">uint8_t get_dim() const</div><div class="ttdoc">Get the dimension of a Vector object.</div><div class="ttdef"><b>Definition:</b> vector.hpp:79</div></div>
 <div class="ttc" id="aclass_vector_html_ade5fbd0cd01b034d1907e0c93433320c"><div class="ttname"><a href="class_vector.html#ade5fbd0cd01b034d1907e0c93433320c">Vector::operator==</a></div><div class="ttdeci">bool operator==(const Vector &amp;v) const</div><div class="ttdoc">Overload of the equality operator for Vector objects. Two vectors are said to be equal if and only if...</div><div class="ttdef"><b>Definition:</b> vector.hpp:115</div></div>
 <div class="ttc" id="aclass_vector_html_adec8bfb032fb32c97c18367d7c7eaa8a"><div class="ttname"><a href="class_vector.html#adec8bfb032fb32c97c18367d7c7eaa8a">Vector::operator-=</a></div><div class="ttdeci">Vector &amp; operator-=(const Vector &amp;v)</div><div class="ttdoc">Overload operator -= for vectors objects.</div><div class="ttdef"><b>Definition:</b> vector.hpp:170</div></div>
-<div class="ttc" id="aclass_vector_html_aea357642d7c4217dcf2dc30e6bab9bab"><div class="ttname"><a href="class_vector.html#aea357642d7c4217dcf2dc30e6bab9bab">Vector::operator*</a></div><div class="ttdeci">double operator*(const Vector &amp;v) const</div><div class="ttdoc">Dot product between vectors.</div><div class="ttdef"><b>Definition:</b> vector.hpp:283</div></div>
-<div class="ttc" id="aclass_vector_html_afd10217cb3fd325a4a930373bc3a980f"><div class="ttname"><a href="class_vector.html#afd10217cb3fd325a4a930373bc3a980f">Vector::operator+</a></div><div class="ttdeci">friend Vector operator+(const double &amp;d, const Vector &amp;v)</div><div class="ttdoc">Operator of addition of a Vector object with a scalar.</div><div class="ttdef"><b>Definition:</b> vector.hpp:212</div></div>
-<div class="ttc" id="avector_8hpp_html_afafd01c767b3d293d349512b881430d7"><div class="ttname"><a href="vector_8hpp.html#afafd01c767b3d293d349512b881430d7">basis</a></div><div class="ttdeci">Vector basis(uint8_t n, uint8_t k)</div><div class="ttdoc">Construct vector of the canonical basis of R^n.</div><div class="ttdef"><b>Definition:</b> vector.hpp:395</div></div>
+<div class="ttc" id="aclass_vector_html_aea357642d7c4217dcf2dc30e6bab9bab"><div class="ttname"><a href="class_vector.html#aea357642d7c4217dcf2dc30e6bab9bab">Vector::operator*</a></div><div class="ttdeci">double operator*(const Vector &amp;v) const</div><div class="ttdoc">Dot product between vectors.</div><div class="ttdef"><b>Definition:</b> vector.hpp:300</div></div>
+<div class="ttc" id="aclass_vector_html_afd10217cb3fd325a4a930373bc3a980f"><div class="ttname"><a href="class_vector.html#afd10217cb3fd325a4a930373bc3a980f">Vector::operator+</a></div><div class="ttdeci">friend Vector operator+(const double &amp;d, const Vector &amp;v)</div><div class="ttdoc">Operator of addition of a Vector object with a scalar.</div><div class="ttdef"><b>Definition:</b> vector.hpp:226</div></div>
+<div class="ttc" id="avector_8hpp_html_afafd01c767b3d293d349512b881430d7"><div class="ttname"><a href="vector_8hpp.html#afafd01c767b3d293d349512b881430d7">basis</a></div><div class="ttdeci">Vector basis(uint8_t n, uint8_t k)</div><div class="ttdoc">Construct vector of the canonical basis of R^n.</div><div class="ttdef"><b>Definition:</b> vector.hpp:419</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
