@@ -174,6 +174,20 @@ class Vector {
             }
             return *this;
         }
+
+        /**
+         * @brief Operator to get the opposite vector
+         * 
+         * @param v a Vector object
+         * @return Vector the opposite of v, i.e. -v
+         */
+        Vector operator-(const Vector & v) {
+            Vector res(v.dim); 
+            for (int i=0; i < this->dim; i++) {
+                res.data[i] = -v.data[i];
+            }
+            return res;
+        }
         
         /**
          * @brief Operator of multiplication of a Vector object by a scalar.
@@ -234,12 +248,12 @@ class Vector {
          * 
          * @param d Double value to remove to v
          * @param v Vector to be dimished
-         * @return Vector whose components are v[i] - d
+         * @return Vector whose components are d - v[i]
          */
         friend Vector operator-(const double & d, const Vector & v) {
             Vector res(v.dim); 
             for (int i = 0; i < v.dim; i++) {
-                res.data[i] = v.data[i] - d; 
+                res.data[i] = d - v.data[i]; 
             }
             return res; 
         }
@@ -252,8 +266,11 @@ class Vector {
          * @return Vector whose components are v[i] - d
          */
         friend Vector operator-(const Vector & v, const double & d) {
-            // Call previous operator
-            return d - v;
+            Vector res(v.dim); 
+            for (int i = 0; i < v.dim; i++) {
+                res.data[i] = v.data[i] - d; 
+            }
+            return res; 
         }
 
         /**
@@ -268,7 +285,7 @@ class Vector {
             assert(d != 0.); 
             Vector res(v.dim); 
             for (int i = 0; i < v.dim; i++) {
-                res.data[i] = v.data[i] / d; 
+                res.data[i] = v.data[i] / (1. * d); 
             }
             return res; 
         }
@@ -289,6 +306,13 @@ class Vector {
             return res;
         }
 
+        /**
+         * @brief Overload output stream operator for Vector object
+         * 
+         * @param os output stream
+         * @param v  Vector object
+         * @return std::ostream& updated output stream
+         */
         friend std::ostream & operator<< (std::ostream & os, const Vector & v) {
             for (int i = 0; i < v.dim; i++) {
                 os << v.data[i] << std::endl; 
@@ -379,8 +403,8 @@ class Vector {
         }
 
     private:
-        uint8_t dim; 
-        double * data;
+        uint8_t  dim;  /*!< Dimension of Vector object. @warning Must be greater than 1 */
+        double * data; /*!< Data of the vector object. */
 };
 
 /* Non Members Functions */
