@@ -130,6 +130,11 @@ double & Matrix::operator()(uint16_t i, uint16_t j) const {
     return this->at(i, j);
 }
 
+double & Matrix::operator()(uint32_t n) const {
+    assert(n >= 0); assert(n < this->n_elements); 
+    return this->data[n];
+}
+
 double Matrix::norm1() const { 
     // Maximum column sum 
     double res = 0.; double s; 
