@@ -1,0 +1,10 @@
+<map id="sciplot::TextSpecsOf&lt; DerivedSpecs &gt;" name="sciplot::TextSpecsOf&lt; DerivedSpecs &gt;">
+<area shape="rect" id="node1" title="The class used to attach text options to a type." alt="" coords="451,71,593,112"/>
+<area shape="rect" id="node4" href="$classsciplot_1_1_tics_specs_base_of.html" title=" " alt="" coords="641,5,813,47"/>
+<area shape="rect" id="node6" href="$classsciplot_1_1_tics_specs_base_of.html" title=" " alt="" coords="641,71,813,112"/>
+<area shape="rect" id="node8" href="$classsciplot_1_1_tics_specs_base_of.html" title="The class used to attach common tic options to a type that also specifies tic options." alt="" coords="641,136,813,177"/>
+<area shape="rect" id="node2" href="$classsciplot_1_1_font_specs_of.html" title="The class used to attach font options to a type." alt="" coords="260,71,403,112"/>
+<area shape="rect" id="node3" href="$classsciplot_1_1_specs.html" title="The base class for other specs classes (e.g., LineSpecsOf, DrawSpecs, BorderSpecs,..." alt="" coords="5,78,212,105"/>
+<area shape="rect" id="node5" href="$classsciplot_1_1_tics_specs.html" title="The class used to specify options for tics." alt="" coords="877,13,1005,39"/>
+<area shape="rect" id="node7" href="$classsciplot_1_1_tics_specs_major.html" title="The class used to specify options for major tics of a specific axis." alt="" coords="861,78,1021,105"/>
+</map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CONTROL TOOLBOX: src/vector.hpp File Reference</title>
+<title>CONTROL TOOLBOX: src/linalg/vector.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,46 +62,51 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5dff776341474e546195e534ccdc31ab.html">linalg</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">vector.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Header file for <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> class.  
+<p>Header file for <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> class.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for vector.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="vector_8hpp__incl.png" border="0" usemap="#asrc_2vector_8hpp" alt=""/></div>
-<map name="asrc_2vector_8hpp" id="asrc_2vector_8hpp">
-<area shape="rect" title="Header file for Vector class." alt="" coords="113,5,217,32"/>
+<div class="center"><img src="vector_8hpp__incl.png" border="0" usemap="#asrc_2linalg_2vector_8hpp" alt=""/></div>
+<map name="asrc_2linalg_2vector_8hpp" id="asrc_2linalg_2vector_8hpp">
+<area shape="rect" title="Header file for Vector class." alt="" coords="187,5,325,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,67,107"/>
 <area shape="rect" title=" " alt="" coords="91,80,152,107"/>
 <area shape="rect" title=" " alt="" coords="177,80,242,107"/>
 <area shape="rect" title=" " alt="" coords="267,80,339,107"/>
+<area shape="rect" title=" " alt="" coords="363,80,426,107"/>
+<area shape="rect" title=" " alt="" coords="450,80,507,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="vector_8hpp__dep__incl.png" border="0" usemap="#asrc_2vector_8hppdep" alt=""/></div>
-<map name="asrc_2vector_8hppdep" id="asrc_2vector_8hppdep">
-<area shape="rect" title="Header file for Vector class." alt="" coords="48,5,152,32"/>
+<div class="center"><img src="vector_8hpp__dep__incl.png" border="0" usemap="#asrc_2linalg_2vector_8hppdep" alt=""/></div>
+<map name="asrc_2linalg_2vector_8hppdep" id="asrc_2linalg_2vector_8hppdep">
+<area shape="rect" title="Header file for Vector class." alt="" coords="59,5,197,32"/>
 <area shape="rect" href="control_8h.html" title="Header file for Control class." alt="" coords="12,155,105,181"/>
-<area shape="rect" href="matrix_8h.html" title="Header file for Matrix class." alt="" coords="97,80,186,107"/>
+<area shape="rect" href="matrix_8h.html" title="Header file for Matrix class." alt="" coords="127,80,249,107"/>
 <area shape="rect" href="control_8cpp.html" title="Implementation of control class." alt="" coords="5,229,112,256"/>
-<area shape="rect" href="matrix_8cpp.html" title="Implémentation of the Matrix class." alt="" coords="130,155,233,181"/>
+<area shape="rect" href="matrix_8cpp.html" title="Implémentation of the Matrix class." alt="" coords="130,155,267,181"/>
+<area shape="rect" href="square_matrix_8h.html" title=" " alt="" coords="292,155,455,181"/>
+<area shape="rect" href="square_matrix_8cpp.html" title=" " alt="" coords="285,229,461,256"/>
 </map>
 </div>
 </div>
@@ -110,70 +115,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html">Vector</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class describing a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. Vectors are array of size n (&gt;0) dynamically constructed.  <a href="class_vector.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lightweight class describing a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. Vectors are array with size n (&gt;0) of doubles.  <a href="class_vector.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:afafd01c767b3d293d349512b881430d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#afafd01c767b3d293d349512b881430d7">basis</a> (uint8_t n, uint8_t k)</td></tr>
-<tr class="memdesc:afafd01c767b3d293d349512b881430d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct vector of the canonical basis of R^n.  <a href="vector_8hpp.html#afafd01c767b3d293d349512b881430d7">More...</a><br /></td></tr>
-<tr class="separator:afafd01c767b3d293d349512b881430d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header file for <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> class. </p>
+<div class="textblock"><p>Header file for <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> class. </p>
 <dl class="section author"><dt>Author</dt><dd>T. Schmoderer (<a href="#" onclick="location.href='mai'+'lto:'+'iat'+'he'+'na@'+'ma'+'ilo'+'.c'+'om'; return false;">iathe<span style="display: none;">.nosp@m.</span>na@m<span style="display: none;">.nosp@m.</span>ailo.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>2.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2021-10-28</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="afafd01c767b3d293d349512b881430d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afafd01c767b3d293d349512b881430d7">&#9670;&nbsp;</a></span>basis()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_vector.html">Vector</a> basis </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>k</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Construct vector of the canonical basis of R^n. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">n</td><td>Dimension of the vector space (must be greater or equal than 1) </td></tr>
-    <tr><td class="paramname">k</td><td>Number of the basis vector. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> k-th vector of the canonical basis of R^n. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Indices are 0-based. </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

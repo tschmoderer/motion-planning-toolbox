@@ -1,0 +1,6 @@
+<map id="sciplot::BorderSpecs" name="sciplot::BorderSpecs">
+<area shape="rect" id="node1" title="The class used to specify options for plot border." alt="" coords="91,169,233,196"/>
+<area shape="rect" id="node2" href="$classsciplot_1_1_line_specs_of.html" title=" " alt="" coords="5,80,148,121"/>
+<area shape="rect" id="node3" href="$classsciplot_1_1_specs.html" title="The base class for other specs classes (e.g., LineSpecsOf, DrawSpecs, BorderSpecs,..." alt="" coords="59,5,265,32"/>
+<area shape="rect" id="node4" href="$classsciplot_1_1_depth_specs_of.html" title=" " alt="" coords="172,80,323,121"/>
+</map>

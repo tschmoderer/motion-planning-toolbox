@@ -1,0 +1,9 @@
+<map id="sciplot::LegendSpecs" name="sciplot::LegendSpecs">
+<area shape="rect" id="node1" title="The class used to specify options for legend." alt="" coords="661,111,808,138"/>
+<area shape="rect" id="node2" href="$classsciplot_1_1_text_specs_of.html" title=" " alt="" coords="467,5,609,47"/>
+<area shape="rect" id="node3" href="$classsciplot_1_1_font_specs_of.html" title="The class used to attach font options to a type." alt="" coords="266,11,409,52"/>
+<area shape="rect" id="node4" href="$classsciplot_1_1_specs.html" title="The base class for other specs classes (e.g., LineSpecsOf, DrawSpecs, BorderSpecs,..." alt="" coords="5,107,212,134"/>
+<area shape="rect" id="node5" href="$classsciplot_1_1_show_specs_of.html" title=" " alt="" coords="463,71,613,112"/>
+<area shape="rect" id="node6" href="$classsciplot_1_1_title_specs_of.html" title=" " alt="" coords="467,136,609,177"/>
+<area shape="rect" id="node7" href="$classsciplot_1_1_frame_specs_of.html" title=" " alt="" coords="260,188,415,229"/>
+</map>

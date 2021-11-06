@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CONTROL TOOLBOX: src/matrix.cpp File Reference</title>
+<title>CONTROL TOOLBOX: src/linalg/matrix.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5dff776341474e546195e534ccdc31ab.html">linalg</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -79,15 +79,17 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for matrix.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="matrix_8cpp__incl.png" border="0" usemap="#asrc_2matrix_8cpp" alt=""/></div>
-<map name="asrc_2matrix_8cpp" id="asrc_2matrix_8cpp">
-<area shape="rect" title="Implémentation of the Matrix class." alt="" coords="119,5,222,32"/>
-<area shape="rect" href="matrix_8h.html" title="Header file for Matrix class." alt="" coords="137,80,204,107"/>
-<area shape="rect" title=" " alt="" coords="5,229,77,256"/>
-<area shape="rect" title=" " alt="" coords="101,229,163,256"/>
-<area shape="rect" title=" " alt="" coords="273,229,338,256"/>
-<area shape="rect" href="vector_8hpp.html" title="Header file for Vector class." alt="" coords="169,155,252,181"/>
-<area shape="rect" title=" " alt="" coords="187,229,248,256"/>
+<div class="center"><img src="matrix_8cpp__incl.png" border="0" usemap="#asrc_2linalg_2matrix_8cpp" alt=""/></div>
+<map name="asrc_2linalg_2matrix_8cpp" id="asrc_2linalg_2matrix_8cpp">
+<area shape="rect" title="Implémentation of the Matrix class." alt="" coords="187,5,325,32"/>
+<area shape="rect" href="matrix_8h.html" title="Header file for Matrix class." alt="" coords="223,80,289,107"/>
+<area shape="rect" href="vector_8hpp.html" title="Header file for Vector class." alt="" coords="215,155,297,181"/>
+<area shape="rect" title=" " alt="" coords="5,229,67,256"/>
+<area shape="rect" title=" " alt="" coords="91,229,152,256"/>
+<area shape="rect" title=" " alt="" coords="177,229,242,256"/>
+<area shape="rect" title=" " alt="" coords="267,229,339,256"/>
+<area shape="rect" title=" " alt="" coords="363,229,426,256"/>
+<area shape="rect" title=" " alt="" coords="450,229,507,256"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -105,12 +107,8 @@ Functions</h2></td></tr>
 <tr class="separator:a92fba3de8e3c61ea429f3ea3c1bba84a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8146d5b33059225238fef00f73825c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8cpp.html#aa8146d5b33059225238fef00f73825c9">operator*</a> (const <a class="el" href="class_matrix.html">Matrix</a> &amp;A, const <a class="el" href="class_vector.html">Vector</a> &amp;v)</td></tr>
 <tr class="separator:aa8146d5b33059225238fef00f73825c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa490052b51eb7ef084574eb313d6913c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8cpp.html#aa490052b51eb7ef084574eb313d6913c">eye</a> (uint8_t n)</td></tr>
-<tr class="memdesc:aa490052b51eb7ef084574eb313d6913c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the identity <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> of size n.  <a href="matrix_8cpp.html#aa490052b51eb7ef084574eb313d6913c">More...</a><br /></td></tr>
-<tr class="separator:aa490052b51eb7ef084574eb313d6913c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2512827c9917db16f59927cbd5d6e7c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8cpp.html#a2512827c9917db16f59927cbd5d6e7c8">zeros</a> (uint8_t n)</td></tr>
-<tr class="memdesc:a2512827c9917db16f59927cbd5d6e7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the zeors matrix of size n.  <a href="matrix_8cpp.html#a2512827c9917db16f59927cbd5d6e7c8">More...</a><br /></td></tr>
-<tr class="separator:a2512827c9917db16f59927cbd5d6e7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26be7980d94c40cdc27873675e2077f8"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8cpp.html#a26be7980d94c40cdc27873675e2077f8">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="class_matrix.html">Matrix</a> &amp;M)</td></tr>
+<tr class="separator:a26be7980d94c40cdc27873675e2077f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implémentation of the <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> class. </p>
@@ -119,33 +117,6 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>2021-10-23</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="aa490052b51eb7ef084574eb313d6913c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa490052b51eb7ef084574eb313d6913c">&#9670;&nbsp;</a></span>eye()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> eye </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct the identity <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> of size n. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">n</td><td>Size of the <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> Identity matrix of dimension n times n </dd></dl>
-
-</div>
-</div>
 <a id="a5a10ea8009754c096bfedf08f04b57f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a10ea8009754c096bfedf08f04b57f1">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/3]</span></h2>
 
@@ -314,30 +285,31 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2512827c9917db16f59927cbd5d6e7c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2512827c9917db16f59927cbd5d6e7c8">&#9670;&nbsp;</a></span>zeros()</h2>
+<a id="a26be7980d94c40cdc27873675e2077f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26be7980d94c40cdc27873675e2077f8">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> zeros </td>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>M</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Construct the zeors matrix of size n. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">n</td><td>Size of the <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> of dimension n times n composed with only zeros </dd></dl>
 
 </div>
 </div>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vector_51',['Vector',['../class_vector.html',1,'']]]
+  ['columnindex_461',['ColumnIndex',['../structsciplot_1_1_column_index.html',1,'sciplot']]],
+  ['control_462',['Control',['../class_control.html',1,'']]]
 ];

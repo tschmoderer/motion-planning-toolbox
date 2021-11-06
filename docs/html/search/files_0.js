@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['control_2ecpp_52',['control.cpp',['../control_8cpp.html',1,'']]],
-  ['control_2eh_53',['control.h',['../control_8h.html',1,'']]]
+  ['axislabelspecs_2ehpp_530',['AxisLabelSpecs.hpp',['../_axis_label_specs_8hpp.html',1,'']]]
 ];

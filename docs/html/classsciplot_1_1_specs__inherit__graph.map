@@ -1,0 +1,51 @@
+<map id="sciplot::Specs&lt; DerivedSpecs &gt;" name="sciplot::Specs&lt; DerivedSpecs &gt;">
+<area shape="rect" id="node1" title="The base class for other specs classes (e.g., LineSpecsOf, DrawSpecs, BorderSpecs,..." alt="" coords="5,947,212,974"/>
+<area shape="rect" id="node2" href="$classsciplot_1_1_depth_specs_of.html" title=" " alt="" coords="262,5,413,47"/>
+<area shape="rect" id="node4" href="$classsciplot_1_1_depth_specs_of.html" title=" " alt="" coords="262,201,413,243"/>
+<area shape="rect" id="node6" href="$classsciplot_1_1_depth_specs_of.html" title=" " alt="" coords="262,267,413,308"/>
+<area shape="rect" id="node8" href="$classsciplot_1_1_fill_specs_of.html" title=" " alt="" coords="270,397,405,439"/>
+<area shape="rect" id="node10" href="$classsciplot_1_1_fill_specs_of.html" title=" " alt="" coords="270,645,405,687"/>
+<area shape="rect" id="node12" href="$classsciplot_1_1_font_specs_of.html" title=" " alt="" coords="266,463,409,504"/>
+<area shape="rect" id="node14" href="$classsciplot_1_1_frame_specs_of.html" title=" " alt="" coords="465,521,620,563"/>
+<area shape="rect" id="node16" href="$classsciplot_1_1_frame_specs_of.html" title=" " alt="" coords="260,580,415,621"/>
+<area shape="rect" id="node18" href="$classsciplot_1_1_line_specs_of.html" title=" " alt="" coords="266,841,409,883"/>
+<area shape="rect" id="node20" href="$classsciplot_1_1_line_specs_of.html" title=" " alt="" coords="266,71,409,112"/>
+<area shape="rect" id="node21" href="$classsciplot_1_1_line_specs_of.html" title=" " alt="" coords="266,332,409,373"/>
+<area shape="rect" id="node22" href="$classsciplot_1_1_line_specs_of.html" title=" " alt="" coords="266,711,409,752"/>
+<area shape="rect" id="node23" href="$classsciplot_1_1_offset_specs_of.html" title=" " alt="" coords="261,907,413,948"/>
+<area shape="rect" id="node25" href="$classsciplot_1_1_point_specs_of.html" title=" " alt="" coords="264,972,411,1013"/>
+<area shape="rect" id="node27" href="$classsciplot_1_1_point_specs_of.html" title=" " alt="" coords="264,776,411,817"/>
+<area shape="rect" id="node28" href="$classsciplot_1_1_show_specs_of.html" title=" " alt="" coords="262,1037,413,1079"/>
+<area shape="rect" id="node30" href="$classsciplot_1_1_show_specs_of.html" title=" " alt="" coords="262,136,413,177"/>
+<area shape="rect" id="node31" href="$classsciplot_1_1_show_specs_of.html" title=" " alt="" coords="467,1096,618,1137"/>
+<area shape="rect" id="node32" href="$classsciplot_1_1_show_specs_of.html" title=" " alt="" coords="262,1155,413,1196"/>
+<area shape="rect" id="node34" href="$classsciplot_1_1_title_specs_of.html" title=" " alt="" coords="266,1220,409,1261"/>
+<area shape="rect" id="node36" href="$classsciplot_1_1_title_specs_of.html" title=" " alt="" coords="471,1276,614,1317"/>
+<area shape="rect" id="node37" href="$classsciplot_1_1_depth_specs_of.html" title="The class used to attach depth options to a type." alt="" coords="262,1337,413,1379"/>
+<area shape="rect" id="node38" href="$classsciplot_1_1_fill_specs_of.html" title="The class used to attach color or pattern fill options to a type." alt="" coords="270,1403,405,1444"/>
+<area shape="rect" id="node39" href="$classsciplot_1_1_font_specs_of.html" title="The class used to attach font options to a type." alt="" coords="266,1468,409,1509"/>
+<area shape="rect" id="node44" href="$classsciplot_1_1_frame_specs_of.html" title="The class used to attach frame options to a type." alt="" coords="260,1533,415,1575"/>
+<area shape="rect" id="node45" href="$classsciplot_1_1_line_specs_of.html" title="The class used to attach line options to a type." alt="" coords="266,1599,409,1640"/>
+<area shape="rect" id="node46" href="$classsciplot_1_1_offset_specs_of.html" title="The class used to attach offset options to a type." alt="" coords="261,1664,413,1705"/>
+<area shape="rect" id="node47" href="$classsciplot_1_1_point_specs_of.html" title="The class used to attach point options to a type." alt="" coords="264,1729,411,1771"/>
+<area shape="rect" id="node48" href="$classsciplot_1_1_show_specs_of.html" title="The class used to attach visibility options to a type." alt="" coords="262,1795,413,1836"/>
+<area shape="rect" id="node49" href="$classsciplot_1_1_title_specs_of.html" title="The class used to attach title options to a type." alt="" coords="266,1860,409,1901"/>
+<area shape="rect" id="node3" href="$classsciplot_1_1_grid_specs_base.html" title="The class used to specify options for grid lines along axis tics (major or minor)." alt="" coords="464,78,621,105"/>
+<area shape="rect" id="node5" href="$classsciplot_1_1_depth_specs.html" title="The class used to specify depth options." alt="" coords="474,209,611,235"/>
+<area shape="rect" id="node7" href="$classsciplot_1_1_border_specs.html" title="The class used to specify options for plot border." alt="" coords="472,307,613,334"/>
+<area shape="rect" id="node9" href="$classsciplot_1_1_fill_specs.html" title="The class used to specify color or pattern fill options." alt="" coords="483,405,603,431"/>
+<area shape="rect" id="node11" href="$classsciplot_1_1_draw_specs.html" title="The class where options for the plotted element can be specified." alt="" coords="476,718,609,745"/>
+<area shape="rect" id="node13" href="$classsciplot_1_1_font_specs.html" title="The class used to specify font options." alt="" coords="478,470,607,497"/>
+<area shape="rect" id="node15" href="$classsciplot_1_1_legend_specs.html" title="The class used to specify options for legend." alt="" coords="671,1193,817,1219"/>
+<area shape="rect" id="node17" href="$classsciplot_1_1_frame_specs.html" title="The class used to specify frame options." alt="" coords="473,587,613,614"/>
+<area shape="rect" id="node19" href="$classsciplot_1_1_line_specs.html" title="The class used to specify line options." alt="" coords="479,849,607,875"/>
+<area shape="rect" id="node24" href="$classsciplot_1_1_offset_specs.html" title="The class used to specify offset options." alt="" coords="473,914,612,941"/>
+<area shape="rect" id="node26" href="$classsciplot_1_1_point_specs.html" title="The class used to specify point options." alt="" coords="476,979,609,1006"/>
+<area shape="rect" id="node29" href="$classsciplot_1_1_show_specs.html" title="The class used to specify visibility options." alt="" coords="475,1045,611,1071"/>
+<area shape="rect" id="node33" href="$classsciplot_1_1_tics_specs_minor.html" title="The class used to specify options for minor tics of a specific axis." alt="" coords="463,1162,623,1189"/>
+<area shape="rect" id="node35" href="$classsciplot_1_1_title_specs.html" title="The class used to specify title options." alt="" coords="479,1225,607,1251"/>
+<area shape="rect" id="node40" href="$classsciplot_1_1_text_specs_of.html" title=" " alt="" coords="471,1341,614,1383"/>
+<area shape="rect" id="node41" href="$classsciplot_1_1_text_specs_of.html" title=" " alt="" coords="471,1407,614,1448"/>
+<area shape="rect" id="node42" href="$classsciplot_1_1_text_specs_of.html" title=" " alt="" coords="471,1472,614,1513"/>
+<area shape="rect" id="node43" href="$classsciplot_1_1_text_specs_of.html" title="The class used to attach text options to a type." alt="" coords="471,1537,614,1579"/>
+</map>

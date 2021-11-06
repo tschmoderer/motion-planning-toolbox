@@ -1,0 +1,7 @@
+<map id="sciplot::DrawSpecs" name="sciplot::DrawSpecs">
+<area shape="rect" id="node1" title="The class where options for the plotted element can be specified." alt="" coords="455,78,588,105"/>
+<area shape="rect" id="node2" href="$classsciplot_1_1_line_specs_of.html" title=" " alt="" coords="262,5,405,47"/>
+<area shape="rect" id="node3" href="$classsciplot_1_1_specs.html" title="The base class for other specs classes (e.g., LineSpecsOf, DrawSpecs, BorderSpecs,..." alt="" coords="5,78,212,105"/>
+<area shape="rect" id="node4" href="$classsciplot_1_1_point_specs_of.html" title=" " alt="" coords="260,71,407,112"/>
+<area shape="rect" id="node5" href="$classsciplot_1_1_fill_specs_of.html" title=" " alt="" coords="266,136,401,177"/>
+</map>

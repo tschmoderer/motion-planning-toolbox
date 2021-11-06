@@ -64,6 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_vector-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -71,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A class describing a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. Vectors are array of size n (&gt;0) dynamically constructed.  
+<p>A lightweight class describing a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. Vectors are array with size n (&gt;0) of doubles.  
  <a href="class_vector.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="vector_8hpp_source.html">vector.hpp</a>&gt;</code></p>
@@ -79,28 +80,31 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6f80c73b5f18dcf3f8e36065bdc8b9e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5">Vector</a> ()</td></tr>
-<tr class="memdesc:a6f80c73b5f18dcf3f8e36065bdc8b9e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. Default constructor. Return an empty vector of 0 dimension.  <a href="class_vector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5">More...</a><br /></td></tr>
+<tr class="memdesc:a6f80c73b5f18dcf3f8e36065bdc8b9e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. Default constructor. Return an empty vector of 0 dimension.  <a href="class_vector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5">More...</a><br /></td></tr>
 <tr class="separator:a6f80c73b5f18dcf3f8e36065bdc8b9e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac33152ff0909d6b40ef7018bc35b2b43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#ac33152ff0909d6b40ef7018bc35b2b43">Vector</a> (uint8_t n)</td></tr>
-<tr class="memdesc:ac33152ff0909d6b40ef7018bc35b2b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. Return a zeros-vector of dimension n.  <a href="class_vector.html#ac33152ff0909d6b40ef7018bc35b2b43">More...</a><br /></td></tr>
-<tr class="separator:ac33152ff0909d6b40ef7018bc35b2b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dec2d7967f125293488526f442384ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a6dec2d7967f125293488526f442384ee">Vector</a> (uint16_t n)</td></tr>
+<tr class="memdesc:a6dec2d7967f125293488526f442384ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. Return a zeros-vector of dimension n.  <a href="class_vector.html#a6dec2d7967f125293488526f442384ee">More...</a><br /></td></tr>
+<tr class="separator:a6dec2d7967f125293488526f442384ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f0bdd0e8e5f0e79c208045ce7789ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a07f0bdd0e8e5f0e79c208045ce7789ce">Vector</a> (double *dat, uint16_t n)</td></tr>
+<tr class="memdesc:a07f0bdd0e8e5f0e79c208045ce7789ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. Construct a vector object from an array of double.  <a href="class_vector.html#a07f0bdd0e8e5f0e79c208045ce7789ce">More...</a><br /></td></tr>
+<tr class="separator:a07f0bdd0e8e5f0e79c208045ce7789ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f04e343b7306ad11f8a82c89b486764"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a5f04e343b7306ad11f8a82c89b486764">Vector</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;v)</td></tr>
-<tr class="memdesc:a5f04e343b7306ad11f8a82c89b486764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. Copy constructor.  <a href="class_vector.html#a5f04e343b7306ad11f8a82c89b486764">More...</a><br /></td></tr>
+<tr class="memdesc:a5f04e343b7306ad11f8a82c89b486764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. Copy constructor.  <a href="class_vector.html#a5f04e343b7306ad11f8a82c89b486764">More...</a><br /></td></tr>
 <tr class="separator:a5f04e343b7306ad11f8a82c89b486764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eb3c49587a4f12cade7895ccb73f6a0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a2eb3c49587a4f12cade7895ccb73f6a0">~Vector</a> ()</td></tr>
-<tr class="memdesc:a2eb3c49587a4f12cade7895ccb73f6a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object.  <a href="class_vector.html#a2eb3c49587a4f12cade7895ccb73f6a0">More...</a><br /></td></tr>
+<tr class="memdesc:a2eb3c49587a4f12cade7895ccb73f6a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object.  <a href="class_vector.html#a2eb3c49587a4f12cade7895ccb73f6a0">More...</a><br /></td></tr>
 <tr class="separator:a2eb3c49587a4f12cade7895ccb73f6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad96574185a2f02f92b9fa4415d46763f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#ad96574185a2f02f92b9fa4415d46763f">get_dim</a> () const</td></tr>
-<tr class="memdesc:ad96574185a2f02f92b9fa4415d46763f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the dimension of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object.  <a href="class_vector.html#ad96574185a2f02f92b9fa4415d46763f">More...</a><br /></td></tr>
-<tr class="separator:ad96574185a2f02f92b9fa4415d46763f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35ef4509e23fcf1ffed2bd76f019007e"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a35ef4509e23fcf1ffed2bd76f019007e">at</a> (uint8_t n) const</td></tr>
-<tr class="memdesc:a35ef4509e23fcf1ffed2bd76f019007e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the n-th component of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object.  <a href="class_vector.html#a35ef4509e23fcf1ffed2bd76f019007e">More...</a><br /></td></tr>
-<tr class="separator:a35ef4509e23fcf1ffed2bd76f019007e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a853b1a689faf0dfb2d6e915b52feb7bc"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a853b1a689faf0dfb2d6e915b52feb7bc">operator()</a> (uint8_t n) const</td></tr>
-<tr class="memdesc:a853b1a689faf0dfb2d6e915b52feb7bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the n-th value of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object.  <a href="class_vector.html#a853b1a689faf0dfb2d6e915b52feb7bc">More...</a><br /></td></tr>
-<tr class="separator:a853b1a689faf0dfb2d6e915b52feb7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a5bfe930401932b4ffb4bc4afd3227"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a99a5bfe930401932b4ffb4bc4afd3227">get_dim</a> () const</td></tr>
+<tr class="memdesc:a99a5bfe930401932b4ffb4bc4afd3227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the dimension of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object.  <a href="class_vector.html#a99a5bfe930401932b4ffb4bc4afd3227">More...</a><br /></td></tr>
+<tr class="separator:a99a5bfe930401932b4ffb4bc4afd3227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a05c7cacfc240bc3e55e36d7ef464d"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#ac0a05c7cacfc240bc3e55e36d7ef464d">operator[]</a> (uint16_t n) const</td></tr>
+<tr class="memdesc:ac0a05c7cacfc240bc3e55e36d7ef464d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the n-th value of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object.  <a href="class_vector.html#ac0a05c7cacfc240bc3e55e36d7ef464d">More...</a><br /></td></tr>
+<tr class="separator:ac0a05c7cacfc240bc3e55e36d7ef464d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c73adb81011c74cab40b51d2cdba47e"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a6c73adb81011c74cab40b51d2cdba47e">operator()</a> (uint16_t n) const</td></tr>
+<tr class="memdesc:a6c73adb81011c74cab40b51d2cdba47e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the n-th value of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. Same as operator [].  <a href="class_vector.html#a6c73adb81011c74cab40b51d2cdba47e">More...</a><br /></td></tr>
+<tr class="separator:a6c73adb81011c74cab40b51d2cdba47e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade5fbd0cd01b034d1907e0c93433320c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#ade5fbd0cd01b034d1907e0c93433320c">operator==</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;v) const</td></tr>
-<tr class="memdesc:ade5fbd0cd01b034d1907e0c93433320c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the equality operator for <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> objects. Two vectors are said to be equal if and only if they have the same dimension and they have exactly the same values.  <a href="class_vector.html#ade5fbd0cd01b034d1907e0c93433320c">More...</a><br /></td></tr>
+<tr class="memdesc:ade5fbd0cd01b034d1907e0c93433320c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the equality operator for <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> objects. Two vectors are said to be equal if and only if they have the same dimension and they have exactly the same values.  <a href="class_vector.html#ade5fbd0cd01b034d1907e0c93433320c">More...</a><br /></td></tr>
 <tr class="separator:ade5fbd0cd01b034d1907e0c93433320c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97dec78717eb41caeb199272f2fd0326"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a97dec78717eb41caeb199272f2fd0326">operator=</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;v)</td></tr>
 <tr class="memdesc:a97dec78717eb41caeb199272f2fd0326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload the assignement operator. Acts like a copy constructor.  <a href="class_vector.html#a97dec78717eb41caeb199272f2fd0326">More...</a><br /></td></tr>
@@ -118,54 +122,75 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aea357642d7c4217dcf2dc30e6bab9bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dot product between vectors.  <a href="class_vector.html#aea357642d7c4217dcf2dc30e6bab9bab">More...</a><br /></td></tr>
 <tr class="separator:aea357642d7c4217dcf2dc30e6bab9bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ec8fea78d48174ac2cde94060f2285e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a2ec8fea78d48174ac2cde94060f2285e">norm1</a> ()</td></tr>
-<tr class="memdesc:a2ec8fea78d48174ac2cde94060f2285e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the L^1 norm of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object.  <a href="class_vector.html#a2ec8fea78d48174ac2cde94060f2285e">More...</a><br /></td></tr>
+<tr class="memdesc:a2ec8fea78d48174ac2cde94060f2285e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the L^1 norm of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object.  <a href="class_vector.html#a2ec8fea78d48174ac2cde94060f2285e">More...</a><br /></td></tr>
 <tr class="separator:a2ec8fea78d48174ac2cde94060f2285e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36fca83a79477c6367cc8ea5987e1100"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a36fca83a79477c6367cc8ea5987e1100">norm2</a> ()</td></tr>
-<tr class="memdesc:a36fca83a79477c6367cc8ea5987e1100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Euclidean norm of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object.  <a href="class_vector.html#a36fca83a79477c6367cc8ea5987e1100">More...</a><br /></td></tr>
+<tr class="memdesc:a36fca83a79477c6367cc8ea5987e1100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Euclidean norm of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object.  <a href="class_vector.html#a36fca83a79477c6367cc8ea5987e1100">More...</a><br /></td></tr>
 <tr class="separator:a36fca83a79477c6367cc8ea5987e1100"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace4cb201fb065182b0a3d84e02206e60"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#ace4cb201fb065182b0a3d84e02206e60">normp</a> (uint8_t p)</td></tr>
-<tr class="memdesc:ace4cb201fb065182b0a3d84e02206e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the L^p norm of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object.  <a href="class_vector.html#ace4cb201fb065182b0a3d84e02206e60">More...</a><br /></td></tr>
-<tr class="separator:ace4cb201fb065182b0a3d84e02206e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a919a3880967e6d1b9b36e04a28f3f38b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a919a3880967e6d1b9b36e04a28f3f38b">normp</a> (uint16_t p)</td></tr>
+<tr class="memdesc:a919a3880967e6d1b9b36e04a28f3f38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the L^p norm of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object.  <a href="class_vector.html#a919a3880967e6d1b9b36e04a28f3f38b">More...</a><br /></td></tr>
+<tr class="separator:a919a3880967e6d1b9b36e04a28f3f38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c03705e581b2f66df2d1f132e833efa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a8c03705e581b2f66df2d1f132e833efa">normInf</a> ()</td></tr>
-<tr class="memdesc:a8c03705e581b2f66df2d1f132e833efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the L^{\infty} norm of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object.  <a href="class_vector.html#a8c03705e581b2f66df2d1f132e833efa">More...</a><br /></td></tr>
+<tr class="memdesc:a8c03705e581b2f66df2d1f132e833efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the L^{\infty} norm of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object.  <a href="class_vector.html#a8c03705e581b2f66df2d1f132e833efa">More...</a><br /></td></tr>
 <tr class="separator:a8c03705e581b2f66df2d1f132e833efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5599209f3fdcb5662194aefab5b9394"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#ab5599209f3fdcb5662194aefab5b9394">norm</a> (int type)</td></tr>
-<tr class="memdesc:ab5599209f3fdcb5662194aefab5b9394"><td class="mdescLeft">&#160;</td><td class="mdescRight">A general method to compute the norm of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object.  <a href="class_vector.html#ab5599209f3fdcb5662194aefab5b9394">More...</a><br /></td></tr>
+<tr class="memdesc:ab5599209f3fdcb5662194aefab5b9394"><td class="mdescLeft">&#160;</td><td class="mdescRight">A general method to compute the norm of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object.  <a href="class_vector.html#ab5599209f3fdcb5662194aefab5b9394">More...</a><br /></td></tr>
 <tr class="separator:ab5599209f3fdcb5662194aefab5b9394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:af7781e81bd282689d094c1cb7378491a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#af7781e81bd282689d094c1cb7378491a">basis</a> (uint16_t n, uint16_t k)</td></tr>
+<tr class="memdesc:af7781e81bd282689d094c1cb7378491a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct vector of the canonical basis of R^n.  <a href="class_vector.html#af7781e81bd282689d094c1cb7378491a">More...</a><br /></td></tr>
+<tr class="separator:af7781e81bd282689d094c1cb7378491a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a768da06f9989c5f7cd5b2990cde1f38c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a768da06f9989c5f7cd5b2990cde1f38c">zeros</a> (uint16_t n)</td></tr>
+<tr class="memdesc:a768da06f9989c5f7cd5b2990cde1f38c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object of length n filled with zeros.  <a href="class_vector.html#a768da06f9989c5f7cd5b2990cde1f38c">More...</a><br /></td></tr>
+<tr class="separator:a768da06f9989c5f7cd5b2990cde1f38c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52dd2d60694a4f7ad41e0d24287289e2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a52dd2d60694a4f7ad41e0d24287289e2">rand</a> (uint16_t n)</td></tr>
+<tr class="memdesc:a52dd2d60694a4f7ad41e0d24287289e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object of length n filled with random values sampled from 0. to 1.  <a href="class_vector.html#a52dd2d60694a4f7ad41e0d24287289e2">More...</a><br /></td></tr>
+<tr class="separator:a52dd2d60694a4f7ad41e0d24287289e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1113429bbddaf0764d1a184015655c11"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a1113429bbddaf0764d1a184015655c11">ones</a> (uint16_t n)</td></tr>
+<tr class="memdesc:a1113429bbddaf0764d1a184015655c11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object of length n filled with ones.  <a href="class_vector.html#a1113429bbddaf0764d1a184015655c11">More...</a><br /></td></tr>
+<tr class="separator:a1113429bbddaf0764d1a184015655c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade9159eb310c184b3951a7af0a9d8cca"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#ade9159eb310c184b3951a7af0a9d8cca">linspace</a> (double t0, double t1, uint16_t n)</td></tr>
+<tr class="memdesc:ade9159eb310c184b3951a7af0a9d8cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object of length n filled with equally points spaced between t0 and t1 included.  <a href="class_vector.html#ade9159eb310c184b3951a7af0a9d8cca">More...</a><br /></td></tr>
+<tr class="separator:ade9159eb310c184b3951a7af0a9d8cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a6818c73c2e33b67e86a9dc6cf2b8dde8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a6818c73c2e33b67e86a9dc6cf2b8dde8">operator*</a> (const double &amp;d, const <a class="el" href="class_vector.html">Vector</a> &amp;v)</td></tr>
-<tr class="memdesc:a6818c73c2e33b67e86a9dc6cf2b8dde8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of multiplication of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object by a scalar.  <a href="class_vector.html#a6818c73c2e33b67e86a9dc6cf2b8dde8">More...</a><br /></td></tr>
+<tr class="memdesc:a6818c73c2e33b67e86a9dc6cf2b8dde8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of multiplication of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object by a scalar.  <a href="class_vector.html#a6818c73c2e33b67e86a9dc6cf2b8dde8">More...</a><br /></td></tr>
 <tr class="separator:a6818c73c2e33b67e86a9dc6cf2b8dde8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa57640d4ebaeb904da9ffde92517d9a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#aa57640d4ebaeb904da9ffde92517d9a6">operator*</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;v, const double &amp;d)</td></tr>
-<tr class="memdesc:aa57640d4ebaeb904da9ffde92517d9a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of multiplication of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object by a scalar.  <a href="class_vector.html#aa57640d4ebaeb904da9ffde92517d9a6">More...</a><br /></td></tr>
+<tr class="memdesc:aa57640d4ebaeb904da9ffde92517d9a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of multiplication of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object by a scalar.  <a href="class_vector.html#aa57640d4ebaeb904da9ffde92517d9a6">More...</a><br /></td></tr>
 <tr class="separator:aa57640d4ebaeb904da9ffde92517d9a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd10217cb3fd325a4a930373bc3a980f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#afd10217cb3fd325a4a930373bc3a980f">operator+</a> (const double &amp;d, const <a class="el" href="class_vector.html">Vector</a> &amp;v)</td></tr>
-<tr class="memdesc:afd10217cb3fd325a4a930373bc3a980f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of addition of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object with a scalar.  <a href="class_vector.html#afd10217cb3fd325a4a930373bc3a980f">More...</a><br /></td></tr>
+<tr class="memdesc:afd10217cb3fd325a4a930373bc3a980f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of addition of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object with a scalar.  <a href="class_vector.html#afd10217cb3fd325a4a930373bc3a980f">More...</a><br /></td></tr>
 <tr class="separator:afd10217cb3fd325a4a930373bc3a980f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfd7fa7cfca1b96a162b6b18acc05bee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#abfd7fa7cfca1b96a162b6b18acc05bee">operator+</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;v, const double &amp;d)</td></tr>
-<tr class="memdesc:abfd7fa7cfca1b96a162b6b18acc05bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of addition of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object with a scalar.  <a href="class_vector.html#abfd7fa7cfca1b96a162b6b18acc05bee">More...</a><br /></td></tr>
+<tr class="memdesc:abfd7fa7cfca1b96a162b6b18acc05bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of addition of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object with a scalar.  <a href="class_vector.html#abfd7fa7cfca1b96a162b6b18acc05bee">More...</a><br /></td></tr>
 <tr class="separator:abfd7fa7cfca1b96a162b6b18acc05bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e3d153b84eb64da06b54159a67159c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a87e3d153b84eb64da06b54159a67159c">operator-</a> (const double &amp;d, const <a class="el" href="class_vector.html">Vector</a> &amp;v)</td></tr>
-<tr class="memdesc:a87e3d153b84eb64da06b54159a67159c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of remove a scalar to a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a>.  <a href="class_vector.html#a87e3d153b84eb64da06b54159a67159c">More...</a><br /></td></tr>
+<tr class="memdesc:a87e3d153b84eb64da06b54159a67159c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of remove a scalar to a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a>.  <a href="class_vector.html#a87e3d153b84eb64da06b54159a67159c">More...</a><br /></td></tr>
 <tr class="separator:a87e3d153b84eb64da06b54159a67159c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4b04b4e787773ec71361d27a7ce27e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#ab4b04b4e787773ec71361d27a7ce27e8">operator-</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;v, const double &amp;d)</td></tr>
-<tr class="memdesc:ab4b04b4e787773ec71361d27a7ce27e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of remove a scalar to a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a>.  <a href="class_vector.html#ab4b04b4e787773ec71361d27a7ce27e8">More...</a><br /></td></tr>
+<tr class="memdesc:ab4b04b4e787773ec71361d27a7ce27e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of remove a scalar to a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a>.  <a href="class_vector.html#ab4b04b4e787773ec71361d27a7ce27e8">More...</a><br /></td></tr>
 <tr class="separator:ab4b04b4e787773ec71361d27a7ce27e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9193b1ea8aa7920201fdd74f36afa3d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a9193b1ea8aa7920201fdd74f36afa3d3">operator/</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;v, const double &amp;d)</td></tr>
-<tr class="memdesc:a9193b1ea8aa7920201fdd74f36afa3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator to divide a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> by a scalar.  <a href="class_vector.html#a9193b1ea8aa7920201fdd74f36afa3d3">More...</a><br /></td></tr>
+<tr class="memdesc:a9193b1ea8aa7920201fdd74f36afa3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator to divide a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> by a scalar.  <a href="class_vector.html#a9193b1ea8aa7920201fdd74f36afa3d3">More...</a><br /></td></tr>
 <tr class="separator:a9193b1ea8aa7920201fdd74f36afa3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac254b27efeb8486ee2f67821e3a21a60"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#ac254b27efeb8486ee2f67821e3a21a60">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="class_vector.html">Vector</a> &amp;v)</td></tr>
-<tr class="memdesc:ac254b27efeb8486ee2f67821e3a21a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload output stream operator for <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object.  <a href="class_vector.html#ac254b27efeb8486ee2f67821e3a21a60">More...</a><br /></td></tr>
+<tr class="memdesc:ac254b27efeb8486ee2f67821e3a21a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload output stream operator for <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object.  <a href="class_vector.html#ac254b27efeb8486ee2f67821e3a21a60">More...</a><br /></td></tr>
 <tr class="separator:ac254b27efeb8486ee2f67821e3a21a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class describing a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. Vectors are array of size n (&gt;0) dynamically constructed. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Indices are 0-based. Math formulae must be adpted consequently. </dd></dl>
+<div class="textblock"><p>A lightweight class describing a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. Vectors are array with size n (&gt;0) of doubles. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Maximum dimension of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> is 65 535 </dd>
+<dd>
+Indices are 0-based. Math formulae must be adpted consequently. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Template this class to use different data types (double, float, complex) </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6f80c73b5f18dcf3f8e36065bdc8b9e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f80c73b5f18dcf3f8e36065bdc8b9e5">&#9670;&nbsp;</a></span>Vector() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f80c73b5f18dcf3f8e36065bdc8b9e5">&#9670;&nbsp;</a></span>Vector() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,12 +212,12 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. Default constructor. Return an empty vector of 0 dimension. </p>
+<p>Construct a new <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. Default constructor. Return an empty vector of 0 dimension. </p>
 
 </div>
 </div>
-<a id="ac33152ff0909d6b40ef7018bc35b2b43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac33152ff0909d6b40ef7018bc35b2b43">&#9670;&nbsp;</a></span>Vector() <span class="overload">[2/3]</span></h2>
+<a id="a6dec2d7967f125293488526f442384ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dec2d7967f125293488526f442384ee">&#9670;&nbsp;</a></span>Vector() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,7 +228,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">Vector::Vector </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td></td>
         </tr>
@@ -215,7 +240,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. Return a zeros-vector of dimension n. </p>
+<p>Construct a new <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. Return a zeros-vector of dimension n. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>Dimension of the desired vector (must be greater or equal than 1) </td></tr>
@@ -225,8 +250,53 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a07f0bdd0e8e5f0e79c208045ce7789ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f0bdd0e8e5f0e79c208045ce7789ce">&#9670;&nbsp;</a></span>Vector() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector::Vector </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>dat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. Construct a vector object from an array of double. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dat</td><td>Array of double of size n </td></tr>
+    <tr><td class="paramname">n</td><td>Size of the input array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a5f04e343b7306ad11f8a82c89b486764"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f04e343b7306ad11f8a82c89b486764">&#9670;&nbsp;</a></span>Vector() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f04e343b7306ad11f8a82c89b486764">&#9670;&nbsp;</a></span>Vector() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,10 +319,10 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. Copy constructor. </p>
+<p>Construct a new <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. Copy constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> oject to be copied. </td></tr>
+    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> oject to be copied. </td></tr>
   </table>
   </dd>
 </dl>
@@ -282,13 +352,13 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destroy the <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. </p>
+<p>Destroy the <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a35ef4509e23fcf1ffed2bd76f019007e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35ef4509e23fcf1ffed2bd76f019007e">&#9670;&nbsp;</a></span>at()</h2>
+<a id="af7781e81bd282689d094c1cb7378491a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7781e81bd282689d094c1cb7378491a">&#9670;&nbsp;</a></span>basis()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,34 +367,45 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double&amp; Vector::at </td>
+          <td class="memname">static <a class="el" href="class_vector.html">Vector</a> Vector::basis </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the value of the n-th component of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. </p>
+<p>Construct vector of the canonical basis of R^n. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td>Index of the required value (must be between 0 and dim-1) </td></tr>
+    <tr><td class="paramname">n</td><td>Dimension of the vector space (must be greater or equal than 1) </td></tr>
+    <tr><td class="paramname">k</td><td>Number of the basis vector (must be between 0 and n-1). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>double&amp; address of the n-th element of the <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Indices are 0-based </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> k-th vector of the canonical basis of R^n. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Indices are 0-based. </dd></dl>
 
 </div>
 </div>
-<a id="ad96574185a2f02f92b9fa4415d46763f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad96574185a2f02f92b9fa4415d46763f">&#9670;&nbsp;</a></span>get_dim()</h2>
+<a id="a99a5bfe930401932b4ffb4bc4afd3227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a5bfe930401932b4ffb4bc4afd3227">&#9670;&nbsp;</a></span>get_dim()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,7 +414,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t Vector::get_dim </td>
+          <td class="memname">uint16_t Vector::get_dim </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -346,8 +427,61 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the dimension of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. </p>
-<dl class="section return"><dt>Returns</dt><dd>uint8_t Dimension of the <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a>. </dd></dl>
+<p>Get the dimension of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. </p>
+<dl class="section return"><dt>Returns</dt><dd>uint16_t Dimension of the <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a>. </dd></dl>
+
+</div>
+</div>
+<a id="ade9159eb310c184b3951a7af0a9d8cca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade9159eb310c184b3951a7af0a9d8cca">&#9670;&nbsp;</a></span>linspace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_vector.html">Vector</a> Vector::linspace </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object of length n filled with equally points spaced between t0 and t1 included. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t0</td><td>Starting value </td></tr>
+    <tr><td class="paramname">t1</td><td>Final value (must be greater than t0) </td></tr>
+    <tr><td class="paramname">n</td><td>Number of timestep including t0 and t1 (must be greater or equal than 2) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> of size n of equally spaced timestep between t0 and t1 </dd></dl>
 
 </div>
 </div>
@@ -375,14 +509,14 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>A general method to compute the norm of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. </p>
+<p>A general method to compute the norm of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>Integer to decide the norm to choose: type = -1 compute the L^{\infty} norm type &gt;= 1 Compute the L^p norm </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>double L^p norm of the <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>double L^p norm of the <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a>. </dd></dl>
 
 </div>
 </div>
@@ -409,8 +543,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute the L^1 norm of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. </p>
-<dl class="section return"><dt>Returns</dt><dd>double L^1 norm of the <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a>. </dd></dl>
+<p>Compute the L^1 norm of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. </p>
+<dl class="section return"><dt>Returns</dt><dd>double L^1 norm of the <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a>. </dd></dl>
 
 </div>
 </div>
@@ -437,8 +571,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute the Euclidean norm of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. </p>
-<dl class="section return"><dt>Returns</dt><dd>double Euclidean of the <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a>. </dd></dl>
+<p>Compute the Euclidean norm of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. </p>
+<dl class="section return"><dt>Returns</dt><dd>double Euclidean of the <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a>. </dd></dl>
 
 </div>
 </div>
@@ -465,13 +599,13 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute the L^{\infty} norm of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. </p>
-<dl class="section return"><dt>Returns</dt><dd>double L^{\infty} norm of the <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a>. </dd></dl>
+<p>Compute the L^{\infty} norm of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. </p>
+<dl class="section return"><dt>Returns</dt><dd>double L^{\infty} norm of the <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a>. </dd></dl>
 
 </div>
 </div>
-<a id="ace4cb201fb065182b0a3d84e02206e60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace4cb201fb065182b0a3d84e02206e60">&#9670;&nbsp;</a></span>normp()</h2>
+<a id="a919a3880967e6d1b9b36e04a28f3f38b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919a3880967e6d1b9b36e04a28f3f38b">&#9670;&nbsp;</a></span>normp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -482,7 +616,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">double Vector::normp </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -494,19 +628,54 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute the L^p norm of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. </p>
+<p>Compute the L^p norm of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>Order of the norm </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>double L^p norm of the <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>double L^p norm of the <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a>. </dd></dl>
 
 </div>
 </div>
-<a id="a853b1a689faf0dfb2d6e915b52feb7bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a853b1a689faf0dfb2d6e915b52feb7bc">&#9670;&nbsp;</a></span>operator()()</h2>
+<a id="a1113429bbddaf0764d1a184015655c11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1113429bbddaf0764d1a184015655c11">&#9670;&nbsp;</a></span>ones()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_vector.html">Vector</a> Vector::ones </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object of length n filled with ones. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Dimension of the vector (must be greater or equal than 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> A <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object of size n filled with ones </dd></dl>
+
+</div>
+</div>
+<a id="a6c73adb81011c74cab40b51d2cdba47e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c73adb81011c74cab40b51d2cdba47e">&#9670;&nbsp;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -517,7 +686,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">double&amp; Vector::operator() </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -529,14 +698,14 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Access the n-th value of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. </p>
+<p>Access the n-th value of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. Same as operator []. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>index of the required value (must be between 0 and dim-1) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>double&amp; address of the n-th element of the <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>double &amp; address of the n-th element of the <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>indices are 0-based. </dd></dl>
 
 </div>
@@ -608,7 +777,7 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a>&amp; Addition of current object with rhs </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a>&amp; Addition of current object with rhs </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Both vector must be of the same dimension </dd></dl>
 
 </div>
@@ -640,11 +809,11 @@ Friends</h2></td></tr>
 <p>Operator to get the opposite vector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td>a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object </td></tr>
+    <tr><td class="paramname">v</td><td>a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> the opposite of v, i.e. -v </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> the opposite of v, i.e. -v </dd></dl>
 
 </div>
 </div>
@@ -679,7 +848,7 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a>&amp; Difference of current object with rhs </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a>&amp; Difference of current object with rhs </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Both vector must be of the same dimension </dd></dl>
 
 </div>
@@ -715,7 +884,7 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a>&amp; A copy of vector v. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a>&amp; A copy of vector v. </dd></dl>
 
 </div>
 </div>
@@ -743,16 +912,122 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Overload of the equality operator for <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> objects. Two vectors are said to be equal if and only if they have the same dimension and they have exactly the same values. </p>
+<p>Overload of the equality operator for <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> objects. Two vectors are said to be equal if and only if they have the same dimension and they have exactly the same values. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object to be compare with. </td></tr>
+    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object to be compare with. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true If all values of both vectors coincide. </dd>
 <dd>
 false If at least of the value of the two vectors differ. </dd></dl>
+
+</div>
+</div>
+<a id="ac0a05c7cacfc240bc3e55e36d7ef464d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a05c7cacfc240bc3e55e36d7ef464d">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double&amp; Vector::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the n-th value of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>index of the required value (must be between 0 and dim-1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double &amp; address of the n-th element of the <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>indices are 0-based. </dd></dl>
+
+</div>
+</div>
+<a id="a52dd2d60694a4f7ad41e0d24287289e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52dd2d60694a4f7ad41e0d24287289e2">&#9670;&nbsp;</a></span>rand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_vector.html">Vector</a> Vector::rand </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object of length n filled with random values sampled from 0. to 1. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Dimension of the vector (must be greater or equal than 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> A <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object of size n filled with random values </dd></dl>
+
+</div>
+</div>
+<a id="a768da06f9989c5f7cd5b2990cde1f38c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a768da06f9989c5f7cd5b2990cde1f38c">&#9670;&nbsp;</a></span>zeros()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_vector.html">Vector</a> Vector::zeros </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object of length n filled with zeros. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Dimension of the vector (must be greater or equal than 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> A <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object of size n filled with zeros </dd></dl>
 
 </div>
 </div>
@@ -791,15 +1066,15 @@ false If at least of the value of the two vectors differ. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Operator of multiplication of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object by a scalar. </p>
+<p>Operator of multiplication of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object by a scalar. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">d</td><td>Double value to multiply v with </td></tr>
-    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> to be multiplied </td></tr>
+    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> to be multiplied </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> whose components are v[i]*d </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> whose components are v[i]*d </dd></dl>
 
 </div>
 </div>
@@ -837,15 +1112,15 @@ false If at least of the value of the two vectors differ. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Operator of multiplication of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object by a scalar. </p>
+<p>Operator of multiplication of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object by a scalar. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> to be multiplied </td></tr>
+    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> to be multiplied </td></tr>
     <tr><td class="paramname">d</td><td>Double value to multiply v with </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> whose components are v[i]*d </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> whose components are v[i]*d </dd></dl>
 
 </div>
 </div>
@@ -883,15 +1158,15 @@ false If at least of the value of the two vectors differ. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Operator of addition of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object with a scalar. </p>
+<p>Operator of addition of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object with a scalar. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">d</td><td>Double value added to v </td></tr>
-    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> to be additioned </td></tr>
+    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> to be additioned </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> whose components are v[i] + d </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> whose components are v[i] + d </dd></dl>
 
 </div>
 </div>
@@ -929,15 +1204,15 @@ false If at least of the value of the two vectors differ. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Operator of addition of a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object with a scalar. </p>
+<p>Operator of addition of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object with a scalar. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> to be additioned </td></tr>
+    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> to be additioned </td></tr>
     <tr><td class="paramname">d</td><td>Double value added to v </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> whose components are v[i] + d </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> whose components are v[i] + d </dd></dl>
 
 </div>
 </div>
@@ -975,15 +1250,15 @@ false If at least of the value of the two vectors differ. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Operator of remove a scalar to a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a>. </p>
+<p>Operator of remove a scalar to a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">d</td><td>Double value to remove to v </td></tr>
-    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> to be dimished </td></tr>
+    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> to be dimished </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> whose components are d - v[i] </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> whose components are d - v[i] </dd></dl>
 
 </div>
 </div>
@@ -1021,15 +1296,15 @@ false If at least of the value of the two vectors differ. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Operator of remove a scalar to a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a>. </p>
+<p>Operator of remove a scalar to a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> to be dimished </td></tr>
+    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> to be dimished </td></tr>
     <tr><td class="paramname">d</td><td>Double value to remove to v </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> whose components are v[i] - d </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> whose components are v[i] - d </dd></dl>
 
 </div>
 </div>
@@ -1067,15 +1342,15 @@ false If at least of the value of the two vectors differ. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Operator to divide a <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> by a scalar. </p>
+<p>Operator to divide a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> by a scalar. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> v </td></tr>
+    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> v </td></tr>
     <tr><td class="paramname">d</td><td>Double value to divide v (must be non-zero) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> whose components are v[i] / d </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> whose components are v[i] / d </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>d must me non-zero </dd></dl>
 
 </div>
@@ -1114,20 +1389,20 @@ false If at least of the value of the two vectors differ. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Overload output stream operator for <a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object. </p>
+<p>Overload output stream operator for <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">os</td><td>output stream </td></tr>
-    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A class describing a Vector object. Vectors are array of size n (&gt;0) dynamically constructed.">Vector</a> object </td></tr>
+    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> object </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; updated output stream </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::ostream &amp; updated output stream </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/<a class="el" href="vector_8hpp_source.html">vector.hpp</a></li>
+<li>src/linalg/<a class="el" href="vector_8hpp_source.html">vector.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

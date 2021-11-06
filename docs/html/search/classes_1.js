@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['matrix_50',['Matrix',['../class_matrix.html',1,'']]]
+  ['borderspecs_460',['BorderSpecs',['../classsciplot_1_1_border_specs.html',1,'sciplot']]]
 ];

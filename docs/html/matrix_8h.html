@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CONTROL TOOLBOX: src/matrix.h File Reference</title>
+<title>CONTROL TOOLBOX: src/linalg/matrix.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,13 +62,12 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5dff776341474e546195e534ccdc31ab.html">linalg</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">matrix.h File Reference</div>  </div>
 </div><!--header-->
@@ -76,32 +75,33 @@ $(function() {
 
 <p>Header file for <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> class.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;cstdint&gt;</code><br />
-<code>#include &lt;cassert&gt;</code><br />
-<code>#include &quot;<a class="el" href="vector_8hpp_source.html">vector.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="vector_8hpp_source.html">vector.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for matrix.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="matrix_8h__incl.png" border="0" usemap="#asrc_2matrix_8h" alt=""/></div>
-<map name="asrc_2matrix_8h" id="asrc_2matrix_8h">
-<area shape="rect" title="Header file for Matrix class." alt="" coords="126,5,215,32"/>
-<area shape="rect" title=" " alt="" coords="5,155,77,181"/>
-<area shape="rect" title=" " alt="" coords="101,155,163,181"/>
-<area shape="rect" title=" " alt="" coords="273,155,338,181"/>
-<area shape="rect" href="vector_8hpp.html" title="Header file for Vector class." alt="" coords="169,80,252,107"/>
-<area shape="rect" title=" " alt="" coords="187,155,248,181"/>
+<div class="center"><img src="matrix_8h__incl.png" border="0" usemap="#asrc_2linalg_2matrix_8h" alt=""/></div>
+<map name="asrc_2linalg_2matrix_8h" id="asrc_2linalg_2matrix_8h">
+<area shape="rect" title="Header file for Matrix class." alt="" coords="195,5,317,32"/>
+<area shape="rect" href="vector_8hpp.html" title="Header file for Vector class." alt="" coords="215,80,297,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,67,181"/>
+<area shape="rect" title=" " alt="" coords="91,155,152,181"/>
+<area shape="rect" title=" " alt="" coords="177,155,242,181"/>
+<area shape="rect" title=" " alt="" coords="267,155,339,181"/>
+<area shape="rect" title=" " alt="" coords="363,155,426,181"/>
+<area shape="rect" title=" " alt="" coords="450,155,507,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="matrix_8h__dep__incl.png" border="0" usemap="#asrc_2matrix_8hdep" alt=""/></div>
-<map name="asrc_2matrix_8hdep" id="asrc_2matrix_8hdep">
-<area shape="rect" title="Header file for Matrix class." alt="" coords="75,5,165,32"/>
+<div class="center"><img src="matrix_8h__dep__incl.png" border="0" usemap="#asrc_2linalg_2matrix_8hdep" alt=""/></div>
+<map name="asrc_2linalg_2matrix_8hdep" id="asrc_2linalg_2matrix_8hdep">
+<area shape="rect" title="Header file for Matrix class." alt="" coords="137,5,260,32"/>
 <area shape="rect" href="control_8h.html" title="Header file for Control class." alt="" coords="12,80,105,107"/>
-<area shape="rect" href="matrix_8cpp.html" title="Implémentation of the Matrix class." alt="" coords="130,80,233,107"/>
+<area shape="rect" href="matrix_8cpp.html" title="Implémentation of the Matrix class." alt="" coords="130,80,267,107"/>
+<area shape="rect" href="square_matrix_8h.html" title=" " alt="" coords="292,80,455,107"/>
 <area shape="rect" href="control_8cpp.html" title="Implementation of control class." alt="" coords="5,155,112,181"/>
+<area shape="rect" href="square_matrix_8cpp.html" title=" " alt="" coords="285,155,461,181"/>
 </map>
 </div>
 </div>
@@ -110,19 +110,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html">Matrix</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class describing a <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> object. Matrices are array of size (n,m) whre n and m are integer greater or equal than 1. Notice that in general a matrix is not square.  <a href="class_matrix.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class describing a <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> object. Matrices are array of size (n,m) whre n and m are integer greater or equal than 1. Notice that in general a matrix is not square. Non specific structure is assumed. Square, Diagonal, Triangular, etc, have dedicated classes.  <a href="class_matrix.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ad7a43141e5682ec35171de18d3b5fc99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#ad7a43141e5682ec35171de18d3b5fc99">eye</a> (uint8_t)</td></tr>
-<tr class="memdesc:ad7a43141e5682ec35171de18d3b5fc99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the identity <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> of size n.  <a href="matrix_8h.html#ad7a43141e5682ec35171de18d3b5fc99">More...</a><br /></td></tr>
-<tr class="separator:ad7a43141e5682ec35171de18d3b5fc99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60afd17f71cbc89e027b04dceb80ee20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a60afd17f71cbc89e027b04dceb80ee20">zeros</a> (uint8_t)</td></tr>
-<tr class="memdesc:a60afd17f71cbc89e027b04dceb80ee20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the zeors matrix of size n.  <a href="matrix_8h.html#a60afd17f71cbc89e027b04dceb80ee20">More...</a><br /></td></tr>
-<tr class="separator:a60afd17f71cbc89e027b04dceb80ee20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7de70530911322b71f50df3fe3f27956"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a7de70530911322b71f50df3fe3f27956">tr</a> (const <a class="el" href="class_matrix.html">Matrix</a> &amp;)</td></tr>
-<tr class="separator:a7de70530911322b71f50df3fe3f27956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> class. </p>
@@ -130,80 +119,7 @@ Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2021-10-21</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="ad7a43141e5682ec35171de18d3b5fc99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7a43141e5682ec35171de18d3b5fc99">&#9670;&nbsp;</a></span>eye()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> eye </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct the identity <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> of size n. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">n</td><td>Size of the <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> Identity matrix of dimension n times n </dd></dl>
-
-</div>
-</div>
-<a id="a7de70530911322b71f50df3fe3f27956"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7de70530911322b71f50df3fe3f27956">&#9670;&nbsp;</a></span>tr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double tr </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a60afd17f71cbc89e027b04dceb80ee20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60afd17f71cbc89e027b04dceb80ee20">&#9670;&nbsp;</a></span>zeros()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> zeros </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct the zeors matrix of size n. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">n</td><td>Size of the <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> of dimension n times n composed with only zeros </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

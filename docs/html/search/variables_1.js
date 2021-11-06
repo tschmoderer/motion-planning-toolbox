@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['n_5fcols_92',['n_cols',['../class_matrix.html#a35b2e0764389c45181b395508effc4d9',1,'Matrix']]],
-  ['n_5felements_93',['n_elements',['../class_matrix.html#a99d978a71ed34cfd8dd652d146d71465',1,'Matrix']]],
-  ['n_5frows_94',['n_rows',['../class_matrix.html#affc7193ce6ea5d0e858fee704e470cd5',1,'Matrix']]]
+  ['golden_5fratio_919',['GOLDEN_RATIO',['../namespacesciplot.html#a650f83199a311c0587bade565b31327b',1,'sciplot']]],
+  ['golden_5fratio_5finverse_920',['GOLDEN_RATIO_INVERSE',['../namespacesciplot.html#a63ec995b0541ef4babf7e48e4eef765c',1,'sciplot']]]
 ];
