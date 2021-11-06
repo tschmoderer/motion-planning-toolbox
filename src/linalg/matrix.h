@@ -44,9 +44,13 @@ class Matrix {
 		Matrix transpose() const;
 
 		/* OPERATORS */
+		double & operator()(uint32_t ) const;
 		double & operator()(uint16_t, uint16_t) const;
+
 		bool operator==(const Matrix & ) const;
+
 		Matrix & operator=(const Matrix & );
+
 		Matrix operator+(const Matrix & ) const; 
 		Matrix operator-(const Matrix & ) const; 
 		Matrix operator*(const Matrix & ) const; 
