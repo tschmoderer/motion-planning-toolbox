@@ -5,11 +5,13 @@
 
 class SquareMatrix : public Matrix {
     public: 
+        /* CONSTRUCTORS */
         SquareMatrix(uint16_t ); 
 
         /* METHODS */
 
         /* OPERATORS */
+        SquareMatrix & operator=(const SquareMatrix & );
 
         /* STATIC METHODS */
     	static SquareMatrix eye(uint16_t );

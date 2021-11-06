@@ -2,6 +2,11 @@
 
 SquareMatrix::SquareMatrix(uint16_t n) : Matrix(n,n) {}
 
+SquareMatrix & SquareMatrix::operator=(const SquareMatrix & A) {
+    Matrix::operator=(A);
+    return *this;
+}
+
 /**
  * @brief Construct the identity Matrix of size n
  * 
@@ -10,11 +15,9 @@ SquareMatrix::SquareMatrix(uint16_t n) : Matrix(n,n) {}
  */
 SquareMatrix SquareMatrix::eye(uint16_t n) {
     SquareMatrix A(n);
-
     for (int i = 0; i < n; i++ ) {
         A(i,i) = 1.0;
     }
-
     return A;
 }
 
