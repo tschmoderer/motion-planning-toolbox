@@ -9,7 +9,7 @@ on:
       - '**.hpp'
       - '**.c'
       - '**.h'
-      - 'doxyfile.conf'
+      - 'docs/doxyfile.conf'
   workflow_dispatch:
 
 jobs:
