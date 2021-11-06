@@ -39,8 +39,23 @@ class Control {
         /* DESTRUCTOR */
         ~Control(); 
 
+        /* ACCESSORS */
+        Vector get_time() const; 
+        Matrix get_data() const; 
+        Vector get_data(uint8_t ) const; 
+
+        void set_t0(double ); 
+        void set_t1(double ); 
+        void set_N(uint8_t ); 
+
+        void set_data(uint8_t , double , double ); 
+        void set_data(uint8_t , const Vector & ); 
+
+        /* METHODS */
+
         /* OPERATORS */
         Vector operator()(double) const; 
+        Matrix operator()(const Vector & ) const; 
 
         Control operator+(const Control & ) const; 
         Control operator-(const Control & ) const; 
@@ -49,11 +64,13 @@ class Control {
         Control & operator+=(const Control & ); 
         Control & operator-=(const Control & ); 
 
+        friend std::ostream & operator<<(std::ostream & , const Control & );
+
     private: 
-        uint8_t m;  /*!< Number of controls */
-        double  t0; /*!< Minimum timestep */
-        double  t1; /*!< Maximum timestep */ 
-        uint8_t N; /*!< Number of timesteps */
+        uint8_t m;    /*!< Number of controls */
+        double  t0;   /*!< Minimum timestep */
+        double  t1;   /*!< Maximum timestep */ 
+        uint8_t N;    /*!< Number of timesteps */
         Vector  time; /*!< Array of discrete times */
         Matrix  data; /*!< Value of controls at time step */
         interp_t interp_method = INTERP_LINEAR; /*!< Interpolation methods */

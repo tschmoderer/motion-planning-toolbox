@@ -1,21 +1,22 @@
 #include <iostream>
 #include "matrix.h"
+#include "squareMatrix.h"
 
 int main(int argc, char * argv[]) {
     Matrix M1(2,3);
-    M1.show();
+    std::cout << M1 << std::endl; 
 
-    Matrix M2(5); 
-    M2.show();
+    Matrix M2(5,5); 
+    std::cout << M2 << std::endl; 
 
     Matrix M3 = M1; 
-    M3.show();
+    std::cout << M3 << std::endl; 
 
-    Matrix M4 = eye(5);
-    M4.show();
+    SquareMatrix M4 = SquareMatrix::eye(5);
+    std::cout << M4 << std::endl; 
 
-    Matrix M5 = 2 * M4 * M4 + M4 + 5; 
-    M5.show();
+    /*SquareMatrix M5 = 2 * M4 * M4 + M4 + 5; 
+    std::cout << M5 << std::endl; */
 
     return 0;
 }

@@ -2,7 +2,7 @@
  * @file vector.hpp
  * @author T. Schmoderer (iathena@mailo.com)
  * @brief Header file for Vector class
- * @version 1.0
+ * @version 2.0
  * @date 2021-10-28
  * 
  * @copyright Copyright (c) 2021
@@ -15,13 +15,17 @@
 #include <math.h>
 #include <cassert>
 #include <iostream>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  * @class Vector
- * @brief A class describing a Vector object. 
- * Vectors are array of size n (>0) dynamically constructed.
+ * @brief A lightweight class describing a Vector object. 
+ * Vectors are array with size n (>0) of doubles.
  * 
+ * @warning Maximum dimension of a Vector is 65 535
  * @warning Indices are 0-based. Math formulae must be adpted consequently.
+ * @todo    Template this class to use different data types (double, float, complex)
  */
 class Vector {
     public: 
@@ -32,8 +36,8 @@ class Vector {
          * Return an empty vector of 0 dimension 
          */
         Vector() {
-            this->dim   = 0; 
-            this-> data = NULL; 
+            this->dim  = 0; 
+            this->data = NULL; 
         }
 
         /**
@@ -41,11 +45,27 @@ class Vector {
          * Return a zeros-vector of dimension n.
          * @param n Dimension of the desired vector (must be greater or equal than 1)
          */
-        Vector(uint8_t n) {
+        Vector(uint16_t n) {
+            assert(n > 0);
             this->dim  = n; 
             this->data = new double[n]; 
             for (int i = 0; i < n; i++) {
                 this->data[i] = 0.; 
+            }
+        }
+
+        /**
+         * @brief Construct a new Vector object.
+         * Construct a vector object from an array of double. 
+         * @param dat Array of double of size n
+         * @param n Size of the input array
+         */
+        Vector(double * dat, uint16_t n) {
+            assert(n > 0);
+            this->dim  = n; 
+            this->data = new double[n]; 
+            for (int i = 0; i < n; i++) {
+                this->data[i] = dat[i];
             }
         }
         
@@ -62,7 +82,7 @@ class Vector {
            }
        } 
 
-        /* DESTRUCTORS */
+        /* DESTRUCTOR */
         /**
          * @brief Destroy the Vector object.
          */
@@ -74,22 +94,10 @@ class Vector {
         /**
          * @brief Get the dimension of a Vector object.
          * 
-         * @return uint8_t Dimension of the Vector. 
+         * @return uint16_t Dimension of the Vector. 
          */
-        uint8_t get_dim() const {
+        uint16_t get_dim() const {
             return this->dim; 
-        }
-
-        /**
-         * @brief Get the value of the n-th component of a Vector object.
-         * 
-         * @param n Index of the required value (must be between 0 and dim-1)
-         * @return double& address of the n-th element of the Vector object. 
-         * @warning Indices are 0-based
-         */
-        double & at(uint8_t n) const {
-            assert(n >= 0); assert(n < this->dim); 
-            return this->data[n]; 
         }
 
         /* OEPRATORS */
@@ -97,10 +105,23 @@ class Vector {
          * @brief Access the n-th value of a Vector object.
          * 
          * @param n index of the required value (must be between 0 and dim-1)
-         * @return double& address of the n-th element of the Vector object.
+         * @return  double & address of the n-th element of the Vector object.
          * @warning indices are 0-based. 
          */
-        double & operator()(uint8_t n) const {
+        double & operator[](uint16_t n) const {
+            assert(n >= 0); assert(n < this->dim); 
+            return this->data[n]; 
+        }
+
+        /**
+         * @brief Access the n-th value of a Vector object.
+         * Same as operator []
+         * 
+         * @param n index of the required value (must be between 0 and dim-1)
+         * @return  double & address of the n-th element of the Vector object.
+         * @warning indices are 0-based. 
+         */
+        double & operator()(uint16_t n) const {
             assert(n >= 0); assert(n < this->dim); 
             return this->data[n]; 
         }
@@ -311,7 +332,7 @@ class Vector {
          * 
          * @param os output stream
          * @param v  Vector object
-         * @return std::ostream& updated output stream
+         * @return std::ostream & updated output stream
          */
         friend std::ostream & operator<< (std::ostream & os, const Vector & v) {
             for (int i = 0; i < v.dim; i++) {
@@ -353,7 +374,7 @@ class Vector {
          * @param p Order of the norm 
          * @return double L^p norm of the Vector.
          */
-        double normp(uint8_t p) {
+        double normp(uint16_t p) {
             double res = 0.;
             for (int i=0; i < this->dim; i++) {
                 res += pow(abs(this->data[i]), p);
@@ -402,25 +423,88 @@ class Vector {
             return this->normp(type); 
         }
 
+        /**
+        * @brief Construct vector of the canonical basis of R^n
+        * 
+        * @param n Dimension of the vector space (must be greater or equal than 1)
+        * @param k Number of the basis vector (must be between 0 and n-1).
+        * @return Vector k-th vector of the canonical basis of R^n.
+        * @warning Indices are 0-based.
+        */
+        static Vector basis(uint16_t n, uint16_t k) {
+            assert(n > 0); assert(k >= 0); assert(k < n); 
+            Vector v(n); 
+            v[k] = 1; 
+            return v; 
+        }
+
+        /**
+        * @brief Construct a Vector object of length n filled with zeros.
+        * 
+        * @param n Dimension of the vector (must be greater or equal than 1).
+        * @return Vector A Vector object of size n filled with zeros
+        */
+        static Vector zeros(uint16_t n) {
+            assert(n > 0); 
+            Vector v(n);
+            return v;
+        }
+
+        /**
+        * @brief Construct a Vector object of length n filled with random values sampled from 0. to 1.
+        * 
+        * @param n Dimension of the vector (must be greater or equal than 1).
+        * @return Vector  A Vector object of size n filled with random values
+        */
+        static Vector rand(uint16_t n) {
+            assert(n > 0); 
+            srand (time(NULL));
+
+            Vector v(n); 
+            for (int i = 0; i < n; i++) {
+                v[i] = ((double) std::rand() / (RAND_MAX)); 
+            }
+
+            return v;
+        }
+
+        /**
+        * @brief Construct a Vector object of length n filled with ones
+        * 
+        * @param n Dimension of the vector (must be greater or equal than 1).
+        * @return Vector  A Vector object of size n filled with ones
+        */
+        static Vector ones(uint16_t n) {
+            assert(n > 0); 
+            Vector v(n); 
+            for (int i = 0; i < n; i++) {
+                v[i] = 1.; 
+            }
+
+            return v;
+        }
+
+        /**
+        * @brief Construct a Vector object of length n filled  with equally points spaced between t0 and t1 included. 
+        * 
+        * @param t0 Starting value
+        * @param t1 Final value (must be greater than t0)
+        * @param n Number of timestep including t0 and t1 (must be greater or equal than 2)
+        * @return Vector of size n of equally spaced timestep between t0 and t1
+        */
+        static Vector linspace(double t0, double t1, uint16_t n) {
+            assert(t1 > t0); 
+            assert(n >= 2);
+            double dt = (t1-t0) / (1.*n - 1); 
+            Vector v(n);
+            for (int i = 0; i < n; i++) {
+                v[i] = t0 + i * dt;
+            }
+            return v;
+        }
+
     private:
-        uint8_t  dim;  /*!< Dimension of Vector object. @warning Must be greater than 1 */
+        uint16_t dim;  /*!< Dimension of Vector object. @warning Must be greater than 1 */
         double * data; /*!< Data of the vector object. */
 };
-
-/* Non Members Functions */
-/**
-    * @brief Construct vector of the canonical basis of R^n
-    * 
-    * @param n Dimension of the vector space (must be greater or equal than 1)
-    * @param k Number of the basis vector.
-    * @return Vector k-th vector of the canonical basis of R^n.
-    * @warning Indices are 0-based.
-    */
-inline Vector basis(uint8_t n, uint8_t k) {
-    assert(n > 0); assert(k >= 0); assert(k < n); 
-    Vector v(n); 
-    v(k) = 1; 
-    return v; 
-}
-
 #endif

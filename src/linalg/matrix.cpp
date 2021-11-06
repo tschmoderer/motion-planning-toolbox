@@ -29,32 +29,13 @@ Matrix::Matrix() {
  * @param n number of rows (must be greater or equal than 1)
  * @param m number of colums (must be greater or equal than 1)
  */
-Matrix::Matrix(uint8_t n, uint8_t m) {
+Matrix::Matrix(uint16_t n, uint16_t m) {
     assert(n > 0); assert(m > 0);
 
     this->n_rows     = n; 
     this->n_cols     = m; 
     this->n_elements = n * m; 
     this->data       = new double[n * m]; 
-
-    for (int i = 0; i < this->n_elements; i++) {
-        this->data[i] = 0.;
-    }
-}
-
-/**
- * @brief Construct a Matrix object.
- * Construct a square matrix of size n rows times n columns
- *
- * @param n number of rows and columns (must be greater or equal than 1)
- */
-Matrix::Matrix(uint8_t n) {
-    assert(n > 0);
-
-    this->n_rows = n; 
-    this->n_cols = n; 
-    this->n_elements = n * n; 
-    this->data = new double[n * n]; 
 
     for (int i = 0; i < this->n_elements; i++) {
         this->data[i] = 0.;
@@ -87,19 +68,37 @@ Matrix::~Matrix() {
 /**
  * @brief Accessor to the number of rows.
  * 
- * @return uint8_t Number of rows of the matrix (is greater or equal than 1)
+ * @return uint16_t Number of rows of the matrix (is greater or equal than 1)
  */
-uint8_t Matrix::get_n_rows() const {
+uint16_t Matrix::get_n_rows() const {
     return this->n_rows;
 }
 
 /**
  * @brief Accessor to the number of columns.
  * 
- * @return uint8_t Number of columns of the matrix (is greater or equal than 1)
+ * @return uint16_t Number of columns of the matrix (is greater or equal than 1)
  */
-uint8_t Matrix::get_n_cols() const {
+uint16_t Matrix::get_n_cols() const {
     return this->n_cols;
+}
+
+Vector Matrix::row(uint16_t r) const {
+    assert(r >= 0); assert(r < this->n_rows);
+    Vector res(this->n_cols); 
+    for (int j = 0; j < this->n_cols; j++) {
+        res(j) = this->at(r,j); 
+    }
+    return res;
+}
+
+Vector Matrix::col(uint16_t c) const {
+    assert(c >= 0); assert(c < this->n_cols);
+    Vector res(this->n_rows); 
+    for (int i = 0; i < this->n_rows; i++) {
+        res(i) = this->at(i,c); 
+    }
+    return res;
 }
 
 /**
@@ -111,7 +110,7 @@ uint8_t Matrix::get_n_cols() const {
  * 
  * @warning Indices are 0-based
  */
-double & Matrix::at(uint8_t i, uint16_t j) const {
+double & Matrix::at(uint16_t i, uint16_t j) const {
     assert((0 <= i) && (i < this->n_rows));
     assert((0 <= j) && (j < this->n_cols));
 
@@ -127,7 +126,7 @@ double & Matrix::at(uint8_t i, uint16_t j) const {
  * 
  * @warning Indices are 0-based
  */
-double & Matrix::operator()(uint8_t i, uint8_t j) const {
+double & Matrix::operator()(uint16_t i, uint16_t j) const {
     return this->at(i, j);
 }
 
@@ -163,8 +162,8 @@ double Matrix::normInf() const {
 
 double Matrix::normFrob() const {
     double res = 0.; 
-    for (int i=0; i < this->n_rows; i++) {
-        for (int j=0; j < this->n_cols; j++) {
+    for (int i = 0; i < this->n_rows; i++) {
+        for (int j = 0; j < this->n_cols; j++) {
             res += this->at(i,j) * this->at(i,j); 
         }
     }
@@ -172,19 +171,10 @@ double Matrix::normFrob() const {
     return res; 
 }
 
-double Matrix::trace() const {
-    assert(this->n_cols == this->n_rows); 
-    double res = 0.;
-    for (int i = 0; i < this->n_rows; i++) {
-        res += this->at(i,i); 
-    }
-    return res; 
-}
-
 Matrix Matrix::transpose() const {
     Matrix res(this->n_cols, this->n_rows); 
-    for (int i=0; i < this->n_cols; i++) {
-        for (int j=0; j < this->n_rows; j++) {
+    for (int i = 0; i < this->n_cols; i++) {
+        for (int j = 0; j < this->n_rows; j++) {
             res(i,j) = this->at(j,i); 
         }
     }
@@ -222,11 +212,13 @@ Matrix & Matrix::operator=(const Matrix & B) {
         return *this;
     }
 
-    this->n_rows = B.n_rows;
-    this->n_cols = B.n_cols;
-    this->n_elements = this->n_rows * this->n_cols;
-    delete [] this->data;
-    this->data = new double[this->n_elements];
+    if ((this->n_rows != B.n_rows) || (this->n_cols != B.n_cols)) {
+        this->n_rows = B.n_rows;
+        this->n_cols = B.n_cols;
+        this->n_elements = this->n_rows * this->n_cols;
+        delete [] this->data;
+        this->data = new double[this->n_elements];
+    }
 
     for (int i = 0; i < this->n_elements; i++) {
         this->data[i] = B.data[i];
@@ -370,13 +362,23 @@ Vector operator*(const Matrix & A, const Vector & v) {
     assert(A.n_cols == v.get_dim()); 
     Vector res(A.n_rows); 
 
-    for (int i=0; i < A.n_rows; i++) {
-        for (int k=0; k < A.n_cols; k++) {
-            res(i) += A(i,k) * v(k); 
+    for (int i = 0; i < A.n_rows; i++) {
+        for (int k = 0; k < A.n_cols; k++) {
+            res[i] += A(i,k) * v[k]; 
         }
     }
 
     return res;
+}
+
+std::ostream & operator<<(std::ostream & os, const Matrix & M) {
+    for (int i = 0; i < M.n_rows; i++) {
+        for (int j = 0; j < M.n_cols; j++) {
+            os << M(i,j) << "\t"; 
+        }
+        os << std::endl;
+    }
+    return os; 
 }
 
 /**
@@ -392,29 +394,16 @@ void Matrix::show() const {
     }
 }
 
-/**
- * @brief Construct the identity Matrix of size n
- * 
- * @param n Size of the Matrix
- * @return Matrix Identity matrix of dimension n times n 
- */
-Matrix eye(uint8_t n) {
-    Matrix A(n);
+Matrix Matrix::rand(uint16_t n, uint16_t m) {
+    assert(n > 0); assert(m > 0); 
+    srand (time(NULL));
 
-    for (int i = 0; i < n; i++ ) {
-            A(i,i) = 1.0;
+    Matrix M(n, m); 
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            M(i,j) = ((double) std::rand() / (RAND_MAX)); 
+        }
     }
-
-    return A;
-}
-
-/**
- * @brief Construct the zeors matrix of size n
- * 
- * @param n Size of the Matrix
- * @return Matrix of dimension n times n composed with only zeros
- */
-Matrix zeros(uint8_t n) {
-    Matrix A(n);
-    return A;
+    
+    return M; 
 }

@@ -11,43 +11,40 @@
  * @copyright Copyright (c) 2021
  */
 
-#include <iostream>
-#include <cstdint>
-#include <cassert>
 #include "vector.hpp"
 
 /**
  * @class Matrix
  * @brief A class describing a Matrix object. 
  * Matrices are array of size (n,m) whre n and m are integer greater or equal than 1. 
- * Notice that in general a matrix is not square. 
+ * Notice that in general a matrix is not square. Non specific structure is assumed. Square, Diagonal, Triangular, etc, have dedicated classes.
  * @warning Indices are 0-based (Math Formulae must be adapted consequently)
+ * @warning Maximum dimension of a Matrix is 65 535 times 65 535
  */
 class Matrix {
 	public: 
 		/* CONSTRUCTORs */
 		Matrix(); 
-		Matrix(uint8_t , uint8_t );
-		Matrix(uint8_t );
-
+		Matrix(uint16_t , uint16_t );
 		Matrix(const Matrix & );
 
 		/* DESTRUCTOR */
 		virtual ~Matrix();
 
 		/* ACCESSORS */
-		uint8_t get_n_rows() const; 
-		uint8_t get_n_cols() const;
+		uint16_t get_n_rows() const; 
+		uint16_t get_n_cols() const;
 
 		/* CLASS METHODS */
+		Vector row(uint16_t ) const;
+		Vector col(uint16_t ) const;
 		double norm1() const;
 		double normInf() const; 
 		double normFrob() const; 
-		double trace() const;  
 		Matrix transpose() const;
 
 		/* OPERATORS */
-		double & operator()(uint8_t, uint8_t) const;
+		double & operator()(uint16_t, uint16_t) const;
 		bool operator==(const Matrix & ) const;
 		Matrix & operator=(const Matrix & );
 		Matrix operator+(const Matrix & ) const; 
@@ -74,22 +71,21 @@ class Matrix {
 		friend Vector operator*(const Matrix & , const Vector & ); 
 
 		/* HELPERS */
-		void show() const;
+		friend std::ostream & operator<<(std::ostream & , const Matrix & );
+
+		/* STATIC METHODS */
+		static Matrix rand(uint16_t , uint16_t );
 
 	protected:
 		/* ATTRIBUTES */
-		uint8_t  n_rows;     /*!< Number of rows. @warning Must be greater than 1 */
-		uint8_t  n_cols;     /*!< Number of columns. @warning Must be greater than 1 */
-		uint16_t n_elements; /*!< Number of elements */
-		double*  data;       /*!< Matrix data */
+		uint16_t n_rows;     /*!< Number of rows. @warning Must be greater than 1 */
+		uint16_t n_cols;     /*!< Number of columns. @warning Must be greater than 1 */
+		uint32_t n_elements; /*!< Number of elements */
+		double * data;       /*!< Matrix data */
 
 		/* METHODS */
-		double & at(uint8_t , uint16_t ) const;
+		double & at(uint16_t , uint16_t ) const;
+		void show() const;
 };
-
-/* Non Members Methods */
-Matrix eye(uint8_t );
-Matrix zeros(uint8_t );
-double tr(const Matrix & );
 
 #endif
