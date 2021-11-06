@@ -83,6 +83,10 @@ uint16_t Matrix::get_n_cols() const {
     return this->n_cols;
 }
 
+uint32_t Matrix::get_n_elements() const {
+    return this->n_elements;
+}
+
 Vector Matrix::row(uint16_t r) const {
     assert(r >= 0); assert(r < this->n_rows);
     Vector res(this->n_cols); 
@@ -402,10 +406,8 @@ void Matrix::show() const {
 Matrix Matrix::ones(uint16_t n, uint16_t m) {
     assert(n > 0); assert(m > 0);
     Matrix M(n,m); 
-    for (int i = 0; i< n; i++) {
-        for (int j = 0; j < m; j++) {
-            M(i,j) = 1.;
-        }
+    for (int i = 0; i < M.get_n_elements(); i++) {
+        M(i) = 1.; 
     }
     return M;
 }
@@ -414,7 +416,7 @@ Matrix Matrix::rand(uint16_t n, uint16_t m) {
     assert(n > 0); assert(m > 0); 
     srand (time(NULL));
     Matrix M(n, m); 
-    for (int i = 0; i < n*m; i++) {
+    for (int i = 0; i < M.get_n_elements(); i++) {
         M(i) = ((double) std::rand() / (RAND_MAX)); 
     }
     return M; 
@@ -422,6 +424,6 @@ Matrix Matrix::rand(uint16_t n, uint16_t m) {
 
 Matrix Matrix::zeros(uint16_t n, uint16_t m) {
     assert(n > 0); assert(m > 0);
-    Matrix M(n,m); 
+    Matrix M(n, m); 
     return M;
 }

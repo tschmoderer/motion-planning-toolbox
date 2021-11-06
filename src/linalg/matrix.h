@@ -34,6 +34,7 @@ class Matrix {
 		/* ACCESSORS */
 		uint16_t get_n_rows() const; 
 		uint16_t get_n_cols() const;
+		uint32_t get_n_elements() const; 
 
 		/* CLASS METHODS */
 		Vector row(uint16_t ) const;
