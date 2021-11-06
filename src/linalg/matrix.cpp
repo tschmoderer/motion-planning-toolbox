@@ -394,16 +394,31 @@ void Matrix::show() const {
     }
 }
 
+Matrix Matrix::ones(uint16_t n, uint16_t m) {
+    assert(n > 0); assert(m > 0);
+    Matrix M(n,m); 
+    for (int i = 0; i< n; i++) {
+        for (int j = 0; j < m; j++) {
+            M(i,j) = 1.;
+        }
+    }
+    return M;
+}
+
 Matrix Matrix::rand(uint16_t n, uint16_t m) {
     assert(n > 0); assert(m > 0); 
     srand (time(NULL));
-
     Matrix M(n, m); 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             M(i,j) = ((double) std::rand() / (RAND_MAX)); 
         }
     }
-    
     return M; 
+}
+
+Matrix Matrix::zeros(uint16_t n, uint16_t m) {
+    assert(n > 0); assert(m > 0);
+    Matrix M(n,m); 
+    return M;
 }

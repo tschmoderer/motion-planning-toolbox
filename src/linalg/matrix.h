@@ -74,7 +74,9 @@ class Matrix {
 		friend std::ostream & operator<<(std::ostream & , const Matrix & );
 
 		/* STATIC METHODS */
+		static Matrix ones(uint16_t , uint16_t ); 
 		static Matrix rand(uint16_t , uint16_t );
+		static Matrix zeros(uint16_t , uint16_t ); 
 
 	protected:
 		/* ATTRIBUTES */
