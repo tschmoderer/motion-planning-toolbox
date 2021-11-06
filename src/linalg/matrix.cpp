@@ -414,10 +414,8 @@ Matrix Matrix::rand(uint16_t n, uint16_t m) {
     assert(n > 0); assert(m > 0); 
     srand (time(NULL));
     Matrix M(n, m); 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            M(i,j) = ((double) std::rand() / (RAND_MAX)); 
-        }
+    for (int i = 0; i < n*m; i++) {
+        M(i) = ((double) std::rand() / (RAND_MAX)); 
     }
     return M; 
 }
