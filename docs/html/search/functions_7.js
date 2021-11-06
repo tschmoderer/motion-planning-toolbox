@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['hide_710',['hide',['../classsciplot_1_1_show_specs_of.html#a318798b06bad56629ddd6f949fb167df',1,'sciplot::ShowSpecsOf']]],
-  ['histogramstylespecs_711',['HistogramStyleSpecs',['../classsciplot_1_1_histogram_style_specs.html#a94abbef6a31b8b4ae2d610269cced1b8',1,'sciplot::HistogramStyleSpecs']]]
+  ['matrix_90',['Matrix',['../class_matrix.html#a2dba13c45127354c9f75ef576f49269b',1,'Matrix::Matrix()'],['../class_matrix.html#af831fa075a2bf6c2e6608217ad681f38',1,'Matrix::Matrix(uint16_t, uint16_t)'],['../class_matrix.html#a0b9cfa2302a0273afb1b26e501f93abc',1,'Matrix::Matrix(const Matrix &amp;)']]]
 ];

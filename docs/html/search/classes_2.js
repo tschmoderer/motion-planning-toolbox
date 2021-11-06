@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['columnindex_461',['ColumnIndex',['../structsciplot_1_1_column_index.html',1,'sciplot']]],
-  ['control_462',['Control',['../class_control.html',1,'']]]
+  ['squarematrix_68',['SquareMatrix',['../class_square_matrix.html',1,'']]]
 ];

@@ -1,31 +1,4 @@
 var searchData=
 [
-  ['add_572',['add',['../classsciplot_1_1_tics_specs_major.html#a06082805322daf6a7aba46179d4e7950',1,'sciplot::TicsSpecsMajor::add(const std::vector&lt; double &gt; &amp;values, const std::vector&lt; std::string &gt; &amp;labels) -&gt; TicsSpecsMajor &amp;'],['../classsciplot_1_1_tics_specs_major.html#a56277ab0e8154f2f4cef9d425619f5ef',1,'sciplot::TicsSpecsMajor::add(const std::vector&lt; double &gt; &amp;values) -&gt; TicsSpecsMajor &amp;']]],
-  ['alongaxis_573',['alongAxis',['../classsciplot_1_1_tics_specs_base_of.html#abbf908b2573c69e91278c7964c4c171b',1,'sciplot::TicsSpecsBaseOf']]],
-  ['alongborder_574',['alongBorder',['../classsciplot_1_1_tics_specs_base_of.html#a1f35fa479d2a3b7aa40ee8e8219cbc30',1,'sciplot::TicsSpecsBaseOf']]],
-  ['at_575',['at',['../class_matrix.html#ac5b915fd0e1de6209ae55aa9fa0fa5f3',1,'Matrix::at()'],['../classsciplot_1_1_tics_specs_major.html#a48cca03b7ded61cb1b9c717479dc3859',1,'sciplot::TicsSpecsMajor::at(const std::vector&lt; double &gt; &amp;values) -&gt; TicsSpecsMajor &amp;'],['../classsciplot_1_1_tics_specs_major.html#a4f7e89297f6d661f11a87eb69fc64d7b',1,'sciplot::TicsSpecsMajor::at(const std::vector&lt; double &gt; &amp;values, const std::vector&lt; std::string &gt; &amp;labels) -&gt; TicsSpecsMajor &amp;']]],
-  ['atbottom_576',['atBottom',['../classsciplot_1_1_legend_specs.html#a5b1867a9882af51ad64072a687fed430',1,'sciplot::LegendSpecs']]],
-  ['atbottomleft_577',['atBottomLeft',['../classsciplot_1_1_legend_specs.html#a571396d1b0b91be035ea747a6b7b885b',1,'sciplot::LegendSpecs']]],
-  ['atbottomright_578',['atBottomRight',['../classsciplot_1_1_legend_specs.html#adabd4617b3cc81292c748bf9b9edca06',1,'sciplot::LegendSpecs']]],
-  ['atcenter_579',['atCenter',['../classsciplot_1_1_legend_specs.html#ad4620930ed3383647c1560d8400b95d5',1,'sciplot::LegendSpecs']]],
-  ['atleft_580',['atLeft',['../classsciplot_1_1_legend_specs.html#a0fa30500eee9053d9e702edc9375d38d',1,'sciplot::LegendSpecs']]],
-  ['atoutsidebottom_581',['atOutsideBottom',['../classsciplot_1_1_legend_specs.html#aa92054f33514ec4099b22c3df1f9f28a',1,'sciplot::LegendSpecs']]],
-  ['atoutsidebottomleft_582',['atOutsideBottomLeft',['../classsciplot_1_1_legend_specs.html#a6ac68f7f8b8e04e7b14b96bf7c4d4f33',1,'sciplot::LegendSpecs']]],
-  ['atoutsidebottomright_583',['atOutsideBottomRight',['../classsciplot_1_1_legend_specs.html#a75ad8311f03566dafe10b2559b4b9523',1,'sciplot::LegendSpecs']]],
-  ['atoutsideleft_584',['atOutsideLeft',['../classsciplot_1_1_legend_specs.html#a5e895b72360dee0167f1fdf9b2bf3536',1,'sciplot::LegendSpecs']]],
-  ['atoutsideleftbottom_585',['atOutsideLeftBottom',['../classsciplot_1_1_legend_specs.html#a89f601198a7a16175bfe0c69f2a36a87',1,'sciplot::LegendSpecs']]],
-  ['atoutsidelefttop_586',['atOutsideLeftTop',['../classsciplot_1_1_legend_specs.html#aa14ce8e411bb190bb06adff0d7ccb49a',1,'sciplot::LegendSpecs']]],
-  ['atoutsideright_587',['atOutsideRight',['../classsciplot_1_1_legend_specs.html#a3edafe9b76c42528d0d9c1b318ba23bb',1,'sciplot::LegendSpecs']]],
-  ['atoutsiderightbottom_588',['atOutsideRightBottom',['../classsciplot_1_1_legend_specs.html#adb3996158b6aa80957a2e14092598427',1,'sciplot::LegendSpecs']]],
-  ['atoutsiderighttop_589',['atOutsideRightTop',['../classsciplot_1_1_legend_specs.html#a1de3478ed9bbaff6ac4f1397d0b34849',1,'sciplot::LegendSpecs']]],
-  ['atoutsidetop_590',['atOutsideTop',['../classsciplot_1_1_legend_specs.html#a42a6692a94a4f4772b18f30102411eff',1,'sciplot::LegendSpecs']]],
-  ['atoutsidetopleft_591',['atOutsideTopLeft',['../classsciplot_1_1_legend_specs.html#add24adde4c74849f6c5836f9182a681c',1,'sciplot::LegendSpecs']]],
-  ['atoutsidetopright_592',['atOutsideTopRight',['../classsciplot_1_1_legend_specs.html#af0927cbd3a98a25e3b183095bc690e71',1,'sciplot::LegendSpecs']]],
-  ['atright_593',['atRight',['../classsciplot_1_1_legend_specs.html#aa82547767a7e350241ef08481984fb05',1,'sciplot::LegendSpecs']]],
-  ['attop_594',['atTop',['../classsciplot_1_1_legend_specs.html#aa12096878c5aa8b74911dd3cf12851d7',1,'sciplot::LegendSpecs']]],
-  ['attopleft_595',['atTopLeft',['../classsciplot_1_1_legend_specs.html#a9fa0b4d618b71f74df613d5c76d45b03',1,'sciplot::LegendSpecs']]],
-  ['attopright_596',['atTopRight',['../classsciplot_1_1_legend_specs.html#a1d9c1846c6a664737da4326a8684f418',1,'sciplot::LegendSpecs']]],
-  ['autoclean_597',['autoclean',['../classsciplot_1_1_figure.html#a03f7af36fe1137d99ae67427af4e5238',1,'sciplot::Figure::autoclean()'],['../classsciplot_1_1_plot.html#ab37551a73647569e88914e5fc9aa478e',1,'sciplot::Plot::autoclean()']]],
-  ['automatic_598',['automatic',['../classsciplot_1_1_tics_specs_major.html#ad7d449ebc874229f0a8b6a3e8e575fcf',1,'sciplot::TicsSpecsMajor::automatic()'],['../classsciplot_1_1_tics_specs_minor.html#a74b578ebe97ad245a7f2918fd7887734',1,'sciplot::TicsSpecsMinor::automatic()']]],
-  ['axislabelspecs_599',['AxisLabelSpecs',['../classsciplot_1_1_axis_label_specs.html#ad72233f39695e8dc7f648beaaee93580',1,'sciplot::AxisLabelSpecs']]]
+  ['at_78',['at',['../class_matrix.html#ac5b915fd0e1de6209ae55aa9fa0fa5f3',1,'Matrix']]]
 ];

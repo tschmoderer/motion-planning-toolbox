@@ -1,8 +1,0 @@
-<map id="sciplot::TicsSpecsBaseOf&lt; DerivedSpecs &gt;" name="sciplot::TicsSpecsBaseOf&lt; DerivedSpecs &gt;">
-<area shape="rect" id="node1" title="The class used to attach common tic options to a type that also specifies tic options." alt="" coords="659,71,831,112"/>
-<area shape="rect" id="node2" href="$classsciplot_1_1_text_specs_of.html" title="The class used to attach text options to a type." alt="" coords="463,5,606,47"/>
-<area shape="rect" id="node3" href="$classsciplot_1_1_font_specs_of.html" title="The class used to attach font options to a type." alt="" coords="264,9,407,51"/>
-<area shape="rect" id="node4" href="$classsciplot_1_1_specs.html" title="The base class for other specs classes (e.g., LineSpecsOf, DrawSpecs, BorderSpecs,..." alt="" coords="5,78,212,105"/>
-<area shape="rect" id="node5" href="$classsciplot_1_1_offset_specs_of.html" title="The class used to attach offset options to a type." alt="" coords="459,71,611,112"/>
-<area shape="rect" id="node6" href="$classsciplot_1_1_show_specs_of.html" title="The class used to attach visibility options to a type." alt="" coords="260,129,411,171"/>
-</map>

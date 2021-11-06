@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['extension_933',['Extension',['../namespacesciplot.html#afca095b2ca40d664a42d06a34404419f',1,'sciplot']]]
+  ['interp_5ft_130',['interp_t',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25',1,'control.h']]]
 ];

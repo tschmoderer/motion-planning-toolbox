@@ -1,26 +1,8 @@
 var searchData=
 [
-  ['figure_678',['Figure',['../classsciplot_1_1_figure.html#ad4c44f508c6d0bc6ab5b8d78b3bfe341',1,'sciplot::Figure::Figure(const std::vector&lt; std::vector&lt; Plot &gt;&gt; &amp;plots)'],['../classsciplot_1_1_figure.html#a5bc64f6e1ec910593029acb8ffa8c6c2',1,'sciplot::Figure::Figure(const std::initializer_list&lt; std::initializer_list&lt; Plot &gt;&gt; &amp;plots)']]],
-  ['fillcolor_679',['fillColor',['../classsciplot_1_1_fill_specs_of.html#a56713011c5c824fd8de8f21a914a7361',1,'sciplot::FillSpecsOf']]],
-  ['fillempty_680',['fillEmpty',['../classsciplot_1_1_fill_specs_of.html#aa371fa33982b1a8897e1459df02eea8a',1,'sciplot::FillSpecsOf']]],
-  ['fillintensity_681',['fillIntensity',['../classsciplot_1_1_fill_specs_of.html#af03180b6007b334072fdbcc3c51f1959',1,'sciplot::FillSpecsOf']]],
-  ['fillpattern_682',['fillPattern',['../classsciplot_1_1_fill_specs_of.html#af6f230b8d3680bff2ca51b1b93376538',1,'sciplot::FillSpecsOf']]],
-  ['fillsolid_683',['fillSolid',['../classsciplot_1_1_fill_specs_of.html#af0897120afa58908ceb7fa154926b766',1,'sciplot::FillSpecsOf']]],
-  ['fillspecsof_684',['FillSpecsOf',['../classsciplot_1_1_fill_specs_of.html#abadd97be4ba8e1577b8ca79b02157ea6',1,'sciplot::FillSpecsOf']]],
-  ['fillstylespecs_685',['FillStyleSpecs',['../classsciplot_1_1_fill_style_specs.html#a1dbecb55ae3471589d97278de6a6e37e',1,'sciplot::FillStyleSpecs']]],
-  ['filltransparent_686',['fillTransparent',['../classsciplot_1_1_fill_specs_of.html#aba0c0b26fd723560b3f479de0ada5476',1,'sciplot::FillSpecsOf']]],
-  ['fontname_687',['fontName',['../classsciplot_1_1_figure.html#a9e7fd2a27f8fcd1107571332764321be',1,'sciplot::Figure::fontName()'],['../classsciplot_1_1_plot.html#aa8a8e96fd733b47e414c179040b931a8',1,'sciplot::Plot::fontName()'],['../classsciplot_1_1_font_specs_of.html#a7eb6619f08a0d5cf70d76cdf5a2449b9',1,'sciplot::FontSpecsOf::fontName()']]],
-  ['fontsize_688',['fontSize',['../classsciplot_1_1_plot.html#a7fee0fee7ec27b8439c4932e011c168f',1,'sciplot::Plot::fontSize()'],['../classsciplot_1_1_font_specs_of.html#a25671937663d5d7c04f82ca6d952777a',1,'sciplot::FontSpecsOf::fontSize()'],['../classsciplot_1_1_figure.html#ab9f6007adfc09c24d9f2c1af16264a7f',1,'sciplot::Figure::fontSize()']]],
-  ['fontspecsof_689',['FontSpecsOf',['../classsciplot_1_1_font_specs_of.html#a5ab64af2eb74da67558200df66a96bd9',1,'sciplot::FontSpecsOf']]],
-  ['format_690',['format',['../classsciplot_1_1_tics_specs_base_of.html#a7653d3e73f6dfd3b9951ff1bc7498628',1,'sciplot::TicsSpecsBaseOf']]],
-  ['framedashtype_691',['frameDashType',['../classsciplot_1_1_frame_specs_of.html#a61f9bd5e7c28921009296f485eabe2b0',1,'sciplot::FrameSpecsOf']]],
-  ['framehide_692',['frameHide',['../classsciplot_1_1_frame_specs_of.html#a269096515eeb93fa3a758c974b426367',1,'sciplot::FrameSpecsOf']]],
-  ['framelinecolor_693',['frameLineColor',['../classsciplot_1_1_frame_specs_of.html#a08e22a63c0f8aa986fc671a95c421c1a',1,'sciplot::FrameSpecsOf']]],
-  ['framelinestyle_694',['frameLineStyle',['../classsciplot_1_1_frame_specs_of.html#a1d4ecd2dbb5efd47c118dbcbede165f8',1,'sciplot::FrameSpecsOf']]],
-  ['framelinetype_695',['frameLineType',['../classsciplot_1_1_frame_specs_of.html#a3aef26b187d6dcc85ec9de0a85c29ffb',1,'sciplot::FrameSpecsOf']]],
-  ['framelinewidth_696',['frameLineWidth',['../classsciplot_1_1_frame_specs_of.html#a1f7b1ad9c83e18302ad0c33c2c33b66a',1,'sciplot::FrameSpecsOf']]],
-  ['frameshow_697',['frameShow',['../classsciplot_1_1_frame_specs_of.html#a38c00af8d4db39b87edb5c6e092fd043',1,'sciplot::FrameSpecsOf']]],
-  ['framespecsof_698',['FrameSpecsOf',['../classsciplot_1_1_frame_specs_of.html#a279224966e04271cbab05348c67b3dcc',1,'sciplot::FrameSpecsOf']]],
-  ['front_699',['front',['../classsciplot_1_1_depth_specs_of.html#a17d6a6ef6174e934f24405084924568d',1,'sciplot::DepthSpecsOf']]],
-  ['frontvertical_700',['frontVertical',['../classsciplot_1_1_border_specs.html#a2e7c8ad1c5db13ce7fdfb719cbecb599',1,'sciplot::BorderSpecs']]]
+  ['get_5fdata_84',['get_data',['../class_control.html#a8e3c6422d6a1084384cc67af739c0c6b',1,'Control::get_data() const'],['../class_control.html#aaba8ea1616ebc0fb341ed07729e8ab6f',1,'Control::get_data(uint8_t) const']]],
+  ['get_5fdim_85',['get_dim',['../class_vector.html#a99a5bfe930401932b4ffb4bc4afd3227',1,'Vector']]],
+  ['get_5fn_5fcols_86',['get_n_cols',['../class_matrix.html#adaf9dc155b6b045ac57b63ccfd4a1b5c',1,'Matrix']]],
+  ['get_5fn_5frows_87',['get_n_rows',['../class_matrix.html#a6f9688307dd4ec181b1da8c95f574ff6',1,'Matrix']]],
+  ['get_5ftime_88',['get_time',['../class_control.html#adee3fca60a5ed8c0a7b7151cfd68de3f',1,'Control']]]
 ];

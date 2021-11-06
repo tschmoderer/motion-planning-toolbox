@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['none_736',['none',['../classsciplot_1_1_border_specs.html#a5c30ab831dc4820717ebd9001b86fa1b',1,'sciplot::BorderSpecs']]],
-  ['norm_737',['norm',['../class_vector.html#ab5599209f3fdcb5662194aefab5b9394',1,'Vector']]],
-  ['norm1_738',['norm1',['../class_matrix.html#abf79f9e27f3bfcf2cc8e5cfc1f02fdf8',1,'Matrix::norm1()'],['../class_vector.html#a2ec8fea78d48174ac2cde94060f2285e',1,'Vector::norm1()']]],
-  ['norm2_739',['norm2',['../class_vector.html#a36fca83a79477c6367cc8ea5987e1100',1,'Vector']]],
-  ['normfrob_740',['normFrob',['../class_matrix.html#a1f4744c7b2882abaee6b70f6f15a6bd6',1,'Matrix']]],
-  ['norminf_741',['normInf',['../class_matrix.html#a66fdb5c8533b884ccb6e9a1d9ebd7f37',1,'Matrix::normInf()'],['../class_vector.html#a8c03705e581b2f66df2d1f132e833efa',1,'Vector::normInf()']]],
-  ['normp_742',['normp',['../class_vector.html#a919a3880967e6d1b9b36e04a28f3f38b',1,'Vector']]],
-  ['number_743',['number',['../classsciplot_1_1_tics_specs_minor.html#ab6a425a49b145176252750aedf96f940',1,'sciplot::TicsSpecsMinor']]]
+  ['set_5fdata_113',['set_data',['../class_control.html#af91fa3b50ec98199874ac413e065cb72',1,'Control::set_data(uint8_t, double, double)'],['../class_control.html#acde7a51e096dcaed473466b39a3f5cd7',1,'Control::set_data(uint8_t, const Vector &amp;)']]],
+  ['set_5fn_114',['set_N',['../class_control.html#a949e74e8db74b4a4492c7531b837cbfe',1,'Control']]],
+  ['set_5ft0_115',['set_t0',['../class_control.html#ac7efda85a75c97e44c5d7d51c09e42ee',1,'Control']]],
+  ['set_5ft1_116',['set_t1',['../class_control.html#a6c4f6b74384652c6ed00bd7b322c7349',1,'Control']]],
+  ['show_117',['show',['../class_matrix.html#ac8004035ae9446ac04cf0d3e97011702',1,'Matrix']]],
+  ['squarematrix_118',['SquareMatrix',['../class_square_matrix.html#a2b6a885c455bf4440a3153cd55bcede3',1,'SquareMatrix']]]
 ];

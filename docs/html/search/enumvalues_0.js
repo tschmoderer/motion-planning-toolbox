@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['emf_935',['emf',['../namespacesciplot.html#afca095b2ca40d664a42d06a34404419fafd165adc15673b1b0f2d4ea06692095a',1,'sciplot']]],
-  ['eps_936',['eps',['../namespacesciplot.html#afca095b2ca40d664a42d06a34404419face8e4a184e2e534c09d6bf6ae773ca4a',1,'sciplot']]]
+  ['interp_5fconstant_5fleft_131',['INTERP_CONSTANT_LEFT',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25ab7ccea8ae0457c69704c0835f6480e18',1,'control.h']]],
+  ['interp_5fconstant_5fright_132',['INTERP_CONSTANT_RIGHT',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a5e9da5b99456219f1c0560c7e85be262',1,'control.h']]],
+  ['interp_5flinear_133',['INTERP_LINEAR',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a17abedd2e487446bf814c9da0b7791de',1,'control.h']]],
+  ['interp_5fnearest_134',['INTERP_NEAREST',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a5dc1c99b5e803daf350345d519b58b67',1,'control.h']]]
 ];

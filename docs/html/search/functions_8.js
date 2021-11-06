@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['increment_712',['increment',['../classsciplot_1_1_tics_specs_major.html#a8686e1234d2de5139368bf633b5e611e',1,'sciplot::TicsSpecsMajor']]],
-  ['insidegraph_713',['insideGraph',['../classsciplot_1_1_tics_specs_base_of.html#a6fdec17f42c34efcda1704a4b96240a6',1,'sciplot::TicsSpecsBaseOf']]],
-  ['intensity_714',['intensity',['../classsciplot_1_1_fill_style_specs.html#a8a01b9727d2596a977268695f06b9bc6',1,'sciplot::FillStyleSpecs']]],
-  ['interval_715',['interval',['../classsciplot_1_1_tics_specs_major.html#a6bedd0b3a619c7bc5d73ecd9143374d6',1,'sciplot::TicsSpecsMajor']]],
-  ['ishidden_716',['isHidden',['../classsciplot_1_1_show_specs_of.html#a58f7d577b11631a079f6de2783343a3c',1,'sciplot::ShowSpecsOf']]]
+  ['norm_91',['norm',['../class_vector.html#ab5599209f3fdcb5662194aefab5b9394',1,'Vector']]],
+  ['norm1_92',['norm1',['../class_matrix.html#abf79f9e27f3bfcf2cc8e5cfc1f02fdf8',1,'Matrix::norm1()'],['../class_vector.html#a2ec8fea78d48174ac2cde94060f2285e',1,'Vector::norm1()']]],
+  ['norm2_93',['norm2',['../class_vector.html#a36fca83a79477c6367cc8ea5987e1100',1,'Vector']]],
+  ['normfrob_94',['normFrob',['../class_matrix.html#a1f4744c7b2882abaee6b70f6f15a6bd6',1,'Matrix']]],
+  ['norminf_95',['normInf',['../class_matrix.html#a66fdb5c8533b884ccb6e9a1d9ebd7f37',1,'Matrix::normInf()'],['../class_vector.html#a8c03705e581b2f66df2d1f132e833efa',1,'Vector::normInf()']]],
+  ['normp_96',['normp',['../class_vector.html#a919a3880967e6d1b9b36e04a28f3f38b',1,'Vector']]]
 ];
