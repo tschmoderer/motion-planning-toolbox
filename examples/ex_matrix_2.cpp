@@ -9,7 +9,6 @@ int main(int argc, char * argv[]) {
     SquareMatrix M2 = M1;
     M2 += M1; M2 -= M1;
     assert(M2 == M1);
-    M2 *= 2;
     std::cout << M2 << std::endl; 
 
     return 0;
