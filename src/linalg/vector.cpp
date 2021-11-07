@@ -310,9 +310,8 @@ Vector operator/(const Vector & v, const double d) {
 
 /**
 * @brief Overload output stream operator for Vector object
-* 
-* @param os output stream
-* @param v  Vector object
+* @param os Output stream.
+* @param v  Vector object.
 * @return std::ostream & updated output stream
 */
 std::ostream & operator<<(std::ostream & os, const Vector & v) {
@@ -414,7 +413,7 @@ double Vector::normInf() {
 * @return Vector k-th vector of the canonical basis of R^n.
 * @warning Indices are 0-based.
 */
-Vector basis(uint16_t n, uint16_t k) {
+Vector Vector::basis(uint16_t n, uint16_t k) {
     assert(n > 0); assert(k >= 0); assert(k < n); 
     Vector v(n); v[k] = 1; 
     return v; 
@@ -422,11 +421,10 @@ Vector basis(uint16_t n, uint16_t k) {
 
 /**
 * @brief Construct a Vector object of length n filled with zeros.
-* 
-* @param n Dimension of the vector (must be greater or equal than 1).
+* @param n Dimension of the Mector (must be greater or equal than 1).
 * @return Vector A Vector object of size n filled with zeros
 */
-Vector zeros(uint16_t n) {
+Vector Vector::zeros(uint16_t n) {
     assert(n > 0); 
     Vector v(n);
     return v;
@@ -434,11 +432,10 @@ Vector zeros(uint16_t n) {
 
 /**
 * @brief Construct a Vector object of length n filled with ones
-* 
 * @param n Dimension of the vector (must be greater or equal than 1).
 * @return Vector  A Vector object of size n filled with ones
 */
-Vector ones(uint16_t n) {
+Vector Vector::ones(uint16_t n) {
     assert(n > 0); 
     Vector v(n); 
     for (int i = 0; i < n; i++) {
@@ -449,11 +446,10 @@ Vector ones(uint16_t n) {
 
 /**
 * @brief Construct a Vector object of length n filled with random values sampled from 0. to 1.
-* 
 * @param n Dimension of the vector (must be greater or equal than 1).
 * @return Vector  A Vector object of size n filled with random values
 */
-Vector rand(uint16_t n) {
+Vector Vector::rand(uint16_t n) {
     assert(n > 0); 
     srand (time(NULL));
     Vector v(n); 
@@ -465,13 +461,12 @@ Vector rand(uint16_t n) {
         
 /**
 * @brief Construct a Vector object of length n filled  with equally points spaced between t0 and t1 included. 
-* 
 * @param t0 Starting value
 * @param t1 Final value (must be greater than t0)
 * @param n Number of timestep including t0 and t1 (must be greater or equal than 2)
 * @return Vector of size n of equally spaced timestep between t0 and t1
 */
-Vector linspace(double t0, double t1, uint16_t n) {
+Vector Vector::linspace(double t0, double t1, uint16_t n) {
     assert(t1 > t0); 
     assert(n >= 2);
     double dt = (t1-t0) / (1.*n - 1); 
