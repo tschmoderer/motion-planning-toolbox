@@ -80,6 +80,7 @@ class Matrix {
 		static Matrix rand(uint16_t , uint16_t );
 		static Matrix hilbert(uint16_t , uint16_t ); 
 		static Matrix vandermonde(const Vector & , uint16_t );
+		static Matrix outer(const Vector & , const Vector & );
 
 	protected:
 		/* ATTRIBUTES */

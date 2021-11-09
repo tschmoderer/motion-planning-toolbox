@@ -592,6 +592,22 @@ Matrix Matrix::vandermonde(const Vector & v, uint16_t n) {
     return M;
 }
 
+/**
+* @brief Overload operator * between two vectors to compute their outer product
+* @param u Vector object of dimension $n$ (>0)
+* @param v Vector object of dimension $m$ (>0)
+* @return Matrix Matrix object M of dimension $n\times m$ equal to M = u*v^T, i.e. $M_{ij} = u_iv_j$.
+*/
+Matrix Matrix::outer(const Vector & u, const Vector & v) {
+    Matrix A(u.get_dim(), v.get_dim()); 
+    for (int i = 0; i < u.get_dim(); i++) {
+        for (int j = 0; j < v.get_dim(); j++) {
+            A(i,j) = u[i] * v[j]; 
+        }
+    }
+    return A; 
+}
+
 /* PRIVATE METHODS */
 
 /**
