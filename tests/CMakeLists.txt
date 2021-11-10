@@ -1,8 +1,8 @@
 add_executable(test_matrix test_matrix.cpp)
-target_link_libraries (test_matrix LINK_PUBLIC ctrltlbx)
+target_link_libraries (test_matrix LINK_PUBLIC linalg)
 
 add_executable(test_vector test_vector.cpp)
-target_link_libraries (test_vector LINK_PUBLIC ctrltlbx)
+target_link_libraries (test_vector LINK_PUBLIC linalg)
 
 # add_executable(test_control test_control.cpp)
 # target_link_libraries (test_control LINK_PUBLIC ctrltlbx)

@@ -15,7 +15,13 @@ void test_accessors() {
 }
 
 void test_operators() {
+    Matrix A(2,7); 
+    Matrix B(7,4); 
 
+    Matrix C = A * B; 
+
+    A = Matrix(7,2); 
+    C = Matrix::matmul(A, TRANSPOSE, B, NO_TRANSPOSE);
 }
 
 void test_methods() {
@@ -23,6 +29,8 @@ void test_methods() {
     Vector v = Vector::rand(5); 
 
     Vector w = M*v;
+
+    Matrix M2 = Matrix::rand(4,7);
 }
 
 int main(int argc, char * argv[]) {
