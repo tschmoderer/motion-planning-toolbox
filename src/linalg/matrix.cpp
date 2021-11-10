@@ -616,7 +616,7 @@ Matrix Matrix::outer(const Vector & u, const Vector & v) {
 * @param TRANB 
 * @return Matrix 
 */
-Matrix matmul(const Matrix & A, MATRIX_TRANSPOSE TRANSA, const Matrix & B, MATRIX_TRANSPOSE TRANSB) {
+Matrix Matrix::matmul(const Matrix & A, MATRIX_TRANSPOSE TRANSA, const Matrix & B, MATRIX_TRANSPOSE TRANSB) {
     uint16_t n_A = A.get_n_rows(); 
     uint16_t m_A = A.get_n_cols(); 
     uint16_t n_B = B.get_n_rows(); 
@@ -633,6 +633,7 @@ Matrix matmul(const Matrix & A, MATRIX_TRANSPOSE TRANSA, const Matrix & B, MATRI
                 }
             }
         }
+        return M; 
     }
 
     // Case 2: A * B^t
@@ -646,6 +647,7 @@ Matrix matmul(const Matrix & A, MATRIX_TRANSPOSE TRANSA, const Matrix & B, MATRI
                 }
             }
         }
+        return M; 
     }
 
     // Case 3: A^t * B^t
@@ -659,6 +661,7 @@ Matrix matmul(const Matrix & A, MATRIX_TRANSPOSE TRANSA, const Matrix & B, MATRI
                 }
             }
         }
+        return M; 
     }
 
     // Case 4: A * B
