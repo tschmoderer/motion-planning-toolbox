@@ -2,6 +2,10 @@
 
 SquareMatrix::SquareMatrix(uint16_t n) : Matrix(n,n) {}
 
+SquareMatrix::SquareMatrix(const Matrix & M) : Matrix(M) {
+    assert(M.get_n_rows() == M.get_n_cols()); 
+}
+
 SquareMatrix & SquareMatrix::operator=(const SquareMatrix & A) {
     Matrix::operator=(A);
     return *this;
@@ -54,4 +58,8 @@ double SquareMatrix::tr(const SquareMatrix & A) {
         res += A(i,i); 
     }
     return res;
+}
+
+SquareMatrix SquareMatrix::vandermonde(const Vector & v) {
+    return Matrix::vandermonde(v, v.get_dim()); 
 }

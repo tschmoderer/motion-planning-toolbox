@@ -7,6 +7,7 @@ class SquareMatrix : public Matrix {
     public: 
         /* CONSTRUCTORS */
         SquareMatrix(uint16_t ); 
+        SquareMatrix(const Matrix & ); 
 
         /* METHODS */
 
@@ -19,6 +20,7 @@ class SquareMatrix : public Matrix {
         static SquareMatrix diag(const Vector & ); 
         static Vector diag(const SquareMatrix & );
 	    static double tr(const SquareMatrix & );
+        static SquareMatrix vandermonde(const Vector & ); 
 
     private:
         
