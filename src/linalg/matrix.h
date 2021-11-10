@@ -14,6 +14,11 @@
 #include "vector.h"
 
 /**
+* @brief Enumeration of transposition operation for Matrix object, useful for fast multiplication. 
+*/
+enum MATRIX_TRANSPOSE {TRANSPOSE, NO_TRANSPOSE};
+
+/**
 * @class Matrix
 * @brief A class describing a Matrix object. 
 * Matrices are array of size (n,m) whre n and m are integer greater or equal than 1. 
@@ -81,6 +86,7 @@ class Matrix {
 		static Matrix hilbert(uint16_t , uint16_t ); 
 		static Matrix vandermonde(const Vector & , uint16_t );
 		static Matrix outer(const Vector & , const Vector & );
+		static Matrix matmul(const Matrix & , MATRIX_TRANSPOSE , const Matrix & , MATRIX_TRANSPOSE );
 
 	protected:
 		/* ATTRIBUTES */

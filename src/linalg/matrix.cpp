@@ -608,6 +608,63 @@ Matrix Matrix::outer(const Vector & u, const Vector & v) {
     return A; 
 }
 
+/**
+* @brief Compute the product of two matrices combined with their transposition 
+* @param A Matrix object of dimension $(n_A,m_A)$
+* @param TRANSA 
+* @param B Matrix object of dimension $(n_B,m_B)$
+* @param TRANB 
+* @return Matrix 
+*/
+Matrix matmul(const Matrix & A, MATRIX_TRANSPOSE TRANSA, const Matrix & B, MATRIX_TRANSPOSE TRANSB) {
+    uint16_t n_A = A.get_n_rows(); 
+    uint16_t m_A = A.get_n_cols(); 
+    uint16_t n_B = B.get_n_rows(); 
+    uint16_t m_B = B.get_n_cols();
+    
+    // Case 1: A^t * B
+    if ((TRANSA == TRANSPOSE) && (TRANSB == NO_TRANSPOSE)) {
+        assert(n_A == n_B); 
+        Matrix M(m_A, m_B); 
+        for (int i = 0; i < m_A; i++) {
+            for (int j = 0; j < m_B; j++) {
+                for (int k = 0; k < n_A; k++) {
+                    M(i,j) = A(k,i) * B(k,j); 
+                }
+            }
+        }
+    }
+
+    // Case 2: A * B^t
+    if ((TRANSA == NO_TRANSPOSE) && (TRANSB == TRANSPOSE)) {
+        assert(m_A == m_B); 
+        Matrix M(n_A, n_B); 
+        for (int i = 0; i < n_A; i++) {
+            for (int j = 0; j < n_B; j++) {
+                for (int k = 0; k < m_A; k++) {
+                    M(i,j) = A(i,k) * B(j,k); 
+                }
+            }
+        }
+    }
+
+    // Case 3: A^t * B^t
+    if ((TRANSA == TRANSPOSE) && (TRANSB == TRANSPOSE)) {
+        assert(n_A == m_B); 
+        Matrix M(m_A, n_B); 
+        for (int i = 0; i < m_A; i++) {
+            for (int j = 0; j < n_B; j++) {
+                for (int k = 0; k < n_A; k++) {
+                    M(i,j) = A(k,i) * B(j, k); 
+                }
+            }
+        }
+    }
+
+    // Case 4: A * B
+    return A * B; 
+}
+
 /* PRIVATE METHODS */
 
 /**
