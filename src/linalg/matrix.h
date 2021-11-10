@@ -28,7 +28,7 @@ enum MATRIX_TRANSPOSE {TRANSPOSE, NO_TRANSPOSE};
 */
 class Matrix {
 	public: 
-		/* CONSTRUCTORsS*/
+		/* CONSTRUCTORS*/
 		Matrix(); 
 		Matrix(uint16_t , uint16_t );
 		Matrix(const Matrix & );
