@@ -1,7 +1,8 @@
 <map id="src/control.h" name="src/control.h">
-<area shape="rect" id="node1" title="Header file for Control class." alt="" coords="209,5,303,32"/>
-<area shape="rect" id="node2" href="$matrix_8h.html" title="Header file for Matrix class." alt="" coords="188,80,255,107"/>
-<area shape="rect" id="node3" href="$vector_8hpp.html" title="Header file for Vector class." alt="" coords="215,155,297,181"/>
+<area shape="rect" id="node1" title="Header file for Control class." alt="" coords="259,5,352,32"/>
+<area shape="rect" id="node2" href="$matrix_8h.html" title="Header file for Matrix class." alt="" coords="223,80,289,107"/>
+<area shape="rect" id="node10" title=" " alt="" coords="313,80,396,107"/>
+<area shape="rect" id="node3" href="$vector_8h.html" title="Header file for Vector class." alt="" coords="222,155,290,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,229,67,256"/>
 <area shape="rect" id="node5" title=" " alt="" coords="91,229,152,256"/>
 <area shape="rect" id="node6" title=" " alt="" coords="177,229,242,256"/>

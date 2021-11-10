@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['vector_60',['Vector',['../class_vector.html',1,'Vector'],['../class_vector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5',1,'Vector::Vector()'],['../class_vector.html#a6dec2d7967f125293488526f442384ee',1,'Vector::Vector(uint16_t n)'],['../class_vector.html#a07f0bdd0e8e5f0e79c208045ce7789ce',1,'Vector::Vector(double *dat, uint16_t n)'],['../class_vector.html#a5f04e343b7306ad11f8a82c89b486764',1,'Vector::Vector(const Vector &amp;v)']]],
-  ['vector_2ehpp_61',['vector.hpp',['../vector_8hpp.html',1,'']]]
+  ['time_5ft_66',['time_t',['../control_system_8h.html#af309960df7642091870307861ce5094a',1,'controlSystem.h']]],
+  ['todo_20list_67',['Todo List',['../todo.html',1,'']]],
+  ['tr_68',['tr',['../class_square_matrix.html#aee3a9dc461e5106263025a9b88da4cbf',1,'SquareMatrix']]],
+  ['transpose_69',['transpose',['../class_matrix.html#a759661b75b9681f3a89ff75e27933b3a',1,'Matrix']]],
+  ['transpose_70',['TRANSPOSE',['../matrix_8h.html#a2899e4ac4ca85f60df8c86b3c4018542a3416ba33b450af93f7e5944a20253e68',1,'matrix.h']]]
 ];

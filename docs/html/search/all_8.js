@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['matrix_20',['Matrix',['../class_matrix.html',1,'Matrix'],['../class_matrix.html#a2dba13c45127354c9f75ef576f49269b',1,'Matrix::Matrix()'],['../class_matrix.html#af831fa075a2bf6c2e6608217ad681f38',1,'Matrix::Matrix(uint16_t, uint16_t)'],['../class_matrix.html#a0b9cfa2302a0273afb1b26e501f93abc',1,'Matrix::Matrix(const Matrix &amp;)']]],
-  ['matrix_2ecpp_21',['matrix.cpp',['../matrix_8cpp.html',1,'']]],
-  ['matrix_2eh_22',['matrix.h',['../matrix_8h.html',1,'']]]
+  ['linearcontrolsystem_23',['LinearControlSystem',['../class_linear_control_system.html',1,'']]],
+  ['linearcontrolsystem_2eh_24',['linearControlSystem.h',['../linear_control_system_8h.html',1,'']]],
+  ['linspace_25',['linspace',['../class_vector.html#af7cd240e7eb8ef88949a3cd7dd8cf138',1,'Vector']]]
 ];

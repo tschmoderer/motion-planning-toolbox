@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['basis_79',['basis',['../class_vector.html#af7781e81bd282689d094c1cb7378491a',1,'Vector']]]
+  ['basis_97',['basis',['../class_vector.html#a20d091fb2f855d62dd519fd73334011d',1,'Vector']]]
 ];

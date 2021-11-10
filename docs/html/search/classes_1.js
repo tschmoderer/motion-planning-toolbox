@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['matrix_67',['Matrix',['../class_matrix.html',1,'']]]
+  ['linearcontrolsystem_81',['LinearControlSystem',['../class_linear_control_system.html',1,'']]]
 ];

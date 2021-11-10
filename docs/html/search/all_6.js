@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['interp_5fconstant_5fleft_14',['INTERP_CONSTANT_LEFT',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25ab7ccea8ae0457c69704c0835f6480e18',1,'control.h']]],
-  ['interp_5fconstant_5fright_15',['INTERP_CONSTANT_RIGHT',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a5e9da5b99456219f1c0560c7e85be262',1,'control.h']]],
-  ['interp_5flinear_16',['INTERP_LINEAR',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a17abedd2e487446bf814c9da0b7791de',1,'control.h']]],
-  ['interp_5fnearest_17',['INTERP_NEAREST',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a5dc1c99b5e803daf350345d519b58b67',1,'control.h']]],
-  ['interp_5ft_18',['interp_t',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25',1,'control.h']]]
+  ['hilbert_17',['hilbert',['../class_matrix.html#aac86920d6ece86419f75b9b47d3e1f36',1,'Matrix']]]
 ];

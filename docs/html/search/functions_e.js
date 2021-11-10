@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zeros_122',['zeros',['../class_matrix.html#a14f81988fdf708fa09db5cbb95293fd8',1,'Matrix::zeros()'],['../class_square_matrix.html#a70fa4ad92283e794f313f1c8c385c736',1,'SquareMatrix::zeros()'],['../class_vector.html#a768da06f9989c5f7cd5b2990cde1f38c',1,'Vector::zeros()']]]
+  ['vandermonde_141',['vandermonde',['../class_matrix.html#a5107a216dd22e1bd5fcb6c1d7a31985d',1,'Matrix::vandermonde()'],['../class_square_matrix.html#aa642da108cb635975897c36068bb11c7',1,'SquareMatrix::vandermonde()']]],
+  ['vector_142',['Vector',['../class_vector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5',1,'Vector::Vector()'],['../class_vector.html#a199dd6e7d5169d0cf63db0200c6208ed',1,'Vector::Vector(uint16_t)'],['../class_vector.html#a6131b0efbf6b788121470e41567a39c9',1,'Vector::Vector(double *, uint16_t)'],['../class_vector.html#a130470658bcf6440baa7280f4b94449b',1,'Vector::Vector(const Vector &amp;)']]]
 ];

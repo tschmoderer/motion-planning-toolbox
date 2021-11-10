@@ -1,8 +1,9 @@
 <map id="src/control.cpp" name="src/control.cpp">
-<area shape="rect" id="node1" title="Implementation of control class." alt="" coords="203,5,309,32"/>
-<area shape="rect" id="node2" href="$control_8h.html" title="Header file for Control class." alt="" coords="221,80,291,107"/>
-<area shape="rect" id="node3" href="$matrix_8h.html" title="Header file for Matrix class." alt="" coords="188,155,255,181"/>
-<area shape="rect" id="node4" href="$vector_8hpp.html" title="Header file for Vector class." alt="" coords="215,229,297,256"/>
+<area shape="rect" id="node1" title="Implementation of control class." alt="" coords="252,5,359,32"/>
+<area shape="rect" id="node2" href="$control_8h.html" title="Header file for Control class." alt="" coords="270,80,341,107"/>
+<area shape="rect" id="node3" href="$matrix_8h.html" title="Header file for Matrix class." alt="" coords="223,155,289,181"/>
+<area shape="rect" id="node11" title=" " alt="" coords="313,155,396,181"/>
+<area shape="rect" id="node4" href="$vector_8h.html" title="Header file for Vector class." alt="" coords="222,229,290,256"/>
 <area shape="rect" id="node5" title=" " alt="" coords="5,304,67,331"/>
 <area shape="rect" id="node6" title=" " alt="" coords="91,304,152,331"/>
 <area shape="rect" id="node7" title=" " alt="" coords="177,304,242,331"/>
