@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -183,6 +190,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac8004035ae9446ac04cf0d3e97011702"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#ac8004035ae9446ac04cf0d3e97011702">show</a> () const</td></tr>
 <tr class="memdesc:ac8004035ae9446ac04cf0d3e97011702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to display a <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> object to the standart output stream.  <a href="class_matrix.html#ac8004035ae9446ac04cf0d3e97011702">More...</a><br /></td></tr>
 <tr class="separator:ac8004035ae9446ac04cf0d3e97011702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a9858d6737c1f6c05fd859ffd492c2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a2a9858d6737c1f6c05fd859ffd492c2b">default_data</a> ()</td></tr>
+<tr class="memdesc:a2a9858d6737c1f6c05fd859ffd492c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the data array with zeros. <br  />
+  <a href="class_matrix.html#a2a9858d6737c1f6c05fd859ffd492c2b">More...</a><br /></td></tr>
+<tr class="separator:a2a9858d6737c1f6c05fd859ffd492c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -462,6 +473,34 @@ Maximum dimension of a <a class="el" href="class_matrix.html" title="A class des
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> of length n_rows containing the c-th column of the current <a class="el" href="class_matrix.html" title="A class describing a Matrix object. Matrices are array of size (n,m) whre n and m are integer greater...">Matrix</a> object </dd></dl>
+
+</div>
+</div>
+<a id="a2a9858d6737c1f6c05fd859ffd492c2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a9858d6737c1f6c05fd859ffd492c2b">&#9670;&nbsp;</a></span>default_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::default_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fill the data array with zeros. <br  />
+ </p>
 
 </div>
 </div>
