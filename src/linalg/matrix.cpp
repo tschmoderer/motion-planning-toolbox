@@ -432,9 +432,9 @@ Vector Matrix::col(uint16_t c) const {
 /**
 * @brief Compute the norm-1 of a Matrix object. 
 * For a Matrix M of dimension $n\times m$, its norm-1 is given by the maximum colum sum (in absolute value)
-* $$
+* \f[
 * \|M\|_1 = \max_{1\leq j\leq m} \sum_{i=1}^n |M_{ij}|
-* $$
+* \f]
 * @return double Norm-1 of Matrix object 
 */
 double Matrix::norm1() const { 
