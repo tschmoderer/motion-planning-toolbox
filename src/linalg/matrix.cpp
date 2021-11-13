@@ -4,9 +4,7 @@
 * @brief Implémentation of the Matrix class
 * @version 2.0
 * @date 2021-10-23
-* 
 * @copyright Copyright (c) 2021
-* 
 */
 
 #include "matrix.h"
@@ -36,9 +34,7 @@ Matrix::Matrix(uint16_t n, uint16_t m) {
     this->n_cols     = m; 
     this->n_elements = n * m; 
     this->data       = new double[n * m]; 
-    for (int i = 0; i < this->n_elements; i++) {
-        this->data[i] = 0.;
-    }
+    this->default_data();
 }
 
 /**
@@ -702,5 +698,14 @@ void Matrix::show() const {
             std::cout << this->at(i,j) << "\t"; 
         }
         std::cout << std::endl;
+    }
+}
+
+/**
+ * @brief Fill the data array with zeros.  
+ */
+void Matrix::default_data() {
+    for (int i = 0; i < this->n_elements; i++) {
+        this->data[i] = 0.;
     }
 }

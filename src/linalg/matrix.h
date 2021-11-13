@@ -4,7 +4,6 @@
 * @brief Header file for Matrix class
 * @version 2.0
 * @date 2021-10-21
-* 
 * @copyright Copyright (c) 2021
 */
 
@@ -99,6 +98,7 @@ class Matrix {
 		double & at(uint32_t ) const;
 		double & at(uint16_t , uint16_t ) const;
 		void show() const;
+		void default_data(); 
 };
 
 #endif
