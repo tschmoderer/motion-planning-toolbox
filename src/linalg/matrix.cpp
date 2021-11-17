@@ -1,7 +1,7 @@
 /**
 * @file matrix.cpp
 * @author T. Schmoderer (iathena@mailo.com)
-* @brief Implémentation of the Matrix class
+* @brief Implementation of the Matrix class
 * @version 2.0
 * @date 2021-10-23
 * @copyright Copyright (c) 2021
@@ -262,8 +262,10 @@ Vector operator*(const Matrix & A, const Vector & v) {
 */
 Matrix operator*(const double k, const Matrix & B) {
     Matrix A(B); 
-    for (int i = 0; i < A.n_elements; i++) {
-        A.data[i] *= k;
+    if (k != 0) {
+        for (int i = 0; i < A.n_elements; i++) {
+            A.data[i] *= k;
+        }
     }
     return A;
 }
@@ -531,10 +533,7 @@ Matrix Matrix::zeros(uint16_t n, uint16_t m) {
 Matrix Matrix::ones(uint16_t n, uint16_t m) {
     assert(n > 0); assert(m > 0);
     Matrix M(n,m); 
-    for (int i = 0; i < M.get_n_elements(); i++) {
-        M(i) = 1.; 
-    }
-    return M;
+    return M + 1;
 }
 
 /**
