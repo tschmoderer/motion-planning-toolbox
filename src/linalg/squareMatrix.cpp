@@ -37,7 +37,7 @@ SquareMatrix SquareMatrix::operator-() const {
 }
 
 SquareMatrix operator*(const SquareMatrix & lhs, const SquareMatrix & rhs)  {
-    SquareMatrix(lhs.n_cols == rhs.n_rows); 
+    assert(lhs.n_cols == rhs.n_rows); 
     SquareMatrix A(lhs.n_rows);
     for (int i = 0; i < lhs.n_rows; i++) {
         for (int j = 0; j < rhs.n_cols; j++) {
@@ -88,7 +88,6 @@ SquareMatrix operator+(const SquareMatrix & B, const double k) {
 
 SquareMatrix operator-(const SquareMatrix & lhs, const SquareMatrix & rhs) {
     assert(lhs.n_rows == rhs.n_rows); 
-    assert(lhs.n_cols == rhs.n_cols); 
     SquareMatrix A(lhs.n_rows);
     for (int i = 0; i < lhs.n_elements; i++) {
         A.data[i] = lhs.data[i] - rhs.data[i];
