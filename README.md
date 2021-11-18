@@ -1,7 +1,7 @@
 <div id="motion-planning-toolbox-logo" align="center">
     <br />
     <img src="#" alt="Motion Planning ToolBox Logo" width="200"/>
-    <h1>Control Toolbox</h1>
+    <h1>Motion Planning Toolbox</h1>
     <h3></h3>
 </div>
 
