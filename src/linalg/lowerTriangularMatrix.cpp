@@ -124,7 +124,6 @@ LTMatrix LTMatrix::operator-() const {
 * @param lhs Left hand side, a lower triangular matrix of size : $(n, n)$
 * @param rhs Right hand side, a lower triangular matrix of size : $(n, n)$
 * @return LTMatrix Product lhs and rhs stored as a new lower triangular matrix object
-* @todo make this function work
 * @warning lhs and rhs must be square (and thus of the same dimensions) lower triangular matrices in order for the product to make sense. 
 */
 LTMatrix operator*(const LTMatrix & lhs, const LTMatrix & rhs) {
