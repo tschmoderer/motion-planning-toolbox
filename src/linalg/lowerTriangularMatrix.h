@@ -39,6 +39,7 @@ class LTMatrix : public Matrix {
 		LTMatrix operator-() const;
 
         friend LTMatrix operator*(const LTMatrix & , const LTMatrix & ); 
+        friend Vector operator*(const LTMatrix & , const Vector & ); 
 		friend LTMatrix operator*(const double , const LTMatrix & ); 
 		friend LTMatrix operator*(const LTMatrix & , const double );
 

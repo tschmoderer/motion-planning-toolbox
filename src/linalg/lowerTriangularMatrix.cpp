@@ -140,6 +140,17 @@ LTMatrix operator*(const LTMatrix & lhs, const LTMatrix & rhs) {
     return A;
 } 
 
+Vector operator*(const LTMatrix & lhs, const Vector & rhs) {
+    assert(lhs.n_cols == rhs.get_dim()); 
+    Vector res(lhs.n_rows); 
+    for (int i = 0; i < lhs.n_rows; i++) {
+        for (int k = 0; k <= lhs.max_col_from_row(i); k++) {
+            res[i] += lhs(i,k) * rhs[k]; 
+        }
+    }
+    return res;
+}
+
 LTMatrix operator*(const double k, const LTMatrix & L) {
     LTMatrix A(L); 
     if (k != 0) {
