@@ -73,7 +73,6 @@ class LTMatrix : public Matrix {
 		double & at(uint32_t ) const;
 		double & at(uint16_t , uint16_t ) const;
 		void show() const;
-
 };
 
 #endif

@@ -18,7 +18,7 @@ LTMatrix::LTMatrix(uint16_t n) {
     assert(n > 0); 
     this->n_rows = n; 
     this->n_cols = n; 
-    this->n_elements = n*(n+1) / 2; 
+    this->n_elements = triangular(n); 
     this->data = new double[this->n_elements]; 
     this->default_data();
 }
@@ -26,18 +26,18 @@ LTMatrix::LTMatrix(uint16_t n) {
 /**
 * @brief Construct a new LTMatrix object. 
 * Represent a general rectangular lower triangular matrix.  
-* @param n Number of row of the matrix, must be greater or equal than $m$, 
-* @param m Number of colum of the matrix, must be greater or equal than $1$. 
+* @param m Number of row of the matrix, must be greater or equal than $n$, 
+* @param n Number of colum of the matrix, must be greater or equal than $1$. 
 */
-LTMatrix::LTMatrix(uint16_t n, uint16_t m) {
+LTMatrix::LTMatrix(uint16_t m, uint16_t n) {
     assert(m > 0); assert(n > 0); 
-    assert(n >= m); // otherwise it is a regular dense Matrix. 
-    this->n_rows = n; 
-    this->n_cols = m; 
+    assert(m >= n); // otherwise it is a regular dense Matrix. 
+    this->n_rows = m; 
+    this->n_cols = n; 
     // Matrix is composed of two block on top of each other. 
-    // Above block is a square lower triangular matrix of dimension $m\times m$
-    // Bellow is a rectangular dense block with dimension $(n-m)\times m$. 
-    this->n_elements = triangular(m) + (n-m) * m; 
+    // Above block is a square lower triangular matrix of dimension $n\times n$
+    // Bellow is a rectangular dense block with dimension $(m-n)\times n$. 
+    this->n_elements = triangular(n) + (m-n) * n; 
     this->data = new double[this->n_elements]; 
     this->default_data();
 }
@@ -65,6 +65,16 @@ LTMatrix::~LTMatrix() {/*Call Matrix destructor*/}
 
 /* METHODS */
 
+/**
+ * @brief A method to compute the maximum colum index with non-zero data for a given row $i$.
+ * Works for a general rectangular lower triangular matrix $L$ of dimension $(m\times n)$ 
+ * with $m\geq n$. With C++ indexing convention, the result is given by 
+ * $$
+ * j_{\max}(i)=\min(i, n-1),\quad\forall\,0\leq i< m
+ * $$
+ * @param i Row index, must be between $0$ and $m-1$.
+ * @return uint16_t $j_{\max}(i) maximum index of a column with non-zeros data.
+ */
 uint16_t LTMatrix::max_col_from_row(uint16_t i) const {
     assert(i >=0 ); assert(i < this->n_rows); 
     return std::min((int)i, this->n_cols-1);
@@ -274,9 +284,11 @@ double & LTMatrix::at(uint32_t n) const {
 }
 
 /**
-* @brief Access given element of a matrix 
+* @brief Access given element of a matrix. If $L$ is a lower triangular matrix 
+* of dimension $m\times n$ with $m\geq n$, then $i$ can take values between $0$ and $m-1$ 
+* and $j$ can take values between $0$ and $j_{\max}(i)=\min(i,n-1)$.
 * @param i Row number (must be greater or equal than 0)
-* @param j Column number (must be between 0 and i)
+* @param j Column number (must be between 0 and $j_{\max}(i)$)
 * @return double & Reference to the (i,j)-th element of the matrix
 * @warning Indices are 0-based
 */
@@ -284,7 +296,6 @@ double & LTMatrix::at(uint16_t i, uint16_t j) const {
     assert((0 <= i) && (i < this->n_rows));
     assert((0 <= j) && (j < this->n_cols));
     assert(j <= i);
-    // 
     uint32_t idx = 0;
     if (i < this->n_cols) {
         idx = triangular(i) + j;
@@ -297,7 +308,7 @@ double & LTMatrix::at(uint16_t i, uint16_t j) const {
 void LTMatrix::show() const {
     for (int i = 0; i < this->n_rows; i++) {
         for (int j = 0; j < this->n_cols; j++) {
-            if (i < j) { 
+            if (j <= this->max_col_from_row(i)) { 
                 std::cout << this->at(i,j) << "\t"; 
             } else {
                 std::cout << 0. << "\t";
