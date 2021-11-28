@@ -15,7 +15,7 @@
 #include <cassert>
 #include <iostream>
 #include <stdlib.h>
-#include <time.h>
+#include "utils.h"
 
 /**
 * @class Vector
@@ -74,6 +74,8 @@ class Vector {
         static Vector zeros(uint16_t );
         static Vector ones(uint16_t );
         static Vector rand(uint16_t );
+        static Vector randn(uint16_t ); 
+        static Vector randn(uint16_t , double , double ); 
         static Vector linspace(double , double , uint16_t );
 
     private: 

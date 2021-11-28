@@ -477,20 +477,50 @@ Vector Vector::ones(uint16_t n) {
 }
 
 /**
-* @brief Construct a Vector object of length n filled with random values sampled from 0. to 1.
+* @brief Construct a Vector object of length $n$ filled with random values sampled from 0. to 1.
 * @param n Dimension of the vector (must be greater or equal than 1).
-* @return Vector  A Vector object of size n filled with random values
+* @return Vector A Vector object of size n filled with random values
 */
 Vector Vector::rand(uint16_t n) {
     assert(n > 0); 
-    srand (time(NULL));
     Vector v(n); 
     for (int i = 0; i < n; i++) {
-        v[i] = ((double) std::rand() / (RAND_MAX)); 
+        v[i] = uniform_distribution(0., 1.); 
     }
     return v;
 }
-        
+
+/**
+* @brief Construct a Vector object of length $n$ filled with random values sampled from the Gaussian random number distribution: mean is 0. and standart deviation is 1.
+* @param n Dimension of the vector (must be greater or equal than 1).
+* @return Vector A Vector object of size $n$ filled with random values picked following a $\mathcal{N}(0,1)$ law.
+*/
+Vector Vector::randn(uint16_t n) {
+    assert(n > 0);
+    Vector v(n); 
+    for (int i = 0; i < n; i++) {
+        v[i] = normal_distribution(0., 1.);
+    }
+    return v;
+
+}
+
+/**
+* @brief Construct a Vector object of length $n$ filled with random values sampled from a Gaussian random number distribution. 
+* @param n Dimension of the vector (must be greater or equal than 1).
+* @param m Mean of the Gaussian distribution.
+* @param s Standart deviation of the Gaussian distribution
+* @return Vector A Vector object of size $n$ filled with random values  picked following a $\mathcal{N}(m,s)$ law.
+*/
+Vector Vector::randn(uint16_t n, double m, double s) {
+    assert(n > 0);
+    Vector v(n); 
+    for (int i = 0; i < n; i++) {
+        v[i] = normal_distribution(m, s); 
+    }
+    return v;
+}
+
 /**
 * @brief Construct a Vector object of length n filled  with equally points spaced between t0 and t1 included. 
 * @param t0 Starting value
