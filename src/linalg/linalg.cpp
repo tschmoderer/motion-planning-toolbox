@@ -8,8 +8,8 @@ Vector solve(const DiagonalMatrix & D, const Vector & b) {
     }
     return res; 
 }
-/*
-Vector solve(const LowerTriangularMatrix & L, const Vector & b) {
+
+Vector solve(const LTMatrix & L, const Vector & b) {
     Vector res(b.get_dim()); 
     for (int i = 0; i < b.get_dim(); i++) {
         res(i) = b(i); 
@@ -19,4 +19,4 @@ Vector solve(const LowerTriangularMatrix & L, const Vector & b) {
         res(i) /= L(i,i); 
     }
     return res; 
-}*/
+}
