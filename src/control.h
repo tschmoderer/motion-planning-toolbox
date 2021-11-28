@@ -1,19 +1,18 @@
 /**
- * @file control.h
- * @author T. Schmoderer (iathena@mailo.com)
- * @brief Header file for Control class
- * @version 1.0
- * @date 2021-10-27
- * 
- * @copyright Copyright (c) 2021
- * 
- */
+* @file control.h
+* @author T. Schmoderer (iathena@mailo.com)
+* @brief Header file for Control class
+* @version 1.0
+* @date 2021-10-27
+* 
+* @copyright Copyright (c) 2021
+*/
 
 #ifndef CONTROL_H
 #define CONTROL_H
 
 #include "matrix.h"
-#include "vector.hpp"
+#include "vector.h"
 
 enum interp_t : uint8_t {
     INTERP_CONSTANT_LEFT, 
@@ -71,6 +70,7 @@ class Control {
         double  t0;   /*!< Minimum timestep */
         double  t1;   /*!< Maximum timestep */ 
         uint8_t N;    /*!< Number of timesteps */
+        // TODO: change for pointers !!
         Vector  time; /*!< Array of discrete times */
         Matrix  data; /*!< Value of controls at time step */
         interp_t interp_method = INTERP_LINEAR; /*!< Interpolation methods */

@@ -1,13 +1,13 @@
 /**
- * @file control.cpp
- * @author T. Schmoderer (iathena@mailo.com)
- * @brief Implementation of control class
- * @version 1.0
- * @date 2021-10-31
- * 
- * @copyright Copyright (c) 2021
- * 
- */
+* @file control.cpp
+* @author T. Schmoderer (iathena@mailo.com)
+* @brief Implementation of control class
+* @version 1.0
+* @date 2021-10-31
+* 
+* @copyright Copyright (c) 2021
+* 
+*/
 
 #include "control.h"
 
@@ -21,8 +21,9 @@ Control::Control() {
     this->t1 = 1.; 
     this->N  = 2; 
 
-    this->construct_discrete_time(); 
-    this->default_data(); 
+    // this->construct_discrete_time(); update with new pointer type of attributes !! 
+    // this->default_data(); 
+
 }
 
 Control::Control(uint8_t nb_ctrl, double time_0, double time_1, uint8_t nb_time) {
