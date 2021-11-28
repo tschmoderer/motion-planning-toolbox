@@ -53,8 +53,10 @@ class Vector {
         friend double operator*(const Vector & , const Vector & );
         friend Vector operator*(const double , const Vector & );
         friend Vector operator*(const Vector & , const double );
+        friend Vector operator+(const Vector & , const Vector & );
         friend Vector operator+(const double , const Vector & );
         friend Vector operator+(const Vector & , const double );
+        friend Vector operator-(const Vector & , const Vector & );
         friend Vector operator-(const double , const Vector & );
         friend Vector operator-(const Vector & , const double );
         friend Vector operator/(const Vector & , const double );

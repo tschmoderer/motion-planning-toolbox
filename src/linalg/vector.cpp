@@ -238,6 +238,22 @@ Vector operator*(const Vector & v, const double d) {
 }
 
 /**
+* @brief Addition of two vector objects.
+* @param lhs A vector of dimension $n$,
+* @param rhs A vector of dimension $n$
+* @warning lhs and rhs must be of the same dimension. 
+* @return Vector Sum of lhs and rhs.
+*/
+Vector operator+(const Vector & lhs, const Vector & rhs) {
+    assert(lhs.dim == rhs.dim);
+    Vector res(lhs.dim); 
+    for (int i = 0; i< lhs.dim; i++) {
+        res.data[i] = lhs.data[i] + rhs.data[i];
+    }
+    return res;
+}
+
+/**
 * @brief Operator of addition of a Vector object with a scalar.
 * 
 * @param d Double value added to v
@@ -262,6 +278,22 @@ Vector operator+(const double d, const Vector & v) {
 Vector operator+(const Vector & v, const double d) {
     // Call previous operator
     return d + v;
+}
+
+/**
+* @brief Substract two vector objects.
+* @param lhs A vector of dimension $n$,
+* @param rhs A vector of dimension $n$
+* @warning lhs and rhs must be of the same dimension. 
+* @return Vector Difference of lhs and rhs.
+*/
+Vector operator-(const Vector & lhs, const Vector & rhs) {
+    assert(lhs.dim == rhs.dim);
+    Vector res(lhs.dim); 
+    for (int i = 0; i< lhs.dim; i++) {
+        res.data[i] = lhs.data[i] - rhs.data[i];
+    }
+    return res;
 }
 
 /**
