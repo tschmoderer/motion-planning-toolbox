@@ -16,6 +16,8 @@ void test_operators() {
 }
 
 void test_methods() {
+    SquareMatrix M1(2); 
+    assert(M1.is_square()); 
 }
 
 int main(int argc, char * argv[]) {
