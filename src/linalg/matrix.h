@@ -11,6 +11,7 @@
 #define MATRIX_H
 
 #include "vector.h"
+#include <iomanip>
 
 /**
 * @brief Enumeration of transposition operation for Matrix object, useful for fast multiplication. 
@@ -39,6 +40,16 @@ class Matrix {
 		uint16_t get_n_rows() const; 
 		uint16_t get_n_cols() const;
 		uint32_t get_n_elements() const; 
+
+		/* METHODS */
+		
+		bool is_square() const; 
+		Vector row(uint16_t ) const;
+		Vector col(uint16_t ) const;
+		double norm1() const;
+		double normInf() const; 
+		double normFrob() const; 
+		Matrix transpose() const;
 
 		/* OPERATORS */
 		double & operator()(uint32_t ) const;
@@ -69,14 +80,6 @@ class Matrix {
 		friend Matrix operator/(const Matrix & , const double );
 
 		friend std::ostream & operator<<(std::ostream & , const Matrix & );
-
-		/* METHODS */
-		Vector row(uint16_t ) const;
-		Vector col(uint16_t ) const;
-		double norm1() const;
-		double normInf() const; 
-		double normFrob() const; 
-		Matrix transpose() const;
 
 		/* STATIC METHODS */
 		static Matrix zeros(uint16_t , uint16_t ); 

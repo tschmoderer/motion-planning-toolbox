@@ -25,13 +25,13 @@ Matrix::Matrix() {
 /**
 * @brief Construct a Matrix object.
 * Construct a matrix of size n rows times m columns
-* @param n number of rows (must be greater or equal than 1)
-* @param m number of colums (must be greater or equal than 1)
+* @param m number of rows (must be greater or equal than 1)
+* @param n number of colums (must be greater or equal than 1)
 */
-Matrix::Matrix(uint16_t n, uint16_t m) {
-    assert(n > 0); assert(m > 0);
-    this->n_rows     = n; 
-    this->n_cols     = m; 
+Matrix::Matrix(uint16_t m, uint16_t n) {
+    assert(m > 0); assert(n > 0);
+    this->n_rows     = m; 
+    this->n_cols     = n; 
     this->n_elements = n * m; 
     this->data       = new double[n * m]; 
     this->default_data();
@@ -404,6 +404,15 @@ std::ostream & operator<<(std::ostream & os, const Matrix & M) {
 /* METHODS */
 
 /**
+* @brief Test if a matrix has a square shape. 
+* @return true If the Matrix object has teh same number of row and columns. 
+* @return false Otherwise. 
+*/
+bool Matrix::is_square() const {
+    return this->n_cols == this->n_rows;
+}
+
+/**
 * @brief Extract row from Matrix
 * @param r Row number must be between 0 and n_rows-1
 * @return Vector Vector of length n_cols containing the r-th row of the current Matrix object
@@ -440,11 +449,11 @@ Vector Matrix::col(uint16_t c) const {
 * @return double Norm-1 of Matrix object 
 */
 double Matrix::norm1() const { 
-    // Maximum column sum 
+    // Maximum absolute column sum 
     double res = 0.; double s; 
-    for (int i=0; i < this->n_cols; i++) {
+    for (int j = 0; j < this->n_cols; j++) {
         s = 0.; 
-        for (int j=0; j < this->n_rows; j++) {
+        for (int i = 0; i < this->n_rows; i++) {
             s += abs(this->at(i,j)); 
         }
         if (s > res) {
@@ -465,9 +474,9 @@ double Matrix::norm1() const {
 double Matrix::normInf() const {
     // Maximum line sum 
     double res = 0.; double s; 
-    for (int j=0; j < this->n_rows; j++) {
+    for (int i = 0; i < this->n_rows; i++) {
         s = 0.; 
-        for (int i=0; i < this->n_cols; i++) {
+        for (int j = 0; j < this->n_cols; j++) {
             s += abs(this->at(i,j)); 
         }
         if (s > res) {
@@ -502,9 +511,9 @@ double Matrix::normFrob() const {
 */
 Matrix Matrix::transpose() const {
     Matrix res(this->n_cols, this->n_rows); 
-    for (int i = 0; i < this->n_cols; i++) {
-        for (int j = 0; j < this->n_rows; j++) {
-            res(i,j) = this->at(j,i); 
+    for (int i = 0; i < this->n_rows; i++) {
+        for (int j = 0; j < this->n_cols; j++) {
+            res(j,i) = this->at(i,j); 
         }
     }
     return res; 
@@ -514,38 +523,38 @@ Matrix Matrix::transpose() const {
 
 /**
 * @brief Construct a matrix object of dimension n times m filled with zeros
-* @param n Number of rows of the Matrix (must be greater or equal than 1).
-* @param m Number of cols of the Matrix (must be greater or equal than 1).
+* @param m Number of rows of the Matrix (must be greater or equal than 1).
+* @param n Number of cols of the Matrix (must be greater or equal than 1).
 * @return Matrix A Matrix object of size nxm filled with zeros
 */
-Matrix Matrix::zeros(uint16_t n, uint16_t m) {
-    assert(n > 0); assert(m > 0);
-    Matrix M(n, m); 
+Matrix Matrix::zeros(uint16_t m, uint16_t n) {
+    assert(m > 0); assert(n > 0);
+    Matrix M(m, n); 
     return M;
 }
 
 /**
 * @brief Construct a matrix object of dimension n times m filled with ones
-* @param n Number of rows of the Matrix (must be greater or equal than 1).
-* @param m Number of cols of the Matrix (must be greater or equal than 1).
+* @param m Number of rows of the Matrix (must be greater or equal than 1).
+* @param n Number of cols of the Matrix (must be greater or equal than 1).
 * @return Matrix A Matrix object of size nxm filled with ones
 */
-Matrix Matrix::ones(uint16_t n, uint16_t m) {
-    assert(n > 0); assert(m > 0);
-    Matrix M(n,m); 
+Matrix Matrix::ones(uint16_t m, uint16_t n) {
+    assert(m > 0); assert(n > 0);
+    Matrix M(m, n); 
     return M + 1;
 }
 
 /**
 * @brief Construct a matrix object of dimension n times m filled with random values sampled from 0. to 1.
-* @param n Number of rows of the Matrix (must be greater or equal than 1).
-* @param m Number of cols of the Matrix (must be greater or equal than 1).
+* @param m Number of rows of the Matrix (must be greater or equal than 1).
+* @param n Number of cols of the Matrix (must be greater or equal than 1).
 * @return Matrix A Matrix object of size nxm filled with random values
 */
-Matrix Matrix::rand(uint16_t n, uint16_t m) {
-    assert(n > 0); assert(m > 0); 
+Matrix Matrix::rand(uint16_t m, uint16_t n) {
+    assert(m > 0); assert(m > 0); 
     srand (time(NULL));
-    Matrix M(n, m); 
+    Matrix M(m, n); 
     for (int i = 0; i < M.get_n_elements(); i++) {
         M(i) = ((double) std::rand() / (RAND_MAX)); 
     }
@@ -554,15 +563,15 @@ Matrix Matrix::rand(uint16_t n, uint16_t m) {
 
 /**
 * @brief Construct an Hilbert matrix.
-* @param n Number of rows of the Matrix (must be greater or equal than 1).
-* @param m Number of cols of the Matrix (must be greater or equal than 1).
+* @param m Number of rows of the Matrix (must be greater or equal than 1).
+* @param n Number of cols of the Matrix (must be greater or equal than 1).
 * @return Matrix A Matrix object whose coefficients are $M_{ij} = \frac{1}{i+j-1}$ 
 */
-Matrix Matrix::hilbert(uint16_t n, uint16_t m) {
-    assert(n > 0); assert(m > 0); 
-    Matrix M(n,m); 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
+Matrix Matrix::hilbert(uint16_t m, uint16_t n) {
+    assert(m > 0); assert(n > 0); 
+    Matrix M(m, n); 
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
             M(i,j) = 1./(i+j+1);
         }
     }
@@ -574,7 +583,7 @@ Matrix Matrix::hilbert(uint16_t n, uint16_t m) {
 * See https://en.wikipedia.org/wiki/Vandermonde_matrix
 * @param v Vector of data sampled
 * @param n Power order of the vandermonde matrix
-* @return Matrix A Matrix object of dimension v.dim x n whose coefficients are $M_{ij}=v[i]^{j-1}$ 
+* @return Matrix A Matrix object of dimension v.dim x n whose coefficients are $M_{ij}=v_i^{j-1}$ 
 */
 Matrix Matrix::vandermonde(const Vector & v, uint16_t n) {
     assert(n > 0); 
@@ -589,9 +598,9 @@ Matrix Matrix::vandermonde(const Vector & v, uint16_t n) {
 
 /**
 * @brief Overload operator * between two vectors to compute their outer product
-* @param u Vector object of dimension $n$ (>0)
-* @param v Vector object of dimension $m$ (>0)
-* @return Matrix Matrix object M of dimension $n\times m$ equal to M = u*v^T, i.e. $M_{ij} = u_iv_j$.
+* @param u Vector object of dimension $m$ (>0)
+* @param v Vector object of dimension $n$ (>0)
+* @return Matrix Matrix object M of dimension $m\times n$ equal to M = u*v^T, i.e. $M_{ij} = u_iv_j$.
 */
 Matrix Matrix::outer(const Vector & u, const Vector & v) {
     Matrix A(u.get_dim(), v.get_dim()); 
@@ -605,25 +614,25 @@ Matrix Matrix::outer(const Vector & u, const Vector & v) {
 
 /**
 * @brief Compute the product of two matrices combined with their transposition 
-* @param A Matrix object of dimension $(n_A,m_A)$
+* @param A Matrix object of dimension $(m_A,n_A)$
 * @param TRANSA 
-* @param B Matrix object of dimension $(n_B,m_B)$
+* @param B Matrix object of dimension $(m_B,n_B)$
 * @param TRANB 
 * @return Matrix 
 */
 Matrix Matrix::matmul(const Matrix & A, MATRIX_TRANSPOSE TRANSA, const Matrix & B, MATRIX_TRANSPOSE TRANSB) {
-    uint16_t n_A = A.get_n_rows(); 
-    uint16_t m_A = A.get_n_cols(); 
-    uint16_t n_B = B.get_n_rows(); 
-    uint16_t m_B = B.get_n_cols();
+    uint16_t m_A = A.get_n_rows(); 
+    uint16_t n_A = A.get_n_cols(); 
+    uint16_t m_B = B.get_n_rows(); 
+    uint16_t n_B = B.get_n_cols();
     
-    // Case 1: A^t * B
+    // Case 1: A^t * B : (n_A, m_A) * (m_B, n_B)
     if ((TRANSA == TRANSPOSE) && (TRANSB == NO_TRANSPOSE)) {
-        assert(n_A == n_B); 
-        Matrix M(m_A, m_B); 
-        for (int i = 0; i < m_A; i++) {
-            for (int j = 0; j < m_B; j++) {
-                for (int k = 0; k < n_A; k++) {
+        assert(m_A == m_B); 
+        Matrix M(n_A, n_B); 
+        for (int i = 0; i < n_A; i++) {
+            for (int j = 0; j < n_B; j++) {
+                for (int k = 0; k < m_A; k++) {
                     M(i,j) = A(k,i) * B(k,j); 
                 }
             }
@@ -631,13 +640,13 @@ Matrix Matrix::matmul(const Matrix & A, MATRIX_TRANSPOSE TRANSA, const Matrix & 
         return M; 
     }
 
-    // Case 2: A * B^t
+    // Case 2: A * B^t : (m_A, n_A) * (n_B, m_B)
     if ((TRANSA == NO_TRANSPOSE) && (TRANSB == TRANSPOSE)) {
-        assert(m_A == m_B); 
-        Matrix M(n_A, n_B); 
-        for (int i = 0; i < n_A; i++) {
-            for (int j = 0; j < n_B; j++) {
-                for (int k = 0; k < m_A; k++) {
+        assert(n_A == n_B); 
+        Matrix M(m_A, m_B); 
+        for (int i = 0; i < m_A; i++) {
+            for (int j = 0; j < m_B; j++) {
+                for (int k = 0; k < n_A; k++) {
                     M(i,j) = A(i,k) * B(j,k); 
                 }
             }
@@ -645,13 +654,13 @@ Matrix Matrix::matmul(const Matrix & A, MATRIX_TRANSPOSE TRANSA, const Matrix & 
         return M; 
     }
 
-    // Case 3: A^t * B^t
+    // Case 3: A^t * B^t : (n_A, m_A) * (n_B, m_B)
     if ((TRANSA == TRANSPOSE) && (TRANSB == TRANSPOSE)) {
-        assert(n_A == m_B); 
-        Matrix M(m_A, n_B); 
-        for (int i = 0; i < m_A; i++) {
-            for (int j = 0; j < n_B; j++) {
-                for (int k = 0; k < n_A; k++) {
+        assert(m_A == n_B); 
+        Matrix M(n_A, m_B); 
+        for (int i = 0; i < n_A; i++) {
+            for (int j = 0; j < m_B; j++) {
+                for (int k = 0; k < m_A; k++) {
                     M(i,j) = A(k,i) * B(j, k); 
                 }
             }
@@ -659,7 +668,7 @@ Matrix Matrix::matmul(const Matrix & A, MATRIX_TRANSPOSE TRANSA, const Matrix & 
         return M; 
     }
 
-    // Case 4: A * B
+    // Case 4: A * B : (m_A, n_A) * (m_B, n_B)
     return A * B; 
 }
 
@@ -678,7 +687,7 @@ double & Matrix::at(uint32_t n) const {
 /**
 * @brief Access given element of a matrix 
 * @param i Row number (must be greater or equal than 0)
-* @param j Column number (must be gretaer or equal than 0)
+* @param j Column number (must be greater or equal than 0)
 * @return double & Reference to the (i,j)-th element of the matrix
 * @warning Indices are 0-based
 */
