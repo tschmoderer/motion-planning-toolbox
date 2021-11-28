@@ -1,22 +1,24 @@
 #ifndef LOWER_TRIANGULAR_MATRIX_H
 #define LOWER_TRIANGULAR_MATRIX_H
 
+#include "utils.h"
 #include "matrix.h"
 
 /**
 * @class LTMatrix 
 * @brief A class describing a Lower Triangular Matrix. 
-* Lower triangular matrix are Matrix of dimension $n\times m$ satisfying
+* Lower triangular matrix are Matrix of dimension $n\times n$ satisfying
 * $$
 * L_{ij} = \left\{\begin{array}{rl} 0&\textrm{if}\quad j> i \\ 0 &\textrm{otherwise} \end{array}\right.
 * $$
 * @todo check that calling operator L(i,j) calls the newt implementation of the at function. 
+* @todo Extend the definition to $n\times m$, with $n>m$, matrices.
 */
 class LTMatrix : public Matrix {
     public: 
         /* CONSTRUCTORS */
         LTMatrix(); 
-        // TODO: LTMatrix(uint16_t , uint16_t );
+        LTMatrix(uint16_t , uint16_t );
         LTMatrix(uint16_t ); 
         LTMatrix(const LTMatrix & ); 
 
@@ -26,8 +28,12 @@ class LTMatrix : public Matrix {
         /*ACCESSORS */
 
         /* METHODS */
+        uint16_t max_col_from_row(uint16_t ) const; 
 
-        /* OVERLOAD OPERATORS MATRIX*/
+        /* OPERATORS */
+        double & operator()(uint32_t ) const; 
+        double & operator()(uint16_t, uint16_t) const;
+
         LTMatrix & operator=(const LTMatrix & );
 
 		LTMatrix operator-() const;
@@ -58,12 +64,15 @@ class LTMatrix : public Matrix {
         static LTMatrix zeros(uint16_t ); 
 		static LTMatrix ones(uint16_t ); 
 		static LTMatrix rand(uint16_t );
+        static LTMatrix rand(uint16_t , uint16_t );
     
     private:
-		/* METHODS */
-        double & at(uint16_t , uint16_t ) const;
-        void show() const;
+		/* ATTRIBUTES */
 
+		/* METHODS */
+		double & at(uint32_t ) const;
+		double & at(uint16_t , uint16_t ) const;
+		void show() const;
 
 };
 
