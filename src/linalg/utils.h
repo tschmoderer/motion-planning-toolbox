@@ -1,6 +1,7 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+#include <random>
 #include <cstdint>
 
 /**
@@ -12,5 +13,8 @@
 * @return uint32_t $T_n$, $n$-th triangular number.
 */
 inline uint32_t triangular(uint16_t n) {return n*(n+1)/2;}
+
+double uniform_distribution(double , double ); 
+double normal_distribution(double , double ); 
 
 #endif
