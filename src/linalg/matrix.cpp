@@ -242,7 +242,6 @@ Vector operator*(const Vector & v, const Matrix & A) {
 * @return Vector A Vector object of dimension m 
 * @warning Vector v must have the length equla to the number of columns of A
 */
-
 Vector operator*(const Matrix & A, const Vector & v) {
     assert(A.n_cols == v.get_dim()); 
     Vector res(A.n_rows); 
