@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['set_5fdata_135',['set_data',['../class_control.html#af91fa3b50ec98199874ac413e065cb72',1,'Control::set_data(uint8_t, double, double)'],['../class_control.html#acde7a51e096dcaed473466b39a3f5cd7',1,'Control::set_data(uint8_t, const Vector &amp;)']]],
-  ['set_5fn_136',['set_N',['../class_control.html#a949e74e8db74b4a4492c7531b837cbfe',1,'Control']]],
-  ['set_5ft0_137',['set_t0',['../class_control.html#ac7efda85a75c97e44c5d7d51c09e42ee',1,'Control']]],
-  ['set_5ft1_138',['set_t1',['../class_control.html#a6c4f6b74384652c6ed00bd7b322c7349',1,'Control']]],
-  ['show_139',['show',['../class_matrix.html#ac8004035ae9446ac04cf0d3e97011702',1,'Matrix']]],
-  ['squarematrix_140',['SquareMatrix',['../class_square_matrix.html#a2b6a885c455bf4440a3153cd55bcede3',1,'SquareMatrix::SquareMatrix(uint16_t)'],['../class_square_matrix.html#a0e5a341e835851e84ccdca546fad5983',1,'SquareMatrix::SquareMatrix(const Matrix &amp;)']]]
+  ['rand_174',['rand',['../class_l_t_matrix.html#afe82c151810f54db2a0137ab0e637f8e',1,'LTMatrix::rand(uint16_t)'],['../class_l_t_matrix.html#a6d91b74281bca243e32465331d161a9c',1,'LTMatrix::rand(uint16_t, uint16_t)'],['../class_matrix.html#a04fe460ae9fec2a361c76c2616ba5cfd',1,'Matrix::rand()'],['../class_square_matrix.html#a7fe794ebf7f47ba064b882f2b1f4330d',1,'SquareMatrix::rand()'],['../class_vector.html#a5cf3a8c9b58b69f2d28f19af2e14bb55',1,'Vector::rand(uint16_t)']]],
+  ['randn_175',['randn',['../class_vector.html#a5d5120b5f92f166450d1508d504e99b4',1,'Vector::randn(uint16_t)'],['../class_vector.html#afd7c81609842c37c91ddd63857e02f3e',1,'Vector::randn(uint16_t, double, double)']]],
+  ['row_176',['row',['../class_matrix.html#a1153edd19c7e63bad8ae48ac3dedcdfe',1,'Matrix']]]
 ];

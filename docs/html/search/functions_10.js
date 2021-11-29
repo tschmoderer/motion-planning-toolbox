@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7econtrol_146',['~Control',['../class_control.html#aedda1328c4f8b8d49bca8f0812d3bfd1',1,'Control']]],
-  ['_7ematrix_147',['~Matrix',['../class_matrix.html#a9b1c3627f573d78a2f08623fdfef990f',1,'Matrix']]],
-  ['_7evector_148',['~Vector',['../class_vector.html#a2eb3c49587a4f12cade7895ccb73f6a0',1,'Vector']]]
+  ['vandermonde_188',['vandermonde',['../class_matrix.html#a5107a216dd22e1bd5fcb6c1d7a31985d',1,'Matrix::vandermonde()'],['../class_square_matrix.html#aa642da108cb635975897c36068bb11c7',1,'SquareMatrix::vandermonde()']]],
+  ['vector_189',['Vector',['../class_vector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5',1,'Vector::Vector()'],['../class_vector.html#a199dd6e7d5169d0cf63db0200c6208ed',1,'Vector::Vector(uint16_t)'],['../class_vector.html#a6131b0efbf6b788121470e41567a39c9',1,'Vector::Vector(double *, uint16_t)'],['../class_vector.html#a130470658bcf6440baa7280f4b94449b',1,'Vector::Vector(const Vector &amp;)']]]
 ];

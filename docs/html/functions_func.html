@@ -99,6 +99,9 @@ $(function() {
 <li>default_data()
 : <a class="el" href="class_matrix.html#a2a9858d6737c1f6c05fd859ffd492c2b">Matrix</a>
 </li>
+<li>det()
+: <a class="el" href="class_l_t_matrix.html#a8db350006dc23715edead57042cc3ffe">LTMatrix</a>
+</li>
 <li>diag()
 : <a class="el" href="class_square_matrix.html#a5be19ebbbd18632ca2c5f31638816af8">SquareMatrix</a>
 </li>
@@ -106,6 +109,9 @@ $(function() {
 
 
 <h3><a id="index_e"></a>- e -</h3><ul>
+<li>eval()
+: <a class="el" href="class_l_s_q.html#a8145ad95ff290938c5920c7629a221f6">LSQ</a>
+</li>
 <li>eye()
 : <a class="el" href="class_square_matrix.html#ac6042b4af25003b488a0a0dfcf3e8035">SquareMatrix</a>
 </li>
@@ -137,6 +143,14 @@ $(function() {
 <h3><a id="index_h"></a>- h -</h3><ul>
 <li>hilbert()
 : <a class="el" href="class_matrix.html#aac86920d6ece86419f75b9b47d3e1f36">Matrix</a>
+, <a class="el" href="class_square_matrix.html#afe42444d59061650dd4a7fbb94c415d9">SquareMatrix</a>
+</li>
+</ul>
+
+
+<h3><a id="index_i"></a>- i -</h3><ul>
+<li>is_square()
+: <a class="el" href="class_matrix.html#a4e909f004fd51f7615a590553165d6a3">Matrix</a>
 </li>
 </ul>
 
@@ -145,15 +159,25 @@ $(function() {
 <li>linspace()
 : <a class="el" href="class_vector.html#af7cd240e7eb8ef88949a3cd7dd8cf138">Vector</a>
 </li>
+<li>LSQ()
+: <a class="el" href="class_l_s_q.html#ad761fed6250405068cec1b7e10edc979">LSQ</a>
+</li>
+<li>LTMatrix()
+: <a class="el" href="class_l_t_matrix.html#ab13cc4298c82bbab9a1d27fc767d0f8b">LTMatrix</a>
+</li>
 </ul>
 
 
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>matmul()
 : <a class="el" href="class_matrix.html#a1e5351ac541e58705013965253ab7f01">Matrix</a>
+, <a class="el" href="class_square_matrix.html#a4c691d87ab4f66dfe407350d396536bf">SquareMatrix</a>
 </li>
 <li>Matrix()
 : <a class="el" href="class_matrix.html#a2dba13c45127354c9f75ef576f49269b">Matrix</a>
+</li>
+<li>max_col_from_row()
+: <a class="el" href="class_l_t_matrix.html#a2a7e682c959e69439178bbe79d6b7e6a">LTMatrix</a>
 </li>
 </ul>
 
@@ -184,11 +208,14 @@ $(function() {
 
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>ones()
-: <a class="el" href="class_matrix.html#ad2e1d50b6503919c5b1e6f3cb94b83f6">Matrix</a>
+: <a class="el" href="class_l_t_matrix.html#a7f6e98d458d7bbc8951acf07980de374">LTMatrix</a>
+, <a class="el" href="class_matrix.html#ad2e1d50b6503919c5b1e6f3cb94b83f6">Matrix</a>
+, <a class="el" href="class_square_matrix.html#a23d6365cacd121b2b8c134672dc3e873">SquareMatrix</a>
 , <a class="el" href="class_vector.html#aa7b71d8060a00c942ef77b80e5c53391">Vector</a>
 </li>
 <li>operator()()
 : <a class="el" href="class_control.html#a6f9aa4255c3a89a526a6042b751399ac">Control</a>
+, <a class="el" href="class_l_t_matrix.html#af6203e852fa41d27005ded4f13bd75fe">LTMatrix</a>
 , <a class="el" href="class_matrix.html#aeb7bedf0bf8a0f0ad5bd6c6d384a8935">Matrix</a>
 , <a class="el" href="class_vector.html#a01caeee5b001ca13eb1b43bbf3aeebb7">Vector</a>
 </li>
@@ -202,7 +229,9 @@ $(function() {
 </li>
 <li>operator-()
 : <a class="el" href="class_control.html#a6279d780d5691cee53f81ccdc4867e14">Control</a>
+, <a class="el" href="class_l_t_matrix.html#ae1000ae95b9249b6ea429a6c7bffb496">LTMatrix</a>
 , <a class="el" href="class_matrix.html#a747062da9eb312e9fd2e8cf026b4365a">Matrix</a>
+, <a class="el" href="class_square_matrix.html#acf7867b6fb0265a10c635a4e82b19319">SquareMatrix</a>
 , <a class="el" href="class_vector.html#a8226fda013671ae804712d085cc0a12c">Vector</a>
 </li>
 <li>operator-=()
@@ -212,6 +241,7 @@ $(function() {
 </li>
 <li>operator=()
 : <a class="el" href="class_control.html#a34a879c5b3ea6d734adecbdef22147ff">Control</a>
+, <a class="el" href="class_l_t_matrix.html#a9de2f7ae9d59801943655b838c9090a0">LTMatrix</a>
 , <a class="el" href="class_matrix.html#ae3695797299c70849667c22a098db137">Matrix</a>
 , <a class="el" href="class_square_matrix.html#aefc1c932521615568ccf6d73b69c6852">SquareMatrix</a>
 , <a class="el" href="class_vector.html#af4c2769384d324e1a806e463edb1832c">Vector</a>
@@ -221,14 +251,20 @@ $(function() {
 </li>
 <li>outer()
 : <a class="el" href="class_matrix.html#a6316405f3f8e244bb78ef1be5f3ef732">Matrix</a>
+, <a class="el" href="class_square_matrix.html#a81185ae4d284e6db92fa2413c0cdbe37">SquareMatrix</a>
 </li>
 </ul>
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
 <li>rand()
-: <a class="el" href="class_matrix.html#a04fe460ae9fec2a361c76c2616ba5cfd">Matrix</a>
+: <a class="el" href="class_l_t_matrix.html#afe82c151810f54db2a0137ab0e637f8e">LTMatrix</a>
+, <a class="el" href="class_matrix.html#a04fe460ae9fec2a361c76c2616ba5cfd">Matrix</a>
+, <a class="el" href="class_square_matrix.html#a7fe794ebf7f47ba064b882f2b1f4330d">SquareMatrix</a>
 , <a class="el" href="class_vector.html#a5cf3a8c9b58b69f2d28f19af2e14bb55">Vector</a>
+</li>
+<li>randn()
+: <a class="el" href="class_vector.html#a5d5120b5f92f166450d1508d504e99b4">Vector</a>
 </li>
 <li>row()
 : <a class="el" href="class_matrix.html#a1153edd19c7e63bad8ae48ac3dedcdfe">Matrix</a>
@@ -252,18 +288,23 @@ $(function() {
 <li>show()
 : <a class="el" href="class_matrix.html#ac8004035ae9446ac04cf0d3e97011702">Matrix</a>
 </li>
+<li>solve()
+: <a class="el" href="class_l_s_q.html#ac659a097df98b615d51915edd28f7eff">LSQ</a>
+</li>
 <li>SquareMatrix()
-: <a class="el" href="class_square_matrix.html#a2b6a885c455bf4440a3153cd55bcede3">SquareMatrix</a>
+: <a class="el" href="class_square_matrix.html#a76dc18df134009fe0c211205921e9d7d">SquareMatrix</a>
 </li>
 </ul>
 
 
 <h3><a id="index_t"></a>- t -</h3><ul>
 <li>tr()
-: <a class="el" href="class_square_matrix.html#aee3a9dc461e5106263025a9b88da4cbf">SquareMatrix</a>
+: <a class="el" href="class_l_t_matrix.html#a369f558409b80733e27694cb06978d96">LTMatrix</a>
+, <a class="el" href="class_square_matrix.html#aee3a9dc461e5106263025a9b88da4cbf">SquareMatrix</a>
 </li>
 <li>transpose()
 : <a class="el" href="class_matrix.html#a759661b75b9681f3a89ff75e27933b3a">Matrix</a>
+, <a class="el" href="class_square_matrix.html#a497a8757f6dbb834d2906874491270b3">SquareMatrix</a>
 </li>
 </ul>
 
@@ -281,7 +322,8 @@ $(function() {
 
 <h3><a id="index_z"></a>- z -</h3><ul>
 <li>zeros()
-: <a class="el" href="class_matrix.html#a14f81988fdf708fa09db5cbb95293fd8">Matrix</a>
+: <a class="el" href="class_l_t_matrix.html#a4a02b122990513bcf12d401c8661cb4c">LTMatrix</a>
+, <a class="el" href="class_matrix.html#a14f81988fdf708fa09db5cbb95293fd8">Matrix</a>
 , <a class="el" href="class_square_matrix.html#a70fa4ad92283e794f313f1c8c385c736">SquareMatrix</a>
 , <a class="el" href="class_vector.html#a0f7a8afc5320b8418ffec6cc1668d309">Vector</a>
 </li>
@@ -292,8 +334,17 @@ $(function() {
 <li>~Control()
 : <a class="el" href="class_control.html#aedda1328c4f8b8d49bca8f0812d3bfd1">Control</a>
 </li>
+<li>~LSQ()
+: <a class="el" href="class_l_s_q.html#a28aa2159fc4e73d0c56abc06df7f5c8c">LSQ</a>
+</li>
+<li>~LTMatrix()
+: <a class="el" href="class_l_t_matrix.html#a6d01e32ee7bd64de948efdf54b81c12d">LTMatrix</a>
+</li>
 <li>~Matrix()
 : <a class="el" href="class_matrix.html#a9b1c3627f573d78a2f08623fdfef990f">Matrix</a>
+</li>
+<li>~SquareMatrix()
+: <a class="el" href="class_square_matrix.html#a2649bb7f63dad4ef768cfe7f82b43542">SquareMatrix</a>
 </li>
 <li>~Vector()
 : <a class="el" href="class_vector.html#a2eb3c49587a4f12cade7895ccb73f6a0">Vector</a>

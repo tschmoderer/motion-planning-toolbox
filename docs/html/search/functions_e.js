@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['vandermonde_143',['vandermonde',['../class_matrix.html#a5107a216dd22e1bd5fcb6c1d7a31985d',1,'Matrix::vandermonde()'],['../class_square_matrix.html#aa642da108cb635975897c36068bb11c7',1,'SquareMatrix::vandermonde()']]],
-  ['vector_144',['Vector',['../class_vector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5',1,'Vector::Vector()'],['../class_vector.html#a199dd6e7d5169d0cf63db0200c6208ed',1,'Vector::Vector(uint16_t)'],['../class_vector.html#a6131b0efbf6b788121470e41567a39c9',1,'Vector::Vector(double *, uint16_t)'],['../class_vector.html#a130470658bcf6440baa7280f4b94449b',1,'Vector::Vector(const Vector &amp;)']]]
+  ['tr_184',['tr',['../class_l_t_matrix.html#a369f558409b80733e27694cb06978d96',1,'LTMatrix::tr()'],['../class_square_matrix.html#aee3a9dc461e5106263025a9b88da4cbf',1,'SquareMatrix::tr()'],['../linalg_8h.html#a31ba01f5695e96c46e5ec7bc8651543a',1,'tr():&#160;linalg.h']]],
+  ['transpose_185',['transpose',['../class_matrix.html#a759661b75b9681f3a89ff75e27933b3a',1,'Matrix::transpose()'],['../class_square_matrix.html#a497a8757f6dbb834d2906874491270b3',1,'SquareMatrix::transpose()']]],
+  ['triangular_186',['triangular',['../utils_8h.html#a326691d241a8ef0cb560bc7dc825be5c',1,'utils.h']]]
 ];

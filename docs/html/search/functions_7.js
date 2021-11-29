@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linspace_111',['linspace',['../class_vector.html#af7cd240e7eb8ef88949a3cd7dd8cf138',1,'Vector']]]
+  ['is_5fsquare_147',['is_square',['../class_matrix.html#a4e909f004fd51f7615a590553165d6a3',1,'Matrix']]]
 ];

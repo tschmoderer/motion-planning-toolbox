@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['state_5ft_153',['state_t',['../control_system_8h.html#a5483d1c805c21bcd60dc78e643231748',1,'controlSystem.h']]]
+  ['diagonalmatrix_202',['DiagonalMatrix',['../linalg_8h.html#a121320d61421c918f9961ff11578f633',1,'linalg.h']]]
 ];
