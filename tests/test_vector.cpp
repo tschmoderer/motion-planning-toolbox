@@ -69,12 +69,25 @@ void test_methods() {
     }
 }
 
+void test_friend_methods() {
+    Vector v0 = Vector::rand(12); 
+    Vector v1 = abs(v0);
+    Vector v2 = sqrt(pow2(v0));
+    for (int i = 0; i < 12; i++) {
+        assert(v1[i] >= 0); 
+        assert(v1[i] == v2[i]);
+    }
+    assert(abs(v1) == v1); 
+    assert(pow2(v1) == prod(v1,v1)); 
+}
+
 
 int main(int argc, char * argv[]) {
     test_contructors(); 
     test_accessors();
     test_operators(); 
     test_methods(); 
+    test_friend_methods();
 
     return 0; 
 }
