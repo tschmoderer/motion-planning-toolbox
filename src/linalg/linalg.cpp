@@ -1,5 +1,13 @@
 #include "linalg.h"
 
+double tr(const DiagonalMatrix & D) {
+    return sum(D);
+}
+
+double det(const DiagonalMatrix & D) {
+    return prod(D);
+}
+
 Vector solve(const DiagonalMatrix & D, const Vector & b) {
     assert(D.get_dim() == b.get_dim()); 
     Vector res(b.get_dim()); 
