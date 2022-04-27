@@ -22,3 +22,23 @@ The library contains a sublibrary of linear algebra developped by myself.
   * For the moment I do not know how to properly use polymorphism with operators.
 * In *linalg* library bind with a BLAS implementation ;
 
+# Install & Building
+
+
+
+## Unix 
+
+Require cmake & g++
+
+Optional valgrind for memcheck
+
+```bash
+git clone https://github.com/tschmoderer/motion-planning-toolbox.git 
+cd motion-planning-toolbox
+mkdir build
+cd build
+cmake ..
+make
+make test
+(Opt) make memcheck
+```
