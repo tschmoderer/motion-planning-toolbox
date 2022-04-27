@@ -538,3 +538,86 @@ Vector Vector::linspace(double t0, double t1, uint16_t n) {
     }
     return v;
 }
+
+/* FRIEND METHODS */
+
+/**
+ * @brief Elementwise absolute value of a vector
+ * @param v a vector
+ * @return Vector a vector whose components are the absolute value of the components of v
+ */
+Vector abs(const Vector & v) {
+    Vector res(v.dim);
+    for (int i = 0; i < v.dim; i++) {
+        res.data[i] = std::abs(v.data[i]);
+    }
+    return res;
+}
+
+/**
+ * @brief Elementwise square of a vector
+ * @param v a vector
+ * @return Vector a vector whose components are the square of the components of v
+ */
+Vector pow2(const Vector & v) {
+    return prod(v,v);
+}
+
+/**
+ * @brief Compute the product of the element of a vector
+ * @param v a vector object
+ * @return double product of the components of $v$
+ * @warning If v has zero length then we return 1
+ */
+double prod(const Vector & v) {
+    double res = 1.;
+    for (int i = 0; i < v.dim; i++) {
+        res *= v[i];
+    }
+    return res;
+}
+
+/**
+ * @brief Compute the elementwise product of two vectors
+ * @param v1 a vector
+ * @param v2 a vector
+ * @return Vector a vector whose elements are the product of the corresponding elements of v1 and v2
+ * @warning v1 and v2 must have the same dimension
+ */
+Vector prod(const Vector & v1, const Vector & v2) {
+    assert(v1.dim == v2.dim); 
+    Vector res(v1.dim);
+    for (int i = 0; i < v1.dim; i++) {
+        res.data[i] = v1.data[i] * v2.data[i];
+    }
+    return res;
+}
+
+/**
+ * @brief Elementwise square root of a vector
+ * @param v a vector
+ * @return Vector a vector whose components are the square root of the components of v
+ * @warning the components must be non negative
+ */
+Vector sqrt(const Vector & v) {
+    Vector res(v.dim);
+    for (int i = 0; i < v.dim; i++) {
+        assert(v.data[i] >= 0.);
+        res.data[i] = std::sqrt(v.data[i]);
+    }
+    return res;
+}
+
+/**
+ * @brief Compute the sum of the element of a vector
+ * @param v a vector object
+ * @return double sum of the components of $v$
+ * @warning If v has zero length then we return 0
+ */
+double sum(const Vector & v) {
+    double res = 0.;
+    for (int i = 0; i < v.dim; i++) {
+        res += v[i];
+    }
+    return res;
+}

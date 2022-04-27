@@ -22,7 +22,7 @@
 * @brief A lightweight class describing a Vector object. 
 * Vectors are array with size n (>0) of doubles.
 * @warning Maximum dimension of a Vector is 65 535
-* @warning Indices are 0-based. Math formulae must be adpted consequently.
+* @warning Indices are 0-based. Math formulae must be adapted consequently.
 * @todo    Template this class to use different data types (double, float, complex)
 */
 class Vector {
@@ -77,6 +77,15 @@ class Vector {
         static Vector randn(uint16_t ); 
         static Vector randn(uint16_t , double , double ); 
         static Vector linspace(double , double , uint16_t );
+
+        /* FRIEND METHODS */
+        friend Vector abs(const Vector & ); 
+        friend Vector pow2(const Vector & ); 
+        friend double prod(const Vector & ); 
+        friend Vector prod(const Vector & , const Vector & );
+        friend Vector sqrt(const Vector & ); 
+        friend double sum(const Vector & ); 
+        
 
     private: 
         uint16_t dim;  /*!< Dimension of Vector object. @warning Must be greater than 1 */
