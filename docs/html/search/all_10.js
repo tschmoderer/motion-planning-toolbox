@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['vandermonde_93',['vandermonde',['../class_matrix.html#a5107a216dd22e1bd5fcb6c1d7a31985d',1,'Matrix::vandermonde()'],['../class_square_matrix.html#aa642da108cb635975897c36068bb11c7',1,'SquareMatrix::vandermonde()']]],
-  ['vector_94',['Vector',['../class_vector.html',1,'Vector'],['../class_vector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5',1,'Vector::Vector()'],['../class_vector.html#a199dd6e7d5169d0cf63db0200c6208ed',1,'Vector::Vector(uint16_t)'],['../class_vector.html#a6131b0efbf6b788121470e41567a39c9',1,'Vector::Vector(double *, uint16_t)'],['../class_vector.html#a130470658bcf6440baa7280f4b94449b',1,'Vector::Vector(const Vector &amp;)']]],
-  ['vector_2ecpp_95',['vector.cpp',['../vector_8cpp.html',1,'']]],
-  ['vector_2eh_96',['vector.h',['../vector_8h.html',1,'']]]
+  ['uniform_5fdistribution_0',['uniform_distribution',['../utils_8cpp.html#a622a57e6aa59f4b32d773118575dbe64',1,'uniform_distribution(double a=0., double b=1.):&#160;utils.cpp'],['../utils_8h.html#a95ff687b73be65f167d72afa04c03d72',1,'uniform_distribution(double, double):&#160;utils.cpp']]],
+  ['utils_2ecpp_1',['utils.cpp',['../utils_8cpp.html',1,'']]],
+  ['utils_2eh_2',['utils.h',['../utils_8h.html',1,'']]]
 ];
