@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Doxygenize
-        uses: langroodi/doxygenize@v1.4
+        uses: langroodi/doxygenize@v1.6.1
         with: 
           doxygenconf: './docs/doxyfile.conf' # default is ./Doxyfile
           htmloutput: './docs/html/'          # default is ./docs/
