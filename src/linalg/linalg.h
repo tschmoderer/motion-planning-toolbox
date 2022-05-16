@@ -8,15 +8,12 @@
 #include "matrix.h"
 #include "squareMatrix.h"
 #include "lowerTriangularMatrix.h"
+#include "diagonalMatrix.h"
 
 /* ADDITIONNAL TYPES */
 
-typedef Vector DiagonalMatrix;
 
 /* ADDITIONNAL METHODS */
-
-double tr(const DiagonalMatrix & );
-double det(const DiagonalMatrix & );
 
 Vector solve(const DiagonalMatrix & , const Vector & );
 Vector solve(const LTMatrix & , const Vector & );

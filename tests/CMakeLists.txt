@@ -7,12 +7,16 @@ target_link_libraries (test_matrix LINK_PUBLIC linalg)
 add_executable(test_squarematrix test_squarematrix.cpp)
 target_link_libraries (test_squarematrix LINK_PUBLIC linalg)
 
+add_executable(test_diagonalmatrix test_diagonalmatrix.cpp)
+target_link_libraries (test_diagonalmatrix LINK_PUBLIC linalg)
+
 # add_executable(test_control test_control.cpp)
 # target_link_libraries (test_control LINK_PUBLIC ctrltlbx)
 
 add_test(test_vector test_vector)
 add_test(test_matrix test_matrix)
 add_test(test_squarematrix test_squarematrix)
+add_test(test_diagonalmatrix test_diagonalmatrix)
 
 # add_test(test_control test_control)
 
