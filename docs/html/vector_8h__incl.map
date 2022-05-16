@@ -1,10 +1,10 @@
 <map id="src/linalg/vector.h" name="src/linalg/vector.h">
-<area shape="rect" id="node1" title="Header file for Vector class." alt="" coords="128,5,252,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="126,155,187,181"/>
-<area shape="rect" id="node3" title=" " alt="" coords="24,80,86,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="110,80,176,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="200,80,272,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="297,80,360,107"/>
-<area shape="rect" id="node7" href="$utils_8h.html" title=" " alt="" coords="384,80,440,107"/>
-<area shape="rect" id="node8" title=" " alt="" coords="380,155,445,181"/>
+<area shape="rect" id="node1" title="Header file for Vector class." alt="" coords="194,5,318,32"/>
+<area shape="rect" id="node2" href="$utils_8h.html" title=" " alt="" coords="228,80,284,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,67,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="91,155,152,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="177,155,242,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="267,155,339,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="363,155,426,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="450,155,515,181"/>
 </map>

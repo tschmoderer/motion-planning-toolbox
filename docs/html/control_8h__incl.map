@@ -1,13 +1,13 @@
 <map id="src/control.h" name="src/control.h">
-<area shape="rect" id="node1" title="Header file for Control class." alt="" coords="178,5,271,32"/>
-<area shape="rect" id="node2" href="$matrix_8h.html" title="Header file for Matrix class." alt="" coords="227,80,294,107"/>
-<area shape="rect" id="node3" href="$vector_8h.html" title="Header file for Vector class." alt="" coords="156,155,224,181"/>
-<area shape="rect" id="node11" title=" " alt="" coords="248,155,315,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="126,304,187,331"/>
-<area shape="rect" id="node5" title=" " alt="" coords="24,229,86,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="110,229,176,256"/>
-<area shape="rect" id="node7" title=" " alt="" coords="200,229,272,256"/>
-<area shape="rect" id="node8" title=" " alt="" coords="297,229,360,256"/>
-<area shape="rect" id="node9" href="$utils_8h.html" title=" " alt="" coords="384,229,440,256"/>
-<area shape="rect" id="node10" title=" " alt="" coords="380,304,445,331"/>
+<area shape="rect" id="node1" title="Header file for Control class." alt="" coords="244,5,337,32"/>
+<area shape="rect" id="node2" href="$matrix_8h.html" title="Header file for Matrix class." alt="" coords="293,80,360,107"/>
+<area shape="rect" id="node3" href="$vector_8h.html" title="Header file for Vector class." alt="" coords="222,155,290,181"/>
+<area shape="rect" id="node11" title=" " alt="" coords="315,155,381,181"/>
+<area shape="rect" id="node4" href="$utils_8h.html" title=" " alt="" coords="228,229,284,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,304,67,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="91,304,152,331"/>
+<area shape="rect" id="node7" title=" " alt="" coords="177,304,242,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="267,304,339,331"/>
+<area shape="rect" id="node9" title=" " alt="" coords="363,304,426,331"/>
+<area shape="rect" id="node10" title=" " alt="" coords="450,304,515,331"/>
 </map>

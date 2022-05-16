@@ -79,16 +79,21 @@ $(function() {
 <a href="utils_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef UTILS_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define UTILS_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/* USEFUL LIBRARY */</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="utils_8h.html#a326691d241a8ef0cb560bc7dc825be5c">   15</a></span><span class="keyword">inline</span> uint32_t <a class="code hl_function" href="utils_8h.html#a326691d241a8ef0cb560bc7dc825be5c">triangular</a>(uint16_t n) {<span class="keywordflow">return</span> n*(n+1)/2;}</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">double</span> <a class="code hl_function" href="utils_8h.html#a95ff687b73be65f167d72afa04c03d72">uniform_distribution</a>(<span class="keywordtype">double</span> , <span class="keywordtype">double</span> ); </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">double</span> <a class="code hl_function" href="utils_8h.html#a5f41be87d1546ffbe0f63ecf2d48eab2">normal_distribution</a>(<span class="keywordtype">double</span> , <span class="keywordtype">double</span> ); </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="autils_8h_html_a326691d241a8ef0cb560bc7dc825be5c"><div class="ttname"><a href="utils_8h.html#a326691d241a8ef0cb560bc7dc825be5c">triangular</a></div><div class="ttdeci">uint32_t triangular(uint16_t n)</div><div class="ttdoc">Compute $n$-th triangular number $T_n$ defined by $$ T_n = \frac{n(n+1)}{2}. $$.</div><div class="ttdef"><b>Definition:</b> utils.h:15</div></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="utils_8h.html#a326691d241a8ef0cb560bc7dc825be5c">   20</a></span><span class="keyword">inline</span> uint32_t <a class="code hl_function" href="utils_8h.html#a326691d241a8ef0cb560bc7dc825be5c">triangular</a>(uint16_t n) {<span class="keywordflow">return</span> n*(n+1)/2;}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">double</span> <a class="code hl_function" href="utils_8h.html#a95ff687b73be65f167d72afa04c03d72">uniform_distribution</a>(<span class="keywordtype">double</span> , <span class="keywordtype">double</span> ); </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">double</span> <a class="code hl_function" href="utils_8h.html#a5f41be87d1546ffbe0f63ecf2d48eab2">normal_distribution</a>(<span class="keywordtype">double</span> , <span class="keywordtype">double</span> ); </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="autils_8h_html_a326691d241a8ef0cb560bc7dc825be5c"><div class="ttname"><a href="utils_8h.html#a326691d241a8ef0cb560bc7dc825be5c">triangular</a></div><div class="ttdeci">uint32_t triangular(uint16_t n)</div><div class="ttdoc">Compute $n$-th triangular number $T_n$ defined by $$ T_n = \frac{n(n+1)}{2}. $$.</div><div class="ttdef"><b>Definition:</b> utils.h:20</div></div>
 <div class="ttc" id="autils_8h_html_a5f41be87d1546ffbe0f63ecf2d48eab2"><div class="ttname"><a href="utils_8h.html#a5f41be87d1546ffbe0f63ecf2d48eab2">normal_distribution</a></div><div class="ttdeci">double normal_distribution(double, double)</div><div class="ttdoc">Generate a random umber using the Gaussian distribution.</div><div class="ttdef"><b>Definition:</b> utils.cpp:23</div></div>
 <div class="ttc" id="autils_8h_html_a95ff687b73be65f167d72afa04c03d72"><div class="ttname"><a href="utils_8h.html#a95ff687b73be65f167d72afa04c03d72">uniform_distribution</a></div><div class="ttdeci">double uniform_distribution(double, double)</div><div class="ttdoc">Generate a random number using the uniform distribution.</div><div class="ttdef"><b>Definition:</b> utils.cpp:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
