@@ -1,8 +1,13 @@
 #ifndef UTILS_H
 #define UTILS_H
 
-#include <random>
+/* USEFUL LIBRARY */
 #include <cstdint>
+#include <math.h>
+#include <cassert>
+#include <iostream>
+#include <stdlib.h>
+#include <random>
 
 /**
 * @brief Compute $n$-th triangular number $T_n$ defined by 

@@ -10,11 +10,6 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 
-#include <cstdint>
-#include <math.h>
-#include <cassert>
-#include <iostream>
-#include <stdlib.h>
 #include "utils.h"
 
 /**
