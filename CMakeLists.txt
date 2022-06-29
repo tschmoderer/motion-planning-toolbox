@@ -8,7 +8,9 @@ include(CTest)
 enable_testing()
 
 set(CMAKE_BUILD_TYPE Debug)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_C_COMPILER /usr/bin/gcc)
+set(CMAKE_CXX_COMPILER /usr/bin/g++)
+set(CMAKE_CXX_STANDARD 17)
 
 # define directories
 set(SRC      ${CMAKE_SOURCE_DIR}/src)

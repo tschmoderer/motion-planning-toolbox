@@ -67,6 +67,12 @@ void test_methods() {
             assert((v5[i+2] - v5[i+1]) == (v5[i+1] - v5[i]) );
         }
     }
+
+    Vector v6 = Vector::rand(N);
+    v6.sort(); 
+    for (int i = 0; i < N-1; i++) {
+        assert(v6(i) <= v6(i+1));
+    }
 }
 
 void test_friend_methods() {

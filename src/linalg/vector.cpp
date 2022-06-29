@@ -435,6 +435,13 @@ double Vector::normInf() {
     return res;
 }
 
+/**
+* @brief Sort the vector with the quickSort algorithm
+*/
+void Vector::sort() {
+    quicksort(0, this->dim-1);
+}
+
 /* STATIC METHODS */
 
 /**
@@ -620,4 +627,52 @@ double sum(const Vector & v) {
         res += v[i];
     }
     return res;
+}
+
+/* PRIVATE METHODS */
+
+/**
+* @brief This function takes last element as pivot, places the pivot element at its correct position in sorted
+*        array, and places all smaller (smaller than pivot) to left of pivot and all greater elements to right of pivot. 
+* @param low 
+* @param high 
+* @return uint16_t 
+*/
+uint16_t Vector::partition(int low, int high) {
+    double pivot = this->data[high];    // pivot
+    int i = (low - 1);  // Index of smaller element
+ 
+    for (int j = low; j <= high- 1; j++) {
+        if (this->data[j] <= pivot) {
+            i++;    // increment index of smaller element
+            swap(&this->data[i], &this->data[j]);
+        }
+    }
+
+    swap(&this->data[i + 1], &this->data[high]);
+    return (i + 1);
+}
+
+/**
+* @brief The main function that implements QuickSort.
+* @param low Starting index
+* @param high Ending index 
+*/
+void Vector::quicksort(int low, int high) {
+    if (low < high) {
+        uint16_t pi = partition(low, high);
+        quicksort(low, pi - 1);
+        quicksort(pi + 1, high);
+    }
+}
+
+/**
+* @brief A utility function to swap two elements.
+* @param a 
+* @param b 
+*/
+void Vector::swap(double * a, double * b) {
+    double t = *a; 
+    *a = *b;
+    *b = t; 
 }

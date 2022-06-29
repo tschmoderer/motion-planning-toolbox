@@ -63,6 +63,7 @@ class Vector {
         double norm2();
         double normp(uint8_t );
         double normInf();
+        void sort(); 
 
         /* STATIC METHODS */
         static Vector basis(uint16_t , uint16_t );
@@ -85,6 +86,13 @@ class Vector {
     private: 
         uint16_t dim;  /*!< Dimension of Vector object. @warning Must be greater than 1 */
         double * data; /*!< Data of the vector object. */
+
+        /* METHODS */
+        uint16_t partition(int , int ); 
+        void quicksort(int , int );
+
+        /* STATIC METHODS */
+        static void swap(double *, double * ); 
 };
 
 #endif
