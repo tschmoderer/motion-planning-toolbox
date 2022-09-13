@@ -1,9 +1,6 @@
 [submodule "src/odeint/odeint-v2"]
 	path = src/odeint/odeint-v2
 	url = git@github.com:headmyshoulder/odeint-v2.git
-[submodule "src/interpol"]
-	path = src/interpol
-	url = git@github.com:tschmoderer/interpol-lib.git
 [submodule "src/linalg/eigen"]
 	path = src/linalg/eigen
 	url = https://gitlab.com/libeigen/eigen.git
