@@ -4,3 +4,6 @@
 [submodule "src/interpol"]
 	path = src/interpol
 	url = git@github.com:tschmoderer/interpol-lib.git
+[submodule "src/linalg/eigen"]
+	path = src/linalg/eigen
+	url = https://gitlab.com/libeigen/eigen.git
