@@ -1,37 +1,85 @@
+/**
+ * @file interpolator1d.cpp
+ * @author T. Schmoderer (iathena@mailo.com)
+ * @brief Implementation file for Interpolator1D class
+ * @version 1.0
+ * @date 2022-09-13
+ * @copyright Copyright (c) 2022
+ */
+
 #include "interpolator1d.h"
 
 /* CONSTRUCTORS */
+/**
+ * @brief Construct a new Interpolator1D::Interpolator1D object
+ * Default constructor
+ * By default extension method to the left and right are CONSTANT
+ */
 Interpolator1D::Interpolator1D() : Interpolator() {
     this->extend_left_method = EXTEND_CONSTANT; 
     this->extend_right_method = EXTEND_CONSTANT;
 }
 
+/**
+ * @brief Construct a new Interpolator1D::Interpolator1D object
+ * Constrcutor of an Interpolator1D object with user specified parameters
+ * @param imethod Interpolation method
+ * @param exleft  Method to extend left 
+ * @param exright Method to extend right
+ */
 Interpolator1D::Interpolator1D(interpolation_method_t imethod, extend_t exleft, extend_t exright) : Interpolator(imethod,1){
     this->extend_left_method = exleft; 
     this->extend_right_method = exright;   
 }
 
 /* DESTRUCTOR */
+/**
+ * @brief Destroy the Interpolator1D::Interpolator1D object
+ */
 Interpolator1D::~Interpolator1D() {};
 
 /* ACCESSORS */
+/**
+ * @brief Set a mew method for left extension of the interpolation operator
+ * @param new_exleft 
+ */
 void Interpolator1D::set_exleft(extend_t new_exleft) {
     this->extend_left_method = new_exleft;
 }
 
+/**
+ * @brief Set a mew method for right extension of the interpolation operator
+ * @param new_exright 
+ */
 void Interpolator1D::set_exright(extend_t new_exright) {
     this->extend_right_method = new_exright;
 }
 
+/**
+ * @brief get current method for left extension of the interpolation operator
+ * @return extend_t 
+ */
 extend_t Interpolator1D::get_exleft() const {
     return this->extend_left_method;
 }
 
+/**
+ * @brief get current method for right extension of the interpolation operator
+ * @return extend_t 
+ */
 extend_t Interpolator1D::get_exright() const {
     return this->extend_right_method;
 }
 
 /* METHODS */
+/**
+ * @brief Method for 1d interpolation
+ * @param times Prescribed dicrete times
+ * @param data Prescribed data at times 
+ * @param t Interpolation t 
+ * @return double interpolated value at time t computed according to the attribute i_method
+ * @warning times and data must have the same dimension
+ */
 double Interpolator1D::interp1d(Vector * times, Vector * data, double t) const {
     assert(times->get_dim() == data->get_dim());
     
@@ -98,14 +146,38 @@ double Interpolator1D::interp1d(Vector * times, Vector * data, double t) const {
     return 0.;
 }
 
+/**
+ * @brief Interpolate with the value at the nearest left neighbour
+ * @param times Prescribed dicrete times
+ * @param data Prescribed data at times 
+ * @param t Interpolation t 
+ * @param idx_inf index i such that $$t\in [t_i, t_{i+1}[
+ * @return double 
+ */
 double Interpolator1D::interp1d_constant_left(Vector * times, Vector * data, double t, uint16_t idx_inf) const {
     return (*data)[idx_inf]; 
 }
 
+/**
+ * @brief Interpolate with the value at the nearest right neighbour
+ * @param times Prescribed dicrete times
+ * @param data Prescribed data at times 
+ * @param t Interpolation t 
+ * @param idx_inf index i such that $$t\in [t_i, t_{i+1}[
+ * @return double 
+ */
 double Interpolator1D::interp1d_constant_right(Vector * times, Vector * data, double t, uint16_t idx_inf) const {
     return (*data)[idx_inf+1]; 
 }
 
+/**
+ * @brief Interpolate with the value at the nearest neighbour
+ * @param times Prescribed dicrete times
+ * @param data Prescribed data at times 
+ * @param t Interpolation t 
+ * @param idx_inf index i such that $$t\in [t_i, t_{i+1}[
+ * @return double 
+ */
 double Interpolator1D::interp1d_nearest(Vector * times, Vector * data, double t, uint16_t idx_inf) const {
     double mid = ((*times)[idx_inf+1] + (*times)[idx_inf]) / 2.; 
     if (t <= mid) {
@@ -115,6 +187,14 @@ double Interpolator1D::interp1d_nearest(Vector * times, Vector * data, double t,
     }
 }
 
+/**
+ * @brief Interpolate with a linear interpolation between the values of the prescribed data at the two adjacent neighbours
+ * @param times Prescribed dicrete times
+ * @param data Prescribed data at times 
+ * @param t Interpolation t 
+ * @param idx_inf index i such that $$t\in [t_i, t_{i+1}[
+ * @return double 
+ */
 double Interpolator1D::interp1d_linear(Vector * times, Vector * data, double t, uint16_t idx_inf) const {
     double dx = (*times)[idx_inf+1] - (*times)[idx_inf]; 
     double a = ((*data)[idx_inf+1] - (*data)[idx_inf]) / dx; 
@@ -122,6 +202,13 @@ double Interpolator1D::interp1d_linear(Vector * times, Vector * data, double t, 
     return a*t+b; 
 }
 
+/**
+ * @brief Compute interpolated value for a time t outside (left) of the interval 
+ * @param times Prescribed dicrete times
+ * @param data Prescribed data at times 
+ * @param t Interpolation t 
+ * @return double value interpolated according to the value of the attribute extend_left_method
+ */
 double Interpolator1D::interp1D_extend_left(Vector * times, Vector * data, double t) const {
     switch (this->extend_left_method) {
         case EXTEND_CONSTANT:
@@ -134,6 +221,13 @@ double Interpolator1D::interp1D_extend_left(Vector * times, Vector * data, doubl
     }
 }
 
+/**
+ * @brief Compute interpolated value for a time t outside (right) of the interval 
+ * @param times Prescribed dicrete times
+ * @param data Prescribed data at times 
+ * @param t Interpolation t 
+ * @return double value interpolated according to the value of the attribute extend_right_method
+ */
 double Interpolator1D::interp1D_extend_right(Vector * times, Vector * data, double t) const {
     switch (this->extend_right_method) {
         case EXTEND_CONSTANT:

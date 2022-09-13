@@ -1,8 +1,21 @@
+/**
+ * @file interpolator.h
+ * @author T. Schmoderer (iathena@mailo.com)
+ * @brief Header file for Interpolator abstract class
+ * @version 1.0
+ * @date 2022-09-13
+ * @copyright Copyright (c) 2022
+ */
+
 #ifndef INTERPOLATOR_H
 #define INTERPOLATOR_H
 
 #include "utils.h"
 
+/**
+ * @brief enumeration of the different interpolation methods in 1D
+ * 
+ */
 enum interpolation_method_t : uint8_t {
     INTERP_CONSTANT_LEFT, 
     INTERP_CONSTANT_RIGHT, 
@@ -10,6 +23,10 @@ enum interpolation_method_t : uint8_t {
     INTERP_LINEAR
 };
 
+/**
+ * @class Interpolator
+ * @brief An abstract class to describe an interpolation operator
+ */
 class Interpolator {
     public:
         /* CONSTRUCTORS */
@@ -45,7 +62,7 @@ class Interpolator {
     private: 
         /* ATTRIBUTES */
 
-        /* STATIC METHODS */
+        /* METHODS */
 };
 
 #endif
