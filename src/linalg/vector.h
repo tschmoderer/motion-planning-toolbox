@@ -55,7 +55,7 @@ class Vector {
         friend Vector operator-(const double , const Vector & );
         friend Vector operator-(const Vector & , const double );
         friend Vector operator/(const Vector & , const double );
-        friend std::ostream & operator<< (std::ostream & , const Vector & );
+        friend std::ostream & operator<<(std::ostream & , const Vector & );
 
         /* METHODS */
         double norm(uint8_t );
@@ -63,8 +63,9 @@ class Vector {
         double norm2();
         double normp(uint8_t );
         double normInf();
-        void sort(); 
-
+        void   sort(); 
+        std::vector<double> to_std_vector();
+        
         /* STATIC METHODS */
         static Vector basis(uint16_t , uint16_t );
         static Vector zeros(uint16_t );
@@ -82,7 +83,6 @@ class Vector {
         friend Vector sqrt(const Vector & ); 
         friend double sum(const Vector & ); 
         
-
     private: 
         uint16_t dim;  /*!< Dimension of Vector object. @warning Must be greater than 1 */
         double * data; /*!< Data of the vector object. */

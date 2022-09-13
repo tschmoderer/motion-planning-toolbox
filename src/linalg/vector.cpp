@@ -442,6 +442,18 @@ void Vector::sort() {
     quicksort(0, this->dim-1);
 }
 
+/**
+* @brief Conversion to a standard library vector object
+* @return std::vector<double> a standard vector object with the same data as the current object
+*/
+std::vector<double> Vector::to_std_vector() {
+    std::vector<double> x(this->dim);
+    for (int i = 0; i < this->dim; i++) {
+        x.at(i) = this->data[i];
+    }
+    return x;
+}
+
 /* STATIC METHODS */
 
 /**
