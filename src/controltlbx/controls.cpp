@@ -17,12 +17,3 @@ Control Controls::operator[](uint8_t idx) const {
     assert(idx < this->m);
     return this->control_list[idx];
 }
-
-Vector Control::get_data(uint8_t ctrl_nb) const {
-    assert(ctrl_nb >= 0); assert(ctrl_nb < this->m); 
-    Vector res(this->N); 
-    for (int i = 0; i < this->N; i++) {
-        res[i] = this->data(ctrl_nb, i); 
-    }
-    return res; 
-}
