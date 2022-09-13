@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['matmul_0',['matmul',['../class_matrix.html#a1e5351ac541e58705013965253ab7f01',1,'Matrix::matmul()'],['../class_square_matrix.html#a4c691d87ab4f66dfe407350d396536bf',1,'SquareMatrix::matmul()']]],
-  ['matrix_1',['Matrix',['../class_matrix.html#a2dba13c45127354c9f75ef576f49269b',1,'Matrix::Matrix()'],['../class_matrix.html#af831fa075a2bf6c2e6608217ad681f38',1,'Matrix::Matrix(uint16_t, uint16_t)'],['../class_matrix.html#a0b9cfa2302a0273afb1b26e501f93abc',1,'Matrix::Matrix(const Matrix &amp;)']]],
-  ['max_5fcol_5ffrom_5frow_2',['max_col_from_row',['../class_l_t_matrix.html#a2a7e682c959e69439178bbe79d6b7e6a',1,'LTMatrix']]]
+  ['linspace_0',['linspace',['../class_vector.html#af7cd240e7eb8ef88949a3cd7dd8cf138',1,'Vector']]],
+  ['locate_5ftime_1',['locate_time',['../class_interpolator.html#aba7d9dadb5262887734e64d7e2aa3216',1,'Interpolator']]],
+  ['lsq_2',['LSQ',['../class_l_s_q.html#ad761fed6250405068cec1b7e10edc979',1,'LSQ::LSQ()'],['../class_l_s_q.html#a145feafd2185fe3f49a8b74751498e34',1,'LSQ::LSQ(const LSQ &amp;)'],['../class_l_s_q.html#ae6221f5b6ed8fa768d5d77d6b39d5c45',1,'LSQ::LSQ(const Matrix *, const Vector *)']]],
+  ['ltmatrix_3',['LTMatrix',['../class_l_t_matrix.html#ab13cc4298c82bbab9a1d27fc767d0f8b',1,'LTMatrix::LTMatrix()'],['../class_l_t_matrix.html#a99dfa8612ff16b814bbe9ee16ca1a40c',1,'LTMatrix::LTMatrix(uint16_t, uint16_t)'],['../class_l_t_matrix.html#abc15d3a8acc7d9b5d9dc94ef9414378d',1,'LTMatrix::LTMatrix(uint16_t)'],['../class_l_t_matrix.html#a83a2994d3633e981145b9ee2eee12894',1,'LTMatrix::LTMatrix(const LTMatrix &amp;)']]]
 ];

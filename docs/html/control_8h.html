@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CONTROL TOOLBOX: src/control.h File Reference</title>
+<title>CONTROL TOOLBOX: src/controltlbx/control.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,46 +69,62 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2830e324700609867cb07e88e9d5c9c9.html">controltlbx</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle"><div class="title">control.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Header file for <a class="el" href="class_control.html" title="A class decribing Control functions. Controls are described by interpolations points t_i and values u...">Control</a> class.  
+<p>Header file for <a class="el" href="class_control.html" title="A class decribing a single control function. A control is described by interpolations points t_i and ...">Control</a> class.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="matrix_8h_source.html">matrix.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="vector_8h_source.html">vector.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="interpol_8h_source.html">interpol.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for control.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="control_8h__incl.png" border="0" usemap="#asrc_2control_8h" alt=""/></div>
-<map name="asrc_2control_8h" id="asrc_2control_8h">
-<area shape="rect" title="Header file for Control class." alt="" coords="244,5,337,32"/>
-<area shape="rect" href="matrix_8h.html" title="Header file for Matrix class." alt="" coords="293,80,360,107"/>
-<area shape="rect" href="vector_8h.html" title="Header file for Vector class." alt="" coords="222,155,290,181"/>
-<area shape="rect" title=" " alt="" coords="315,155,381,181"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="228,229,284,256"/>
-<area shape="rect" title=" " alt="" coords="5,304,67,331"/>
-<area shape="rect" title=" " alt="" coords="91,304,152,331"/>
-<area shape="rect" title=" " alt="" coords="177,304,242,331"/>
-<area shape="rect" title=" " alt="" coords="267,304,339,331"/>
-<area shape="rect" title=" " alt="" coords="363,304,426,331"/>
-<area shape="rect" title=" " alt="" coords="450,304,515,331"/>
+<div class="center"><img src="control_8h__incl.png" border="0" usemap="#asrc_2controltlbx_2control_8h" alt=""/></div>
+<map name="asrc_2controltlbx_2control_8h" id="asrc_2controltlbx_2control_8h">
+<area shape="rect" title="Header file for Control class." alt="" coords="622,5,778,32"/>
+<area shape="rect" href="matrix_8h.html" title="Header file for Matrix class." alt="" coords="447,528,513,555"/>
+<area shape="rect" href="vector_8h.html" title="Header file for Vector class." alt="" coords="533,603,601,629"/>
+<area shape="rect" href="interpol_8h.html" title="Main header file for interpolation library." alt="" coords="567,80,641,107"/>
+<area shape="rect" title=" " alt="" coords="441,603,508,629"/>
+<area shape="rect" href="linalg_2utils_8h.html" title=" " alt="" coords="275,677,331,704"/>
+<area shape="rect" title=" " alt="" coords="691,752,752,779"/>
+<area shape="rect" title=" " alt="" coords="5,752,67,779"/>
+<area shape="rect" title=" " alt="" coords="91,752,157,779"/>
+<area shape="rect" title=" " alt="" coords="181,752,253,779"/>
+<area shape="rect" title=" " alt="" coords="525,752,587,779"/>
+<area shape="rect" title=" " alt="" coords="278,752,343,779"/>
+<area shape="rect" href="interpolator_8h.html" title="Header file for Interpolator abstract class." alt="" coords="463,229,559,256"/>
+<area shape="rect" href="interpolator1d_8h.html" title="Header file for 1D interpolator operator class." alt="" coords="549,155,659,181"/>
+<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="435,304,491,331"/>
+<area shape="rect" href="linalg_8h.html" title="Main Header file for Linear Algebra Library." alt="" coords="431,379,494,405"/>
+<area shape="rect" href="square_matrix_8h.html" title=" " alt="" coords="455,453,561,480"/>
+<area shape="rect" href="lower_triangular_matrix_8h.html" title=" " alt="" coords="225,453,380,480"/>
+<area shape="rect" href="diagonal_matrix_8h.html" title=" " alt="" coords="599,528,713,555"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="control_8h__dep__incl.png" border="0" usemap="#asrc_2control_8hdep" alt=""/></div>
-<map name="asrc_2control_8hdep" id="asrc_2control_8hdep">
-<area shape="rect" title="Header file for Control class." alt="" coords="12,5,105,32"/>
-<area shape="rect" href="control_8cpp.html" title="Implementation of control class." alt="" coords="5,80,112,107"/>
+<div class="center"><img src="control_8h__dep__incl.png" border="0" usemap="#asrc_2controltlbx_2control_8hdep" alt=""/></div>
+<map name="asrc_2controltlbx_2control_8hdep" id="asrc_2controltlbx_2control_8hdep">
+<area shape="rect" title="Header file for Control class." alt="" coords="135,5,291,32"/>
+<area shape="rect" href="control_8cpp.html" title="Implementation of control class." alt="" coords="5,80,176,107"/>
+<area shape="rect" href="controltlbx_8h.html" title=" " alt="" coords="315,311,491,338"/>
+<area shape="rect" href="controltlbx_2utils_8h.html" title=" " alt="" coords="396,80,537,107"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="355,393,451,420"/>
+<area shape="rect" href="control_system_8h.html" title=" " alt="" coords="504,229,704,256"/>
+<area shape="rect" href="controls_8h.html" title=" " alt="" coords="385,155,548,181"/>
+<area shape="rect" href="control_system_8cpp.html" title=" " alt="" coords="718,311,933,338"/>
+<area shape="rect" href="linear_control_system_8h.html" title=" " alt="" coords="515,304,693,345"/>
+<area shape="rect" href="controls_8cpp.html" title=" " alt="" coords="251,229,429,256"/>
 </map>
 </div>
 </div>
@@ -117,46 +133,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html">Control</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class decribing <a class="el" href="class_control.html" title="A class decribing Control functions. Controls are described by interpolations points t_i and values u...">Control</a> functions. Controls are described by interpolations points t_i and values u(t_i) Several interpolation methods are implemented to compute u(t)  <a href="class_control.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class decribing a single control function. A control is described by interpolations points t_i and values u(t_i) Several interpolation methods are implemented to compute u(t)  <a href="class_control.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a69143bce9d83515f0a1b630cdc8f8c25"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25">interp_t</a> : uint8_t { <a class="el" href="control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25ab7ccea8ae0457c69704c0835f6480e18">INTERP_CONSTANT_LEFT</a>
-, <a class="el" href="control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a5e9da5b99456219f1c0560c7e85be262">INTERP_CONSTANT_RIGHT</a>
-, <a class="el" href="control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a5dc1c99b5e803daf350345d519b58b67">INTERP_NEAREST</a>
-, <a class="el" href="control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a17abedd2e487446bf814c9da0b7791de">INTERP_LINEAR</a>
- }</td></tr>
-<tr class="separator:a69143bce9d83515f0a1b630cdc8f8c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Header file for <a class="el" href="class_control.html" title="A class decribing Control functions. Controls are described by interpolations points t_i and values u...">Control</a> class. </p>
+<div class="textblock"><p >Header file for <a class="el" href="class_control.html" title="A class decribing a single control function. A control is described by interpolations points t_i and ...">Control</a> class. </p>
 <dl class="section author"><dt>Author</dt><dd>T. Schmoderer (<a href="#" onclick="location.href='mai'+'lto:'+'iat'+'he'+'na@'+'ma'+'ilo'+'.c'+'om'; return false;">iathe<span style="display: none;">.nosp@m.</span>na@m<span style="display: none;">.nosp@m.</span>ailo.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2021-10-27</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 </dd></dl>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a69143bce9d83515f0a1b630cdc8f8c25" name="a69143bce9d83515f0a1b630cdc8f8c25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69143bce9d83515f0a1b630cdc8f8c25">&#9670;&nbsp;</a></span>interp_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25">interp_t</a> : uint8_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a69143bce9d83515f0a1b630cdc8f8c25ab7ccea8ae0457c69704c0835f6480e18" name="a69143bce9d83515f0a1b630cdc8f8c25ab7ccea8ae0457c69704c0835f6480e18"></a>INTERP_CONSTANT_LEFT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a69143bce9d83515f0a1b630cdc8f8c25a5e9da5b99456219f1c0560c7e85be262" name="a69143bce9d83515f0a1b630cdc8f8c25a5e9da5b99456219f1c0560c7e85be262"></a>INTERP_CONSTANT_RIGHT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a69143bce9d83515f0a1b630cdc8f8c25a5dc1c99b5e803daf350345d519b58b67" name="a69143bce9d83515f0a1b630cdc8f8c25a5dc1c99b5e803daf350345d519b58b67"></a>INTERP_NEAREST&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a69143bce9d83515f0a1b630cdc8f8c25a17abedd2e487446bf814c9da0b7791de" name="a69143bce9d83515f0a1b630cdc8f8c25a17abedd2e487446bf814c9da0b7791de"></a>INTERP_LINEAR&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2

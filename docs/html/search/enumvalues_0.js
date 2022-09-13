@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['interp_5fconstant_5fleft_0',['INTERP_CONSTANT_LEFT',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25ab7ccea8ae0457c69704c0835f6480e18',1,'control.h']]],
-  ['interp_5fconstant_5fright_1',['INTERP_CONSTANT_RIGHT',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a5e9da5b99456219f1c0560c7e85be262',1,'control.h']]],
-  ['interp_5flinear_2',['INTERP_LINEAR',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a17abedd2e487446bf814c9da0b7791de',1,'control.h']]],
-  ['interp_5fnearest_3',['INTERP_NEAREST',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25a5dc1c99b5e803daf350345d519b58b67',1,'control.h']]]
+  ['extend_5fconstant_0',['EXTEND_CONSTANT',['../interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a0adfefef48924a343c169571db86fc33',1,'interpolator1d.h']]],
+  ['extend_5fzero_1',['EXTEND_ZERO',['../interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a7f75d51b33702e6ebfbb6f8a6762d731',1,'interpolator1d.h']]]
 ];

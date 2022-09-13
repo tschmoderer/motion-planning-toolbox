@@ -77,7 +77,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A class decribing <a class="el" href="class_control.html" title="A class decribing Control functions. Controls are described by interpolations points t_i and values u...">Control</a> functions. Controls are described by interpolations points t_i and values u(t_i) Several interpolation methods are implemented to compute u(t)  
+<p>A class decribing a single control function. A control is described by interpolations points t_i and values u(t_i) Several interpolation methods are implemented to compute u(t)  
  <a href="class_control.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="control_8h_source.html">control.h</a>&gt;</code></p>
@@ -85,40 +85,42 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa730aeda4517f40bc48ba1e46ebded77"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#aa730aeda4517f40bc48ba1e46ebded77">Control</a> ()</td></tr>
-<tr class="memdesc:aa730aeda4517f40bc48ba1e46ebded77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_control.html" title="A class decribing Control functions. Controls are described by interpolations points t_i and values u...">Control</a> object. Default Constructor.  <a href="class_control.html#aa730aeda4517f40bc48ba1e46ebded77">More...</a><br /></td></tr>
+<tr class="memdesc:aa730aeda4517f40bc48ba1e46ebded77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_control.html" title="A class decribing a single control function. A control is described by interpolations points t_i and ...">Control</a> object. Default Constructor By defauly we have the following values : t0 = 0 ; t1 = 1 ; N = 2 data = 0 <a class="el" href="class_interpolator.html" title="An abstract class to describe an interpolation operator.">Interpolator</a> linear with constant extension left and right.  <a href="class_control.html#aa730aeda4517f40bc48ba1e46ebded77">More...</a><br /></td></tr>
 <tr class="separator:aa730aeda4517f40bc48ba1e46ebded77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78d57c1de7e0a6a1572082d2eda29a45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a78d57c1de7e0a6a1572082d2eda29a45">Control</a> (uint8_t, double, double, uint8_t)</td></tr>
-<tr class="separator:a78d57c1de7e0a6a1572082d2eda29a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f38a88ae77b21b47c5454d442057c52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a6f38a88ae77b21b47c5454d442057c52">Control</a> (double, double, uint16_t, <a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>)</td></tr>
+<tr class="separator:a6f38a88ae77b21b47c5454d442057c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd106c79ea2c4eb6c1df2f9e2f419601"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#abd106c79ea2c4eb6c1df2f9e2f419601">Control</a> (<a class="el" href="class_vector.html">Vector</a> *, <a class="el" href="class_vector.html">Vector</a> *, <a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>)</td></tr>
+<tr class="separator:abd106c79ea2c4eb6c1df2f9e2f419601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4c9b9434d8608ece1743808dcdc1bf9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#ad4c9b9434d8608ece1743808dcdc1bf9">Control</a> (double, double, <a class="el" href="class_vector.html">Vector</a> *, <a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>)</td></tr>
+<tr class="separator:ad4c9b9434d8608ece1743808dcdc1bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c2cb5a17c8a125350c543097b188f67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a2c2cb5a17c8a125350c543097b188f67">Control</a> (const <a class="el" href="class_control.html">Control</a> &amp;)</td></tr>
 <tr class="separator:a2c2cb5a17c8a125350c543097b188f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedda1328c4f8b8d49bca8f0812d3bfd1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#aedda1328c4f8b8d49bca8f0812d3bfd1">~Control</a> ()</td></tr>
 <tr class="separator:aedda1328c4f8b8d49bca8f0812d3bfd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adee3fca60a5ed8c0a7b7151cfd68de3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#adee3fca60a5ed8c0a7b7151cfd68de3f">get_time</a> () const</td></tr>
-<tr class="separator:adee3fca60a5ed8c0a7b7151cfd68de3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e3c6422d6a1084384cc67af739c0c6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a8e3c6422d6a1084384cc67af739c0c6b">get_data</a> () const</td></tr>
-<tr class="separator:a8e3c6422d6a1084384cc67af739c0c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaba8ea1616ebc0fb341ed07729e8ab6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#aaba8ea1616ebc0fb341ed07729e8ab6f">get_data</a> (uint8_t) const</td></tr>
-<tr class="separator:aaba8ea1616ebc0fb341ed07729e8ab6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0fa2db209b9d403afdd354e36c712a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#ab0fa2db209b9d403afdd354e36c712a4">get_time</a> () const</td></tr>
+<tr class="separator:ab0fa2db209b9d403afdd354e36c712a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3bc9e827d9865800ef9bb8934c289ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#ab3bc9e827d9865800ef9bb8934c289ac">get_data</a> () const</td></tr>
+<tr class="separator:ab3bc9e827d9865800ef9bb8934c289ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7efda85a75c97e44c5d7d51c09e42ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#ac7efda85a75c97e44c5d7d51c09e42ee">set_t0</a> (double)</td></tr>
 <tr class="separator:ac7efda85a75c97e44c5d7d51c09e42ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c4f6b74384652c6ed00bd7b322c7349"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a6c4f6b74384652c6ed00bd7b322c7349">set_t1</a> (double)</td></tr>
 <tr class="separator:a6c4f6b74384652c6ed00bd7b322c7349"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a949e74e8db74b4a4492c7531b837cbfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a949e74e8db74b4a4492c7531b837cbfe">set_N</a> (uint8_t)</td></tr>
-<tr class="separator:a949e74e8db74b4a4492c7531b837cbfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af91fa3b50ec98199874ac413e065cb72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#af91fa3b50ec98199874ac413e065cb72">set_data</a> (uint8_t, double, double)</td></tr>
-<tr class="separator:af91fa3b50ec98199874ac413e065cb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acde7a51e096dcaed473466b39a3f5cd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#acde7a51e096dcaed473466b39a3f5cd7">set_data</a> (uint8_t, const <a class="el" href="class_vector.html">Vector</a> &amp;)</td></tr>
-<tr class="separator:acde7a51e096dcaed473466b39a3f5cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f9aa4255c3a89a526a6042b751399ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a6f9aa4255c3a89a526a6042b751399ac">operator()</a> (double) const</td></tr>
-<tr class="separator:a6f9aa4255c3a89a526a6042b751399ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a088edb518e7cacda32fc82d640af2ff6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a088edb518e7cacda32fc82d640af2ff6">operator()</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;) const</td></tr>
-<tr class="separator:a088edb518e7cacda32fc82d640af2ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac34e3da87eb83ae41fa16b0373771455"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_control.html">Control</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#ac34e3da87eb83ae41fa16b0373771455">operator+</a> (const <a class="el" href="class_control.html">Control</a> &amp;) const</td></tr>
-<tr class="separator:ac34e3da87eb83ae41fa16b0373771455"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6279d780d5691cee53f81ccdc4867e14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_control.html">Control</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a6279d780d5691cee53f81ccdc4867e14">operator-</a> (const <a class="el" href="class_control.html">Control</a> &amp;) const</td></tr>
-<tr class="separator:a6279d780d5691cee53f81ccdc4867e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fa5beff317ec5dad11c058fb019fc97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_control.html">Control</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a7fa5beff317ec5dad11c058fb019fc97">operator=</a> (const <a class="el" href="class_control.html">Control</a> &amp;) const</td></tr>
-<tr class="separator:a7fa5beff317ec5dad11c058fb019fc97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade669fc78cc87a45967f8aa06e77db34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#ade669fc78cc87a45967f8aa06e77db34">set_N</a> (uint16_t)</td></tr>
+<tr class="separator:ade669fc78cc87a45967f8aa06e77db34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b5233bb56755fab1cbb7955f52b4db1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a8b5233bb56755fab1cbb7955f52b4db1">set_data</a> (double, double)</td></tr>
+<tr class="separator:a8b5233bb56755fab1cbb7955f52b4db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5eafe82cf45f92a7479c37a55b3065"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a8e5eafe82cf45f92a7479c37a55b3065">set_data</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;)</td></tr>
+<tr class="separator:a8e5eafe82cf45f92a7479c37a55b3065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860e9fd066c4c15de45f31d4e689bbe4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a860e9fd066c4c15de45f31d4e689bbe4">set_interp_method</a> (<a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>)</td></tr>
+<tr class="separator:a860e9fd066c4c15de45f31d4e689bbe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe2ea27b07bb45971cee010f9ccf8b63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#afe2ea27b07bb45971cee010f9ccf8b63">set_interp_method</a> (<a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>)</td></tr>
+<tr class="separator:afe2ea27b07bb45971cee010f9ccf8b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c15fa1983875c95bd28fffd2da82748"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a4c15fa1983875c95bd28fffd2da82748">operator()</a> (double) const</td></tr>
+<tr class="separator:a4c15fa1983875c95bd28fffd2da82748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1bf0f5050dd74d92c901d1fe58c88e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a2f1bf0f5050dd74d92c901d1fe58c88e">operator()</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;) const</td></tr>
+<tr class="separator:a2f1bf0f5050dd74d92c901d1fe58c88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84586bbffaee27751ae8a4004c1f3a5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_control.html">Control</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a84586bbffaee27751ae8a4004c1f3a5e">operator=</a> (const <a class="el" href="class_control.html">Control</a> &amp;)</td></tr>
+<tr class="separator:a84586bbffaee27751ae8a4004c1f3a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65c77a675ccc4a39476354cf1222419a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_control.html">Control</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a65c77a675ccc4a39476354cf1222419a">operator+=</a> (const <a class="el" href="class_control.html">Control</a> &amp;)</td></tr>
 <tr class="separator:a65c77a675ccc4a39476354cf1222419a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a118c21a94ef911b4d3f94143775936fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_control.html">Control</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a118c21a94ef911b4d3f94143775936fc">operator-=</a> (const <a class="el" href="class_control.html">Control</a> &amp;)</td></tr>
@@ -126,14 +128,20 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
+<tr class="memitem:ab7808e82896ab0361f641c0a43844f4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#ab7808e82896ab0361f641c0a43844f4f">operator==</a> (const <a class="el" href="class_control.html">Control</a> &amp;, const <a class="el" href="class_control.html">Control</a> &amp;)</td></tr>
+<tr class="separator:ab7808e82896ab0361f641c0a43844f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67da4f957e3b8a4076ebbd505304cd71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_control.html">Control</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a67da4f957e3b8a4076ebbd505304cd71">operator+</a> (const <a class="el" href="class_control.html">Control</a> &amp;, const <a class="el" href="class_control.html">Control</a> &amp;)</td></tr>
+<tr class="separator:a67da4f957e3b8a4076ebbd505304cd71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ae7e641ecb89722c1d02d7e78e1e60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_control.html">Control</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a65ae7e641ecb89722c1d02d7e78e1e60">operator-</a> (const <a class="el" href="class_control.html">Control</a> &amp;, const <a class="el" href="class_control.html">Control</a> &amp;)</td></tr>
+<tr class="separator:a65ae7e641ecb89722c1d02d7e78e1e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6faf4983230ac919f15eb56dfaf93a6d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control.html#a6faf4983230ac919f15eb56dfaf93a6d">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="class_control.html">Control</a> &amp;)</td></tr>
 <tr class="separator:a6faf4983230ac919f15eb56dfaf93a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >A class decribing <a class="el" href="class_control.html" title="A class decribing Control functions. Controls are described by interpolations points t_i and values u...">Control</a> functions. Controls are described by interpolations points t_i and values u(t_i) Several interpolation methods are implemented to compute u(t) </p>
+<div class="textblock"><p >A class decribing a single control function. A control is described by interpolations points t_i and values u(t_i) Several interpolation methods are implemented to compute u(t) </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa730aeda4517f40bc48ba1e46ebded77" name="aa730aeda4517f40bc48ba1e46ebded77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa730aeda4517f40bc48ba1e46ebded77">&#9670;&nbsp;</a></span>Control() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa730aeda4517f40bc48ba1e46ebded77">&#9670;&nbsp;</a></span>Control() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,12 +155,12 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="class_control.html" title="A class decribing Control functions. Controls are described by interpolations points t_i and values u...">Control</a> object. Default Constructor. </p>
+<p>Construct a new <a class="el" href="class_control.html" title="A class decribing a single control function. A control is described by interpolations points t_i and ...">Control</a> object. Default Constructor By defauly we have the following values : t0 = 0 ; t1 = 1 ; N = 2 data = 0 <a class="el" href="class_interpolator.html" title="An abstract class to describe an interpolation operator.">Interpolator</a> linear with constant extension left and right. </p>
 
 </div>
 </div>
-<a id="a78d57c1de7e0a6a1572082d2eda29a45" name="a78d57c1de7e0a6a1572082d2eda29a45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78d57c1de7e0a6a1572082d2eda29a45">&#9670;&nbsp;</a></span>Control() <span class="overload">[2/3]</span></h2>
+<a id="a6f38a88ae77b21b47c5454d442057c52" name="a6f38a88ae77b21b47c5454d442057c52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f38a88ae77b21b47c5454d442057c52">&#9670;&nbsp;</a></span>Control() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,26 +168,136 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">Control::Control </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>nb_ctrl</em>, </td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>time_0</em>, </td>
+          <td class="paramname"><em>t1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>&#160;</td>
+          <td class="paramname"><em>imeth</em> = <code><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78fa17abedd2e487446bf814c9da0b7791de">INTERP_LINEAR</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>exleft</em> = <code><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a0adfefef48924a343c169571db86fc33">EXTEND_CONSTANT</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>exright</em> = <code><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a0adfefef48924a343c169571db86fc33">EXTEND_CONSTANT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd106c79ea2c4eb6c1df2f9e2f419601" name="abd106c79ea2c4eb6c1df2f9e2f419601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd106c79ea2c4eb6c1df2f9e2f419601">&#9670;&nbsp;</a></span>Control() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Control::Control </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>&#160;</td>
+          <td class="paramname"><em>imeth</em> = <code><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78fa17abedd2e487446bf814c9da0b7791de">INTERP_LINEAR</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>exleft</em> = <code><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a0adfefef48924a343c169571db86fc33">EXTEND_CONSTANT</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>exright</em> = <code><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a0adfefef48924a343c169571db86fc33">EXTEND_CONSTANT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4c9b9434d8608ece1743808dcdc1bf9" name="ad4c9b9434d8608ece1743808dcdc1bf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4c9b9434d8608ece1743808dcdc1bf9">&#9670;&nbsp;</a></span>Control() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Control::Control </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>time_1</em>, </td>
+          <td class="paramname"><em>t1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>nb_time</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>&#160;</td>
+          <td class="paramname"><em>imeth</em> = <code><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78fa17abedd2e487446bf814c9da0b7791de">INTERP_LINEAR</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>exleft</em> = <code><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a0adfefef48924a343c169571db86fc33">EXTEND_CONSTANT</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>exright</em> = <code><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a0adfefef48924a343c169571db86fc33">EXTEND_CONSTANT</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -192,7 +310,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="a2c2cb5a17c8a125350c543097b188f67" name="a2c2cb5a17c8a125350c543097b188f67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c2cb5a17c8a125350c543097b188f67">&#9670;&nbsp;</a></span>Control() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c2cb5a17c8a125350c543097b188f67">&#9670;&nbsp;</a></span>Control() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,25 +345,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8e3c6422d6a1084384cc67af739c0c6b" name="a8e3c6422d6a1084384cc67af739c0c6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e3c6422d6a1084384cc67af739c0c6b">&#9670;&nbsp;</a></span>get_data() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Control::get_data </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aaba8ea1616ebc0fb341ed07729e8ab6f" name="aaba8ea1616ebc0fb341ed07729e8ab6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaba8ea1616ebc0fb341ed07729e8ab6f">&#9670;&nbsp;</a></span>get_data() <span class="overload">[2/2]</span></h2>
+<a id="ab3bc9e827d9865800ef9bb8934c289ac" name="ab3bc9e827d9865800ef9bb8934c289ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3bc9e827d9865800ef9bb8934c289ac">&#9670;&nbsp;</a></span>get_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,8 +354,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_vector.html">Vector</a> Control::get_data </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ctrl_nb</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -262,14 +362,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="adee3fca60a5ed8c0a7b7151cfd68de3f" name="adee3fca60a5ed8c0a7b7151cfd68de3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adee3fca60a5ed8c0a7b7151cfd68de3f">&#9670;&nbsp;</a></span>get_time()</h2>
+<a id="ab0fa2db209b9d403afdd354e36c712a4" name="ab0fa2db209b9d403afdd354e36c712a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0fa2db209b9d403afdd354e36c712a4">&#9670;&nbsp;</a></span>get_time()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_vector.html">Vector</a> Control::get_time </td>
+          <td class="memname"><a class="el" href="class_vector.html">Vector</a> * Control::get_time </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -279,26 +379,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a088edb518e7cacda32fc82d640af2ff6" name="a088edb518e7cacda32fc82d640af2ff6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a088edb518e7cacda32fc82d640af2ff6">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Control::operator() </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_vector.html">Vector</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6f9aa4255c3a89a526a6042b751399ac" name="a6f9aa4255c3a89a526a6042b751399ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f9aa4255c3a89a526a6042b751399ac">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+<a id="a2f1bf0f5050dd74d92c901d1fe58c88e" name="a2f1bf0f5050dd74d92c901d1fe58c88e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f1bf0f5050dd74d92c901d1fe58c88e">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,8 +388,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_vector.html">Vector</a> Control::operator() </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>t</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>tmp</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -315,17 +397,17 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ac34e3da87eb83ae41fa16b0373771455" name="ac34e3da87eb83ae41fa16b0373771455"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac34e3da87eb83ae41fa16b0373771455">&#9670;&nbsp;</a></span>operator+()</h2>
+<a id="a4c15fa1983875c95bd28fffd2da82748" name="a4c15fa1983875c95bd28fffd2da82748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c15fa1983875c95bd28fffd2da82748">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_control.html">Control</a> Control::operator+ </td>
+          <td class="memname">double Control::operator() </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_control.html">Control</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -343,26 +425,8 @@ Friends</h2></td></tr>
           <td class="memname"><a class="el" href="class_control.html">Control</a> &amp; Control::operator+= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_control.html">Control</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6279d780d5691cee53f81ccdc4867e14" name="a6279d780d5691cee53f81ccdc4867e14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6279d780d5691cee53f81ccdc4867e14">&#9670;&nbsp;</a></span>operator-()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_control.html">Control</a> Control::operator- </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_control.html">Control</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -379,7 +443,7 @@ Friends</h2></td></tr>
           <td class="memname"><a class="el" href="class_control.html">Control</a> &amp; Control::operator-= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_control.html">Control</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -387,8 +451,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a7fa5beff317ec5dad11c058fb019fc97" name="a7fa5beff317ec5dad11c058fb019fc97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fa5beff317ec5dad11c058fb019fc97">&#9670;&nbsp;</a></span>operator=()</h2>
+<a id="a84586bbffaee27751ae8a4004c1f3a5e" name="a84586bbffaee27751ae8a4004c1f3a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84586bbffaee27751ae8a4004c1f3a5e">&#9670;&nbsp;</a></span>operator=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -397,16 +461,16 @@ Friends</h2></td></tr>
           <td class="memname"><a class="el" href="class_control.html">Control</a> &amp; Control::operator= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_control.html">Control</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="acde7a51e096dcaed473466b39a3f5cd7" name="acde7a51e096dcaed473466b39a3f5cd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acde7a51e096dcaed473466b39a3f5cd7">&#9670;&nbsp;</a></span>set_data() <span class="overload">[1/2]</span></h2>
+<a id="a8e5eafe82cf45f92a7479c37a55b3065" name="a8e5eafe82cf45f92a7479c37a55b3065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e5eafe82cf45f92a7479c37a55b3065">&#9670;&nbsp;</a></span>set_data() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -414,40 +478,24 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void Control::set_data </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ctrl_nb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="class_vector.html">Vector</a> &amp;&#160;</td>
-          <td class="paramname"><em>d</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>d</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="af91fa3b50ec98199874ac413e065cb72" name="af91fa3b50ec98199874ac413e065cb72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af91fa3b50ec98199874ac413e065cb72">&#9670;&nbsp;</a></span>set_data() <span class="overload">[2/2]</span></h2>
+<a id="a8b5233bb56755fab1cbb7955f52b4db1" name="a8b5233bb56755fab1cbb7955f52b4db1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b5233bb56755fab1cbb7955f52b4db1">&#9670;&nbsp;</a></span>set_data() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Control::set_data </td>
+          <td class="memname">bool Control::set_data </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ctrl_nb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>ti</em>, </td>
         </tr>
@@ -467,8 +515,60 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a949e74e8db74b4a4492c7531b837cbfe" name="a949e74e8db74b4a4492c7531b837cbfe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a949e74e8db74b4a4492c7531b837cbfe">&#9670;&nbsp;</a></span>set_N()</h2>
+<a id="a860e9fd066c4c15de45f31d4e689bbe4" name="a860e9fd066c4c15de45f31d4e689bbe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a860e9fd066c4c15de45f31d4e689bbe4">&#9670;&nbsp;</a></span>set_interp_method() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Control::set_interp_method </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>&#160;</td>
+          <td class="paramname"><em>imeth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe2ea27b07bb45971cee010f9ccf8b63" name="afe2ea27b07bb45971cee010f9ccf8b63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe2ea27b07bb45971cee010f9ccf8b63">&#9670;&nbsp;</a></span>set_interp_method() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Control::set_interp_method </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>&#160;</td>
+          <td class="paramname"><em>imeth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>exleft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>exright</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade669fc78cc87a45967f8aa06e77db34" name="ade669fc78cc87a45967f8aa06e77db34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade669fc78cc87a45967f8aa06e77db34">&#9670;&nbsp;</a></span>set_N()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,7 +576,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void Control::set_N </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>new_N</em></td><td>)</td>
           <td></td>
         </tr>
@@ -522,6 +622,78 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a67da4f957e3b8a4076ebbd505304cd71" name="a67da4f957e3b8a4076ebbd505304cd71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67da4f957e3b8a4076ebbd505304cd71">&#9670;&nbsp;</a></span>operator+</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_control.html">Control</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_control.html">Control</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_control.html">Control</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65ae7e641ecb89722c1d02d7e78e1e60" name="a65ae7e641ecb89722c1d02d7e78e1e60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ae7e641ecb89722c1d02d7e78e1e60">&#9670;&nbsp;</a></span>operator-</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_control.html">Control</a> operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_control.html">Control</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_control.html">Control</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6faf4983230ac919f15eb56dfaf93a6d" name="a6faf4983230ac919f15eb56dfaf93a6d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6faf4983230ac919f15eb56dfaf93a6d">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
 
@@ -558,9 +730,46 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="ab7808e82896ab0361f641c0a43844f4f" name="ab7808e82896ab0361f641c0a43844f4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7808e82896ab0361f641c0a43844f4f">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_control.html">Control</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_control.html">Control</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/<a class="el" href="control_8h_source.html">control.h</a></li>
-<li>src/<a class="el" href="control_8cpp.html">control.cpp</a></li>
+<li>src/controltlbx/<a class="el" href="control_8h_source.html">control.h</a></li>
+<li>src/controltlbx/<a class="el" href="control_8cpp.html">control.cpp</a></li>
+<li>src/controltlbx/<a class="el" href="controls_8cpp.html">controls.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

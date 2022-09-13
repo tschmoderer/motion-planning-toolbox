@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['interp_5ft_0',['interp_t',['../control_8h.html#a69143bce9d83515f0a1b630cdc8f8c25',1,'control.h']]]
+  ['extend_5ft_0',['extend_t',['../interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991',1,'interpolator1d.h']]]
 ];

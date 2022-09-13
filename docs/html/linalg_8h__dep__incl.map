@@ -1,4 +1,20 @@
 <map id="src/linalg/linalg.h" name="src/linalg/linalg.h">
-<area shape="rect" id="node1" title=" " alt="" coords="12,5,131,32"/>
-<area shape="rect" id="node2" href="$linalg_8cpp.html" title=" " alt="" coords="5,80,137,107"/>
+<area shape="rect" id="node1" title="Main Header file for Linear Algebra Library." alt="" coords="493,5,612,32"/>
+<area shape="rect" id="node2" href="$control_system_8h.html" title=" " alt="" coords="234,603,434,629"/>
+<area shape="rect" id="node7" href="$controltlbx_2utils_8h.html" title=" " alt="" coords="433,453,574,480"/>
+<area shape="rect" id="node10" href="$interpol_2utils_8h.html" title=" " alt="" coords="541,80,665,107"/>
+<area shape="rect" id="node18" href="$linalg_8cpp.html" title=" " alt="" coords="689,80,821,107"/>
+<area shape="rect" id="node3" href="$control_system_8cpp.html" title=" " alt="" coords="5,685,220,711"/>
+<area shape="rect" id="node4" href="$controltlbx_8h.html" title=" " alt="" coords="447,685,623,711"/>
+<area shape="rect" id="node6" href="$linear_control_system_8h.html" title=" " alt="" coords="245,677,423,719"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="487,767,583,793"/>
+<area shape="rect" id="node8" href="$controls_8h.html" title=" " alt="" coords="422,528,585,555"/>
+<area shape="rect" id="node9" href="$controls_8cpp.html" title=" " alt="" coords="509,603,687,629"/>
+<area shape="rect" id="node11" href="$interpolator_8h.html" title="Header file for Interpolator abstract class." alt="" coords="587,155,751,181"/>
+<area shape="rect" id="node12" href="$interpol_8h.html" title="Main header file for interpolation library." alt="" coords="629,304,772,331"/>
+<area shape="rect" id="node15" href="$interpolator_8cpp.html" title="Implementation for Interpolator abstract class." alt="" coords="597,229,775,256"/>
+<area shape="rect" id="node16" href="$interpolator1d_8h.html" title="Header file for 1D interpolator operator class." alt="" coords="799,229,978,256"/>
+<area shape="rect" id="node13" href="$control_8h.html" title="Header file for Control class." alt="" coords="639,379,795,405"/>
+<area shape="rect" id="node14" href="$control_8cpp.html" title="Implementation of control class." alt="" coords="762,453,933,480"/>
+<area shape="rect" id="node17" href="$interpolator1d_8cpp.html" title="Implementation file for Interpolator1D class." alt="" coords="797,304,989,331"/>
 </map>

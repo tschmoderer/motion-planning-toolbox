@@ -1,0 +1,4 @@
+<map id="Interpolator" name="Interpolator">
+<area shape="rect" id="node1" title="An abstract class to describe an interpolation operator." alt="" coords="13,5,100,32"/>
+<area shape="rect" id="node2" href="$class_interpolator1_d.html" title="Class describing a 1D interpolation operator etend from the general Interpolator class." alt="" coords="5,80,108,107"/>
+</map>

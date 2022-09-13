@@ -139,6 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7bd21e36dd4bff610338e4ce996d0cec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a7bd21e36dd4bff610338e4ce996d0cec">sort</a> ()</td></tr>
 <tr class="memdesc:a7bd21e36dd4bff610338e4ce996d0cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort the vector with the quickSort algorithm.  <a href="class_vector.html#a7bd21e36dd4bff610338e4ce996d0cec">More...</a><br /></td></tr>
 <tr class="separator:a7bd21e36dd4bff610338e4ce996d0cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91c4707a53bbec63c7df2564541762fb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a91c4707a53bbec63c7df2564541762fb">to_std_vector</a> ()</td></tr>
+<tr class="memdesc:a91c4707a53bbec63c7df2564541762fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion to a standard library vector object.  <a href="class_vector.html#a91c4707a53bbec63c7df2564541762fb">More...</a><br /></td></tr>
+<tr class="separator:a91c4707a53bbec63c7df2564541762fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -226,7 +229,7 @@ Friends</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Maximum dimension of a <a class="el" href="class_vector.html" title="A lightweight class describing a Vector object. Vectors are array with size n (&gt;0) of doubles.">Vector</a> is 65 535 </dd>
 <dd>
 Indices are 0-based. Math formulae must be adapted consequently. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Template this class to use different data types (double, float, complex) </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Template this class to use different data types (double, float, complex) </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6f80c73b5f18dcf3f8e36065bdc8b9e5" name="a6f80c73b5f18dcf3f8e36065bdc8b9e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f80c73b5f18dcf3f8e36065bdc8b9e5">&#9670;&nbsp;</a></span>Vector() <span class="overload">[1/4]</span></h2>
@@ -929,6 +932,26 @@ Indices are 0-based. Math formulae must be adapted consequently. </dd></dl>
 </div><div class="memdoc">
 
 <p>Sort the vector with the quickSort algorithm. </p>
+
+</div>
+</div>
+<a id="a91c4707a53bbec63c7df2564541762fb" name="a91c4707a53bbec63c7df2564541762fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c4707a53bbec63c7df2564541762fb">&#9670;&nbsp;</a></span>to_std_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; double &gt; Vector::to_std_vector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Conversion to a standard library vector object. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;double&gt; a standard vector object with the same data as the current object </dd></dl>
 
 </div>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CONTROL TOOLBOX: src/controlSystem.h File Reference</title>
+<title>CONTROL TOOLBOX: src/controltlbx/controlSystem.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,33 +69,58 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2830e324700609867cb07e88e9d5c9c9.html">controltlbx</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle"><div class="title">controlSystem.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;vector.hpp&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="linalg_8h_source.html">linalg.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="controltlbx_2utils_8h_source.html">utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="controls_8h_source.html">controls.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for controlSystem.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="control_system_8h__incl.png" border="0" usemap="#asrc_2control_system_8h" alt=""/></div>
-<map name="asrc_2control_system_8h" id="asrc_2control_system_8h">
-<area shape="rect" title=" " alt="" coords="5,5,143,32"/>
-<area shape="rect" title=" " alt="" coords="33,80,115,107"/>
+<div class="center"><img src="control_system_8h__incl.png" border="0" usemap="#asrc_2controltlbx_2control_system_8h" alt=""/></div>
+<map name="asrc_2controltlbx_2control_system_8h" id="asrc_2controltlbx_2control_system_8h">
+<area shape="rect" title=" " alt="" coords="555,5,755,32"/>
+<area shape="rect" href="linalg_8h.html" title="Main Header file for Linear Algebra Library." alt="" coords="452,603,515,629"/>
+<area shape="rect" href="controltlbx_2utils_8h.html" title=" " alt="" coords="550,155,606,181"/>
+<area shape="rect" href="controls_8h.html" title=" " alt="" coords="616,80,695,107"/>
+<area shape="rect" href="linalg_2utils_8h.html" title=" " alt="" coords="309,901,365,928"/>
+<area shape="rect" href="vector_8h.html" title="Header file for Vector class." alt="" coords="304,827,372,853"/>
+<area shape="rect" href="matrix_8h.html" title="Header file for Matrix class." alt="" coords="565,752,631,779"/>
+<area shape="rect" href="square_matrix_8h.html" title=" " alt="" coords="635,677,742,704"/>
+<area shape="rect" href="lower_triangular_matrix_8h.html" title=" " alt="" coords="406,677,561,704"/>
+<area shape="rect" href="diagonal_matrix_8h.html" title=" " alt="" coords="281,752,395,779"/>
+<area shape="rect" title=" " alt="" coords="753,976,814,1003"/>
+<area shape="rect" title=" " alt="" coords="13,976,74,1003"/>
+<area shape="rect" title=" " alt="" coords="109,976,175,1003"/>
+<area shape="rect" title=" " alt="" coords="205,976,277,1003"/>
+<area shape="rect" title=" " alt="" coords="569,976,632,1003"/>
+<area shape="rect" title=" " alt="" coords="304,976,369,1003"/>
+<area shape="rect" title=" " alt="" coords="565,827,631,853"/>
+<area shape="rect" href="control_8h.html" title="Header file for Control class." alt="" coords="263,229,333,256"/>
+<area shape="rect" href="interpol_8h.html" title="Main header file for interpolation library." alt="" coords="105,304,179,331"/>
+<area shape="rect" href="interpolator_8h.html" title="Header file for Interpolator abstract class." alt="" coords="83,453,179,480"/>
+<area shape="rect" href="interpolator1d_8h.html" title="Header file for 1D interpolator operator class." alt="" coords="5,379,116,405"/>
+<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="114,528,170,555"/>
+<area shape="rect" title=" " alt="" coords="630,155,689,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="control_system_8h__dep__incl.png" border="0" usemap="#asrc_2control_system_8hdep" alt=""/></div>
-<map name="asrc_2control_system_8hdep" id="asrc_2control_system_8hdep">
-<area shape="rect" title=" " alt="" coords="22,5,159,32"/>
-<area shape="rect" href="linear_control_system_8h.html" title=" " alt="" coords="5,80,176,107"/>
+<div class="center"><img src="control_system_8h__dep__incl.png" border="0" usemap="#asrc_2controltlbx_2control_system_8hdep" alt=""/></div>
+<map name="asrc_2controltlbx_2control_system_8hdep" id="asrc_2controltlbx_2control_system_8hdep">
+<area shape="rect" title=" " alt="" coords="233,5,433,32"/>
+<area shape="rect" href="control_system_8cpp.html" title=" " alt="" coords="5,87,220,114"/>
+<area shape="rect" href="controltlbx_8h.html" title=" " alt="" coords="245,87,421,114"/>
+<area shape="rect" href="linear_control_system_8h.html" title=" " alt="" coords="445,80,623,121"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="285,169,381,196"/>
 </map>
 </div>
 </div>
@@ -105,43 +130,7 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html">ControlSystem</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a5483d1c805c21bcd60dc78e643231748"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="control_system_8h.html#a5483d1c805c21bcd60dc78e643231748">state_t</a></td></tr>
-<tr class="separator:a5483d1c805c21bcd60dc78e643231748"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af309960df7642091870307861ce5094a"><td class="memItemLeft" align="right" valign="top">typedef double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="control_system_8h.html#af309960df7642091870307861ce5094a">time_t</a></td></tr>
-<tr class="separator:af309960df7642091870307861ce5094a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a5483d1c805c21bcd60dc78e643231748" name="a5483d1c805c21bcd60dc78e643231748"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5483d1c805c21bcd60dc78e643231748">&#9670;&nbsp;</a></span>state_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="class_vector.html">Vector</a> <a class="el" href="control_system_8h.html#a5483d1c805c21bcd60dc78e643231748">state_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af309960df7642091870307861ce5094a" name="af309960df7642091870307861ce5094a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af309960df7642091870307861ce5094a">&#9670;&nbsp;</a></span>time_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef double <a class="el" href="control_system_8h.html#af309960df7642091870307861ce5094a">time_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,13 +1,18 @@
 var searchData=
 [
-  ['linalg_2ecpp_0',['linalg.cpp',['../linalg_8cpp.html',1,'']]],
-  ['linalg_2eh_1',['linalg.h',['../linalg_8h.html',1,'']]],
-  ['linearcontrolsystem_2',['LinearControlSystem',['../class_linear_control_system.html',1,'']]],
-  ['linearcontrolsystem_2eh_3',['linearControlSystem.h',['../linear_control_system_8h.html',1,'']]],
-  ['linspace_4',['linspace',['../class_vector.html#af7cd240e7eb8ef88949a3cd7dd8cf138',1,'Vector']]],
-  ['lowertriangularmatrix_2ecpp_5',['lowerTriangularMatrix.cpp',['../lower_triangular_matrix_8cpp.html',1,'']]],
-  ['lowertriangularmatrix_2eh_6',['lowerTriangularMatrix.h',['../lower_triangular_matrix_8h.html',1,'']]],
-  ['lsq_7',['LSQ',['../class_l_s_q.html',1,'LSQ'],['../class_l_s_q.html#ae6221f5b6ed8fa768d5d77d6b39d5c45',1,'LSQ::LSQ(const Matrix *, const Vector *)'],['../class_l_s_q.html#a145feafd2185fe3f49a8b74751498e34',1,'LSQ::LSQ(const LSQ &amp;)'],['../class_l_s_q.html#ad761fed6250405068cec1b7e10edc979',1,'LSQ::LSQ()']]],
-  ['lsq_2eh_8',['lsq.h',['../lsq_8h.html',1,'']]],
-  ['ltmatrix_9',['LTMatrix',['../class_l_t_matrix.html',1,'LTMatrix'],['../class_l_t_matrix.html#ab13cc4298c82bbab9a1d27fc767d0f8b',1,'LTMatrix::LTMatrix()'],['../class_l_t_matrix.html#a99dfa8612ff16b814bbe9ee16ca1a40c',1,'LTMatrix::LTMatrix(uint16_t, uint16_t)'],['../class_l_t_matrix.html#abc15d3a8acc7d9b5d9dc94ef9414378d',1,'LTMatrix::LTMatrix(uint16_t)'],['../class_l_t_matrix.html#a83a2994d3633e981145b9ee2eee12894',1,'LTMatrix::LTMatrix(const LTMatrix &amp;)']]]
+  ['i_5fmethod_0',['i_method',['../class_interpolator.html#a275b577c23d913c2c3c6080e57cb09d2',1,'Interpolator']]],
+  ['interp1d_1',['interp1d',['../class_interpolator.html#a0c923698065c9e5790ad196e99852484',1,'Interpolator::interp1d()'],['../class_interpolator1_d.html#a2a9e3ea704a7606754f8479ff061612b',1,'Interpolator1D::interp1d()']]],
+  ['interp_5fconstant_5fleft_2',['INTERP_CONSTANT_LEFT',['../interpolator_8h.html#a6fd53b040507bda8a846932e195fa78fab7ccea8ae0457c69704c0835f6480e18',1,'interpolator.h']]],
+  ['interp_5fconstant_5fright_3',['INTERP_CONSTANT_RIGHT',['../interpolator_8h.html#a6fd53b040507bda8a846932e195fa78fa5e9da5b99456219f1c0560c7e85be262',1,'interpolator.h']]],
+  ['interp_5flinear_4',['INTERP_LINEAR',['../interpolator_8h.html#a6fd53b040507bda8a846932e195fa78fa17abedd2e487446bf814c9da0b7791de',1,'interpolator.h']]],
+  ['interp_5fnearest_5',['INTERP_NEAREST',['../interpolator_8h.html#a6fd53b040507bda8a846932e195fa78fa5dc1c99b5e803daf350345d519b58b67',1,'interpolator.h']]],
+  ['interpol_2eh_6',['interpol.h',['../interpol_8h.html',1,'']]],
+  ['interpolation_5fmethod_5ft_7',['interpolation_method_t',['../interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f',1,'interpolator.h']]],
+  ['interpolator_8',['Interpolator',['../class_interpolator.html#ab8cbb0b13436fc54a4bba03804ae8f8a',1,'Interpolator::Interpolator()'],['../class_interpolator.html#a1732fccc3f0508051d538adfdaa07678',1,'Interpolator::Interpolator(interpolation_method_t, uint8_t)'],['../class_interpolator.html',1,'Interpolator']]],
+  ['interpolator_2ecpp_9',['interpolator.cpp',['../interpolator_8cpp.html',1,'']]],
+  ['interpolator_2eh_10',['interpolator.h',['../interpolator_8h.html',1,'']]],
+  ['interpolator1d_11',['Interpolator1D',['../class_interpolator1_d.html#a2925c7d99f68e7807bd15a327d94903d',1,'Interpolator1D::Interpolator1D()'],['../class_interpolator1_d.html#a2b53d19217c63e18a8e26419fde2e436',1,'Interpolator1D::Interpolator1D(interpolation_method_t, extend_t, extend_t)'],['../class_interpolator1_d.html',1,'Interpolator1D']]],
+  ['interpolator1d_2ecpp_12',['interpolator1d.cpp',['../interpolator1d_8cpp.html',1,'']]],
+  ['interpolator1d_2eh_13',['interpolator1d.h',['../interpolator1d_8h.html',1,'']]],
+  ['is_5fsquare_14',['is_square',['../class_matrix.html#a4e909f004fd51f7615a590553165d6a3',1,'Matrix']]]
 ];

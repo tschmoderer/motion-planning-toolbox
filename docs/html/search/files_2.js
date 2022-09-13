@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['linalg_2ecpp_0',['linalg.cpp',['../linalg_8cpp.html',1,'']]],
-  ['linalg_2eh_1',['linalg.h',['../linalg_8h.html',1,'']]],
-  ['linearcontrolsystem_2eh_2',['linearControlSystem.h',['../linear_control_system_8h.html',1,'']]],
-  ['lowertriangularmatrix_2ecpp_3',['lowerTriangularMatrix.cpp',['../lower_triangular_matrix_8cpp.html',1,'']]],
-  ['lowertriangularmatrix_2eh_4',['lowerTriangularMatrix.h',['../lower_triangular_matrix_8h.html',1,'']]],
-  ['lsq_2eh_5',['lsq.h',['../lsq_8h.html',1,'']]]
+  ['interpol_2eh_0',['interpol.h',['../interpol_8h.html',1,'']]],
+  ['interpolator_2ecpp_1',['interpolator.cpp',['../interpolator_8cpp.html',1,'']]],
+  ['interpolator_2eh_2',['interpolator.h',['../interpolator_8h.html',1,'']]],
+  ['interpolator1d_2ecpp_3',['interpolator1d.cpp',['../interpolator1d_8cpp.html',1,'']]],
+  ['interpolator1d_2eh_4',['interpolator1d.h',['../interpolator1d_8h.html',1,'']]]
 ];

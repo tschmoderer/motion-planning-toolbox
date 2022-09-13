@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['norm_0',['norm',['../class_vector.html#a5d1547c95b7d38d5304c28b94c2da3c0',1,'Vector']]],
-  ['norm1_1',['norm1',['../class_matrix.html#abf79f9e27f3bfcf2cc8e5cfc1f02fdf8',1,'Matrix::norm1()'],['../class_vector.html#a2ec8fea78d48174ac2cde94060f2285e',1,'Vector::norm1()']]],
-  ['norm2_2',['norm2',['../class_vector.html#a36fca83a79477c6367cc8ea5987e1100',1,'Vector']]],
-  ['normal_5fdistribution_3',['normal_distribution',['../utils_8cpp.html#a75deaaf0133d01595222a618bd3e99e5',1,'normal_distribution(double m=0., double s=1.):&#160;utils.cpp'],['../utils_8h.html#a5f41be87d1546ffbe0f63ecf2d48eab2',1,'normal_distribution(double, double):&#160;utils.cpp']]],
-  ['normfrob_4',['normFrob',['../class_matrix.html#a1f4744c7b2882abaee6b70f6f15a6bd6',1,'Matrix']]],
-  ['norminf_5',['normInf',['../class_matrix.html#a66fdb5c8533b884ccb6e9a1d9ebd7f37',1,'Matrix::normInf()'],['../class_vector.html#a8c03705e581b2f66df2d1f132e833efa',1,'Vector::normInf()']]],
-  ['normp_6',['normp',['../class_vector.html#ab1a7409299332b8092c6795886719dc3',1,'Vector']]]
+  ['main_0',['main',['../main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.cpp']]],
+  ['matmul_1',['matmul',['../class_matrix.html#a1e5351ac541e58705013965253ab7f01',1,'Matrix::matmul()'],['../class_square_matrix.html#a4c691d87ab4f66dfe407350d396536bf',1,'SquareMatrix::matmul()']]],
+  ['matrix_2',['Matrix',['../class_matrix.html#a2dba13c45127354c9f75ef576f49269b',1,'Matrix::Matrix()'],['../class_matrix.html#af831fa075a2bf6c2e6608217ad681f38',1,'Matrix::Matrix(uint16_t, uint16_t)'],['../class_matrix.html#a0b9cfa2302a0273afb1b26e501f93abc',1,'Matrix::Matrix(const Matrix &amp;)']]],
+  ['max_5fcol_5ffrom_5frow_3',['max_col_from_row',['../class_l_t_matrix.html#a2a7e682c959e69439178bbe79d6b7e6a',1,'LTMatrix']]]
 ];

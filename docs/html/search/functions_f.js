@@ -1,6 +1,17 @@
 var searchData=
 [
-  ['tr_0',['tr',['../class_l_t_matrix.html#a369f558409b80733e27694cb06978d96',1,'LTMatrix::tr()'],['../class_square_matrix.html#aee3a9dc461e5106263025a9b88da4cbf',1,'SquareMatrix::tr()'],['../diagonal_matrix_8cpp.html#ac47318eedaaba145abedb23f4f544534',1,'tr(const DiagonalMatrix &amp;D):&#160;diagonalMatrix.cpp'],['../diagonal_matrix_8h.html#a31ba01f5695e96c46e5ec7bc8651543a',1,'tr(const DiagonalMatrix &amp;):&#160;diagonalMatrix.cpp'],['../linalg_8cpp.html#ac47318eedaaba145abedb23f4f544534',1,'tr(const DiagonalMatrix &amp;D):&#160;linalg.cpp']]],
-  ['transpose_1',['transpose',['../class_matrix.html#a759661b75b9681f3a89ff75e27933b3a',1,'Matrix::transpose()'],['../class_square_matrix.html#a497a8757f6dbb834d2906874491270b3',1,'SquareMatrix::transpose()']]],
-  ['triangular_2',['triangular',['../utils_8h.html#a326691d241a8ef0cb560bc7dc825be5c',1,'utils.h']]]
+  ['set_5fdata_0',['set_data',['../class_control.html#a8e5eafe82cf45f92a7479c37a55b3065',1,'Control::set_data(const Vector &amp;)'],['../class_control.html#a8b5233bb56755fab1cbb7955f52b4db1',1,'Control::set_data(double, double)']]],
+  ['set_5fexleft_1',['set_exleft',['../class_interpolator1_d.html#a26b842117fc503df585ebc104662af83',1,'Interpolator1D']]],
+  ['set_5fexright_2',['set_exright',['../class_interpolator1_d.html#a51a3452c6fcc1a61636aa8f084ebbefa',1,'Interpolator1D']]],
+  ['set_5finterp_5fmethod_3',['set_interp_method',['../class_control.html#a860e9fd066c4c15de45f31d4e689bbe4',1,'Control::set_interp_method(interpolation_method_t)'],['../class_control.html#afe2ea27b07bb45971cee010f9ccf8b63',1,'Control::set_interp_method(interpolation_method_t, extend_t, extend_t)']]],
+  ['set_5fmethod_4',['set_method',['../class_interpolator.html#a4751aa9d427eb769c15c821ec9fc3270',1,'Interpolator']]],
+  ['set_5fn_5',['set_N',['../class_control.html#ade669fc78cc87a45967f8aa06e77db34',1,'Control']]],
+  ['set_5ft0_6',['set_t0',['../class_control.html#ac7efda85a75c97e44c5d7d51c09e42ee',1,'Control']]],
+  ['set_5ft1_7',['set_t1',['../class_control.html#a6c4f6b74384652c6ed00bd7b322c7349',1,'Control']]],
+  ['show_8',['show',['../class_matrix.html#ac8004035ae9446ac04cf0d3e97011702',1,'Matrix']]],
+  ['solve_9',['solve',['../class_l_s_q.html#ac659a097df98b615d51915edd28f7eff',1,'LSQ::solve()'],['../linalg_8h.html#a8a03c5a975f5c82f699e31ee620e0f85',1,'solve(const LTMatrix &amp;, const Vector &amp;):&#160;linalg.cpp'],['../linalg_8h.html#a0277bbbef029ca7585f3a1c51c892945',1,'solve(const DiagonalMatrix &amp;, const Vector &amp;):&#160;linalg.cpp'],['../linalg_8cpp.html#a169ba047bfe9a5c94632d2d96b11595e',1,'solve(const LTMatrix &amp;L, const Vector &amp;b):&#160;linalg.cpp'],['../linalg_8cpp.html#a78e3ea7c97ffc79c728c081fecd5e830',1,'solve(const DiagonalMatrix &amp;D, const Vector &amp;b):&#160;linalg.cpp'],['../class_l_s_q.html#a25787baa1462469cb6a8cd3e0859c4fa',1,'LSQ::solve()']]],
+  ['sort_10',['sort',['../class_vector.html#a7bd21e36dd4bff610338e4ce996d0cec',1,'Vector']]],
+  ['sqrt_11',['sqrt',['../vector_8cpp.html#a8e98601727a813874d045d629d04facf',1,'vector.cpp']]],
+  ['squarematrix_12',['SquareMatrix',['../class_square_matrix.html#aea461ecfd26cdcb767242a5331331e96',1,'SquareMatrix::SquareMatrix(const SquareMatrix &amp;)'],['../class_square_matrix.html#a2b6a885c455bf4440a3153cd55bcede3',1,'SquareMatrix::SquareMatrix(uint16_t)'],['../class_square_matrix.html#a76dc18df134009fe0c211205921e9d7d',1,'SquareMatrix::SquareMatrix()']]],
+  ['sum_13',['sum',['../vector_8cpp.html#adfcb96df2a376889901c57c2f53871a3',1,'vector.cpp']]]
 ];

@@ -1,9 +1,14 @@
 var searchData=
 [
-  ['matmul_0',['matmul',['../class_matrix.html#a1e5351ac541e58705013965253ab7f01',1,'Matrix::matmul()'],['../class_square_matrix.html#a4c691d87ab4f66dfe407350d396536bf',1,'SquareMatrix::matmul()']]],
-  ['matrix_1',['Matrix',['../class_matrix.html',1,'Matrix'],['../class_matrix.html#a2dba13c45127354c9f75ef576f49269b',1,'Matrix::Matrix()'],['../class_matrix.html#af831fa075a2bf6c2e6608217ad681f38',1,'Matrix::Matrix(uint16_t, uint16_t)'],['../class_matrix.html#a0b9cfa2302a0273afb1b26e501f93abc',1,'Matrix::Matrix(const Matrix &amp;)']]],
-  ['matrix_2ecpp_2',['matrix.cpp',['../matrix_8cpp.html',1,'']]],
-  ['matrix_2eh_3',['matrix.h',['../matrix_8h.html',1,'']]],
-  ['matrix_5ftranspose_4',['MATRIX_TRANSPOSE',['../matrix_8h.html#a2899e4ac4ca85f60df8c86b3c4018542',1,'matrix.h']]],
-  ['max_5fcol_5ffrom_5frow_5',['max_col_from_row',['../class_l_t_matrix.html#a2a7e682c959e69439178bbe79d6b7e6a',1,'LTMatrix']]]
+  ['linalg_2ecpp_0',['linalg.cpp',['../linalg_8cpp.html',1,'']]],
+  ['linalg_2eh_1',['linalg.h',['../linalg_8h.html',1,'']]],
+  ['linearcontrolsystem_2',['LinearControlSystem',['../class_linear_control_system.html',1,'']]],
+  ['linearcontrolsystem_2eh_3',['linearControlSystem.h',['../linear_control_system_8h.html',1,'']]],
+  ['linspace_4',['linspace',['../class_vector.html#af7cd240e7eb8ef88949a3cd7dd8cf138',1,'Vector']]],
+  ['locate_5ftime_5',['locate_time',['../class_interpolator.html#aba7d9dadb5262887734e64d7e2aa3216',1,'Interpolator']]],
+  ['lowertriangularmatrix_2ecpp_6',['lowerTriangularMatrix.cpp',['../lower_triangular_matrix_8cpp.html',1,'']]],
+  ['lowertriangularmatrix_2eh_7',['lowerTriangularMatrix.h',['../lower_triangular_matrix_8h.html',1,'']]],
+  ['lsq_8',['LSQ',['../class_l_s_q.html',1,'LSQ'],['../class_l_s_q.html#ae6221f5b6ed8fa768d5d77d6b39d5c45',1,'LSQ::LSQ(const Matrix *, const Vector *)'],['../class_l_s_q.html#a145feafd2185fe3f49a8b74751498e34',1,'LSQ::LSQ(const LSQ &amp;)'],['../class_l_s_q.html#ad761fed6250405068cec1b7e10edc979',1,'LSQ::LSQ()']]],
+  ['lsq_2eh_9',['lsq.h',['../lsq_8h.html',1,'']]],
+  ['ltmatrix_10',['LTMatrix',['../class_l_t_matrix.html',1,'LTMatrix'],['../class_l_t_matrix.html#ab13cc4298c82bbab9a1d27fc767d0f8b',1,'LTMatrix::LTMatrix()'],['../class_l_t_matrix.html#a99dfa8612ff16b814bbe9ee16ca1a40c',1,'LTMatrix::LTMatrix(uint16_t, uint16_t)'],['../class_l_t_matrix.html#abc15d3a8acc7d9b5d9dc94ef9414378d',1,'LTMatrix::LTMatrix(uint16_t)'],['../class_l_t_matrix.html#a83a2994d3633e981145b9ee2eee12894',1,'LTMatrix::LTMatrix(const LTMatrix &amp;)']]]
 ];

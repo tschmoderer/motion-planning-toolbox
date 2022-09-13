@@ -74,11 +74,15 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">linalg.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
+
+<p>Main Header file for Linear Algebra Library.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="linalg_2utils_8h_source.html">utils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="vector_8h_source.html">vector.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="matrix_8h_source.html">matrix.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="square_matrix_8h_source.html">squareMatrix.h</a>&quot;</code><br />
@@ -89,8 +93,8 @@ Include dependency graph for linalg.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="linalg_8h__incl.png" border="0" usemap="#asrc_2linalg_2linalg_8h" alt=""/></div>
 <map name="asrc_2linalg_2linalg_8h" id="asrc_2linalg_2linalg_8h">
-<area shape="rect" title=" " alt="" coords="104,5,223,32"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="295,304,351,331"/>
+<area shape="rect" title="Main Header file for Linear Algebra Library." alt="" coords="104,5,223,32"/>
+<area shape="rect" href="linalg_2utils_8h.html" title=" " alt="" coords="295,304,351,331"/>
 <area shape="rect" href="vector_8h.html" title="Header file for Vector class." alt="" coords="59,229,127,256"/>
 <area shape="rect" href="matrix_8h.html" title="Header file for Matrix class." alt="" coords="165,155,231,181"/>
 <area shape="rect" href="square_matrix_8h.html" title=" " alt="" coords="65,80,171,107"/>
@@ -110,13 +114,40 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="linalg_8h__dep__incl.png" border="0" usemap="#asrc_2linalg_2linalg_8hdep" alt=""/></div>
 <map name="asrc_2linalg_2linalg_8hdep" id="asrc_2linalg_2linalg_8hdep">
-<area shape="rect" title=" " alt="" coords="12,5,131,32"/>
-<area shape="rect" href="linalg_8cpp.html" title=" " alt="" coords="5,80,137,107"/>
+<area shape="rect" title="Main Header file for Linear Algebra Library." alt="" coords="493,5,612,32"/>
+<area shape="rect" href="control_system_8h.html" title=" " alt="" coords="234,603,434,629"/>
+<area shape="rect" href="controltlbx_2utils_8h.html" title=" " alt="" coords="433,453,574,480"/>
+<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="541,80,665,107"/>
+<area shape="rect" href="linalg_8cpp.html" title=" " alt="" coords="689,80,821,107"/>
+<area shape="rect" href="control_system_8cpp.html" title=" " alt="" coords="5,685,220,711"/>
+<area shape="rect" href="controltlbx_8h.html" title=" " alt="" coords="447,685,623,711"/>
+<area shape="rect" href="linear_control_system_8h.html" title=" " alt="" coords="245,677,423,719"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="487,767,583,793"/>
+<area shape="rect" href="controls_8h.html" title=" " alt="" coords="422,528,585,555"/>
+<area shape="rect" href="controls_8cpp.html" title=" " alt="" coords="509,603,687,629"/>
+<area shape="rect" href="interpolator_8h.html" title="Header file for Interpolator abstract class." alt="" coords="587,155,751,181"/>
+<area shape="rect" href="interpol_8h.html" title="Main header file for interpolation library." alt="" coords="629,304,772,331"/>
+<area shape="rect" href="interpolator_8cpp.html" title="Implementation for Interpolator abstract class." alt="" coords="597,229,775,256"/>
+<area shape="rect" href="interpolator1d_8h.html" title="Header file for 1D interpolator operator class." alt="" coords="799,229,978,256"/>
+<area shape="rect" href="control_8h.html" title="Header file for Control class." alt="" coords="639,379,795,405"/>
+<area shape="rect" href="control_8cpp.html" title="Implementation of control class." alt="" coords="762,453,933,480"/>
+<area shape="rect" href="interpolator1d_8cpp.html" title="Implementation file for Interpolator1D class." alt="" coords="797,304,989,331"/>
 </map>
 </div>
 </div>
 <p><a href="linalg_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0da489f5a37456a0e011548c7883e676"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linalg_8h.html#a0da489f5a37456a0e011548c7883e676">VERSION_LINALG_LIB</a>&#160;&#160;&#160;&quot;1.0.0&quot;</td></tr>
+<tr class="separator:a0da489f5a37456a0e011548c7883e676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e165812f349817c3c20798263ca55d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linalg_8h.html#a64e165812f349817c3c20798263ca55d">AUTHOR_LINALG_LIB</a>&#160;&#160;&#160;&quot;T. SCHMODERER/BOHEME&quot;</td></tr>
+<tr class="separator:a64e165812f349817c3c20798263ca55d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a13d8b69bc2841e462fd1ac3ccd6f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linalg_8h.html#af3a13d8b69bc2841e462fd1ac3ccd6f8">CONTACT_LINALG_LIB</a>&#160;&#160;&#160;&quot;iathena@mailo.com&quot;</td></tr>
+<tr class="separator:af3a13d8b69bc2841e462fd1ac3ccd6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389cf5ec8d094b0c6eee03ff309f2d45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linalg_8h.html#a389cf5ec8d094b0c6eee03ff309f2d45">DOCUMENTATION_LINALG_LIB</a>&#160;&#160;&#160;&quot;https://tschmoderer.github.io/motion-planning-toolbox/html/index.html&quot;</td></tr>
+<tr class="separator:a389cf5ec8d094b0c6eee03ff309f2d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0277bbbef029ca7585f3a1c51c892945"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linalg_8h.html#a0277bbbef029ca7585f3a1c51c892945">solve</a> (const <a class="el" href="diagonal_matrix_8h.html#a121320d61421c918f9961ff11578f633">DiagonalMatrix</a> &amp;, const <a class="el" href="class_vector.html">Vector</a> &amp;)</td></tr>
@@ -124,6 +155,69 @@ Functions</h2></td></tr>
 <tr class="memitem:a8a03c5a975f5c82f699e31ee620e0f85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linalg_8h.html#a8a03c5a975f5c82f699e31ee620e0f85">solve</a> (const <a class="el" href="class_l_t_matrix.html">LTMatrix</a> &amp;, const <a class="el" href="class_vector.html">Vector</a> &amp;)</td></tr>
 <tr class="separator:a8a03c5a975f5c82f699e31ee620e0f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Main Header file for Linear Algebra Library. </p>
+<dl class="section author"><dt>Author</dt><dd>T. Schmoderer (<a href="#" onclick="location.href='mai'+'lto:'+'iat'+'he'+'na@'+'ma'+'ilo'+'.c'+'om'; return false;">iathe<span style="display: none;">.nosp@m.</span>na@m<span style="display: none;">.nosp@m.</span>ailo.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-09-13 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022 </dd></dl>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a64e165812f349817c3c20798263ca55d" name="a64e165812f349817c3c20798263ca55d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64e165812f349817c3c20798263ca55d">&#9670;&nbsp;</a></span>AUTHOR_LINALG_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTHOR_LINALG_LIB&#160;&#160;&#160;&quot;T. SCHMODERER/BOHEME&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3a13d8b69bc2841e462fd1ac3ccd6f8" name="af3a13d8b69bc2841e462fd1ac3ccd6f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a13d8b69bc2841e462fd1ac3ccd6f8">&#9670;&nbsp;</a></span>CONTACT_LINALG_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONTACT_LINALG_LIB&#160;&#160;&#160;&quot;iathena@mailo.com&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a389cf5ec8d094b0c6eee03ff309f2d45" name="a389cf5ec8d094b0c6eee03ff309f2d45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a389cf5ec8d094b0c6eee03ff309f2d45">&#9670;&nbsp;</a></span>DOCUMENTATION_LINALG_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DOCUMENTATION_LINALG_LIB&#160;&#160;&#160;&quot;https://tschmoderer.github.io/motion-planning-toolbox/html/index.html&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0da489f5a37456a0e011548c7883e676" name="a0da489f5a37456a0e011548c7883e676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0da489f5a37456a0e011548c7883e676">&#9670;&nbsp;</a></span>VERSION_LINALG_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VERSION_LINALG_LIB&#160;&#160;&#160;&quot;1.0.0&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a0277bbbef029ca7585f3a1c51c892945" name="a0277bbbef029ca7585f3a1c51c892945"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0277bbbef029ca7585f3a1c51c892945">&#9670;&nbsp;</a></span>solve() <span class="overload">[1/2]</span></h2>
