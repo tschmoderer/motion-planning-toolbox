@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title=" " alt="" coords="555,5,755,32"/>
 <area shape="rect" id="node2" href="$linalg_8h.html" title="Main Header file for Linear Algebra Library." alt="" coords="452,603,515,629"/>
 <area shape="rect" id="node16" href="$controltlbx_2utils_8h.html" title=" " alt="" coords="550,155,606,181"/>
-<area shape="rect" id="node22" href="$controls_8h.html" title=" " alt="" coords="616,80,695,107"/>
+<area shape="rect" id="node22" href="$controls_8h.html" title="Header file for Controls class." alt="" coords="616,80,695,107"/>
 <area shape="rect" id="node3" href="$linalg_2utils_8h.html" title=" " alt="" coords="309,901,365,928"/>
 <area shape="rect" id="node10" href="$vector_8h.html" title="Header file for Vector class." alt="" coords="304,827,372,853"/>
 <area shape="rect" id="node11" href="$matrix_8h.html" title="Header file for Matrix class." alt="" coords="565,752,631,779"/>

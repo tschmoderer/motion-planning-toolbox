@@ -76,37 +76,40 @@ $(function() {
   <div class="headertitle"><div class="title">controltlbx.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="controltlbx_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CONTROLTLBX_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CONTROLTLBX_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;stdlib.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="control_8h.html">control.h</a>&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="controls_8h.html">controls.h</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="control_system_8h.html">controlSystem.h</a>&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="vector_8h.html">vector.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="controltlbx_8h.html#a1eb22fa90be3d6f34044b84bd1bca57e">   10</a></span><span class="preprocessor">#define VERSION_MPP_TLBX &quot;0.0.0&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="controltlbx_8h.html#a6c8fad838ed64cc67da3f68149009758">   11</a></span><span class="preprocessor">#define AUTHOR &quot;T. SCHMODERER/BOHEME&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="controltlbx_8h.html#a8c04334560f245d0b6a7b535b01ae26a">   12</a></span><span class="preprocessor">#define CONTACT &quot;iathena@mailo.com&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="controltlbx_8h.html#a19f3d91344a9e153d9625df340ce8a11">   13</a></span><span class="preprocessor">#define DOCUMENTATION &quot;https://tschmoderer.github.io/motion-planning-toolbox/html/index.html&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="controltlbx_8h.html#aa444c8fc7b01a2391937130098dfead9">   19</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="controltlbx_8h.html#aa444c8fc7b01a2391937130098dfead9">hello_world_control_tlbx</a>() {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Welcome to Motion Planning Toolbox&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Version       : &quot;</span> &lt;&lt; <a class="code hl_define" href="controltlbx_8h.html#a1eb22fa90be3d6f34044b84bd1bca57e">VERSION_MPP_TLBX</a> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Documentation : &quot;</span> &lt;&lt; <a class="code hl_define" href="controltlbx_8h.html#a19f3d91344a9e153d9625df340ce8a11">DOCUMENTATION</a> &lt;&lt; std::endl; </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Contact       : &quot;</span> &lt;&lt; <a class="code hl_define" href="controltlbx_8h.html#a8c04334560f245d0b6a7b535b01ae26a">CONTACT</a> &lt;&lt; std::endl; </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;--&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif</span></div>
+<a href="controltlbx_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef CONTROLTLBX_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define CONTROLTLBX_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;stdlib.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="control_8h.html">control.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="controls_8h.html">controls.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="control_system_8h.html">controlSystem.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="linalg_8h.html">linalg.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/* VERSION MACROS */</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="controltlbx_8h.html#a1eb22fa90be3d6f34044b84bd1bca57e">   20</a></span><span class="preprocessor">#define VERSION_MPP_TLBX &quot;0.0.0&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="controltlbx_8h.html#a5e599ccabb463fa085c1228f96a1fc57">   21</a></span><span class="preprocessor">#define AUTHOR_MPP_TLBX &quot;T. SCHMODERER/BOHEME&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="controltlbx_8h.html#a3ff5b1fcf9f2ea50f3a2989a956d7368">   22</a></span><span class="preprocessor">#define CONTACT_MPP_TLBX &quot;iathena@mailo.com&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="controltlbx_8h.html#ae99cad39010956165e7620a3248f6d87">   23</a></span><span class="preprocessor">#define DOCUMENTATION_MPP_TLBX &quot;https://tschmoderer.github.io/motion-planning-toolbox/html/index.html&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="controltlbx_8h.html#aa444c8fc7b01a2391937130098dfead9">   29</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="controltlbx_8h.html#aa444c8fc7b01a2391937130098dfead9">hello_world_control_tlbx</a>() {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Welcome to Motion Planning Toolbox&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Version       : &quot;</span> &lt;&lt; <a class="code hl_define" href="controltlbx_8h.html#a1eb22fa90be3d6f34044b84bd1bca57e">VERSION_MPP_TLBX</a> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Documentation : &quot;</span> &lt;&lt; <a class="code hl_define" href="controltlbx_8h.html#ae99cad39010956165e7620a3248f6d87">DOCUMENTATION_MPP_TLBX</a> &lt;&lt; std::endl; </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Contact       : &quot;</span> &lt;&lt; <a class="code hl_define" href="controltlbx_8h.html#a5e599ccabb463fa085c1228f96a1fc57">AUTHOR_MPP_TLBX</a>  &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; <a class="code hl_define" href="controltlbx_8h.html#a3ff5b1fcf9f2ea50f3a2989a956d7368">CONTACT_MPP_TLBX</a> &lt;&lt; std::endl; </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;--&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="acontrol_8h_html"><div class="ttname"><a href="control_8h.html">control.h</a></div><div class="ttdoc">Header file for Control class.</div></div>
 <div class="ttc" id="acontrol_system_8h_html"><div class="ttname"><a href="control_system_8h.html">controlSystem.h</a></div></div>
-<div class="ttc" id="acontrols_8h_html"><div class="ttname"><a href="controls_8h.html">controls.h</a></div></div>
-<div class="ttc" id="acontroltlbx_8h_html_a19f3d91344a9e153d9625df340ce8a11"><div class="ttname"><a href="controltlbx_8h.html#a19f3d91344a9e153d9625df340ce8a11">DOCUMENTATION</a></div><div class="ttdeci">#define DOCUMENTATION</div><div class="ttdef"><b>Definition:</b> controltlbx.h:13</div></div>
-<div class="ttc" id="acontroltlbx_8h_html_a1eb22fa90be3d6f34044b84bd1bca57e"><div class="ttname"><a href="controltlbx_8h.html#a1eb22fa90be3d6f34044b84bd1bca57e">VERSION_MPP_TLBX</a></div><div class="ttdeci">#define VERSION_MPP_TLBX</div><div class="ttdef"><b>Definition:</b> controltlbx.h:10</div></div>
-<div class="ttc" id="acontroltlbx_8h_html_a8c04334560f245d0b6a7b535b01ae26a"><div class="ttname"><a href="controltlbx_8h.html#a8c04334560f245d0b6a7b535b01ae26a">CONTACT</a></div><div class="ttdeci">#define CONTACT</div><div class="ttdef"><b>Definition:</b> controltlbx.h:12</div></div>
-<div class="ttc" id="acontroltlbx_8h_html_aa444c8fc7b01a2391937130098dfead9"><div class="ttname"><a href="controltlbx_8h.html#aa444c8fc7b01a2391937130098dfead9">hello_world_control_tlbx</a></div><div class="ttdeci">void hello_world_control_tlbx()</div><div class="ttdef"><b>Definition:</b> controltlbx.h:19</div></div>
-<div class="ttc" id="avector_8h_html"><div class="ttname"><a href="vector_8h.html">vector.h</a></div><div class="ttdoc">Header file for Vector class.</div></div>
+<div class="ttc" id="acontrols_8h_html"><div class="ttname"><a href="controls_8h.html">controls.h</a></div><div class="ttdoc">Header file for Controls class.</div></div>
+<div class="ttc" id="acontroltlbx_8h_html_a1eb22fa90be3d6f34044b84bd1bca57e"><div class="ttname"><a href="controltlbx_8h.html#a1eb22fa90be3d6f34044b84bd1bca57e">VERSION_MPP_TLBX</a></div><div class="ttdeci">#define VERSION_MPP_TLBX</div><div class="ttdef"><b>Definition:</b> controltlbx.h:20</div></div>
+<div class="ttc" id="acontroltlbx_8h_html_a3ff5b1fcf9f2ea50f3a2989a956d7368"><div class="ttname"><a href="controltlbx_8h.html#a3ff5b1fcf9f2ea50f3a2989a956d7368">CONTACT_MPP_TLBX</a></div><div class="ttdeci">#define CONTACT_MPP_TLBX</div><div class="ttdef"><b>Definition:</b> controltlbx.h:22</div></div>
+<div class="ttc" id="acontroltlbx_8h_html_a5e599ccabb463fa085c1228f96a1fc57"><div class="ttname"><a href="controltlbx_8h.html#a5e599ccabb463fa085c1228f96a1fc57">AUTHOR_MPP_TLBX</a></div><div class="ttdeci">#define AUTHOR_MPP_TLBX</div><div class="ttdef"><b>Definition:</b> controltlbx.h:21</div></div>
+<div class="ttc" id="acontroltlbx_8h_html_aa444c8fc7b01a2391937130098dfead9"><div class="ttname"><a href="controltlbx_8h.html#aa444c8fc7b01a2391937130098dfead9">hello_world_control_tlbx</a></div><div class="ttdeci">void hello_world_control_tlbx()</div><div class="ttdef"><b>Definition:</b> controltlbx.h:29</div></div>
+<div class="ttc" id="acontroltlbx_8h_html_ae99cad39010956165e7620a3248f6d87"><div class="ttname"><a href="controltlbx_8h.html#ae99cad39010956165e7620a3248f6d87">DOCUMENTATION_MPP_TLBX</a></div><div class="ttdeci">#define DOCUMENTATION_MPP_TLBX</div><div class="ttdef"><b>Definition:</b> controltlbx.h:23</div></div>
+<div class="ttc" id="alinalg_8h_html"><div class="ttname"><a href="linalg_8h.html">linalg.h</a></div><div class="ttdoc">Main Header file for Linear Algebra Library.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

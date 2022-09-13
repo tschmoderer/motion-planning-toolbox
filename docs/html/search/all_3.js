@@ -10,7 +10,7 @@ var searchData=
   ['diagonalmatrix_7',['DiagonalMatrix',['../diagonal_matrix_8h.html#a121320d61421c918f9961ff11578f633',1,'diagonalMatrix.h']]],
   ['diagonalmatrix_2ecpp_8',['diagonalMatrix.cpp',['../diagonal_matrix_8cpp.html',1,'']]],
   ['diagonalmatrix_2eh_9',['diagonalMatrix.h',['../diagonal_matrix_8h.html',1,'']]],
-  ['documentation_10',['DOCUMENTATION',['../controltlbx_8h.html#a19f3d91344a9e153d9625df340ce8a11',1,'controltlbx.h']]],
-  ['documentation_5finterpol_5flib_11',['DOCUMENTATION_INTERPOL_LIB',['../interpol_8h.html#a365c661a472bb27c738497634bc5f2af',1,'interpol.h']]],
-  ['documentation_5flinalg_5flib_12',['DOCUMENTATION_LINALG_LIB',['../linalg_8h.html#a389cf5ec8d094b0c6eee03ff309f2d45',1,'linalg.h']]]
+  ['documentation_5finterpol_5flib_10',['DOCUMENTATION_INTERPOL_LIB',['../interpol_8h.html#a365c661a472bb27c738497634bc5f2af',1,'interpol.h']]],
+  ['documentation_5flinalg_5flib_11',['DOCUMENTATION_LINALG_LIB',['../linalg_8h.html#a389cf5ec8d094b0c6eee03ff309f2d45',1,'linalg.h']]],
+  ['documentation_5fmpp_5ftlbx_12',['DOCUMENTATION_MPP_TLBX',['../controltlbx_8h.html#ae99cad39010956165e7620a3248f6d87',1,'controltlbx.h']]]
 ];
