@@ -4,5 +4,6 @@ var searchData=
   ['randn_1',['randn',['../class_vector.html#a5d5120b5f92f166450d1508d504e99b4',1,'Vector::randn(uint16_t)'],['../class_vector.html#afd7c81609842c37c91ddd63857e02f3e',1,'Vector::randn(uint16_t, double, double)']]],
   ['rd_2',['rd',['../utils_8cpp.html#a7071b0092ad8c5b57d6cc40c5f803df5',1,'utils.cpp']]],
   ['readme_2emd_3',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['row_4',['row',['../class_matrix.html#a1153edd19c7e63bad8ae48ac3dedcdfe',1,'Matrix']]]
+  ['rk_5f4_4',['RK_4',['../integrator1d_8h.html#a912bd25f5be913ca6cfdb07ef1840bddad016f706274c0c8c63861898c0ddeb64',1,'integrator1d.h']]],
+  ['row_5',['row',['../class_matrix.html#a1153edd19c7e63bad8ae48ac3dedcdfe',1,'Matrix']]]
 ];
