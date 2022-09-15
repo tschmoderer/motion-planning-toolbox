@@ -1,5 +1,6 @@
 add_subdirectory("linalg")
 add_subdirectory("interpol")
+add_subdirectory("odeint")
 add_subdirectory("controltlbx")
 add_subdirectory("gui")
 
