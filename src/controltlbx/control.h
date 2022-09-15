@@ -71,7 +71,7 @@ class Control {
 
         Vector * time; /*!< Pointer to array of discrete times */
         Vector * data; /*!< Pointer to the data of the control at time step */
-        Interpolator1D * interpolator;/*!< Pointer to interpolation method */
+        Interpolator1D * interpolator; /*!< Pointer to interpolation method */
 
         /* PRIVATE METHODS */
         void construct_discrete_time(); 

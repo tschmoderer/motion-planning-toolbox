@@ -24,6 +24,7 @@ class Controls {
       /* CONSTRUCTORS */
       Controls(); 
       Controls(uint8_t );
+      Controls(uint8_t , Control );
       Controls(std::vector<Control> );
       Controls(const Controls & ); 
 
@@ -49,12 +50,12 @@ class Controls {
 
       friend bool operator==(const Controls & , const Controls & );
       friend Controls operator+(const Controls & , const Controls & ); 
-      friend Controls operator-(const Control & , const Controls & ); 
+      friend Controls operator-(const Controls & , const Controls & ); 
       friend std::ostream & operator<<(std::ostream & , const Controls & );
 
     private: 
       uint8_t m;    /*!< Number of controls */
-      std::vector<Control> control_list;
+      std::vector<Control> control_list; /*!< List of controls */
 };
 
 #endif
