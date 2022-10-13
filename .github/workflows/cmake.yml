@@ -34,7 +34,7 @@ jobs:
       - name: Dependencies
         shell: bash
         run: | 
-          sudo apt install -y valgrind 
+          sudo apt install -y libeigen3-dev valgrind 
       # Configure cmake
       - name: Configure
         shell: bash
