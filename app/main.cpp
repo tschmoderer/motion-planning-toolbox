@@ -1,13 +1,13 @@
 #include <cstdint>
 #include <iostream>
 
-#include "./ctrl-ode-lib/controltlbx.h"
+#include "../include/header/controltlbx.h"
 
 using namespace std;
 
 #define STATE_DIM 3
 #define CONTROL_DIM 2
-
+/*
 Vector f(double t, const State & x, const Controls & u) {
     Vector dxdt(STATE_DIM);
     dxdt[0] = cos(x[2])*u[0](t);
@@ -25,13 +25,13 @@ Matrix dfdu(double t, const State & x, const Control & u) {
     Matrix df_du(STATE_DIM, CONTROL_DIM);
     return df_du;
 }
-
+*/
 int main(int argc, char **argv) {
     hello_world_control_tlbx();
 
     // Put your code here
-    State x0(STATE_DIM);
-    State x1(STATE_DIM);
+    //State x0(STATE_DIM);
+    //State x1(STATE_DIM);
 
     double t0 = 0; 
     double t1 = 1;

@@ -1,9 +1,9 @@
 /**
-* @file controltlbx.h
-* @author T. Schmoderer (iathena@mailo.com)
-* @version 0.0.0
-* @date 2022-10-13
-* @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
+* @file @CURFILENAME@
+* @author @AUTHOR@ (@AUTHOR_MAIL@)
+* @version @PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@
+* @date @TODAY@
+* @copyright Copyright (c) @YEAR@. All rights reserved. This project is released under the @LICENSE@.
 */
 /**
  * @brief Main file for the control toolbox library
@@ -16,10 +16,10 @@
 #include "control.h"
 
 /* VERSION MACROS */
-#define VERSION_MPP_TLBX "0.0.0"
-#define AUTHOR_MPP_TLBX "T. Schmoderer"
-#define CONTACT_MPP_TLBX "iathena@mailo.com"
-#define DOCUMENTATION_MPP_TLBX "https://tschmoderer.github.io/motion-planning-toolbox/html/index.html"
+#define VERSION_MPP_TLBX "@PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@"
+#define AUTHOR_MPP_TLBX "@AUTHOR@"
+#define CONTACT_MPP_TLBX "@AUTHOR_MAIL@"
+#define DOCUMENTATION_MPP_TLBX "@DOCUMENTATION_ADDR@"
 
 /**
 * @brief 

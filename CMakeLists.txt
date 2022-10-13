@@ -14,7 +14,7 @@ set(AUTHOR "T. Schmoderer")
 set(AUTHOR_MAIL "iathena@mailo.com")
 string(TIMESTAMP TODAY "%Y-%m-%d")
 string(TIMESTAMP YEAR "%Y")
-set(DOCUMENTATION_ADDR "")
+set(DOCUMENTATION_ADDR "https://tschmoderer.github.io/motion-planning-toolbox/html/index.html")
 set(LICENSE "GNU GENERAL PUBLIC LICENSE")
 set(CMAKE_PROJECT_DESCRIPTION "")
 
