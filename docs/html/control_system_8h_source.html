@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('control_system_8h_source.html',''); in
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>: </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="comment">/* CONSTRUCTORS */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_control_system.html#a4b8f52561261c53303c3db0a06ddceed">ControlSystem</a>(); </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_control_system.html#a96bd4099e00ee1b5688241499f477c15">   13</a></span>&#160;        <a class="code" href="class_control_system.html#a96bd4099e00ee1b5688241499f477c15">ControlSystem</a>(<a class="code" href="utils_8h.html#a5483d1c805c21bcd60dc78e643231748">state_t</a> , time_t );</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_control_system.html#a96bd4099e00ee1b5688241499f477c15">   13</a></span>&#160;        <a class="code" href="class_control_system.html#a96bd4099e00ee1b5688241499f477c15">ControlSystem</a>(state_t , time_t );</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">/* DESTRUCTOR */</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_control_system.html#a449890897411186d4f245a79e8f2d016">   16</a></span>&#160;        <a class="code" href="class_control_system.html#a449890897411186d4f245a79e8f2d016">~ControlSystem</a>(); </div>
@@ -129,15 +129,15 @@ $(document).ready(function(){initNavTree('control_system_8h_source.html',''); in
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        uint8_t state_dim; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        uint8_t cntrl_dim;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="utils_8h.html#a5483d1c805c21bcd60dc78e643231748">state_t</a> x0; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="utils_8h.html#aeaff102c0338059de9ba2146d594c7da">temps_t</a> t0; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="utils_8h.html#aeaff102c0338059de9ba2146d594c7da">temps_t</a> t1;  </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        state_t x0; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        temps_t t0; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        temps_t t1;  </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="class_controls.html">Controls</a> * cntrls;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="utils_8h.html#a5483d1c805c21bcd60dc78e643231748">state_t</a> (*f)(<a class="code" href="utils_8h.html#aeaff102c0338059de9ba2146d594c7da">temps_t</a> , <span class="keyword">const</span> <a class="code" href="utils_8h.html#a5483d1c805c21bcd60dc78e643231748">state_t</a> &amp; , <span class="keyword">const</span> <a class="code" href="class_controls.html">Controls</a> &amp; );</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        Matrix (*dfdx)(<a class="code" href="utils_8h.html#aeaff102c0338059de9ba2146d594c7da">temps_t</a> , <span class="keyword">const</span> <a class="code" href="utils_8h.html#a5483d1c805c21bcd60dc78e643231748">state_t</a> &amp; , <span class="keyword">const</span> <a class="code" href="class_controls.html">Controls</a> &amp; );</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        Matrix (*dfdu)(<a class="code" href="utils_8h.html#aeaff102c0338059de9ba2146d594c7da">temps_t</a> , <span class="keyword">const</span> <a class="code" href="utils_8h.html#a5483d1c805c21bcd60dc78e643231748">state_t</a> &amp; , <span class="keyword">const</span> <a class="code" href="class_controls.html">Controls</a> &amp; );</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        state_t (*f)(temps_t , <span class="keyword">const</span> state_t &amp; , <span class="keyword">const</span> <a class="code" href="class_controls.html">Controls</a> &amp; );</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        Matrix (*dfdx)(temps_t , <span class="keyword">const</span> state_t &amp; , <span class="keyword">const</span> <a class="code" href="class_controls.html">Controls</a> &amp; );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        Matrix (*dfdu)(temps_t , <span class="keyword">const</span> state_t &amp; , <span class="keyword">const</span> <a class="code" href="class_controls.html">Controls</a> &amp; );</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        Integrator1D * integrator;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
@@ -151,8 +151,6 @@ $(document).ready(function(){initNavTree('control_system_8h_source.html',''); in
 <div class="ttc" id="aclass_controls_html"><div class="ttname"><a href="class_controls.html">Controls</a></div><div class="ttdoc">Class to describe a collection of controls.</div><div class="ttdef"><b>Definition:</b> controls.h:22</div></div>
 <div class="ttc" id="acontrols_8h_html"><div class="ttname"><a href="controls_8h.html">controls.h</a></div><div class="ttdoc">Header file for Controls class.</div></div>
 <div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
-<div class="ttc" id="autils_8h_html_a5483d1c805c21bcd60dc78e643231748"><div class="ttname"><a href="utils_8h.html#a5483d1c805c21bcd60dc78e643231748">state_t</a></div><div class="ttdeci">Vector state_t</div><div class="ttdef"><b>Definition:</b> utils.h:20</div></div>
-<div class="ttc" id="autils_8h_html_aeaff102c0338059de9ba2146d594c7da"><div class="ttname"><a href="utils_8h.html#aeaff102c0338059de9ba2146d594c7da">temps_t</a></div><div class="ttdeci">double temps_t</div><div class="ttdef"><b>Definition:</b> utils.h:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

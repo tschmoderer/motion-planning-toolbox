@@ -106,30 +106,18 @@ $(document).ready(function(){initNavTree('controltlbx_8h.html',''); initResizabl
 <div class="title">controltlbx.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Main Header file for <a class="el" href="class_control.html" title="A class decribing a single control function. A control is described by interpolations points t_i and ...">Control</a> System Library.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;stdlib.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="control_8h_source.html">control.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="controls_8h_source.html">controls.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="control_system_8h_source.html">controlSystem.h</a>&quot;</code><br />
-<code>#include &quot;linalg.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for controltlbx.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="controltlbx_8h__incl.png" border="0" usemap="#ainclude_2header_2controltlbx_8h" alt=""/></div>
 <map name="ainclude_2header_2controltlbx_8h" id="ainclude_2header_2controltlbx_8h">
-<area shape="rect" title="Main Header file for Control System Library." alt="" coords="89,5,293,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,76,107"/>
-<area shape="rect" href="control_8h.html" title=" " alt="" coords="139,304,217,331"/>
-<area shape="rect" href="controls_8h.html" title="Header file for Controls class." alt="" coords="157,155,244,181"/>
-<area shape="rect" title=" " alt="" coords="304,304,375,331"/>
-<area shape="rect" href="control_system_8h.html" title=" " alt="" coords="229,80,357,107"/>
-<area shape="rect" title=" " alt="" coords="89,379,163,405"/>
-<area shape="rect" title=" " alt="" coords="188,379,272,405"/>
-<area shape="rect" title=" " alt="" coords="152,229,215,256"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="239,229,301,256"/>
-<area shape="rect" title=" " alt="" coords="374,155,449,181"/>
+<area shape="rect" title=" " alt="" coords="5,5,209,32"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="76,155,139,181"/>
+<area shape="rect" href="control_8h.html" title=" " alt="" coords="107,80,185,107"/>
+<area shape="rect" title=" " alt="" coords="18,229,87,256"/>
+<area shape="rect" title=" " alt="" coords="112,229,215,256"/>
 </map>
 </div>
 </div>
@@ -137,14 +125,17 @@ Include dependency graph for controltlbx.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a1eb22fa90be3d6f34044b84bd1bca57e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controltlbx_8h.html#a1eb22fa90be3d6f34044b84bd1bca57e">VERSION_MPP_TLBX</a>&#160;&#160;&#160;&quot;0.0.0&quot;</td></tr>
+<tr class="memitem:a1eb22fa90be3d6f34044b84bd1bca57e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controltlbx_8h.html#a1eb22fa90be3d6f34044b84bd1bca57e">VERSION_MPP_TLBX</a>&#160;&#160;&#160;&quot;0.0.1&quot;</td></tr>
+<tr class="memdesc:a1eb22fa90be3d6f34044b84bd1bca57e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main file for the control toolbox library.  <a href="controltlbx_8h.html#a1eb22fa90be3d6f34044b84bd1bca57e">More...</a><br /></td></tr>
 <tr class="separator:a1eb22fa90be3d6f34044b84bd1bca57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e599ccabb463fa085c1228f96a1fc57"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controltlbx_8h.html#a5e599ccabb463fa085c1228f96a1fc57">AUTHOR_MPP_TLBX</a>&#160;&#160;&#160;&quot;T. SCHMODERER/BOHEME&quot;</td></tr>
+<tr class="memitem:a5e599ccabb463fa085c1228f96a1fc57"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controltlbx_8h.html#a5e599ccabb463fa085c1228f96a1fc57">AUTHOR_MPP_TLBX</a>&#160;&#160;&#160;&quot;T. Schmoderer&quot;</td></tr>
 <tr class="separator:a5e599ccabb463fa085c1228f96a1fc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ff5b1fcf9f2ea50f3a2989a956d7368"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controltlbx_8h.html#a3ff5b1fcf9f2ea50f3a2989a956d7368">CONTACT_MPP_TLBX</a>&#160;&#160;&#160;&quot;iathena@mailo.com&quot;</td></tr>
 <tr class="separator:a3ff5b1fcf9f2ea50f3a2989a956d7368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae99cad39010956165e7620a3248f6d87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controltlbx_8h.html#ae99cad39010956165e7620a3248f6d87">DOCUMENTATION_MPP_TLBX</a>&#160;&#160;&#160;&quot;https://tschmoderer.github.io/motion-planning-toolbox/html/index.html&quot;</td></tr>
 <tr class="separator:ae99cad39010956165e7620a3248f6d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36bae55e49f9d1879096c746332ab60c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controltlbx_8h.html#a36bae55e49f9d1879096c746332ab60c">CODE_MPP_TLBX</a>&#160;&#160;&#160;&quot;https://github.com/tschmoderer/motion-planning-toolbox&quot;</td></tr>
+<tr class="separator:a36bae55e49f9d1879096c746332ab60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -152,11 +143,10 @@ Functions</h2></td></tr>
 <tr class="separator:aa444c8fc7b01a2391937130098dfead9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Main Header file for <a class="el" href="class_control.html" title="A class decribing a single control function. A control is described by interpolations points t_i and ...">Control</a> System Library. </p>
-<dl class="section author"><dt>Author</dt><dd>T. Schmoderer (<a href="#" onclick="location.href='mai'+'lto:'+'iat'+'he'+'na@'+'ma'+'ilo'+'.c'+'om'; return false;">iathe<span style="display: none;">.nosp@m.</span>na@m<span style="display: none;">.nosp@m.</span>ailo.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2022-09-13 </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022 </dd></dl>
+<div class="textblock"><dl class="section author"><dt>Author</dt><dd>T. Schmoderer (<a href="#" onclick="location.href='mai'+'lto:'+'iat'+'he'+'na@'+'ma'+'ilo'+'.c'+'om'; return false;">iathe<span style="display: none;">.nosp@m.</span>na@m<span style="display: none;">.nosp@m.</span>ailo.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.0.1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-10-13 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE. </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a5e599ccabb463fa085c1228f96a1fc57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e599ccabb463fa085c1228f96a1fc57">&#9670;&nbsp;</a></span>AUTHOR_MPP_TLBX</h2>
@@ -165,7 +155,21 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define AUTHOR_MPP_TLBX&#160;&#160;&#160;&quot;T. SCHMODERER/BOHEME&quot;</td>
+          <td class="memname">#define AUTHOR_MPP_TLBX&#160;&#160;&#160;&quot;T. Schmoderer&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36bae55e49f9d1879096c746332ab60c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36bae55e49f9d1879096c746332ab60c">&#9670;&nbsp;</a></span>CODE_MPP_TLBX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CODE_MPP_TLBX&#160;&#160;&#160;&quot;https://github.com/tschmoderer/motion-planning-toolbox&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -207,10 +211,12 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VERSION_MPP_TLBX&#160;&#160;&#160;&quot;0.0.0&quot;</td>
+          <td class="memname">#define VERSION_MPP_TLBX&#160;&#160;&#160;&quot;0.0.1&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Main file for the control toolbox library. </p>
 
 </div>
 </div>

@@ -1,8 +1,7 @@
 <map id="include/header/controls.h" name="include/header/controls.h">
-<area shape="rect" id="node1" title="Header file for Controls class." alt="" coords="226,5,413,32"/>
-<area shape="rect" id="node2" href="$controls_8cpp.html" title=" " alt="" coords="57,80,181,107"/>
-<area shape="rect" id="node3" href="$control_system_8h.html" title=" " alt="" coords="205,80,433,107"/>
-<area shape="rect" id="node5" href="$controltlbx_8h.html" title="Main Header file for Control System Library." alt="" coords="427,162,631,189"/>
-<area shape="rect" id="node4" href="$control_system_8cpp.html" title=" " alt="" coords="5,162,172,189"/>
-<area shape="rect" id="node6" href="$linear_control_system_8h.html" title=" " alt="" coords="196,155,403,196"/>
+<area shape="rect" id="node1" title="Header file for Controls class." alt="" coords="74,5,261,32"/>
+<area shape="rect" id="node2" href="$controls_8cpp.html" title=" " alt="" coords="5,80,129,107"/>
+<area shape="rect" id="node3" href="$control_system_8h.html" title=" " alt="" coords="153,80,381,107"/>
+<area shape="rect" id="node4" href="$control_system_8cpp.html" title=" " alt="" coords="79,162,245,189"/>
+<area shape="rect" id="node5" href="$linear_control_system_8h.html" title=" " alt="" coords="269,155,476,196"/>
 </map>

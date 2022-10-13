@@ -100,24 +100,21 @@ $(document).ready(function(){initNavTree('utils_8h.html',''); initResizable(); }
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">utils.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;linalg.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="control_8h_source.html">control.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;Eigen/Dense&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for utils.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="utils_8h__incl.png" border="0" usemap="#ainclude_2header_2utils_8h" alt=""/></div>
 <map name="ainclude_2header_2utils_8h" id="ainclude_2header_2utils_8h">
-<area shape="rect" title=" " alt="" coords="9,5,171,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,76,107"/>
-<area shape="rect" href="control_8h.html" title=" " alt="" coords="100,80,179,107"/>
-<area shape="rect" title=" " alt="" coords="50,155,125,181"/>
-<area shape="rect" title=" " alt="" coords="149,155,233,181"/>
+<area shape="rect" title=" " alt="" coords="13,5,176,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,75,107"/>
+<area shape="rect" title=" " alt="" coords="99,80,202,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -125,13 +122,15 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="utils_8h__dep__incl.png" border="0" usemap="#ainclude_2header_2utils_8hdep" alt=""/></div>
 <map name="ainclude_2header_2utils_8hdep" id="ainclude_2header_2utils_8hdep">
-<area shape="rect" title=" " alt="" coords="162,5,325,32"/>
-<area shape="rect" href="controls_8h.html" title="Header file for Controls class." alt="" coords="85,80,271,107"/>
-<area shape="rect" href="control_system_8h.html" title=" " alt="" coords="205,155,433,181"/>
-<area shape="rect" href="controls_8cpp.html" title=" " alt="" coords="5,155,129,181"/>
-<area shape="rect" href="controltlbx_8h.html" title="Main Header file for Control System Library." alt="" coords="36,237,240,263"/>
-<area shape="rect" href="control_system_8cpp.html" title=" " alt="" coords="264,237,431,263"/>
-<area shape="rect" href="linear_control_system_8h.html" title=" " alt="" coords="455,229,661,271"/>
+<area shape="rect" title=" " alt="" coords="308,5,471,32"/>
+<area shape="rect" href="control_8h.html" title=" " alt="" coords="108,80,287,107"/>
+<area shape="rect" href="controltlbx_8h.html" title=" " alt="" coords="147,155,351,181"/>
+<area shape="rect" href="controls_8h.html" title="Header file for Controls class." alt="" coords="361,80,548,107"/>
+<area shape="rect" href="control_system_8h.html" title=" " alt="" coords="523,155,751,181"/>
+<area shape="rect" href="control_8cpp.html" title=" " alt="" coords="5,155,123,181"/>
+<area shape="rect" href="controls_8cpp.html" title=" " alt="" coords="375,155,499,181"/>
+<area shape="rect" href="control_system_8cpp.html" title=" " alt="" coords="449,237,615,263"/>
+<area shape="rect" href="linear_control_system_8h.html" title=" " alt="" coords="639,229,846,271"/>
 </map>
 </div>
 </div>
@@ -141,17 +140,10 @@ This graph shows which files directly or indirectly include this file:</div>
 Macros</h2></td></tr>
 <tr class="memitem:a9eaff20221d756288a11ec6dc3ad98b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a9eaff20221d756288a11ec6dc3ad98b7">MAX_CONTROL</a>&#160;&#160;&#160;10</td></tr>
 <tr class="separator:a9eaff20221d756288a11ec6dc3ad98b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a5483d1c805c21bcd60dc78e643231748"><td class="memItemLeft" align="right" valign="top">typedef Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a5483d1c805c21bcd60dc78e643231748">state_t</a></td></tr>
-<tr class="separator:a5483d1c805c21bcd60dc78e643231748"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaff102c0338059de9ba2146d594c7da"><td class="memItemLeft" align="right" valign="top">typedef double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#aeaff102c0338059de9ba2146d594c7da">temps_t</a></td></tr>
-<tr class="separator:aeaff102c0338059de9ba2146d594c7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>T. Schmoderer (<a href="#" onclick="location.href='mai'+'lto:'+'iat'+'he'+'na@'+'ma'+'ilo'+'.c'+'om'; return false;">iathe<span style="display: none;">.nosp@m.</span>na@m<span style="display: none;">.nosp@m.</span>ailo.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.0.0 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2022-10-13 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE. </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -163,35 +155,6 @@ Typedefs</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define MAX_CONTROL&#160;&#160;&#160;10</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a5483d1c805c21bcd60dc78e643231748"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5483d1c805c21bcd60dc78e643231748">&#9670;&nbsp;</a></span>state_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef Vector <a class="el" href="utils_8h.html#a5483d1c805c21bcd60dc78e643231748">state_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aeaff102c0338059de9ba2146d594c7da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeaff102c0338059de9ba2146d594c7da">&#9670;&nbsp;</a></span>temps_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef double <a class="el" href="utils_8h.html#aeaff102c0338059de9ba2146d594c7da">temps_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

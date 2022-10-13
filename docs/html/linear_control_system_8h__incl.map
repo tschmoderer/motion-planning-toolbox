@@ -1,12 +1,11 @@
 <map id="include/header/linearControlSystem.h" name="include/header/linearControlSystem.h">
-<area shape="rect" id="node1" title=" " alt="" coords="37,5,244,47"/>
-<area shape="rect" id="node2" href="$control_system_8h.html" title=" " alt="" coords="77,95,205,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,319,76,345"/>
-<area shape="rect" id="node4" href="$utils_8h.html" title=" " alt="" coords="79,244,141,271"/>
-<area shape="rect" id="node8" href="$controls_8h.html" title="Header file for Controls class." alt="" coords="139,169,225,196"/>
-<area shape="rect" id="node10" title=" " alt="" coords="250,169,325,196"/>
-<area shape="rect" id="node5" href="$control_8h.html" title=" " alt="" coords="100,319,179,345"/>
-<area shape="rect" id="node6" title=" " alt="" coords="50,393,125,420"/>
-<area shape="rect" id="node7" title=" " alt="" coords="149,393,233,420"/>
-<area shape="rect" id="node9" title=" " alt="" coords="165,244,228,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="51,5,257,47"/>
+<area shape="rect" id="node2" href="$control_system_8h.html" title=" " alt="" coords="90,95,218,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,169,76,196"/>
+<area shape="rect" id="node4" href="$utils_8h.html" title=" " alt="" coords="83,244,145,271"/>
+<area shape="rect" id="node7" href="$controls_8h.html" title="Header file for Controls class." alt="" coords="152,169,239,196"/>
+<area shape="rect" id="node9" title=" " alt="" coords="263,169,338,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="25,319,94,345"/>
+<area shape="rect" id="node6" title=" " alt="" coords="119,319,221,345"/>
+<area shape="rect" id="node8" title=" " alt="" coords="169,244,232,271"/>
 </map>

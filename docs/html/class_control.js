@@ -1,27 +1,7 @@
 var class_control =
 [
     [ "Control", "class_control.html#aa730aeda4517f40bc48ba1e46ebded77", null ],
-    [ "Control", "class_control.html#a6f38a88ae77b21b47c5454d442057c52", null ],
-    [ "Control", "class_control.html#abd106c79ea2c4eb6c1df2f9e2f419601", null ],
-    [ "Control", "class_control.html#ad4c9b9434d8608ece1743808dcdc1bf9", null ],
     [ "Control", "class_control.html#a2c2cb5a17c8a125350c543097b188f67", null ],
     [ "~Control", "class_control.html#aedda1328c4f8b8d49bca8f0812d3bfd1", null ],
-    [ "get_data", "class_control.html#a933a7fcab87017bf8ffa033e834f568a", null ],
-    [ "get_time", "class_control.html#ab0fa2db209b9d403afdd354e36c712a4", null ],
-    [ "operator()", "class_control.html#a2f1bf0f5050dd74d92c901d1fe58c88e", null ],
-    [ "operator()", "class_control.html#a4c15fa1983875c95bd28fffd2da82748", null ],
-    [ "operator+=", "class_control.html#a65c77a675ccc4a39476354cf1222419a", null ],
-    [ "operator-=", "class_control.html#a118c21a94ef911b4d3f94143775936fc", null ],
-    [ "operator=", "class_control.html#a84586bbffaee27751ae8a4004c1f3a5e", null ],
-    [ "set_data", "class_control.html#a8e5eafe82cf45f92a7479c37a55b3065", null ],
-    [ "set_data", "class_control.html#a8b5233bb56755fab1cbb7955f52b4db1", null ],
-    [ "set_interp_method", "class_control.html#a860e9fd066c4c15de45f31d4e689bbe4", null ],
-    [ "set_interp_method", "class_control.html#afe2ea27b07bb45971cee010f9ccf8b63", null ],
-    [ "set_N", "class_control.html#ade669fc78cc87a45967f8aa06e77db34", null ],
-    [ "set_t0", "class_control.html#ac7efda85a75c97e44c5d7d51c09e42ee", null ],
-    [ "set_t1", "class_control.html#a6c4f6b74384652c6ed00bd7b322c7349", null ],
-    [ "operator+", "class_control.html#a67da4f957e3b8a4076ebbd505304cd71", null ],
-    [ "operator-", "class_control.html#a65ae7e641ecb89722c1d02d7e78e1e60", null ],
-    [ "operator<<", "class_control.html#aa583720a041b13083b1b23b5f58f2532", null ],
-    [ "operator==", "class_control.html#ab7808e82896ab0361f641c0a43844f4f", null ]
+    [ "operator<<", "class_control.html#aa583720a041b13083b1b23b5f58f2532", null ]
 ];
