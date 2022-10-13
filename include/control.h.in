@@ -1,17 +1,17 @@
 /**
-* @file control.h
-* @author T. Schmoderer (iathena@mailo.com)
-* @brief Header file for Control class
-* @version 1.0
-* @date 2021-10-27
-* 
-* @copyright Copyright (c) 2021
+* @file @CURFILENAME@
+* @author @AUTHOR@ (@AUTHOR_MAIL@)
+* @version @PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@
+* @date @TODAY@
+* @copyright Copyright (c) @YEAR@. All rights reserved. This project is released under the @LICENSE@.
+*/
+/**
+ * @brief
 */
 
 #ifndef CONTROLTLBX_CONTROL_H
 #define CONTROLTLBX_CONTROL_H
 
-#include "matrix.h"
 #include "vector.h"
 #include "interpol.h"
 
