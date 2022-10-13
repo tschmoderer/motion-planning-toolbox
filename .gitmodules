@@ -1,6 +1,3 @@
-[submodule "src/linalg-lib"]
-	path = src/linalg-lib
-	url = git@github.com:tschmoderer/cpp-linear-algebra-toolbox.git
 [submodule "src/interpol-lib"]
 	path = src/interpol-lib
 	url = git@github.com:tschmoderer/cpp-interpolation-toolbox.git
