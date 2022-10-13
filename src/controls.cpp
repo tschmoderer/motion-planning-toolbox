@@ -1,11 +1,3 @@
-/**
- * @file controls.cpp
- * @author T. Schmoderer (iathena@mailo.com)
- * @brief Implementation of Controls class
- * @version 1.0
- * @date 2022-09-14
- * @copyright Copyright (c) 2022
- */
 #include "controls.h"
 
 /* CONSTRUCTORS */

@@ -1,14 +1,3 @@
-/**
-* @file control.cpp
-* @author T. Schmoderer (iathena@mailo.com)
-* @brief Implementation of control class
-* @version 1.0
-* @date 2021-10-31
-* 
-* @copyright Copyright (c) 2021
-* 
-*/
-
 #include "control.h"
 
 /**
