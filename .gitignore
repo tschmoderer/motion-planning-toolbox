@@ -33,5 +33,9 @@
 
 # User exception
 build/
+
+docs/html/
+
+docs/doxyfile.conf
+
 .vscode/
-src/gui/__pycache__/
