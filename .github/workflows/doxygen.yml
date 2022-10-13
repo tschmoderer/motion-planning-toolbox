@@ -9,18 +9,56 @@ on:
       - '**.hpp'
       - '**.c'
       - '**.h'
-      - 'docs/doxyfile.conf'
+      - '**.in'
+      - 'docs/doxyfile.in'
   workflow_dispatch:
 
 jobs:
   docs:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
-      - name: Doxygenize
-        uses: langroodi/doxygenize@v1.6.1
         with: 
-          doxygenconf: './docs/doxyfile.conf' # default is ./Doxyfile
-          htmloutput: './docs/html/'          # default is ./docs/
-          ghpagesbranch: 'gh-pages'               # default is gh-pages
-          ghpagesdir: './docs/html/'           # default is ./ 
+          submodules: 'true'
+          fetch-depth: '0'
+
+      - name: Dependencies
+        shell: bash 
+        run: |
+          sudo apt install -y git doxygen graphviz plantuml 
+          
+      - name: Configure
+        shell: bash
+        run: |
+          mkdir -p build
+          cd build
+          cmake ..  -D CMAKE_BUILD_TYPE=Debug
+      - name: Doxygen
+        shell: bash
+        run: |
+          cd build
+          make docs
+      - name: Publish
+        env: 
+          CI_COMMIT_MESSAGE: Auto commit
+          CI_COMMIT_AUTHOR: github-actions[bot]
+          CI_COMMIT_EMAIL: github-actions[bot]@users.noreply.github.com
+        shell: bash
+        run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "${{ env.CI_COMMIT_EMAIL }}"
+          git add --force ./docs/html/
+          git stash save ./docs/html/
+          git checkout gh-pages
+          if [ -d ./docs/html/ ]; then
+            git rm -rf ./docs/html/
+          fi
+          mkdir -p ./docs/html/
+          git stash pop
+          git add docs/html/*
+          if (! git diff --cached --exit-code --shortstat); then
+            git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
+            git push
+          else
+            echo "There is no change in the documentation"
+          fi
