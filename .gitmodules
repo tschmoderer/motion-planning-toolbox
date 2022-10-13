@@ -1,3 +1,0 @@
-[submodule "src/interpol-lib"]
-	path = src/interpol-lib
-	url = git@github.com:tschmoderer/cpp-interpolation-toolbox.git
