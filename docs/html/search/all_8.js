@@ -1,23 +1,12 @@
 var searchData=
 [
-  ['i_5fmeth_0',['i_meth',['../integrator1d_8h.html#a04240787e680c5eaed98be2f31c4e330',1,'integrator1d.h']]],
-  ['i_5fmethod_1',['i_method',['../class_interpolator.html#a275b577c23d913c2c3c6080e57cb09d2',1,'Interpolator']]],
-  ['integrate_2',['integrate',['../class_control_system.html#ab820edff12f1a3502da1570364e90da0',1,'ControlSystem']]],
-  ['integration_5fmethod_5ft_3',['integration_method_t',['../integrator1d_8h.html#a912bd25f5be913ca6cfdb07ef1840bdd',1,'integrator1d.h']]],
-  ['integrator1d_2ecpp_4',['integrator1d.cpp',['../integrator1d_8cpp.html',1,'']]],
-  ['integrator1d_2eh_5',['integrator1d.h',['../integrator1d_8h.html',1,'']]],
-  ['interp1d_6',['interp1d',['../class_interpolator.html#a0c923698065c9e5790ad196e99852484',1,'Interpolator::interp1d()'],['../class_interpolator1_d.html#a2a9e3ea704a7606754f8479ff061612b',1,'Interpolator1D::interp1d()']]],
-  ['interp_5fconstant_5fleft_7',['INTERP_CONSTANT_LEFT',['../interpolator_8h.html#a6fd53b040507bda8a846932e195fa78fab7ccea8ae0457c69704c0835f6480e18',1,'interpolator.h']]],
-  ['interp_5fconstant_5fright_8',['INTERP_CONSTANT_RIGHT',['../interpolator_8h.html#a6fd53b040507bda8a846932e195fa78fa5e9da5b99456219f1c0560c7e85be262',1,'interpolator.h']]],
-  ['interp_5flinear_9',['INTERP_LINEAR',['../interpolator_8h.html#a6fd53b040507bda8a846932e195fa78fa17abedd2e487446bf814c9da0b7791de',1,'interpolator.h']]],
-  ['interp_5fnearest_10',['INTERP_NEAREST',['../interpolator_8h.html#a6fd53b040507bda8a846932e195fa78fa5dc1c99b5e803daf350345d519b58b67',1,'interpolator.h']]],
-  ['interpol_2eh_11',['interpol.h',['../interpol_8h.html',1,'']]],
-  ['interpolation_5fmethod_5ft_12',['interpolation_method_t',['../interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f',1,'interpolator.h']]],
-  ['interpolator_13',['Interpolator',['../class_interpolator.html#a1732fccc3f0508051d538adfdaa07678',1,'Interpolator::Interpolator(interpolation_method_t, uint8_t)'],['../class_interpolator.html#ab8cbb0b13436fc54a4bba03804ae8f8a',1,'Interpolator::Interpolator()'],['../class_interpolator.html',1,'Interpolator']]],
-  ['interpolator_2ecpp_14',['interpolator.cpp',['../interpolator_8cpp.html',1,'']]],
-  ['interpolator_2eh_15',['interpolator.h',['../interpolator_8h.html',1,'']]],
-  ['interpolator1d_16',['Interpolator1D',['../class_interpolator1_d.html#a2925c7d99f68e7807bd15a327d94903d',1,'Interpolator1D::Interpolator1D()'],['../class_interpolator1_d.html#a2b53d19217c63e18a8e26419fde2e436',1,'Interpolator1D::Interpolator1D(interpolation_method_t, extend_t, extend_t)'],['../class_interpolator1_d.html',1,'Interpolator1D']]],
-  ['interpolator1d_2ecpp_17',['interpolator1d.cpp',['../interpolator1d_8cpp.html',1,'']]],
-  ['interpolator1d_2eh_18',['interpolator1d.h',['../interpolator1d_8h.html',1,'']]],
-  ['is_5fsquare_19',['is_square',['../class_matrix.html#a4e909f004fd51f7615a590553165d6a3',1,'Matrix']]]
+  ['operator_28_29_21',['operator()',['../class_control.html#a2f1bf0f5050dd74d92c901d1fe58c88e',1,'Control::operator()()'],['../class_controls.html#afa0200607c8691e34d167064b7fa5c7f',1,'Controls::operator()(double) const'],['../class_controls.html#ace29ece0823aef0c399843f0a7ad0cd0',1,'Controls::operator()(const Vector &amp;) const'],['../class_control.html#a4c15fa1983875c95bd28fffd2da82748',1,'Control::operator()()']]],
+  ['operator_2b_22',['operator+',['../control_8cpp.html#a5c52cdcd4ff991a2e3197ce8673e65cd',1,'operator+(const Control &amp;lhs, const Control &amp;rhs):&#160;control.cpp'],['../controls_8cpp.html#a2bda56bef92cd8d38ee6fddcc7f96f71',1,'operator+(const Controls &amp;lhs, const Controls &amp;rhs):&#160;controls.cpp'],['../class_controls.html#a7f8e73f5113e4a5680b48de4c1365d0f',1,'Controls::operator+()'],['../class_control.html#a67da4f957e3b8a4076ebbd505304cd71',1,'Control::operator+()']]],
+  ['operator_2b_3d_23',['operator+=',['../class_control.html#a65c77a675ccc4a39476354cf1222419a',1,'Control::operator+=()'],['../class_controls.html#a7847244b0669d2b002803fbc62fed1f8',1,'Controls::operator+=()']]],
+  ['operator_2d_24',['operator-',['../class_control.html#a65ae7e641ecb89722c1d02d7e78e1e60',1,'Control::operator-()'],['../class_controls.html#a016d28e39dadef6319ea028feaf3572c',1,'Controls::operator-()'],['../controls_8cpp.html#a51c9a72b826e6a7a4493f770f2e70207',1,'operator-(const Controls &amp;lhs, const Controls &amp;rhs):&#160;controls.cpp'],['../control_8cpp.html#a81bd2f877c3096e582a6564aea6dd12c',1,'operator-(const Control &amp;lhs, const Control &amp;rhs):&#160;control.cpp']]],
+  ['operator_2d_3d_25',['operator-=',['../class_control.html#a118c21a94ef911b4d3f94143775936fc',1,'Control::operator-=()'],['../class_controls.html#a9ea9e144ef52ac45139efc77905186ee',1,'Controls::operator-=()']]],
+  ['operator_3c_3c_26',['operator&lt;&lt;',['../controls_8cpp.html#ac07eafa3284fe8149a38b000d9083afd',1,'operator&lt;&lt;(std::ostream &amp;os, const Controls &amp;vc):&#160;controls.cpp'],['../control_8cpp.html#afe2fdd9d4a2aa7fcfc528dedfe20c018',1,'operator&lt;&lt;(std::ostream &amp;os, const Control &amp;c):&#160;control.cpp'],['../class_controls.html#a15aeb2e13ca7ef6cc4f02bfbcd32ae90',1,'Controls::operator&lt;&lt;()'],['../class_control.html#aa583720a041b13083b1b23b5f58f2532',1,'Control::operator&lt;&lt;()']]],
+  ['operator_3d_27',['operator=',['../class_controls.html#a208bd7bbdaafe8db66bceea336ca3b52',1,'Controls::operator=()'],['../class_control.html#a84586bbffaee27751ae8a4004c1f3a5e',1,'Control::operator=()']]],
+  ['operator_3d_3d_28',['operator==',['../class_controls.html#a998482c3dabe98ff61ada27cad7ebc70',1,'Controls::operator==()'],['../class_control.html#ab7808e82896ab0361f641c0a43844f4f',1,'Control::operator==()'],['../controls_8cpp.html#a01a53923217c4d66372925cb2efb2350',1,'operator==():&#160;controls.cpp']]],
+  ['operator_5b_5d_29',['operator[]',['../class_controls.html#a8662dd92bf40c799a19994420f899d60',1,'Controls']]]
 ];

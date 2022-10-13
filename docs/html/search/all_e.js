@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['rand_0',['rand',['../class_l_t_matrix.html#afe82c151810f54db2a0137ab0e637f8e',1,'LTMatrix::rand(uint16_t)'],['../class_l_t_matrix.html#a6d91b74281bca243e32465331d161a9c',1,'LTMatrix::rand(uint16_t, uint16_t)'],['../class_matrix.html#a04fe460ae9fec2a361c76c2616ba5cfd',1,'Matrix::rand()'],['../class_square_matrix.html#a7fe794ebf7f47ba064b882f2b1f4330d',1,'SquareMatrix::rand()'],['../class_vector.html#a5cf3a8c9b58b69f2d28f19af2e14bb55',1,'Vector::rand(uint16_t)']]],
-  ['randn_1',['randn',['../class_vector.html#a5d5120b5f92f166450d1508d504e99b4',1,'Vector::randn(uint16_t)'],['../class_vector.html#afd7c81609842c37c91ddd63857e02f3e',1,'Vector::randn(uint16_t, double, double)']]],
-  ['rd_2',['rd',['../utils_8cpp.html#a7071b0092ad8c5b57d6cc40c5f803df5',1,'utils.cpp']]],
-  ['readme_2emd_3',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['rk_5f4_4',['RK_4',['../integrator1d_8h.html#a912bd25f5be913ca6cfdb07ef1840bddad016f706274c0c8c63861898c0ddeb64',1,'integrator1d.h']]],
-  ['row_5',['row',['../class_matrix.html#a1153edd19c7e63bad8ae48ac3dedcdfe',1,'Matrix']]]
+  ['_7econtrol_40',['~Control',['../class_control.html#aedda1328c4f8b8d49bca8f0812d3bfd1',1,'Control']]],
+  ['_7econtrols_41',['~Controls',['../class_controls.html#a546f121f630c5c9db5094f6838d9fed2',1,'Controls']]],
+  ['_7econtrolsystem_42',['~ControlSystem',['../class_control_system.html#a449890897411186d4f245a79e8f2d016',1,'ControlSystem']]]
 ];

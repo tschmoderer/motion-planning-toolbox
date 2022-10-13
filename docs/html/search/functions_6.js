@@ -1,13 +1,8 @@
 var searchData=
 [
-  ['gen_0',['gen',['../utils_8cpp.html#a374a9a7de3fd00dceacc5de8a654c087',1,'utils.cpp']]],
-  ['get_5fdata_1',['get_data',['../class_control.html#a933a7fcab87017bf8ffa033e834f568a',1,'Control::get_data()'],['../class_controls.html#aaeebd51daed394d75dc22ac4a2ce58f8',1,'Controls::get_data(uint8_t) const'],['../class_controls.html#a97a1b90b740f80148bbcaf837a2bb4dc',1,'Controls::get_data() const']]],
-  ['get_5fdim_2',['get_dim',['../class_vector.html#a99a5bfe930401932b4ffb4bc4afd3227',1,'Vector']]],
-  ['get_5fexleft_3',['get_exleft',['../class_interpolator1_d.html#af59979dcfa6466081674b054cb854cff',1,'Interpolator1D']]],
-  ['get_5fexright_4',['get_exright',['../class_interpolator1_d.html#a77ccdc413689fb7eb441cf31afb2e1e0',1,'Interpolator1D']]],
-  ['get_5fmethod_5',['get_method',['../class_interpolator.html#a6165016c380e9b380661bde5e0814fd4',1,'Interpolator']]],
-  ['get_5fn_5fcols_6',['get_n_cols',['../class_matrix.html#adaf9dc155b6b045ac57b63ccfd4a1b5c',1,'Matrix']]],
-  ['get_5fn_5felements_7',['get_n_elements',['../class_matrix.html#a84dde531aeaa2f4c43b35a310f0b7cc3',1,'Matrix']]],
-  ['get_5fn_5frows_8',['get_n_rows',['../class_matrix.html#a6f9688307dd4ec181b1da8c95f574ff6',1,'Matrix']]],
-  ['get_5ftime_9',['get_time',['../class_control.html#ab0fa2db209b9d403afdd354e36c712a4',1,'Control::get_time()'],['../class_controls.html#ad31dfee76a752c3e00d7ac8627c12fe9',1,'Controls::get_time()']]]
+  ['set_5fdata_74',['set_data',['../class_control.html#a8b5233bb56755fab1cbb7955f52b4db1',1,'Control::set_data(double, double)'],['../class_control.html#a8e5eafe82cf45f92a7479c37a55b3065',1,'Control::set_data(const Vector &amp;)']]],
+  ['set_5finterp_5fmethod_75',['set_interp_method',['../class_control.html#a860e9fd066c4c15de45f31d4e689bbe4',1,'Control::set_interp_method(interpolation_method_t)'],['../class_control.html#afe2ea27b07bb45971cee010f9ccf8b63',1,'Control::set_interp_method(interpolation_method_t, extend_t, extend_t)']]],
+  ['set_5fn_76',['set_N',['../class_control.html#ade669fc78cc87a45967f8aa06e77db34',1,'Control']]],
+  ['set_5ft0_77',['set_t0',['../class_control.html#ac7efda85a75c97e44c5d7d51c09e42ee',1,'Control']]],
+  ['set_5ft1_78',['set_t1',['../class_control.html#a6c4f6b74384652c6ed00bd7b322c7349',1,'Control']]]
 ];
