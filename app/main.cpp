@@ -37,6 +37,7 @@ int main(int argc, char **argv) {
     double t1 = 1;
 
     Control u0;
+    cout << u0 << endl; 
 
     // End code
     return 0;

@@ -9,9 +9,37 @@
  * @brief
 */
 
+#include "utils.h"
+
+using Eigen::VectorXd;
+
 class Control {
     public:
+        /* CONSTRUCTORS */
+        Control(); 
+        Control(double , double , uint16_t );
+        Control(VectorXd , VectorXd );
+        Control(double , double , VectorXd );
+        Control(const Control & ); 
+
+        /* DESTRUCTOR */
+        ~Control(); 
+
+        /* OPERATORS */
+        friend std::ostream & operator<<(std::ostream & , const Control & );
+
 
     private: 
+        /* ATTRIBUTES */
+        double  t0; /*!< Minimum timestep */
+        double  t1; /*!< Maximum timestep */ 
+        uint16_t N;  /*!< Number of timesteps */
 
+        VectorXd time; /*!< Pointer to array of discrete times */
+        VectorXd data; /*!< Pointer to the data of the control at time step */
+        //Interpolator1D * interpolator; /*!< Pointer to interpolation method */
+
+        /* PRIVATE METHODS */
+        void construct_discrete_time(); 
+        void default_data(); 
 };

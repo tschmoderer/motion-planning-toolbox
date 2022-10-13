@@ -16,6 +16,7 @@
 #define MAX_CONTROL 10
 
 // Additional library
+#include <cassert>
 #include <Eigen/Dense>
 
 #endif

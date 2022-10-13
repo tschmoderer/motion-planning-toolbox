@@ -17,6 +17,7 @@ string(TIMESTAMP YEAR "%Y")
 set(DOCUMENTATION_ADDR "https://tschmoderer.github.io/motion-planning-toolbox/html/index.html")
 set(LICENSE "GNU GENERAL PUBLIC LICENSE")
 set(CMAKE_PROJECT_DESCRIPTION "")
+set(CODE_ADDR "https://github.com/tschmoderer/motion-planning-toolbox")
 
 # Define version from Git tags
 find_package(Git)
