@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['add_5fcontrol_51',['add_control',['../class_controls.html#ac0b77f4ea9a4c1cfe244b6b415e4d85e',1,'Controls']]]
+  ['add_5fcontrol_47',['add_control',['../class_controls.html#ac0b77f4ea9a4c1cfe244b6b415e4d85e',1,'Controls']]]
 ];
