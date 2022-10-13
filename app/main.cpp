@@ -1,7 +1,7 @@
 #include <cstdint>
 #include <iostream>
 
-#include "controltlbx.h"
+#include "./ctrl-ode-lib/controltlbx.h"
 
 using namespace std;
 
@@ -28,6 +28,7 @@ Matrix dfdu(double t, const State & x, const Control & u) {
 
 int main(int argc, char **argv) {
     hello_world_control_tlbx();
+
     // Put your code here
     State x0(STATE_DIM);
     State x1(STATE_DIM);
