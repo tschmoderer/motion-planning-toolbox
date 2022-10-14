@@ -1,0 +1,24 @@
+/**
+* @file @CURFILENAME@
+* @author @AUTHOR@ (@AUTHOR_MAIL@)
+* @version @PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@
+* @date @TODAY@
+* @copyright Copyright (c) @YEAR@. All rights reserved. This project is released under the @LICENSE@.
+*/
+/**
+ * @brief
+*/
+#ifndef INTEGRATOR_LIB_H
+#define INTEGRATOR_LIB_H
+
+/* VERSION MACROS */
+#define VERSION_INTEGRATOR_LIB       "@PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@"
+#define AUTHOR_INTEGRATOR_LIB        "@AUTHOR@"
+#define CONTACT_INTEGRATOR_LIB       "@AUTHOR_MAIL@"
+#define DOCUMENTATION_INTEGRATOR_LIB "@DOCUMENTATION_ADDR@"
+#define CODE_INTEGRATOR_LIB          "@CODE_ADDR@"
+
+/* INCLUDE ALL HEADERS */
+#include "integrator1d.h"
+
+#endif
