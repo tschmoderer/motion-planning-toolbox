@@ -1,0 +1,23 @@
+/**
+* @file @CURFILENAME@
+* @author @AUTHOR@ (@AUTHOR_MAIL@)
+* @version @PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@
+* @date @TODAY@
+* @copyright Copyright (c) @YEAR@. All rights reserved. This project is released under the @LICENSE@.
+*/
+/**
+ * @brief
+*/
+
+#ifndef INTERPOL_UTILS_H
+#define INTERPOL_UTILS_H
+
+/* USEFUL LIBRARY */
+#include <cstdint>
+#include <math.h>
+#include <cassert>
+#include <iostream>
+#include <stdlib.h>
+#include <Eigen/Dense>
+
+#endif

@@ -1,0 +1,24 @@
+/**
+* @file @CURFILENAME@
+* @author @AUTHOR@ (@AUTHOR_MAIL@)
+* @version @PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@
+* @date @TODAY@
+* @copyright Copyright (c) @YEAR@. All rights reserved. This project is released under the @LICENSE@.
+*/
+/**
+ * @brief
+*/
+#ifndef INTERPOL_LIB_H
+#define INTERPOL_LIB_H
+
+/* VERSION MACROS */
+#define VERSION_INTERPOL_LIB       "@PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@"
+#define AUTHOR_INTERPOL_LIB        "@AUTHOR@"
+#define CONTACT_INTERPOL_LIB       "@AUTHOR_MAIL@"
+#define DOCUMENTATION_INTERPOL_LIB "@DOCUMENTATION_ADDR@"
+#define CODE_INTERPOL_LIB          "@CODE_ADDR@"
+
+/* INCLUDE HEADERS */
+#include "interpolator1d.h"
+
+#endif
