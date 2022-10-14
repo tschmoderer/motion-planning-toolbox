@@ -904,7 +904,7 @@ FILE_PATTERNS          = *.c \
 # be searched for input files as well.
 # The default value is: NO.
 
-RECURSIVE              = NO
+RECURSIVE              = YES
 
 # The EXCLUDE tag can be used to specify files and/or directories that should be
 # excluded from the INPUT source files. This way you can easily exclude a
@@ -1254,8 +1254,7 @@ HTML_EXTRA_STYLESHEET  = @DOCS@/assets/doxygen-awesome-css/doxygen-awesome.css
 # files will be copied as-is; there are no commands or markers available.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_EXTRA_FILES       = @DOCS@/assets/doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js \
-                         @DOCS@/img/icons/cpp-linalg-logo-bw.ico
+HTML_EXTRA_FILES       = @DOCS@/assets/doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js
 
 # The HTML_COLORSTYLE_HUE tag controls the color of the HTML output. Doxygen
 # will adjust the colors in the style sheet and background images according to
