@@ -15,6 +15,10 @@ Control::Control() {
 
     this->time = VectorXd(this->N); 
     this->data = VectorXd(this->N);
+    this->cntrl = NULL;
+
+    this->interpolator = new Interpolator1D();
+    this->integrator   = new Integrator1D();
 
     this->construct_discrete_time();
     this->default_data(); 
@@ -24,7 +28,10 @@ Control::Control() {
  * @brief Destroy the Control:: Control object
  * 
  */
-Control::~Control() {}
+Control::~Control() {
+    delete this->integrator;
+    delete this->interpolator;
+}
 
 std::ostream & operator<<(std::ostream & os, const Control & c) {
     for (int i = 0; i < c.N; i++) {
@@ -38,11 +45,7 @@ void Control::construct_discrete_time() {
     assert(this->t0 < this->t1); 
     assert(this->N >= 2); 
 
-    double dt = (this->t1-this->t0) / (1.*this->N - 1); 
-    for (int i = 0; i < this->N; i++) {
-        this->time(i) = this->t0 + i * dt;
-    }
-
+    this->time = VectorXd::LinSpaced(this->N, this->t0, this->t1);
     assert(this->time(0) == this->t0); 
     //assert(this->time[this->time->get_dim()] == this->t1); 
 }

@@ -2,7 +2,7 @@
 * @file utils.h
 * @author T. Schmoderer (iathena@mailo.com)
 * @version 0.0.1
-* @date 2022-10-13
+* @date 2022-10-14
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -17,6 +17,7 @@
 
 // Additional library
 #include <cassert>
+#include <cstdint>
 #include <Eigen/Dense>
 
 #endif
