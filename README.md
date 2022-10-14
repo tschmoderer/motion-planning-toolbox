@@ -23,6 +23,13 @@ The library contains a sublibrary of linear algebra developped by myself.
 
 # Install & Building
 
+## Requierement 
+* Eigen 
+
+```bash
+sudo apt install libeigen3-dev
+```
+
 
 
 ## Unix 
