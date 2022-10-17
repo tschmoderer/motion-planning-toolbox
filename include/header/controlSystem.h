@@ -1,40 +1,35 @@
-#ifndef CONTROL_SYSTEM_H
-#define CONTROL_SYSTEM_H
+/**
+* @file controlSystem.h
+* @author T. Schmoderer (iathena@mailo.com)
+* @version 0.0.2
+* @date 2022-10-17
+* @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
+*/
+/**
+ * @brief
+*/
 
-#include "linalg.h"
-#include "utils.h"
-#include "controls.h"
-#include "odeint.h"
+#ifndef ODEINT_H
+#define ODEINT_H
+
+// Macros definitions
+
+// Additional library
+#include <cassert>
+#include <cstdint>
+#include <Eigen/Dense>
+#include "../controls.h"
+
+using Eigen::VectorXd;
+using Eigen::MatrixXd;
 
 class ControlSystem {
     public: 
-        /* CONSTRUCTORS */
-        ControlSystem(); 
-        ControlSystem(state_t , time_t );
-
-        /* DESTRUCTOR */
-        ~ControlSystem(); 
-
-        /* ACCESSORS */
-
-        /* METHODS */
-        Vector integrate(const Vector & );
-
+        
     private: 
-        uint8_t state_dim; 
-        uint8_t cntrl_dim;
-
-        state_t x0; 
-        temps_t t0; 
-        temps_t t1;  
-
-        Controls * cntrls;
-
-        state_t (*f)(temps_t , const state_t & , const Controls & );
-        Matrix (*dfdx)(temps_t , const state_t & , const Controls & );
-        Matrix (*dfdu)(temps_t , const state_t & , const Controls & );
-
-        Integrator1D * integrator;
+        std::function<VectorXd(double,VectorXd,Controls)> F;
+        std::function<MatrixXd(double,VectorXd,Controls)> dFdX;
+        std::function<MatrixXd(double,VectorXd,Controls)> dFdU;
 };
 
 #endif

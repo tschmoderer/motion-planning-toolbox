@@ -1,8 +1,8 @@
 /**
 * @file interpolator.h
 * @author T. Schmoderer (iathena@mailo.com)
-* @version 0.0.1
-* @date 2022-10-14
+* @version 0.0.2
+* @date 2022-10-17
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -47,10 +47,10 @@ class Interpolator {
         /* OEPRATORS */
 
         /* METHODS */
-        uint16_t locate_time(VectorXd * , double ) const;
+        uint16_t locate_time(const VectorXd * , double ) const;
 
         /* VIRTUAL METHODS */
-        virtual double interp1d(VectorXd * , VectorXd * , double ) const = 0;
+        virtual double interp1d(const VectorXd * , const VectorXd * , double ) const = 0;
 
         /* STATIC METHODS */
 

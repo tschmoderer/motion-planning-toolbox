@@ -1,8 +1,8 @@
 /**
 * @file interpolator1d.h
 * @author T. Schmoderer (iathena@mailo.com)
-* @version 0.0.1
-* @date 2022-10-14
+* @version 0.0.2
+* @date 2022-10-17
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -49,7 +49,7 @@ class Interpolator1D : public Interpolator {
         extend_t get_exright() const;
 
         /* METHODS */
-        double interp1d(VectorXd * , VectorXd * , double ) const;
+        double interp1d(const VectorXd * , const VectorXd * , double ) const;
 
     private: 
         /* ATTRIBUTES */
@@ -57,13 +57,13 @@ class Interpolator1D : public Interpolator {
         extend_t extend_right_method; /*!< Method for interpolating right from the interval of prescribed times. */
 
         /* METHODS */
-        double interp1d_linear(VectorXd * , VectorXd * , double , uint16_t ) const;
-        double interp1d_nearest(VectorXd * , VectorXd * , double , uint16_t ) const;
-        double interp1d_constant_left(VectorXd * , VectorXd * , double , uint16_t ) const;
-        double interp1d_constant_right(VectorXd * , VectorXd * , double , uint16_t ) const;
+        double interp1d_linear(const VectorXd * , const VectorXd * , double , uint16_t ) const;
+        double interp1d_nearest(const VectorXd * , const VectorXd * , double , uint16_t ) const;
+        double interp1d_constant_left(const VectorXd * , const VectorXd * , double , uint16_t ) const;
+        double interp1d_constant_right(const VectorXd * , const VectorXd * , double , uint16_t ) const;
 
-        double interp1D_extend_left(VectorXd * , VectorXd *, double ) const;
-        double interp1D_extend_right(VectorXd * , VectorXd *, double ) const;
+        double interp1D_extend_left(const VectorXd * , const VectorXd *, double ) const;
+        double interp1D_extend_right(const VectorXd * , const VectorXd *, double ) const;
 };
 
 #endif
