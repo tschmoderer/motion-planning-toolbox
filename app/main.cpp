@@ -36,7 +36,8 @@ int main(int argc, char **argv) {
     double t0 = 0; 
     double t1 = 1;
 
-    Control u0;
+    Controls u0(3);
+    u0.set_discretisation(0., 1., 5);
     cout << u0 << endl; 
 
     // End code
