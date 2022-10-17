@@ -57,7 +57,7 @@ interpolation_method_t Interpolator::get_method() const {
  * @warning If t > times[t1] then index of times[t1] is returned
  * @todo check that the documentation says it correctly
  */
-uint16_t Interpolator::locate_time(VectorXd * times, double t) const {
+uint16_t Interpolator::locate_time(const VectorXd * times, double t) const {
     uint16_t idx = 0; 
     uint16_t N = times->size();
 

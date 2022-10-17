@@ -71,7 +71,7 @@ extend_t Interpolator1D::get_exright() const {
  * @return double interpolated value at time t computed according to the attribute i_method
  * @warning times and data must have the same dimension
  */
-double Interpolator1D::interp1d(VectorXd * times, VectorXd * data, double t) const {
+double Interpolator1D::interp1d(const VectorXd * times, const VectorXd * data, double t) const {
     assert(times->size() == data->size());
     
     /*
@@ -145,7 +145,7 @@ double Interpolator1D::interp1d(VectorXd * times, VectorXd * data, double t) con
  * @param idx_inf index i such that $$t\in [t_i, t_{i+1}[
  * @return double 
  */
-double Interpolator1D::interp1d_constant_left(VectorXd * times, VectorXd * data, double t, uint16_t idx_inf) const {
+double Interpolator1D::interp1d_constant_left(const VectorXd * times, const VectorXd * data, double t, uint16_t idx_inf) const {
     return (*data)[idx_inf]; 
 }
 
@@ -157,7 +157,7 @@ double Interpolator1D::interp1d_constant_left(VectorXd * times, VectorXd * data,
  * @param idx_inf index i such that $$t\in [t_i, t_{i+1}[
  * @return double 
  */
-double Interpolator1D::interp1d_constant_right(VectorXd * times, VectorXd * data, double t, uint16_t idx_inf) const {
+double Interpolator1D::interp1d_constant_right(const VectorXd * times, const VectorXd * data, double t, uint16_t idx_inf) const {
     return (*data)[idx_inf+1]; 
 }
 
@@ -169,7 +169,7 @@ double Interpolator1D::interp1d_constant_right(VectorXd * times, VectorXd * data
  * @param idx_inf index i such that $$t\in [t_i, t_{i+1}[
  * @return double 
  */
-double Interpolator1D::interp1d_nearest(VectorXd * times, VectorXd * data, double t, uint16_t idx_inf) const {
+double Interpolator1D::interp1d_nearest(const VectorXd * times, const VectorXd * data, double t, uint16_t idx_inf) const {
     double mid = ((*times)[idx_inf+1] + (*times)[idx_inf]) / 2.; 
     if (t <= mid) {
         return this->interp1d_constant_left(times, data, t, idx_inf);
@@ -186,7 +186,7 @@ double Interpolator1D::interp1d_nearest(VectorXd * times, VectorXd * data, doubl
  * @param idx_inf index i such that $$t\in [t_i, t_{i+1}[
  * @return double 
  */
-double Interpolator1D::interp1d_linear(VectorXd * times, VectorXd * data, double t, uint16_t idx_inf) const {
+double Interpolator1D::interp1d_linear(const VectorXd * times, const VectorXd * data, double t, uint16_t idx_inf) const {
     double dx = (*times)[idx_inf+1] - (*times)[idx_inf]; 
     double a = ((*data)[idx_inf+1] - (*data)[idx_inf]) / dx; 
     double b = ((*times)[idx_inf+1] * (*data)[idx_inf] -(*times)[idx_inf] * (*data)[idx_inf+1]) / dx;
@@ -200,7 +200,7 @@ double Interpolator1D::interp1d_linear(VectorXd * times, VectorXd * data, double
  * @param t Interpolation t 
  * @return double value interpolated according to the value of the attribute extend_left_method
  */
-double Interpolator1D::interp1D_extend_left(VectorXd * times, VectorXd * data, double t) const {
+double Interpolator1D::interp1D_extend_left(const VectorXd * times, const VectorXd * data, double t) const {
     switch (this->extend_left_method) {
         case EXTEND_CONSTANT:
             return (*data)[0];
@@ -219,7 +219,7 @@ double Interpolator1D::interp1D_extend_left(VectorXd * times, VectorXd * data, d
  * @param t Interpolation t 
  * @return double value interpolated according to the value of the attribute extend_right_method
  */
-double Interpolator1D::interp1D_extend_right(VectorXd * times, VectorXd * data, double t) const {
+double Interpolator1D::interp1D_extend_right(const VectorXd * times, const VectorXd * data, double t) const {
     switch (this->extend_right_method) {
         case EXTEND_CONSTANT:
             return (*data)[data->size()-1];
