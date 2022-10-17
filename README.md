@@ -1,6 +1,6 @@
 <div id="motion-planning-toolbox-logo" align="center">
     <br />
-    <img src="#" alt="Motion Planning ToolBox Logo" width="200"/>
+    <img src="https://github.com/tschmoderer/motion-planning-toolbox/blob/880aade1de1f5a6233511f01bccb075e3789c195/docs/img/icons/128x128/rocket.png" alt="Motion Planning ToolBox Logo" width="128"/>
     <h1>Motion Planning Toolbox</h1>
     <h3></h3>
 </div>
@@ -48,3 +48,10 @@ make
 make test
 (Opt) make memcheck
 ```
+
+## Credits
+
+Portions of this software are copyright of their respective authors :
+
+- Documentation theme is made by [jothepro](https://github.com/jothepro/doxygen-awesome-css) - MIT License
+- Icon is *rocket.svg* distributed by [lucide](https://github.com/lucide-icons/lucide) - ISC License
