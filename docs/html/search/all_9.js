@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readme_2emd_29',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
+  ['norm2_54',['norm2',['../class_control.html#a420e8d5b21815c49ff590f673e892af4',1,'Control']]]
 ];

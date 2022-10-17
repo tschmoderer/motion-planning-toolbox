@@ -42,9 +42,10 @@
          <table cellspacing="0" cellpadding="0">
             <tbody>
                <tr style="height: 56px;">
+                  <td id="projectlogo"><img alt="Logo" src="rocket-bw.png" /></td>
                   <td id="projectalign" style="padding-left: 0.5em;">
                      <div id="projectname">CPP Motion Planning ToolBox
-                        &#160;<span id="projectnumber">0.0.0</span>
+                        &#160;<span id="projectnumber">0.0.3</span>
                      </div>
                   </td>
                </tr>
@@ -107,8 +108,34 @@ $(document).ready(function(){initNavTree('class_control.html',''); initResizable
 <p>This is the complete list of members for <a class="el" href="class_control.html">Control</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_control.html#aa730aeda4517f40bc48ba1e46ebded77">Control</a>()</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_control.html#a6f38a88ae77b21b47c5454d442057c52">Control</a>(double, double, uint16_t, interpolation_method_t, extend_t, extend_t)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_control.html#aa40142f5c135fb4b61143ea2c36f1b4c">Control</a>(VectorXd, VectorXd, interpolation_method_t, extend_t, extend_t)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_control.html#af4b40e2b053538a129b5ed401606732a">Control</a>(double, double, VectorXd, interpolation_method_t, extend_t, extend_t)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_control.html#a86f0edb4bdb1eb1647ff863fae4b0506">Control</a>(double, double, uint16_t, std::function&lt; double(double)&gt; *)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_control.html#a2c2cb5a17c8a125350c543097b188f67">Control</a>(const Control &amp;)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_control.html#a4f163685352571ea4523c4e3e242d050">dot_prod_l2</a>(const Control &amp;) const</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_control.html#a420e8d5b21815c49ff590f673e892af4">norm2</a>() const</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_control.html#a4c15fa1983875c95bd28fffd2da82748">operator()</a>(double) const</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_control.html#a1bd47fe116b7acb9f5fe899b2bff683f">operator*</a>(const Control &amp;, const Control &amp;)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_control.html#a292ccd8d7cee5bb90cca7ee34c80ea0f">operator*</a>(const double, const Control &amp;)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_control.html#a44f734c12d63451639c667913051f369">operator*</a>(const Control &amp;, const double)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_control.html#a67da4f957e3b8a4076ebbd505304cd71">operator+</a>(const Control &amp;, const Control &amp;)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_control.html#ace0d9f560e77cb71f08e18686ed7e61f">operator+</a>(const double, const Control &amp;)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_control.html#a63097c624d730a793b0c6f166abd44d2">operator+</a>(const Control &amp;, const double)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_control.html#a65c77a675ccc4a39476354cf1222419a">operator+=</a>(const Control &amp;)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_control.html#a0759cebc7dec7b4646a7a9ec1837178a">operator-</a>() const</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_control.html#a65ae7e641ecb89722c1d02d7e78e1e60">operator-</a>(const Control &amp;, const Control &amp;)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_control.html#a620685fb8feecbedcb23f4323d7af2c1">operator-</a>(const double, const Control &amp;)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_control.html#a857de70a9327f1110d43f1ca90f4f670">operator-</a>(const Control &amp;, const double)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_control.html#a118c21a94ef911b4d3f94143775936fc">operator-=</a>(const Control &amp;)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_control.html#af37ea60d2ff337262407956c17de92df">operator/</a>(const Control &amp;, const double)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_control.html#aa583720a041b13083b1b23b5f58f2532">operator&lt;&lt;</a>(std::ostream &amp;, const Control &amp;)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_control.html#a84586bbffaee27751ae8a4004c1f3a5e">operator=</a>(const Control &amp;)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_control.html#ab7808e82896ab0361f641c0a43844f4f">operator==</a>(const Control &amp;, const Control &amp;)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_control.html#a9e0f176fadc5121a2a91148a25170751">set_discretisation</a>(double, double, uint16_t)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_control.html#ade669fc78cc87a45967f8aa06e77db34">set_N</a>(uint16_t)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_control.html#ac7efda85a75c97e44c5d7d51c09e42ee">set_t0</a>(double)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_control.html#a6c4f6b74384652c6ed00bd7b322c7349">set_t1</a>(double)</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_control.html#aedda1328c4f8b8d49bca8f0812d3bfd1">~Control</a>()</td><td class="entry"><a class="el" href="class_control.html">Control</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->

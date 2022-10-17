@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['hello_5fworld_5fcontrol_5ftlbx_15',['hello_world_control_tlbx',['../controltlbx_8h.html#aa444c8fc7b01a2391937130098dfead9',1,'controltlbx.h']]]
+  ['get_5fexleft_27',['get_exleft',['../class_interpolator1_d.html#af59979dcfa6466081674b054cb854cff',1,'Interpolator1D']]],
+  ['get_5fexright_28',['get_exright',['../class_interpolator1_d.html#a77ccdc413689fb7eb441cf31afb2e1e0',1,'Interpolator1D']]],
+  ['get_5fmethod_29',['get_method',['../class_interpolator.html#a6165016c380e9b380661bde5e0814fd4',1,'Interpolator']]]
 ];

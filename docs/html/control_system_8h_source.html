@@ -42,9 +42,10 @@
          <table cellspacing="0" cellpadding="0">
             <tbody>
                <tr style="height: 56px;">
+                  <td id="projectlogo"><img alt="Logo" src="rocket-bw.png" /></td>
                   <td id="projectalign" style="padding-left: 0.5em;">
                      <div id="projectname">CPP Motion Planning ToolBox
-                        &#160;<span id="projectnumber">0.0.0</span>
+                        &#160;<span id="projectnumber">0.0.3</span>
                      </div>
                   </td>
                </tr>
@@ -103,54 +104,33 @@ $(document).ready(function(){initNavTree('control_system_8h_source.html',''); in
 <div class="title">controlSystem.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="control_system_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CONTROL_SYSTEM_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CONTROL_SYSTEM_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;linalg.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html">utils.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="controls_8h.html">controls.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;odeint.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_control_system.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_control_system.html">ControlSystem</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>: </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="comment">/* CONSTRUCTORS */</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_control_system.html#a4b8f52561261c53303c3db0a06ddceed">   12</a></span>&#160;        <a class="code" href="class_control_system.html#a4b8f52561261c53303c3db0a06ddceed">ControlSystem</a>(); </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_control_system.html#a96bd4099e00ee1b5688241499f477c15">   13</a></span>&#160;        <a class="code" href="class_control_system.html#a96bd4099e00ee1b5688241499f477c15">ControlSystem</a>(state_t , time_t );</div>
+<a href="control_system_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef ODEINT_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define ODEINT_H</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">/* DESTRUCTOR */</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_control_system.html#a449890897411186d4f245a79e8f2d016">   16</a></span>&#160;        <a class="code" href="class_control_system.html#a449890897411186d4f245a79e8f2d016">~ControlSystem</a>(); </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">/* ACCESSORS */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">/* METHODS */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_control_system.html#ab820edff12f1a3502da1570364e90da0">   21</a></span>&#160;        Vector <a class="code" href="class_control_system.html#ab820edff12f1a3502da1570364e90da0">integrate</a>(<span class="keyword">const</span> Vector &amp; );</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Macros definitions</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Additional library</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;../controls.h&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">private</span>: </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        uint8_t state_dim; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        uint8_t cntrl_dim;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        state_t x0; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        temps_t t0; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        temps_t t1;  </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="class_controls.html">Controls</a> * cntrls;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        state_t (*f)(temps_t , <span class="keyword">const</span> state_t &amp; , <span class="keyword">const</span> <a class="code" href="class_controls.html">Controls</a> &amp; );</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        Matrix (*dfdx)(temps_t , <span class="keyword">const</span> state_t &amp; , <span class="keyword">const</span> <a class="code" href="class_controls.html">Controls</a> &amp; );</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        Matrix (*dfdu)(temps_t , <span class="keyword">const</span> state_t &amp; , <span class="keyword">const</span> <a class="code" href="class_controls.html">Controls</a> &amp; );</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        Integrator1D * integrator;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_control_system_html"><div class="ttname"><a href="class_control_system.html">ControlSystem</a></div><div class="ttdef"><b>Definition:</b> controlSystem.h:9</div></div>
-<div class="ttc" id="aclass_control_system_html_a449890897411186d4f245a79e8f2d016"><div class="ttname"><a href="class_control_system.html#a449890897411186d4f245a79e8f2d016">ControlSystem::~ControlSystem</a></div><div class="ttdeci">~ControlSystem()</div></div>
-<div class="ttc" id="aclass_control_system_html_a4b8f52561261c53303c3db0a06ddceed"><div class="ttname"><a href="class_control_system.html#a4b8f52561261c53303c3db0a06ddceed">ControlSystem::ControlSystem</a></div><div class="ttdeci">ControlSystem()</div></div>
-<div class="ttc" id="aclass_control_system_html_a96bd4099e00ee1b5688241499f477c15"><div class="ttname"><a href="class_control_system.html#a96bd4099e00ee1b5688241499f477c15">ControlSystem::ControlSystem</a></div><div class="ttdeci">ControlSystem(state_t, time_t)</div></div>
-<div class="ttc" id="aclass_control_system_html_ab820edff12f1a3502da1570364e90da0"><div class="ttname"><a href="class_control_system.html#ab820edff12f1a3502da1570364e90da0">ControlSystem::integrate</a></div><div class="ttdeci">Vector integrate(const Vector &amp;)</div></div>
-<div class="ttc" id="aclass_controls_html"><div class="ttname"><a href="class_controls.html">Controls</a></div><div class="ttdoc">Class to describe a collection of controls.</div><div class="ttdef"><b>Definition:</b> controls.h:22</div></div>
-<div class="ttc" id="acontrols_8h_html"><div class="ttname"><a href="controls_8h.html">controls.h</a></div><div class="ttdoc">Header file for Controls class.</div></div>
-<div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using</span> Eigen::VectorXd;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using</span> Eigen::MatrixXd;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_control_system.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_control_system.html">ControlSystem</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>: </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span>: </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::function&lt;VectorXd(<span class="keywordtype">double</span>,VectorXd,<a class="code" href="class_controls.html">Controls</a>)&gt; F;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        std::function&lt;MatrixXd(<span class="keywordtype">double</span>,VectorXd,<a class="code" href="class_controls.html">Controls</a>)&gt; dFdX;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::function&lt;MatrixXd(<span class="keywordtype">double</span>,VectorXd,<a class="code" href="class_controls.html">Controls</a>)&gt; dFdU;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_control_system_html"><div class="ttname"><a href="class_control_system.html">ControlSystem</a></div><div class="ttdef"><b>Definition:</b> controlSystem.h:26</div></div>
+<div class="ttc" id="aclass_controls_html"><div class="ttname"><a href="class_controls.html">Controls</a></div><div class="ttdef"><b>Definition:</b> controls.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

@@ -1,10 +1,7 @@
 <map id="include/header/controlSystem.h" name="include/header/controlSystem.h">
-<area shape="rect" id="node1" title=" " alt="" coords="40,5,268,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,76,107"/>
-<area shape="rect" id="node3" href="$utils_8h.html" title=" " alt="" coords="83,155,145,181"/>
-<area shape="rect" id="node6" href="$controls_8h.html" title="Header file for Controls class." alt="" coords="152,80,239,107"/>
-<area shape="rect" id="node8" title=" " alt="" coords="263,80,338,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="25,229,94,256"/>
-<area shape="rect" id="node5" title=" " alt="" coords="119,229,221,256"/>
-<area shape="rect" id="node7" title=" " alt="" coords="169,155,232,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="73,5,301,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,75,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="99,80,165,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="190,80,293,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="317,80,416,107"/>
 </map>

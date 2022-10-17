@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['add_5fcontrol_47',['add_control',['../class_controls.html#ac0b77f4ea9a4c1cfe244b6b415e4d85e',1,'Controls']]]
+  ['control_117',['Control',['../class_control.html#aa730aeda4517f40bc48ba1e46ebded77',1,'Control::Control()'],['../class_control.html#a6f38a88ae77b21b47c5454d442057c52',1,'Control::Control(double, double, uint16_t, interpolation_method_t, extend_t, extend_t)'],['../class_control.html#aa40142f5c135fb4b61143ea2c36f1b4c',1,'Control::Control(VectorXd, VectorXd, interpolation_method_t, extend_t, extend_t)'],['../class_control.html#af4b40e2b053538a129b5ed401606732a',1,'Control::Control(double, double, VectorXd, interpolation_method_t, extend_t, extend_t)'],['../class_control.html#a86f0edb4bdb1eb1647ff863fae4b0506',1,'Control::Control(double, double, uint16_t, std::function&lt; double(double)&gt; *)'],['../class_control.html#a2c2cb5a17c8a125350c543097b188f67',1,'Control::Control(const Control &amp;)']]],
+  ['controls_118',['Controls',['../class_controls.html#af7bd35700e2bb098234a7f73da026a6d',1,'Controls::Controls(uint8_t)'],['../class_controls.html#a49559a33cba4149a1cf3ad405fbe619b',1,'Controls::Controls(uint8_t, Control)'],['../class_controls.html#a9183be3837e9e60de2145c00ce112d82',1,'Controls::Controls(const Controls &amp;)']]]
 ];

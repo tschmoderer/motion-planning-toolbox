@@ -27,8 +27,11 @@ var NAVTREE =
   [ "CPP Motion Planning ToolBox", "index.html", [
     [ "Improvements", "index.html#autotoc_md0", null ],
     [ "Install & Building", "index.html#autotoc_md1", [
-      [ "Unix", "index.html#autotoc_md2", null ]
+      [ "Requierement", "index.html#autotoc_md2", null ],
+      [ "Unix", "index.html#autotoc_md3", null ],
+      [ "Credits", "index.html#autotoc_md4", null ]
     ] ],
+    [ "Todo List", "todo.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -36,6 +39,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
         [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],
@@ -44,6 +48,8 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]

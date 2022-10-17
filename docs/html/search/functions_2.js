@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['get_5fdata_51',['get_data',['../class_controls.html#a0b2c307a178f8c84e0d39d3863f8a346',1,'Controls::get_data(uint8_t) const'],['../class_controls.html#a97a1b90b740f80148bbcaf837a2bb4dc',1,'Controls::get_data() const']]],
-  ['get_5ftime_52',['get_time',['../class_controls.html#ac0ff4fe1225d228495445fd98af91b7e',1,'Controls']]]
+  ['get_5fexleft_120',['get_exleft',['../class_interpolator1_d.html#af59979dcfa6466081674b054cb854cff',1,'Interpolator1D']]],
+  ['get_5fexright_121',['get_exright',['../class_interpolator1_d.html#a77ccdc413689fb7eb441cf31afb2e1e0',1,'Interpolator1D']]],
+  ['get_5fmethod_122',['get_method',['../class_interpolator.html#a6165016c380e9b380661bde5e0814fd4',1,'Interpolator']]]
 ];

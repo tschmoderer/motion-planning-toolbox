@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['add_5fcontrol_0',['add_control',['../class_controls.html#ac0b77f4ea9a4c1cfe244b6b415e4d85e',1,'Controls']]],
-  ['author_5fmpp_5ftlbx_1',['AUTHOR_MPP_TLBX',['../controltlbx_8h.html#a5e599ccabb463fa085c1228f96a1fc57',1,'controltlbx.h']]]
+  ['author_5fintegrator_5flib_0',['AUTHOR_INTEGRATOR_LIB',['../integrator_8h.html#a19d927d623215cf5988aca15b3463fdb',1,'integrator.h']]],
+  ['author_5finterpol_5flib_1',['AUTHOR_INTERPOL_LIB',['../interpol_8h.html#a26c6f791a152c15b3787cf379cb89209',1,'interpol.h']]],
+  ['author_5fmpp_5ftlbx_2',['AUTHOR_MPP_TLBX',['../controltlbx_8h.html#a5e599ccabb463fa085c1228f96a1fc57',1,'controltlbx.h']]]
 ];
