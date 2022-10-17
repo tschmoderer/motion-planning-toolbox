@@ -35,7 +35,7 @@ jobs:
       - name: Dependencies
         shell: bash
         run: | 
-          sudo apt install -y libeigen3-dev valgrind python3 python3-numpy
+          sudo apt install -y gcc-11 libeigen3-dev valgrind python3 python3-numpy
 
       # Configure cmake
       - name: Configure
