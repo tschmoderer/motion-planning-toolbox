@@ -34,7 +34,8 @@ jobs:
       - name: Dependencies
         shell: bash
         run: | 
-          sudo apt install -y libeigen3-dev valgrind 
+          sudo apt install -y libeigen3-dev valgrind python3
+
       # Configure cmake
       - name: Configure
         shell: bash
@@ -42,18 +43,21 @@ jobs:
           mkdir -p build
           cd build
           cmake .. -D CMAKE_BUILD_TYPE=Debug
+
       # Build 
       - name: Build 
         shell: bash
         run: |
           cd build
           make
+
       # Test 
       - name: Test 
         shell: bash 
         run: |
           cd build
           make test 
+          
       # Memcheck
       - name: Memcheck 
         shell: bash 
