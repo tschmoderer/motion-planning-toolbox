@@ -13,8 +13,8 @@
 #define CNTRLTLBX_H
 
 #include "utils.h"
-#include "control.h"
 #include "controls.h"
+#include "controlSystem.h"
 
 /* VERSION MACROS */
 #define VERSION_MPP_TLBX "@PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@"

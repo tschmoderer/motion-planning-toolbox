@@ -1,5 +1,5 @@
 # find external library
-find_package (Eigen3 3.3 REQUIRED NO_MODULE)
+find_package (Eigen3 3.4 REQUIRED NO_MODULE)
 message(STATUS "Found Eigen3 version ${Eigen3_VERSION}")
 
 # Define app library

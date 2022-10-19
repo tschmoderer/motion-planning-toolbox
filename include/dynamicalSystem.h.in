@@ -7,16 +7,5 @@
 */
 /**
  * @brief
+ * @todo
 */
-
-#ifndef CONTROLTLBX_UTILS_H
-#define CONTROLTLBX_UTILS_H
-
-// Macros definitions
-
-// Additional library
-#include <cassert>
-#include <cstdint>
-#include <Eigen/Dense>
-
-#endif
