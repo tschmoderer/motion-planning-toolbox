@@ -1,8 +1,8 @@
 /**
 * @file interpolator.h
 * @author T. Schmoderer (iathena@mailo.com)
-* @version 0.0.2
-* @date 2022-10-17
+* @version 0.0.3
+* @date 2022-10-19
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -38,7 +38,7 @@ class Interpolator {
         Interpolator(interpolation_method_t , uint8_t );
 
         /* DESTRUCTOR */
-        ~Interpolator();
+        virtual ~Interpolator();
 
         /* ACCESSORS */
         void set_method(interpolation_method_t ); 

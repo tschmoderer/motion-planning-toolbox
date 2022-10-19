@@ -37,6 +37,7 @@ class Interpolator1D : public Interpolator {
         /* CONSTRUCTORS */
         Interpolator1D(); 
         Interpolator1D(interpolation_method_t , extend_t , extend_t);
+        Interpolator1D(const Interpolator1D & );
 
         /* DESTRUCTOR */
         ~Interpolator1D();

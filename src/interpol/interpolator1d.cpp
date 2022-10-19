@@ -23,11 +23,21 @@ Interpolator1D::Interpolator1D(interpolation_method_t imethod, extend_t exleft, 
     this->extend_right_method = exright;   
 }
 
+/**
+ * @brief Construct a new Interpolator1D::Interpolator1D object
+ * Copy constructor
+ * @param interp An Interpolator1D objet to be copied
+ */
+Interpolator1D::Interpolator1D(const Interpolator1D & interp) : Interpolator(interp.i_method,1) {
+    this->extend_left_method = interp.extend_left_method; 
+    this->extend_right_method = interp.extend_right_method;   
+}
+
 /* DESTRUCTOR */
 /**
  * @brief Destroy the Interpolator1D::Interpolator1D object
  */
-Interpolator1D::~Interpolator1D() {};
+Interpolator1D::~Interpolator1D() {}
 
 /* ACCESSORS */
 /**

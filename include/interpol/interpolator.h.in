@@ -38,7 +38,7 @@ class Interpolator {
         Interpolator(interpolation_method_t , uint8_t );
 
         /* DESTRUCTOR */
-        ~Interpolator();
+        virtual ~Interpolator();
 
         /* ACCESSORS */
         void set_method(interpolation_method_t ); 
