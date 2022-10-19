@@ -1,8 +1,8 @@
 /**
 * @file odeint.h
 * @author T. Schmoderer (iathena@mailo.com)
-* @version 0.0.2
-* @date 2022-10-17
+* @version 0.0.3
+* @date 2022-10-19
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -18,7 +18,6 @@
 #include <cassert>
 #include <cstdint>
 #include <Eigen/Dense>
-#include "../controls.h"
 
 using Eigen::VectorXd;
 using Eigen::MatrixXd;
@@ -31,17 +30,19 @@ enum odeint_method_t : uint8_t {
 class ODEInt {
     public: 
         /* CONSTRUCTORS */
-        ODEInt(odeint_method_t ); 
+        ODEInt(odeint_method_t , uint16_t ); 
+        ODEInt(const ODEInt & ); 
 
         /* DESTRUCTORS */
         ~ODEInt(); 
 
         /* METHODS */
-        MatrixXd ode_int(double , double , int , VectorXd , std::function<VectorXd(double,VectorXd)> ); 
+        MatrixXd ode_int(double , double , VectorXd , std::function<VectorXd(double,VectorXd)> ); 
 
     private: 
         /* ATTRIBUTES */
         odeint_method_t ode_meth; 
+        uint16_t T; /*!< Number of time steps */
         
         /* METHODS */
         MatrixXd rk1(VectorXd , VectorXd , std::function<VectorXd(double,VectorXd)> );

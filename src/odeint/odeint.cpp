@@ -1,16 +1,23 @@
 #include "../../include/header/odeint/odeint.h"
 
 /* CONSTRUCTORS */
-ODEInt::ODEInt(odeint_method_t odeintmeth) {
+ODEInt::ODEInt(odeint_method_t odeintmeth, uint16_t nb_tsteps) {
+    assert(nb_tsteps > 1);
     this->ode_meth = odeintmeth;
+    this->T = nb_tsteps;
+}
+
+ODEInt::ODEInt(const ODEInt & oi) {
+    this->ode_meth = oi.ode_meth;
+    this->T = oi.T;
 }
 
 /* DESTRCTORS */
 ODEInt::~ODEInt() {}
 
 /* METHODS */
-MatrixXd ODEInt::ode_int(double t0, double t1, int N, VectorXd x0, std::function<VectorXd(double,VectorXd)> F) {
-    VectorXd tspan = VectorXd::LinSpaced(N, t0, t1); 
+MatrixXd ODEInt::ode_int(double t0, double t1, VectorXd x0, std::function<VectorXd(double,VectorXd)> F) {
+    VectorXd tspan = VectorXd::LinSpaced(this->T, t0, t1); 
     switch (this->ode_meth) {
     case RK4:
         return this->rk4(tspan, x0, F);
@@ -21,7 +28,6 @@ MatrixXd ODEInt::ode_int(double t0, double t1, int N, VectorXd x0, std::function
         break;
     }
 } 
-
 
 /* PRIVATE METHODS */
 MatrixXd ODEInt::rk1(VectorXd tspan, VectorXd x0, std::function<VectorXd(double,VectorXd)> F) {

@@ -18,7 +18,6 @@
 #include <cassert>
 #include <cstdint>
 #include <Eigen/Dense>
-#include "../controls.h"
 
 using Eigen::VectorXd;
 using Eigen::MatrixXd;
@@ -31,17 +30,19 @@ enum odeint_method_t : uint8_t {
 class ODEInt {
     public: 
         /* CONSTRUCTORS */
-        ODEInt(odeint_method_t ); 
+        ODEInt(odeint_method_t , uint16_t ); 
+        ODEInt(const ODEInt & ); 
 
         /* DESTRUCTORS */
         ~ODEInt(); 
 
         /* METHODS */
-        MatrixXd ode_int(double , double , int , VectorXd , std::function<VectorXd(double,VectorXd)> ); 
+        MatrixXd ode_int(double , double , VectorXd , std::function<VectorXd(double,VectorXd)> ); 
 
     private: 
         /* ATTRIBUTES */
         odeint_method_t ode_meth; 
+        uint16_t T; /*!< Number of time steps */
         
         /* METHODS */
         MatrixXd rk1(VectorXd , VectorXd , std::function<VectorXd(double,VectorXd)> );

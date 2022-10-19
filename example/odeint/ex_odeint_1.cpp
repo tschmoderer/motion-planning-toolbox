@@ -22,11 +22,11 @@ VectorXd dyn(double t, VectorXd x) {
 
 int main(int argc, char * argv[]) {
     VectorXd x0(3); 
-    ODEInt odeint(RK4); 
-    MatrixXd res;
     int N = 2500;
+    ODEInt odeint(RK4, N); 
+    MatrixXd res;
     x0 << 10.0 , 1.0 , 1.0; 
-    res = odeint.ode_int(0., 25., N, x0, dyn);
+    res = odeint.ode_int(0., 25., x0, dyn);
     
     for (int i = 0; i < N; i++) {
         cout << res(i, 0) << '\t' << res(i, 1) << '\t' << res(i, 2) << '\t' << res(i, 3) << endl;
