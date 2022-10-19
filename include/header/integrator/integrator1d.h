@@ -1,8 +1,8 @@
 /**
 * @file integrator1d.h
 * @author T. Schmoderer (iathena@mailo.com)
-* @version 0.0.1
-* @date 2022-10-14
+* @version 0.0.3
+* @date 2022-10-19
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -21,6 +21,7 @@ class Integrator1D {
         /* CONSTRUCTORS */
         Integrator1D(); 
         Integrator1D(uint16_t ); 
+        Integrator1D(const Integrator1D & );
 
         /* DESTRUCTOR */
         ~Integrator1D();
@@ -32,7 +33,7 @@ class Integrator1D {
         double integr(VectorXd , VectorXd ) const; 
 
     private:
-        uint16_t nb_points;            /*!< Number of discretisation points */
+        uint16_t nb_points; /*!< Number of discretisation points */
 };
 
 #endif

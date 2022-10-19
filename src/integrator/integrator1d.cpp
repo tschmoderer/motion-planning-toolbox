@@ -8,6 +8,10 @@ Integrator1D::Integrator1D(uint16_t nb) {
     this->nb_points = nb;
 }
 
+Integrator1D::Integrator1D(const Integrator1D & integr) {
+    this->nb_points = integr.nb_points;
+}
+
 Integrator1D::~Integrator1D() {}
 
 double Integrator1D::integr(double a, double b, std::function<double(double)> f) const {
