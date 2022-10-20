@@ -37,9 +37,9 @@ class ODEInt {
         ~ODEInt(); 
 
         /* METHODS */
-        MatrixXd ode_int(double , double , VectorXd , std::function<VectorXd(double,VectorXd)> ); 
+        MatrixXd ode_int(double , double , VectorXd , std::function<VectorXd(double, VectorXd )> ); 
 
-    private: 
+    protected: 
         /* ATTRIBUTES */
         odeint_method_t ode_meth; 
         uint16_t T; /*!< Number of time steps */

@@ -2,7 +2,7 @@
 * @file odeint.h
 * @author T. Schmoderer (iathena@mailo.com)
 * @version 0.0.3
-* @date 2022-10-19
+* @date 2022-10-20
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -37,9 +37,9 @@ class ODEInt {
         ~ODEInt(); 
 
         /* METHODS */
-        MatrixXd ode_int(double , double , VectorXd , std::function<VectorXd(double,VectorXd)> ); 
+        MatrixXd ode_int(double , double , VectorXd , std::function<VectorXd(double, VectorXd )> ); 
 
-    private: 
+    protected: 
         /* ATTRIBUTES */
         odeint_method_t ode_meth; 
         uint16_t T; /*!< Number of time steps */
