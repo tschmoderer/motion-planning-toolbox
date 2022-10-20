@@ -51,7 +51,7 @@ PROJECT_BRIEF          = @CMAKE_PROJECT_DESCRIPTION@
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
-PROJECT_LOGO           = @DOCS@/img/icons/32x32/rocket-bw.png
+PROJECT_LOGO           = @DOCS@/img/icons/32x32/rocket.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
@@ -1254,7 +1254,11 @@ HTML_EXTRA_STYLESHEET  = @DOCS@/assets/doxygen-awesome-css/doxygen-awesome.css
 # files will be copied as-is; there are no commands or markers available.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_EXTRA_FILES       = @DOCS@/assets/doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js
+HTML_EXTRA_FILES       = @DOCS@/assets/doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js \ 
+                         @DOCS@/assets/js/custom.js \ 
+                         @DOCS@/img/icons/rocket-bw.ico \ 
+                         @DOCS@/img/icons/32x32/rocket.png \ 
+                         @DOCS@/img/icons/32x32/rocket-white.png
 
 # The HTML_COLORSTYLE_HUE tag controls the color of the HTML output. Doxygen
 # will adjust the colors in the style sheet and background images according to
