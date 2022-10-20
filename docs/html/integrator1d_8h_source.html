@@ -117,24 +117,25 @@ $(document).ready(function(){initNavTree('integrator1d_8h_source.html',''); init
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">/* CONSTRUCTORS */</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_integrator1_d.html#ad7def67dd94fc4e58611caa290cbd4dd">Integrator1D</a>(); </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_integrator1_d.html#ad7def67dd94fc4e58611caa290cbd4dd">Integrator1D</a>(uint16_t ); </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">/* DESTRUCTOR */</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_integrator1_d.html#a8cc71c1e03c9a3442f5b7ebd7ac3bc68">~Integrator1D</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">/* ACCESSORS */</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">/* METHODS */</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_integrator1_d.html#a13174ebbb10b7f2d6355d096d0b96d1a">integr</a>(<span class="keywordtype">double</span> , <span class="keywordtype">double</span> , std::function&lt;<span class="keywordtype">double</span>(<span class="keywordtype">double</span>)&gt; ) <span class="keyword">const</span>; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_integrator1_d.html#a13174ebbb10b7f2d6355d096d0b96d1a">integr</a>(VectorXd , VectorXd ) <span class="keyword">const</span>; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        uint16_t nb_points;            </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_integrator1_d.html#ad7def67dd94fc4e58611caa290cbd4dd">Integrator1D</a>(<span class="keyword">const</span> <a class="code" href="class_integrator1_d.html">Integrator1D</a> &amp; );</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">/* DESTRUCTOR */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_integrator1_d.html#a8cc71c1e03c9a3442f5b7ebd7ac3bc68">~Integrator1D</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">/* ACCESSORS */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment">/* METHODS */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_integrator1_d.html#a13174ebbb10b7f2d6355d096d0b96d1a">integr</a>(<span class="keywordtype">double</span> , <span class="keywordtype">double</span> , std::function&lt;<span class="keywordtype">double</span>(<span class="keywordtype">double</span>)&gt; ) <span class="keyword">const</span>; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_integrator1_d.html#a13174ebbb10b7f2d6355d096d0b96d1a">integr</a>(VectorXd , VectorXd ) <span class="keyword">const</span>; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        uint16_t nb_points; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_integrator1_d_html"><div class="ttname"><a href="class_integrator1_d.html">Integrator1D</a></div><div class="ttdef"><b>Definition:</b> integrator1d.h:19</div></div>
-<div class="ttc" id="aclass_integrator1_d_html_a13174ebbb10b7f2d6355d096d0b96d1a"><div class="ttname"><a href="class_integrator1_d.html#a13174ebbb10b7f2d6355d096d0b96d1a">Integrator1D::integr</a></div><div class="ttdeci">double integr(double, double, std::function&lt; double(double)&gt;) const</div><div class="ttdef"><b>Definition:</b> integrator1d.cpp:13</div></div>
-<div class="ttc" id="aclass_integrator1_d_html_a8cc71c1e03c9a3442f5b7ebd7ac3bc68"><div class="ttname"><a href="class_integrator1_d.html#a8cc71c1e03c9a3442f5b7ebd7ac3bc68">Integrator1D::~Integrator1D</a></div><div class="ttdeci">~Integrator1D()</div><div class="ttdef"><b>Definition:</b> integrator1d.cpp:11</div></div>
+<div class="ttc" id="aclass_integrator1_d_html_a13174ebbb10b7f2d6355d096d0b96d1a"><div class="ttname"><a href="class_integrator1_d.html#a13174ebbb10b7f2d6355d096d0b96d1a">Integrator1D::integr</a></div><div class="ttdeci">double integr(double, double, std::function&lt; double(double)&gt;) const</div><div class="ttdef"><b>Definition:</b> integrator1d.cpp:17</div></div>
+<div class="ttc" id="aclass_integrator1_d_html_a8cc71c1e03c9a3442f5b7ebd7ac3bc68"><div class="ttname"><a href="class_integrator1_d.html#a8cc71c1e03c9a3442f5b7ebd7ac3bc68">Integrator1D::~Integrator1D</a></div><div class="ttdeci">~Integrator1D()</div><div class="ttdef"><b>Definition:</b> integrator1d.cpp:15</div></div>
 <div class="ttc" id="aclass_integrator1_d_html_ad7def67dd94fc4e58611caa290cbd4dd"><div class="ttname"><a href="class_integrator1_d.html#ad7def67dd94fc4e58611caa290cbd4dd">Integrator1D::Integrator1D</a></div><div class="ttdeci">Integrator1D()</div><div class="ttdef"><b>Definition:</b> integrator1d.cpp:3</div></div>
 <div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

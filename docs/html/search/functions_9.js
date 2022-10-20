@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['_7econtrol_150',['~Control',['../class_control.html#aedda1328c4f8b8d49bca8f0812d3bfd1',1,'Control']]],
-  ['_7econtrols_151',['~Controls',['../class_controls.html#a546f121f630c5c9db5094f6838d9fed2',1,'Controls']]],
-  ['_7eintegrator1d_152',['~Integrator1D',['../class_integrator1_d.html#a8cc71c1e03c9a3442f5b7ebd7ac3bc68',1,'Integrator1D']]],
-  ['_7einterpolator_153',['~Interpolator',['../class_interpolator.html#a6bb406dfe33e06296ccf24f18abcd46c',1,'Interpolator']]],
-  ['_7einterpolator1d_154',['~Interpolator1D',['../class_interpolator1_d.html#a2c5300209805d00e797636720c7ff109',1,'Interpolator1D']]],
-  ['_7eodeint_155',['~ODEInt',['../class_o_d_e_int.html#a4eda540c357b15c0f798d8ad59500a95',1,'ODEInt']]]
+  ['leastsquaresalgorithm_368',['LeastSquaresAlgorithm',['../classlsqcpp_1_1_least_squares_algorithm.html#a088a802d007ecac1c5e2abca825cbdea',1,'lsqcpp::LeastSquaresAlgorithm']]],
+  ['levenbergmarquardtmethod_369',['LevenbergMarquardtMethod',['../classlsqcpp_1_1_levenberg_marquardt_method.html#a492beffa67b375ea8b7a3b3de9279a87',1,'lsqcpp::LevenbergMarquardtMethod']]],
+  ['levenbergmarquardtparameter_370',['LevenbergMarquardtParameter',['../classlsqcpp_1_1_levenberg_marquardt_parameter.html#a96b55f4773d5d99610fcfb835d8c8b76',1,'lsqcpp::LevenbergMarquardtParameter::LevenbergMarquardtParameter()=default'],['../classlsqcpp_1_1_levenberg_marquardt_parameter.html#afe75f9559f8f13d0458866aa0ebd262f',1,'lsqcpp::LevenbergMarquardtParameter::LevenbergMarquardtParameter(const Scalar initialLambda, const Scalar increase, const Scalar decrease, const Index iterations)']]],
+  ['locate_5ftime_371',['locate_time',['../class_interpolator.html#aa1a452ebcf4a00b7e9e6eab45e64afca',1,'Interpolator']]]
 ];

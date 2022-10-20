@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_5fdim_156',['data_dim',['../class_interpolator.html#a37f38a2f17524627609afdb8842d6df5',1,'Interpolator']]]
+  ['converged_460',['converged',['../structlsqcpp_1_1_least_squares_algorithm_1_1_result.html#a6030966bf79bb45463af80eb8d7e14e6',1,'lsqcpp::LeastSquaresAlgorithm::Result']]]
 ];

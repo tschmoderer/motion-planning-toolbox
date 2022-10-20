@@ -1,8 +1,25 @@
 var searchData=
 [
-  ['data_5fdim_18',['data_dim',['../class_interpolator.html#a37f38a2f17524627609afdb8842d6df5',1,'Interpolator']]],
-  ['documentation_5fintegrator_5flib_19',['DOCUMENTATION_INTEGRATOR_LIB',['../integrator_8h.html#a95e9cffa605b65cd88fabbb36854fde5',1,'integrator.h']]],
-  ['documentation_5finterpol_5flib_20',['DOCUMENTATION_INTERPOL_LIB',['../interpol_8h.html#a365c661a472bb27c738497634bc5f2af',1,'interpol.h']]],
-  ['documentation_5fmpp_5ftlbx_21',['DOCUMENTATION_MPP_TLBX',['../controltlbx_8h.html#ae99cad39010956165e7620a3248f6d87',1,'controltlbx.h']]],
-  ['dot_5fprod_5fl2_22',['dot_prod_l2',['../class_control.html#a4f163685352571ea4523c4e3e242d050',1,'Control']]]
+  ['callback_12',['Callback',['../classlsqcpp_1_1_least_squares_algorithm.html#af0994ea86287f2f77e4d9f0b02d747cc',1,'lsqcpp::LeastSquaresAlgorithm']]],
+  ['centraldifferences_13',['CentralDifferences',['../structlsqcpp_1_1_central_differences.html',1,'lsqcpp']]],
+  ['code_5fintegrator_5flib_14',['CODE_INTEGRATOR_LIB',['../integrator_8h.html#a3ba34f89428ce46326de9aee5d069c47',1,'integrator.h']]],
+  ['code_5finterpol_5flib_15',['CODE_INTERPOL_LIB',['../interpol_8h.html#a2d73fe0efc5afe9950563acadc0ae053',1,'interpol.h']]],
+  ['code_5fmpp_5ftlbx_16',['CODE_MPP_TLBX',['../controltlbx_8h.html#a36bae55e49f9d1879096c746332ab60c',1,'controltlbx.h']]],
+  ['constantstepfactor_17',['ConstantStepFactor',['../structlsqcpp_1_1_constant_step_factor.html',1,'lsqcpp']]],
+  ['constantstepfactorparameter_18',['ConstantStepFactorParameter',['../classlsqcpp_1_1_constant_step_factor_parameter.html#af2c0e3fb936ad778f0fffcb2d50005e7',1,'lsqcpp::ConstantStepFactorParameter::ConstantStepFactorParameter(const Scalar factor)'],['../classlsqcpp_1_1_constant_step_factor_parameter.html#a5911c095de36269a5f2275d15c1fbd88',1,'lsqcpp::ConstantStepFactorParameter::ConstantStepFactorParameter()=default'],['../classlsqcpp_1_1_constant_step_factor_parameter.html',1,'lsqcpp::ConstantStepFactorParameter&lt; _Scalar &gt;']]],
+  ['constantstepsize_19',['constantStepSize',['../classlsqcpp_1_1_barzilai_borwein_parameter.html#a8fd150f6ccce6f0bf2639e304621cb5d',1,'lsqcpp::BarzilaiBorweinParameter']]],
+  ['contact_5fintegrator_5flib_20',['CONTACT_INTEGRATOR_LIB',['../integrator_8h.html#a07cf25bfd3d8a91550ccdbebaabf1757',1,'integrator.h']]],
+  ['contact_5finterpol_5flib_21',['CONTACT_INTERPOL_LIB',['../interpol_8h.html#a2335f32528d460eb685e421898e446f1',1,'interpol.h']]],
+  ['contact_5fmpp_5ftlbx_22',['CONTACT_MPP_TLBX',['../controltlbx_8h.html#a3ff5b1fcf9f2ea50f3a2989a956d7368',1,'controltlbx.h']]],
+  ['controls_23',['Controls',['../class_controls.html',1,'Controls'],['../class_controls.html#ac33a461920a09622a89bbab50311a77e',1,'Controls::Controls(uint8_t, double, double, uint16_t)'],['../class_controls.html#a9183be3837e9e60de2145c00ce112d82',1,'Controls::Controls(const Controls &amp;)']]],
+  ['controls_2ecpp_24',['controls.cpp',['../controls_8cpp.html',1,'']]],
+  ['controls_2eh_25',['controls.h',['../controls_8h.html',1,'']]],
+  ['controlsystem_26',['ControlSystem',['../class_control_system.html#a469071d66e8aae5cd2d871c459dff365',1,'ControlSystem::ControlSystem()'],['../class_control_system.html',1,'ControlSystem'],['../class_control_system.html#a88715f23c32ed9a0d875fa4da1163be2',1,'ControlSystem::ControlSystem()']]],
+  ['controlsystem_2ecpp_27',['controlSystem.cpp',['../control_system_8cpp.html',1,'']]],
+  ['controlsystem_2eh_28',['controlSystem.h',['../control_system_8h.html',1,'']]],
+  ['controlsystemint_29',['ControlSystemInt',['../class_control_system_int.html#a4f46e08ded04c4f429e3525590085f25',1,'ControlSystemInt::ControlSystemInt(odeint_method_t, uint16_t)'],['../class_control_system_int.html#a7489af18f6a42f06d098ad3b1d3e14bc',1,'ControlSystemInt::ControlSystemInt(const ControlSystemInt &amp;)'],['../class_control_system_int.html',1,'ControlSystemInt']]],
+  ['controlsystemint_2ecpp_30',['controlSystemInt.cpp',['../control_system_int_8cpp.html',1,'']]],
+  ['controlsystemint_2eh_31',['controlSystemInt.h',['../control_system_int_8h.html',1,'']]],
+  ['controltlbx_2eh_32',['controltlbx.h',['../controltlbx_8h.html',1,'']]],
+  ['converged_33',['converged',['../structlsqcpp_1_1_least_squares_algorithm_1_1_result.html#a6030966bf79bb45463af80eb8d7e14e6',1,'lsqcpp::LeastSquaresAlgorithm::Result']]]
 ];

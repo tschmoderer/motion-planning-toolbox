@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['dot_5fprod_5fl2_119',['dot_prod_l2',['../class_control.html#a4f163685352571ea4523c4e3e242d050',1,'Control']]]
+  ['backtrackingdecrease_332',['backtrackingDecrease',['../classlsqcpp_1_1_armijo_backtracking_parameter.html#afd76a9565c8db2f2ce09408b48cdbe26',1,'lsqcpp::ArmijoBacktrackingParameter::backtrackingDecrease()'],['../classlsqcpp_1_1_wolfe_backtracking_parameter.html#a8942c8a057bde01ac4e1512086ba210f',1,'lsqcpp::WolfeBacktrackingParameter::backtrackingDecrease()']]],
+  ['barzilaiborweinparameter_333',['BarzilaiBorweinParameter',['../classlsqcpp_1_1_barzilai_borwein_parameter.html#a6b2c76642bff8904f054794c31e7978c',1,'lsqcpp::BarzilaiBorweinParameter::BarzilaiBorweinParameter()=default'],['../classlsqcpp_1_1_barzilai_borwein_parameter.html#a108cbc0bfb75610c7c00a2a3fb6b2166',1,'lsqcpp::BarzilaiBorweinParameter::BarzilaiBorweinParameter(const BarzilaiBorwein::Mode mode)'],['../classlsqcpp_1_1_barzilai_borwein_parameter.html#ab4aa24548b65eed9147d83415daedc3c',1,'lsqcpp::BarzilaiBorweinParameter::BarzilaiBorweinParameter(const Scalar constStep)'],['../classlsqcpp_1_1_barzilai_borwein_parameter.html#a01681aa9bd348c0e2c65efab6b340979',1,'lsqcpp::BarzilaiBorweinParameter::BarzilaiBorweinParameter(const BarzilaiBorwein::Mode mode, const Scalar constStep)']]]
 ];

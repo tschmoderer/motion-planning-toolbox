@@ -1,7 +1,10 @@
 <map id="include/header/controls.h" name="include/header/controls.h">
-<area shape="rect" id="node1" title=" " alt="" coords="162,5,349,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="226,5,413,32"/>
 <area shape="rect" id="node2" href="$controls_8cpp.html" title=" " alt="" coords="5,87,129,114"/>
-<area shape="rect" id="node3" href="$controltlbx_8h.html" title=" " alt="" coords="153,87,357,114"/>
-<area shape="rect" id="node4" href="$odeint_8h.html" title=" " alt="" coords="382,80,545,121"/>
-<area shape="rect" id="node5" href="$odeint_8cpp.html" title=" " alt="" coords="384,169,543,196"/>
+<area shape="rect" id="node3" href="$control_system_8h.html" title=" " alt="" coords="205,177,433,203"/>
+<area shape="rect" id="node5" href="$controltlbx_8h.html" title=" " alt="" coords="65,259,269,285"/>
+<area shape="rect" id="node6" href="$motion_planner_8h.html" title=" " alt="" coords="667,169,884,211"/>
+<area shape="rect" id="node7" href="$control_system_int_8h.html" title=" " alt="" coords="413,80,575,121"/>
+<area shape="rect" id="node4" href="$control_system_8cpp.html" title=" " alt="" coords="293,259,460,285"/>
+<area shape="rect" id="node8" href="$control_system_int_8cpp.html" title=" " alt="" coords="458,169,642,211"/>
 </map>

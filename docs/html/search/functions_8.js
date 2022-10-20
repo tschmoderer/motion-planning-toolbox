@@ -1,10 +1,13 @@
 var searchData=
 [
-  ['set_5fdiscretisation_143',['set_discretisation',['../class_control.html#a9e0f176fadc5121a2a91148a25170751',1,'Control::set_discretisation()'],['../class_controls.html#a63fce7adce851b329ed1c208af5cb817',1,'Controls::set_discretisation()']]],
-  ['set_5fexleft_144',['set_exleft',['../class_interpolator1_d.html#a26b842117fc503df585ebc104662af83',1,'Interpolator1D']]],
-  ['set_5fexright_145',['set_exright',['../class_interpolator1_d.html#a51a3452c6fcc1a61636aa8f084ebbefa',1,'Interpolator1D']]],
-  ['set_5fmethod_146',['set_method',['../class_interpolator.html#a4751aa9d427eb769c15c821ec9fc3270',1,'Interpolator']]],
-  ['set_5fn_147',['set_N',['../class_control.html#ade669fc78cc87a45967f8aa06e77db34',1,'Control::set_N()'],['../class_controls.html#af7cea5f1030e012d0d0a8c0f6a6e914b',1,'Controls::set_N()']]],
-  ['set_5ft0_148',['set_t0',['../class_control.html#ac7efda85a75c97e44c5d7d51c09e42ee',1,'Control::set_t0()'],['../class_controls.html#a66418e4dc4569112a2fbcea26b7a0849',1,'Controls::set_t0()']]],
-  ['set_5ft1_149',['set_t1',['../class_control.html#a6c4f6b74384652c6ed00bd7b322c7349',1,'Control::set_t1()'],['../class_controls.html#a93525eda0598185fedcfce862067f03c',1,'Controls::set_t1()']]]
+  ['increase_358',['increase',['../classlsqcpp_1_1_levenberg_marquardt_parameter.html#a010d98102153767baa0a7ebfca13ef4e',1,'lsqcpp::LevenbergMarquardtParameter']]],
+  ['initiallambda_359',['initialLambda',['../classlsqcpp_1_1_levenberg_marquardt_parameter.html#aa19eb724986356c40641d21104f2c306',1,'lsqcpp::LevenbergMarquardtParameter']]],
+  ['initialradius_360',['initialRadius',['../classlsqcpp_1_1_dogleg_method_parameter.html#a8160671c907d8b110feb2406c6d8faf9',1,'lsqcpp::DoglegMethodParameter']]],
+  ['inout_361',['inout',['../class_control_system.html#a67d52f332eb923d8530f24f1ab2ed2f5',1,'ControlSystem']]],
+  ['integr_362',['integr',['../class_integrator1_d.html#a13174ebbb10b7f2d6355d096d0b96d1a',1,'Integrator1D::integr(double, double, std::function&lt; double(double)&gt;) const'],['../class_integrator1_d.html#aa8e835afab9e002f77b022a60936a333',1,'Integrator1D::integr(VectorXd, VectorXd) const']]],
+  ['integrate_363',['integrate',['../class_control_system_int.html#ad5cfdb25b5ce5f3d97048bd1ba039b26',1,'ControlSystemInt']]],
+  ['integrator1d_364',['Integrator1D',['../class_integrator1_d.html#a2ad67b68dce2477aa8de6b180c52741c',1,'Integrator1D::Integrator1D(uint16_t)'],['../class_integrator1_d.html#af46022908ea8fc256b4bc444af77c356',1,'Integrator1D::Integrator1D(const Integrator1D &amp;)'],['../class_integrator1_d.html#ad7def67dd94fc4e58611caa290cbd4dd',1,'Integrator1D::Integrator1D()']]],
+  ['interp1d_365',['interp1d',['../class_interpolator.html#ad4d9119d86bb400b8301b7a879138202',1,'Interpolator::interp1d()'],['../class_interpolator1_d.html#a87855fcc0f9bd99c0e37f7d208838a80',1,'Interpolator1D::interp1d()']]],
+  ['interpolator_366',['Interpolator',['../class_interpolator.html#ab8cbb0b13436fc54a4bba03804ae8f8a',1,'Interpolator::Interpolator()'],['../class_interpolator.html#a1732fccc3f0508051d538adfdaa07678',1,'Interpolator::Interpolator(interpolation_method_t, uint8_t)']]],
+  ['interpolator1d_367',['Interpolator1D',['../class_interpolator1_d.html#a2925c7d99f68e7807bd15a327d94903d',1,'Interpolator1D::Interpolator1D()'],['../class_interpolator1_d.html#a2b53d19217c63e18a8e26419fde2e436',1,'Interpolator1D::Interpolator1D(interpolation_method_t, extend_t, extend_t)'],['../class_interpolator1_d.html#aba78f2e92df13e686b442659e1890402',1,'Interpolator1D::Interpolator1D(const Interpolator1D &amp;)']]]
 ];

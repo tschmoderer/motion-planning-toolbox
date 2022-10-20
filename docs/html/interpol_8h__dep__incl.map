@@ -1,10 +1,13 @@
 <map id="include/header/interpol/interpol.h" name="include/header/interpol/interpol.h">
-<area shape="rect" id="node1" title=" " alt="" coords="168,5,340,47"/>
-<area shape="rect" id="node2" href="$control_8h.html" title=" " alt="" coords="165,95,343,121"/>
-<area shape="rect" id="node3" href="$control_8cpp.html" title=" " alt="" coords="19,169,137,196"/>
-<area shape="rect" id="node4" href="$controls_8h.html" title=" " alt="" coords="161,169,347,196"/>
-<area shape="rect" id="node6" href="$controltlbx_8h.html" title=" " alt="" coords="341,251,545,278"/>
-<area shape="rect" id="node5" href="$controls_8cpp.html" title=" " alt="" coords="5,251,129,278"/>
-<area shape="rect" id="node7" href="$odeint_8h.html" title=" " alt="" coords="154,244,317,285"/>
-<area shape="rect" id="node8" href="$odeint_8cpp.html" title=" " alt="" coords="156,333,315,360"/>
+<area shape="rect" id="node1" title=" " alt="" coords="540,5,712,47"/>
+<area shape="rect" id="node2" href="$controls_8h.html" title=" " alt="" coords="427,102,614,129"/>
+<area shape="rect" id="node10" href="$trajectory_8h.html" title=" " alt="" coords="707,95,892,136"/>
+<area shape="rect" id="node3" href="$controls_8cpp.html" title=" " alt="" coords="619,191,743,218"/>
+<area shape="rect" id="node4" href="$control_system_8h.html" title=" " alt="" coords="145,281,373,307"/>
+<area shape="rect" id="node6" href="$controltlbx_8h.html" title=" " alt="" coords="5,363,209,389"/>
+<area shape="rect" id="node7" href="$motion_planner_8h.html" title=" " alt="" coords="607,273,824,315"/>
+<area shape="rect" id="node8" href="$control_system_int_8h.html" title=" " alt="" coords="381,184,543,225"/>
+<area shape="rect" id="node5" href="$control_system_8cpp.html" title=" " alt="" coords="233,363,400,389"/>
+<area shape="rect" id="node9" href="$control_system_int_8cpp.html" title=" " alt="" coords="398,273,582,315"/>
+<area shape="rect" id="node11" href="$trajectory_8cpp.html" title=" " alt="" coords="767,191,967,218"/>
 </map>

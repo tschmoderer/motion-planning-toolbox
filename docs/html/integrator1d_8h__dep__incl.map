@@ -2,11 +2,12 @@
 <area shape="rect" id="node1" title=" " alt="" coords="135,5,322,47"/>
 <area shape="rect" id="node2" href="$integrator1d_8cpp.html" title=" " alt="" coords="5,102,225,129"/>
 <area shape="rect" id="node3" href="$integrator_8h.html" title=" " alt="" coords="250,95,437,136"/>
-<area shape="rect" id="node4" href="$control_8h.html" title=" " alt="" coords="254,184,433,211"/>
-<area shape="rect" id="node5" href="$control_8cpp.html" title=" " alt="" coords="109,259,226,285"/>
-<area shape="rect" id="node6" href="$controls_8h.html" title=" " alt="" coords="250,259,437,285"/>
-<area shape="rect" id="node8" href="$controltlbx_8h.html" title=" " alt="" coords="431,341,635,367"/>
-<area shape="rect" id="node7" href="$controls_8cpp.html" title=" " alt="" coords="95,341,219,367"/>
-<area shape="rect" id="node9" href="$odeint_8h.html" title=" " alt="" coords="243,333,406,375"/>
-<area shape="rect" id="node10" href="$odeint_8cpp.html" title=" " alt="" coords="245,423,404,449"/>
+<area shape="rect" id="node4" href="$controls_8h.html" title=" " alt="" coords="250,184,437,211"/>
+<area shape="rect" id="node5" href="$controls_8cpp.html" title=" " alt="" coords="29,266,153,293"/>
+<area shape="rect" id="node6" href="$control_system_8h.html" title=" " alt="" coords="229,355,457,382"/>
+<area shape="rect" id="node8" href="$controltlbx_8h.html" title=" " alt="" coords="89,437,293,464"/>
+<area shape="rect" id="node9" href="$motion_planner_8h.html" title=" " alt="" coords="691,348,908,389"/>
+<area shape="rect" id="node10" href="$control_system_int_8h.html" title=" " alt="" coords="437,259,599,300"/>
+<area shape="rect" id="node7" href="$control_system_8cpp.html" title=" " alt="" coords="317,437,484,464"/>
+<area shape="rect" id="node11" href="$control_system_int_8cpp.html" title=" " alt="" coords="482,348,666,389"/>
 </map>

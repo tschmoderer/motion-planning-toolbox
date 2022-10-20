@@ -113,59 +113,80 @@ $(document).ready(function(){initNavTree('class_controls.html',''); initResizabl
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af7bd35700e2bb098234a7f73da026a6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#af7bd35700e2bb098234a7f73da026a6d">Controls</a> (uint8_t)</td></tr>
-<tr class="memdesc:af7bd35700e2bb098234a7f73da026a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_controls.html">Controls</a>:: <a class="el" href="class_controls.html">Controls</a> object Create a list of nb default <a class="el" href="class_control.html">Control</a> object.  <a href="class_controls.html#af7bd35700e2bb098234a7f73da026a6d">More...</a><br /></td></tr>
-<tr class="separator:af7bd35700e2bb098234a7f73da026a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49559a33cba4149a1cf3ad405fbe619b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a49559a33cba4149a1cf3ad405fbe619b">Controls</a> (uint8_t, <a class="el" href="class_control.html">Control</a>)</td></tr>
-<tr class="memdesc:a49559a33cba4149a1cf3ad405fbe619b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_controls.html">Controls</a>:: <a class="el" href="class_controls.html">Controls</a> object Create a list of nb controls object that are copy of the <a class="el" href="class_control.html">Control</a> c.  <a href="class_controls.html#a49559a33cba4149a1cf3ad405fbe619b">More...</a><br /></td></tr>
-<tr class="separator:a49559a33cba4149a1cf3ad405fbe619b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33a461920a09622a89bbab50311a77e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e">Controls</a> (uint8_t, double, double, uint16_t)</td></tr>
+<tr class="memdesc:ac33a461920a09622a89bbab50311a77e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object Create a list of nb Control object with domain \([t_0,t_1]\) and \(H\) step of discretisation.  <a href="class_controls.html#ac33a461920a09622a89bbab50311a77e">More...</a><br /></td></tr>
+<tr class="separator:ac33a461920a09622a89bbab50311a77e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9183be3837e9e60de2145c00ce112d82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a9183be3837e9e60de2145c00ce112d82">Controls</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;)</td></tr>
+<tr class="memdesc:a9183be3837e9e60de2145c00ce112d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object Copy constructor.  <a href="class_controls.html#a9183be3837e9e60de2145c00ce112d82">More...</a><br /></td></tr>
 <tr class="separator:a9183be3837e9e60de2145c00ce112d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a546f121f630c5c9db5094f6838d9fed2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a546f121f630c5c9db5094f6838d9fed2">~Controls</a> ()</td></tr>
+<tr class="memdesc:a546f121f630c5c9db5094f6838d9fed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object.  <a href="class_controls.html#a546f121f630c5c9db5094f6838d9fed2">More...</a><br /></td></tr>
 <tr class="separator:a546f121f630c5c9db5094f6838d9fed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845dc6facd3933e2f2d9cb4314bdb77d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a845dc6facd3933e2f2d9cb4314bdb77d">get_nb_cntrl</a> () const</td></tr>
+<tr class="separator:a845dc6facd3933e2f2d9cb4314bdb77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b1827b6e1d6ce013100569f65939ac7"><td class="memItemLeft" align="right" valign="top">VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a2b1827b6e1d6ce013100569f65939ac7">get_control</a> (uint8_t) const</td></tr>
+<tr class="separator:a2b1827b6e1d6ce013100569f65939ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66418e4dc4569112a2fbcea26b7a0849"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a66418e4dc4569112a2fbcea26b7a0849">set_t0</a> (double)</td></tr>
 <tr class="separator:a66418e4dc4569112a2fbcea26b7a0849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93525eda0598185fedcfce862067f03c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a93525eda0598185fedcfce862067f03c">set_t1</a> (double)</td></tr>
 <tr class="separator:a93525eda0598185fedcfce862067f03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7cea5f1030e012d0d0a8c0f6a6e914b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#af7cea5f1030e012d0d0a8c0f6a6e914b">set_N</a> (uint16_t)</td></tr>
-<tr class="separator:af7cea5f1030e012d0d0a8c0f6a6e914b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63fce7adce851b329ed1c208af5cb817"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a63fce7adce851b329ed1c208af5cb817">set_discretisation</a> (double, double, uint16_t)</td></tr>
-<tr class="separator:a63fce7adce851b329ed1c208af5cb817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad21e0838e2a0768b02f902bdc222823c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#ad21e0838e2a0768b02f902bdc222823c">set_H</a> (uint16_t)</td></tr>
+<tr class="separator:ad21e0838e2a0768b02f902bdc222823c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d010983cce9d62ec4d887e3b16b843"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#ac0d010983cce9d62ec4d887e3b16b843">set_discretisation_cntrls</a> (double, double, uint16_t)</td></tr>
+<tr class="separator:ac0d010983cce9d62ec4d887e3b16b843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb6a927d6d36555cb3916a2489f1b267"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#aeb6a927d6d36555cb3916a2489f1b267">set_cntrl</a> (uint8_t, double)</td></tr>
+<tr class="separator:aeb6a927d6d36555cb3916a2489f1b267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadef912c4890a4048a45946c34c9d13e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#aadef912c4890a4048a45946c34c9d13e">set_cntrl</a> (uint8_t, VectorXd)</td></tr>
+<tr class="separator:aadef912c4890a4048a45946c34c9d13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf192afdc526c40183af67ba71b24917"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#acf192afdc526c40183af67ba71b24917">set_interpolation_method</a> (const <a class="el" href="class_interpolator1_d.html">Interpolator1D</a> *)</td></tr>
+<tr class="separator:acf192afdc526c40183af67ba71b24917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a784ea36ec2117881da9958e26211ae2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a784ea36ec2117881da9958e26211ae2d">set_integration_method</a> (const <a class="el" href="class_integrator1_d.html">Integrator1D</a> *)</td></tr>
+<tr class="separator:a784ea36ec2117881da9958e26211ae2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24e8da253ff9573bd087aa7c87abc53f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a24e8da253ff9573bd087aa7c87abc53f">dot_prod_l2</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;) const</td></tr>
+<tr class="memdesc:a24e8da253ff9573bd087aa7c87abc53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the \(L^2\) dot product of two <a class="el" href="class_controls.html">Controls</a> object.  <a href="class_controls.html#a24e8da253ff9573bd087aa7c87abc53f">More...</a><br /></td></tr>
+<tr class="separator:a24e8da253ff9573bd087aa7c87abc53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0413be444eef8c468eee11af1ae3a3f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#ab0413be444eef8c468eee11af1ae3a3f">norm2</a> () const</td></tr>
+<tr class="separator:ab0413be444eef8c468eee11af1ae3a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af02681159f2ee734b93d5e1fddc267a7"><td class="memItemLeft" align="right" valign="top">VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#af02681159f2ee734b93d5e1fddc267a7">operator()</a> (double) const</td></tr>
+<tr class="separator:af02681159f2ee734b93d5e1fddc267a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208bd7bbdaafe8db66bceea336ca3b52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a208bd7bbdaafe8db66bceea336ca3b52">operator=</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;)</td></tr>
+<tr class="memdesc:a208bd7bbdaafe8db66bceea336ca3b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload the assignement operator. Acts like a copy constructor.  <a href="class_controls.html#a208bd7bbdaafe8db66bceea336ca3b52">More...</a><br /></td></tr>
+<tr class="separator:a208bd7bbdaafe8db66bceea336ca3b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7847244b0669d2b002803fbc62fed1f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a7847244b0669d2b002803fbc62fed1f8">operator+=</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;)</td></tr>
+<tr class="separator:a7847244b0669d2b002803fbc62fed1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea9e144ef52ac45139efc77905186ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a9ea9e144ef52ac45139efc77905186ee">operator-=</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;)</td></tr>
+<tr class="separator:a9ea9e144ef52ac45139efc77905186ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a286a155f30cbe6d472a947b8e29b4847"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_controls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a286a155f30cbe6d472a947b8e29b4847">operator-</a> () const</td></tr>
+<tr class="separator:a286a155f30cbe6d472a947b8e29b4847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
+<tr class="memitem:a998482c3dabe98ff61ada27cad7ebc70"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a998482c3dabe98ff61ada27cad7ebc70">operator==</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;, const <a class="el" href="class_controls.html">Controls</a> &amp;)</td></tr>
+<tr class="separator:a998482c3dabe98ff61ada27cad7ebc70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69287367b7dd5b87f46436e7151f259a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a69287367b7dd5b87f46436e7151f259a">operator*</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;, const <a class="el" href="class_controls.html">Controls</a> &amp;)</td></tr>
+<tr class="memdesc:a69287367b7dd5b87f46436e7151f259a"><td class="mdescLeft">&#160;</td><td class="mdescRight">\(L^2\) dot product between two <a class="el" href="class_controls.html">Controls</a> objects  <a href="class_controls.html#a69287367b7dd5b87f46436e7151f259a">More...</a><br /></td></tr>
+<tr class="separator:a69287367b7dd5b87f46436e7151f259a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3f706c676a152d2796c354925e442e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_controls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a1a3f706c676a152d2796c354925e442e">operator*</a> (const double, const <a class="el" href="class_controls.html">Controls</a> &amp;)</td></tr>
+<tr class="memdesc:a1a3f706c676a152d2796c354925e442e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator, multiplication of a <a class="el" href="class_controls.html">Controls</a> object by a scalar.  <a href="class_controls.html#a1a3f706c676a152d2796c354925e442e">More...</a><br /></td></tr>
+<tr class="separator:a1a3f706c676a152d2796c354925e442e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae2d9b57ee20cd142bd0511f981dbbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_controls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#adae2d9b57ee20cd142bd0511f981dbbc">operator*</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;, const double)</td></tr>
+<tr class="memdesc:adae2d9b57ee20cd142bd0511f981dbbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator, multiplication of a <a class="el" href="class_controls.html">Controls</a> object by a scalar.  <a href="class_controls.html#adae2d9b57ee20cd142bd0511f981dbbc">More...</a><br /></td></tr>
+<tr class="separator:adae2d9b57ee20cd142bd0511f981dbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f8e73f5113e4a5680b48de4c1365d0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_controls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a7f8e73f5113e4a5680b48de4c1365d0f">operator+</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;, const <a class="el" href="class_controls.html">Controls</a> &amp;)</td></tr>
+<tr class="memdesc:a7f8e73f5113e4a5680b48de4c1365d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sum of two <a class="el" href="class_controls.html">Controls</a> object.  <a href="class_controls.html#a7f8e73f5113e4a5680b48de4c1365d0f">More...</a><br /></td></tr>
+<tr class="separator:a7f8e73f5113e4a5680b48de4c1365d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a016d28e39dadef6319ea028feaf3572c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_controls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a016d28e39dadef6319ea028feaf3572c">operator-</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;, const <a class="el" href="class_controls.html">Controls</a> &amp;)</td></tr>
+<tr class="memdesc:a016d28e39dadef6319ea028feaf3572c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substraction of two <a class="el" href="class_controls.html">Controls</a> object.  <a href="class_controls.html#a016d28e39dadef6319ea028feaf3572c">More...</a><br /></td></tr>
+<tr class="separator:a016d28e39dadef6319ea028feaf3572c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abebc430e06b17f56aef8c927be6131a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_controls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#abebc430e06b17f56aef8c927be6131a2">operator/</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;, const double)</td></tr>
+<tr class="memdesc:abebc430e06b17f56aef8c927be6131a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of division of a <a class="el" href="class_controls.html">Controls</a> object with a scalar.  <a href="class_controls.html#abebc430e06b17f56aef8c927be6131a2">More...</a><br /></td></tr>
+<tr class="separator:abebc430e06b17f56aef8c927be6131a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15aeb2e13ca7ef6cc4f02bfbcd32ae90"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a15aeb2e13ca7ef6cc4f02bfbcd32ae90">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="class_controls.html">Controls</a> &amp;)</td></tr>
 <tr class="separator:a15aeb2e13ca7ef6cc4f02bfbcd32ae90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af7bd35700e2bb098234a7f73da026a6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7bd35700e2bb098234a7f73da026a6d">&#9670;&nbsp;</a></span>Controls() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Controls::Controls </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>nb</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct a new <a class="el" href="class_controls.html">Controls</a>:: <a class="el" href="class_controls.html">Controls</a> object Create a list of nb default <a class="el" href="class_control.html">Control</a> object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">nb</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a49559a33cba4149a1cf3ad405fbe619b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49559a33cba4149a1cf3ad405fbe619b">&#9670;&nbsp;</a></span>Controls() <span class="overload">[2/3]</span></h2>
+<a id="ac33a461920a09622a89bbab50311a77e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33a461920a09622a89bbab50311a77e">&#9670;&nbsp;</a></span>Controls() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,8 +200,20 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_control.html">Control</a>&#160;</td>
-          <td class="paramname"><em>c</em>&#160;</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>H</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -190,19 +223,26 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="class_controls.html">Controls</a>:: <a class="el" href="class_controls.html">Controls</a> object Create a list of nb controls object that are copy of the <a class="el" href="class_control.html">Control</a> c. </p>
+<p>Construct a new <a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object Create a list of nb Control object with domain \([t_0,t_1]\) and \(H\) step of discretisation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nb</td><td></td></tr>
-    <tr><td class="paramname">c</td><td></td></tr>
+    <tr><td class="paramname">nb</td><td>Number of controls </td></tr>
+    <tr><td class="paramname">t0</td><td></td></tr>
+    <tr><td class="paramname">t1</td><td></td></tr>
+    <tr><td class="paramname">H</td><td>Number of discretisation time step of \([t_0,t_1]\) </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section warning"><dt>Warning</dt><dd>nb should takes its values between \([0,255]\) </dd>
+<dd>
+Interpolation method is not set, should be manually added after instanciating a <a class="el" href="class_controls.html">Controls</a> object </dd>
+<dd>
+Integration method is not set, should be manually added after instanciating a <a class="el" href="class_controls.html">Controls</a> object </dd></dl>
 
 </div>
 </div>
 <a id="a9183be3837e9e60de2145c00ce112d82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9183be3837e9e60de2145c00ce112d82">&#9670;&nbsp;</a></span>Controls() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9183be3837e9e60de2145c00ce112d82">&#9670;&nbsp;</a></span>Controls() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -211,11 +251,19 @@ Friends</h2></td></tr>
           <td class="memname">Controls::Controls </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>cs</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object Copy constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cs</td><td>a <a class="el" href="class_controls.html">Controls</a> object to be copied </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -234,17 +282,271 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Destroy the <a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a63fce7adce851b329ed1c208af5cb817"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63fce7adce851b329ed1c208af5cb817">&#9670;&nbsp;</a></span>set_discretisation()</h2>
+<a id="a24e8da253ff9573bd087aa7c87abc53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24e8da253ff9573bd087aa7c87abc53f">&#9670;&nbsp;</a></span>dot_prod_l2()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Controls::set_discretisation </td>
+          <td class="memname">double Controls::dot_prod_l2 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>cs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the \(L^2\) dot product of two <a class="el" href="class_controls.html">Controls</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The integrator attibute must be set before using this method </dd>
+<dd>
+The integration method of the first <a class="el" href="class_controls.html">Controls</a> object is used. </dd></dl>
+
+</div>
+</div>
+<a id="a2b1827b6e1d6ce013100569f65939ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b1827b6e1d6ce013100569f65939ac7">&#9670;&nbsp;</a></span>get_control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VectorXd Controls::get_control </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>VectorXd </dd></dl>
+
+</div>
+</div>
+<a id="a845dc6facd3933e2f2d9cb4314bdb77d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a845dc6facd3933e2f2d9cb4314bdb77d">&#9670;&nbsp;</a></span>get_nb_cntrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Controls::get_nb_cntrl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>uint8_t </dd></dl>
+
+</div>
+</div>
+<a id="ab0413be444eef8c468eee11af1ae3a3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0413be444eef8c468eee11af1ae3a3f">&#9670;&nbsp;</a></span>norm2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Controls::norm2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af02681159f2ee734b93d5e1fddc267a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af02681159f2ee734b93d5e1fddc267a7">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VectorXd Controls::operator() </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>VectorXd </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The interpolator attibute must be set before using this method </dd></dl>
+
+</div>
+</div>
+<a id="a7847244b0669d2b002803fbc62fed1f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7847244b0669d2b002803fbc62fed1f8">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_controls.html">Controls</a> &amp; Controls::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>cs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a286a155f30cbe6d472a947b8e29b4847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a286a155f30cbe6d472a947b8e29b4847">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_controls.html">Controls</a> Controls::operator- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ea9e144ef52ac45139efc77905186ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea9e144ef52ac45139efc77905186ee">&#9670;&nbsp;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_controls.html">Controls</a> &amp; Controls::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>cs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a208bd7bbdaafe8db66bceea336ca3b52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a208bd7bbdaafe8db66bceea336ca3b52">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_controls.html">Controls</a> &amp; Controls::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>cs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload the assignement operator. Acts like a copy constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cs</td><td>The controls to be copied. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_controls.html">Controls</a>&amp; A copy of controls cs </dd></dl>
+
+</div>
+</div>
+<a id="aeb6a927d6d36555cb3916a2489f1b267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb6a927d6d36555cb3916a2489f1b267">&#9670;&nbsp;</a></span>set_cntrl() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controls::set_cntrl </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aadef912c4890a4048a45946c34c9d13e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadef912c4890a4048a45946c34c9d13e">&#9670;&nbsp;</a></span>set_cntrl() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controls::set_cntrl </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VectorXd&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0d010983cce9d62ec4d887e3b16b843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d010983cce9d62ec4d887e3b16b843">&#9670;&nbsp;</a></span>set_discretisation_cntrls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controls::set_discretisation_cntrls </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>t0</em>, </td>
@@ -259,7 +561,7 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>N</em>&#160;</td>
+          <td class="paramname"><em>H</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -268,24 +570,94 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t0</td><td></td></tr>
+    <tr><td class="paramname">t1</td><td></td></tr>
+    <tr><td class="paramname">H</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>t0 should be less that t1 </dd>
+<dd>
+H should be at least 2 </dd>
+<dd>
+Reinitialise data to zeros </dd></dl>
 
 </div>
 </div>
-<a id="af7cea5f1030e012d0d0a8c0f6a6e914b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7cea5f1030e012d0d0a8c0f6a6e914b">&#9670;&nbsp;</a></span>set_N()</h2>
+<a id="ad21e0838e2a0768b02f902bdc222823c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad21e0838e2a0768b02f902bdc222823c">&#9670;&nbsp;</a></span>set_H()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Controls::set_N </td>
+          <td class="memname">void Controls::set_H </td>
           <td>(</td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>N</em></td><td>)</td>
+          <td class="paramname"><em>H</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">H</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>H should be at least 2 </dd>
+<dd>
+Reiniatlise data to zeros </dd></dl>
+
+</div>
+</div>
+<a id="a784ea36ec2117881da9958e26211ae2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a784ea36ec2117881da9958e26211ae2d">&#9670;&nbsp;</a></span>set_integration_method()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controls::set_integration_method </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_integrator1_d.html">Integrator1D</a> *&#160;</td>
+          <td class="paramname"><em>integr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">integr</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acf192afdc526c40183af67ba71b24917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf192afdc526c40183af67ba71b24917">&#9670;&nbsp;</a></span>set_interpolation_method()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controls::set_interpolation_method </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_interpolator1_d.html">Interpolator1D</a> *&#160;</td>
+          <td class="paramname"><em>interpol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interpol</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -299,7 +671,7 @@ Friends</h2></td></tr>
           <td class="memname">void Controls::set_t0 </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>t0</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -322,10 +694,299 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t0</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>t0 should be less than object attribute t1 </dd>
+<dd>
+Does not change data, hence the same data are now evaluated at the new interpolation points defined by the discretisation of the interval \([t_0,t_1]\$ into H pieces */ void Controls::set_t0(double t0) { assert(t0 &lt; this-&gt;t1); this-&gt;t0 = t0; this-&gt;construct_discrete_time(); } /** @brief @param t1 @warning t1 must be greater than object attribute t0 @warning Does not change data, hence the same data are now evaluated at the new interpolation points defined by the discretisation of the interval \)[t_0,t_1]$ into H pieces </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a69287367b7dd5b87f46436e7151f259a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69287367b7dd5b87f46436e7151f259a">&#9670;&nbsp;</a></span>operator* <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>\(L^2\) dot product between two <a class="el" href="class_controls.html">Controls</a> objects </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>Left hand side </td></tr>
+    <tr><td class="paramname">rhs</td><td>Right hand side </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Both <a class="el" href="class_controls.html">Controls</a> objects must have the same attributes M, t0, t1, H </dd></dl>
+
+</div>
+</div>
+<a id="adae2d9b57ee20cd142bd0511f981dbbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae2d9b57ee20cd142bd0511f981dbbc">&#9670;&nbsp;</a></span>operator* <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_controls.html">Controls</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operator, multiplication of a <a class="el" href="class_controls.html">Controls</a> object by a scalar. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>A <a class="el" href="class_controls.html">Controls</a> object </td></tr>
+    <tr><td class="paramname">rhs</td><td>A scalar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_controls.html">Controls</a> object whose data are d*c.data </dd></dl>
+
+</div>
+</div>
+<a id="a1a3f706c676a152d2796c354925e442e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a3f706c676a152d2796c354925e442e">&#9670;&nbsp;</a></span>operator* <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_controls.html">Controls</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operator, multiplication of a <a class="el" href="class_controls.html">Controls</a> object by a scalar. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>A scalar </td></tr>
+    <tr><td class="paramname">rhs</td><td>A <a class="el" href="class_controls.html">Controls</a> object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_controls.html">Controls</a> object whose data are d*c.data </dd></dl>
+
+</div>
+</div>
+<a id="a7f8e73f5113e4a5680b48de4c1365d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f8e73f5113e4a5680b48de4c1365d0f">&#9670;&nbsp;</a></span>operator+</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_controls.html">Controls</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sum of two <a class="el" href="class_controls.html">Controls</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>Left hand side </td></tr>
+    <tr><td class="paramname">rhs</td><td>Right hand side </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_controls.html">Controls</a> whose data are lhs.data + rhs.data </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Both <a class="el" href="class_controls.html">Controls</a> objects must have the same attributes M, t0, t1, H </dd></dl>
+
+</div>
+</div>
+<a id="a016d28e39dadef6319ea028feaf3572c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a016d28e39dadef6319ea028feaf3572c">&#9670;&nbsp;</a></span>operator-</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_controls.html">Controls</a> operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Substraction of two <a class="el" href="class_controls.html">Controls</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>Left hand side </td></tr>
+    <tr><td class="paramname">rhs</td><td>Right hand side </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_controls.html">Controls</a> whose data are lhs.data - rhs.data </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Both <a class="el" href="class_controls.html">Controls</a> objects must have the same attributes M, t0, t1, H </dd></dl>
+
+</div>
+</div>
+<a id="abebc430e06b17f56aef8c927be6131a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abebc430e06b17f56aef8c927be6131a2">&#9670;&nbsp;</a></span>operator/</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_controls.html">Controls</a> operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operator of division of a <a class="el" href="class_controls.html">Controls</a> object with a scalar. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Double value dividing lhs </td></tr>
+    <tr><td class="paramname">lhs</td><td><a class="el" href="class_controls.html">Controls</a> object to be divised </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Control whose data are lhs.data[i] / d </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>d must be non zero </dd></dl>
+
+</div>
+</div>
 <a id="a15aeb2e13ca7ef6cc4f02bfbcd32ae90"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a15aeb2e13ca7ef6cc4f02bfbcd32ae90">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
 
@@ -346,6 +1007,42 @@ Friends</h2></td></tr>
           <td></td>
           <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
           <td class="paramname"><em>cs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a998482c3dabe98ff61ada27cad7ebc70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a998482c3dabe98ff61ada27cad7ebc70">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

@@ -101,24 +101,357 @@ $(document).ready(function(){initNavTree('class_control_system.html',''); initRe
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_control_system-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ControlSystem Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>This describes a general, non-linear dynamic system described by an Ordinary Differential Equation (ODE) of the following form.  
+ <a href="class_control_system.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="control_system_8h_source.html">controlSystem.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for ControlSystem:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_control_system__inherit__graph.png" border="0" usemap="#a_control_system_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_control_system_inherit__map" id="a_control_system_inherit__map">
-<area shape="rect" title=" " alt="" coords="25,5,144,32"/>
-<area shape="rect" href="class_linear_control_system.html" title=" " alt="" coords="5,80,164,107"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a469071d66e8aae5cd2d871c459dff365"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#a469071d66e8aae5cd2d871c459dff365">ControlSystem</a> (uint16_t, uint16_t)</td></tr>
+<tr class="separator:a469071d66e8aae5cd2d871c459dff365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88715f23c32ed9a0d875fa4da1163be2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#a88715f23c32ed9a0d875fa4da1163be2">ControlSystem</a> (uint16_t, uint16_t, double, double, VectorXd)</td></tr>
+<tr class="separator:a88715f23c32ed9a0d875fa4da1163be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449890897411186d4f245a79e8f2d016"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#a449890897411186d4f245a79e8f2d016">~ControlSystem</a> ()</td></tr>
+<tr class="separator:a449890897411186d4f245a79e8f2d016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48dfbf2b1b5ced18ecab68f9091d5532"><td class="memItemLeft" align="right" valign="top">VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#a48dfbf2b1b5ced18ecab68f9091d5532">get_dynamics</a> (double, VectorXd) const</td></tr>
+<tr class="separator:a48dfbf2b1b5ced18ecab68f9091d5532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09bf57e57e03101d128f31b870edc678"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#a09bf57e57e03101d128f31b870edc678">set_x0</a> (VectorXd)</td></tr>
+<tr class="separator:a09bf57e57e03101d128f31b870edc678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4edd7b729f415983f893b5df06629be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#ac4edd7b729f415983f893b5df06629be">set_t0</a> (double)</td></tr>
+<tr class="separator:ac4edd7b729f415983f893b5df06629be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe9267bce557b807aedfaf942f11bc2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#abe9267bce557b807aedfaf942f11bc2b">set_t1</a> (double)</td></tr>
+<tr class="separator:abe9267bce557b807aedfaf942f11bc2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d3f21bff441bba22af19ed6055c9fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#a17d3f21bff441bba22af19ed6055c9fd">set_controls</a> (const <a class="el" href="class_controls.html">Controls</a> *)</td></tr>
+<tr class="separator:a17d3f21bff441bba22af19ed6055c9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc833b2f8b89d245141aef10082ced0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#adc833b2f8b89d245141aef10082ced0d">set_cntrl_system_integrator</a> (const <a class="el" href="class_control_system_int.html">ControlSystemInt</a> *)</td></tr>
+<tr class="separator:adc833b2f8b89d245141aef10082ced0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4baf8e6dc26226e609238f919f3c219"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#af4baf8e6dc26226e609238f919f3c219">set_dynamics</a> (std::function&lt; VectorXd(double, VectorXd, <a class="el" href="class_controls.html">Controls</a>)&gt;)</td></tr>
+<tr class="separator:af4baf8e6dc26226e609238f919f3c219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d6f07bd6e6edf8d869d1c39dd7c6798"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#a5d6f07bd6e6edf8d869d1c39dd7c6798">set_dynamics_derivative_x</a> (std::function&lt; MatrixXd(double, VectorXd, <a class="el" href="class_controls.html">Controls</a>)&gt;)</td></tr>
+<tr class="separator:a5d6f07bd6e6edf8d869d1c39dd7c6798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70311f643c3aab5ef552ca8bb6e68bda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#a70311f643c3aab5ef552ca8bb6e68bda">set_dynamics_derivative_u</a> (std::function&lt; MatrixXd(double, VectorXd, <a class="el" href="class_controls.html">Controls</a>)&gt;)</td></tr>
+<tr class="separator:a70311f643c3aab5ef552ca8bb6e68bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc6ac651aaa626395f050ec8e342550"><td class="memItemLeft" align="right" valign="top">MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#a7bc6ac651aaa626395f050ec8e342550">trajectory</a> ()</td></tr>
+<tr class="separator:a7bc6ac651aaa626395f050ec8e342550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67d52f332eb923d8530f24f1ab2ed2f5"><td class="memItemLeft" align="right" valign="top">VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html#a67d52f332eb923d8530f24f1ab2ed2f5">inout</a> ()</td></tr>
+<tr class="separator:a67d52f332eb923d8530f24f1ab2ed2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This describes a general, non-linear dynamic system described by an Ordinary Differential Equation (ODE) of the following form. </p>
+<p class="formulaDsp">
+\[ \dot{x} = f(t,x,u) \]
+</p>
+<p>where \( t \) the time, \( x(t) \) is the state, and \( u(t) \) the control input. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a469071d66e8aae5cd2d871c459dff365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a469071d66e8aae5cd2d871c459dff365">&#9670;&nbsp;</a></span>ControlSystem() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ControlSystem::ControlSystem </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>s_dim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>c_dim</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88715f23c32ed9a0d875fa4da1163be2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88715f23c32ed9a0d875fa4da1163be2">&#9670;&nbsp;</a></span>ControlSystem() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ControlSystem::ControlSystem </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>s_dim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>c_dim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VectorXd&#160;</td>
+          <td class="paramname"><em>x0</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a449890897411186d4f245a79e8f2d016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a449890897411186d4f245a79e8f2d016">&#9670;&nbsp;</a></span>~ControlSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ControlSystem::~ControlSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a48dfbf2b1b5ced18ecab68f9091d5532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48dfbf2b1b5ced18ecab68f9091d5532">&#9670;&nbsp;</a></span>get_dynamics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VectorXd ControlSystem::get_dynamics </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VectorXd&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67d52f332eb923d8530f24f1ab2ed2f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67d52f332eb923d8530f24f1ab2ed2f5">&#9670;&nbsp;</a></span>inout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VectorXd ControlSystem::inout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc833b2f8b89d245141aef10082ced0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc833b2f8b89d245141aef10082ced0d">&#9670;&nbsp;</a></span>set_cntrl_system_integrator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ControlSystem::set_cntrl_system_integrator </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_control_system_int.html">ControlSystemInt</a> *&#160;</td>
+          <td class="paramname"><em>odeint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17d3f21bff441bba22af19ed6055c9fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17d3f21bff441bba22af19ed6055c9fd">&#9670;&nbsp;</a></span>set_controls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ControlSystem::set_controls </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_controls.html">Controls</a> *&#160;</td>
+          <td class="paramname"><em>cs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4baf8e6dc26226e609238f919f3c219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4baf8e6dc26226e609238f919f3c219">&#9670;&nbsp;</a></span>set_dynamics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ControlSystem::set_dynamics </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; VectorXd(double, VectorXd, <a class="el" href="class_controls.html">Controls</a>)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70311f643c3aab5ef552ca8bb6e68bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70311f643c3aab5ef552ca8bb6e68bda">&#9670;&nbsp;</a></span>set_dynamics_derivative_u()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ControlSystem::set_dynamics_derivative_u </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; MatrixXd(double, VectorXd, <a class="el" href="class_controls.html">Controls</a>)&gt;&#160;</td>
+          <td class="paramname"><em>df_du</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d6f07bd6e6edf8d869d1c39dd7c6798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d6f07bd6e6edf8d869d1c39dd7c6798">&#9670;&nbsp;</a></span>set_dynamics_derivative_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ControlSystem::set_dynamics_derivative_x </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; MatrixXd(double, VectorXd, <a class="el" href="class_controls.html">Controls</a>)&gt;&#160;</td>
+          <td class="paramname"><em>df_dx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4edd7b729f415983f893b5df06629be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4edd7b729f415983f893b5df06629be">&#9670;&nbsp;</a></span>set_t0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ControlSystem::set_t0 </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>new_t0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe9267bce557b807aedfaf942f11bc2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe9267bce557b807aedfaf942f11bc2b">&#9670;&nbsp;</a></span>set_t1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ControlSystem::set_t1 </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>new_t1</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09bf57e57e03101d128f31b870edc678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09bf57e57e03101d128f31b870edc678">&#9670;&nbsp;</a></span>set_x0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ControlSystem::set_x0 </td>
+          <td>(</td>
+          <td class="paramtype">VectorXd&#160;</td>
+          <td class="paramname"><em>new_x0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7bc6ac651aaa626395f050ec8e342550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bc6ac651aaa626395f050ec8e342550">&#9670;&nbsp;</a></span>trajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MatrixXd ControlSystem::trajectory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/header/<a class="el" href="control_system_8h_source.html">controlSystem.h</a></li>
+<li>src/<a class="el" href="control_system_8cpp.html">controlSystem.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

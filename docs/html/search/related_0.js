@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['operator_2a_169',['operator*',['../class_control.html#a1bd47fe116b7acb9f5fe899b2bff683f',1,'Control::operator*()'],['../class_control.html#a292ccd8d7cee5bb90cca7ee34c80ea0f',1,'Control::operator*()'],['../class_control.html#a44f734c12d63451639c667913051f369',1,'Control::operator*()']]],
-  ['operator_2b_170',['operator+',['../class_control.html#a67da4f957e3b8a4076ebbd505304cd71',1,'Control::operator+()'],['../class_control.html#ace0d9f560e77cb71f08e18686ed7e61f',1,'Control::operator+()'],['../class_control.html#a63097c624d730a793b0c6f166abd44d2',1,'Control::operator+()']]],
-  ['operator_2d_171',['operator-',['../class_control.html#a65ae7e641ecb89722c1d02d7e78e1e60',1,'Control::operator-()'],['../class_control.html#a620685fb8feecbedcb23f4323d7af2c1',1,'Control::operator-()'],['../class_control.html#a857de70a9327f1110d43f1ca90f4f670',1,'Control::operator-()']]],
-  ['operator_2f_172',['operator/',['../class_control.html#af37ea60d2ff337262407956c17de92df',1,'Control']]],
-  ['operator_3c_3c_173',['operator&lt;&lt;',['../class_control.html#aa583720a041b13083b1b23b5f58f2532',1,'Control::operator&lt;&lt;()'],['../class_controls.html#a15aeb2e13ca7ef6cc4f02bfbcd32ae90',1,'Controls::operator&lt;&lt;()']]],
-  ['operator_3d_3d_174',['operator==',['../class_control.html#ab7808e82896ab0361f641c0a43844f4f',1,'Control']]]
+  ['operator_2a_512',['operator*',['../class_controls.html#a69287367b7dd5b87f46436e7151f259a',1,'Controls::operator*()'],['../class_controls.html#a1a3f706c676a152d2796c354925e442e',1,'Controls::operator*()'],['../class_controls.html#adae2d9b57ee20cd142bd0511f981dbbc',1,'Controls::operator*()']]],
+  ['operator_2b_513',['operator+',['../class_controls.html#a7f8e73f5113e4a5680b48de4c1365d0f',1,'Controls']]],
+  ['operator_2d_514',['operator-',['../class_controls.html#a016d28e39dadef6319ea028feaf3572c',1,'Controls']]],
+  ['operator_2f_515',['operator/',['../class_controls.html#abebc430e06b17f56aef8c927be6131a2',1,'Controls']]],
+  ['operator_3c_3c_516',['operator&lt;&lt;',['../class_controls.html#a15aeb2e13ca7ef6cc4f02bfbcd32ae90',1,'Controls::operator&lt;&lt;()'],['../class_trajectory.html#a62e9f0a8dc2d16b6ab280d60f5060d79',1,'Trajectory::operator&lt;&lt;()']]],
+  ['operator_3d_3d_517',['operator==',['../class_controls.html#a998482c3dabe98ff61ada27cad7ebc70',1,'Controls']]]
 ];
