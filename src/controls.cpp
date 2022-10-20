@@ -150,6 +150,17 @@ void Controls::set_discretisation_cntrls(double t0, double t1, uint16_t H) {
     this->default_data(); 
 }
 
+void Controls::set_cntrl(uint8_t idx, double d) {
+    assert(idx < this->M);
+    this->data.col(idx) = MatrixXd::Constant(this->H, 1, d);
+}
+
+void Controls::set_cntrl(uint8_t idx, VectorXd val) {
+    assert(idx < this->M);
+    assert(val.size() == this->H);
+    this->data.col(idx) = val;
+}
+
 /**
  * @brief 
  * 

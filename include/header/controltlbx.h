@@ -2,7 +2,7 @@
 * @file controltlbx.h
 * @author T. Schmoderer (iathena@mailo.com)
 * @version 0.0.3
-* @date 2022-10-19
+* @date 2022-10-20
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -15,6 +15,7 @@
 #include "utils.h"
 #include "controls.h"
 #include "controlSystem.h"
+#include "path/path.h"
 
 /* VERSION MACROS */
 #define VERSION_MPP_TLBX "0.0.3"

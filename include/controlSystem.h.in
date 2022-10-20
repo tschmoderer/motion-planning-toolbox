@@ -6,7 +6,7 @@
 * @copyright Copyright (c) @YEAR@. All rights reserved. This project is released under the @LICENSE@.
 */
 /**
- * @brief
+ * @brief Header file for ControlSystem class
 */
 
 #ifndef CNTRLTLBX_CONTROLSYSTEM_H
@@ -15,15 +15,24 @@
 // Macros definitions
 
 // Additional library
-#include <cassert>
-#include <cstdint>
-#include <Eigen/Dense>
+#include "utils.h"
 #include "controls.h"
-#include "odeint/odeint.h"
+#include "odeint/controlSystemInt.h"
 
 using Eigen::VectorXd;
 using Eigen::MatrixXd;
 
+/**
+ * @class ControlSystem
+ * @brief This describes a general, non-linear dynamic system described by an Ordinary Differential Equation (ODE)
+ * of the following form
+ *
+ * \f[
+ *  \dot{x} = f(t,x,u)
+ * \f]
+ *
+ * where \f$ t \f$ the time, \f$ x(t) \f$ is the state, and \f$ u(t) \f$ the control input.
+ */
 class ControlSystem {
     public: 
         /* CONSTRUCTORS */
@@ -40,9 +49,11 @@ class ControlSystem {
         void set_t0(double ); 
         void set_t1(double );
         void set_controls(const Controls * );
-        void set_ode_integrator(const ODEInt * ); 
+        void set_cntrl_system_integrator(const ControlSystemInt * ); 
         void set_dynamics(std::function<VectorXd(double , VectorXd , Controls )> );
-        
+        void set_dynamics_derivative_x(std::function<MatrixXd(double , VectorXd , Controls )> );
+        void set_dynamics_derivative_u(std::function<MatrixXd(double , VectorXd , Controls )> );
+
         /* METHODS */
         MatrixXd trajectory(); 
         VectorXd inout();
@@ -60,10 +71,10 @@ class ControlSystem {
         Controls * u; 
 
         std::function<VectorXd(double , VectorXd , Controls )> F;
-        //std::function<MatrixXd(double , VectorXd , Controls )> dFdX;
-        //std::function<MatrixXd(double , VectorXd , Controls )> dFdU;
+        std::function<MatrixXd(double , VectorXd , Controls )> dFdX;
+        std::function<MatrixXd(double , VectorXd , Controls )> dFdU;
         
-        ODEInt * ode_integrator; 
+        ControlSystemInt * integrator; 
 
         /* PRIVATE METHODS */
         VectorXd dynamics(double , VectorXd ) const; 

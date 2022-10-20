@@ -2,7 +2,7 @@
 * @file controls.h
 * @author T. Schmoderer (iathena@mailo.com)
 * @version 0.0.3
-* @date 2022-10-19
+* @date 2022-10-20
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -36,6 +36,9 @@ class Controls {
         void set_t1(double ); 
         void set_H(uint16_t ); 
         void set_discretisation_cntrls(double , double , uint16_t ); 
+
+        void set_cntrl(uint8_t , double );
+        void set_cntrl(uint8_t , VectorXd );
 
         void set_interpolation_method(const Interpolator1D * ); 
         void set_integration_method(const Integrator1D * ); 

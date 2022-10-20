@@ -10,10 +10,10 @@ ControlSystem::ControlSystem(uint16_t s_dim, uint16_t c_dim) {
     this->t1 = 1.; 
 
     this->u = NULL; 
-    this->ode_integrator = NULL; 
+    this->integrator = NULL; 
 }
 
-ControlSystem::ControlSystem(uint16_t s_dim, uint16_t c_dim, double t0, double t1, VectorXd c0) {
+ControlSystem::ControlSystem(uint16_t s_dim, uint16_t c_dim, double t0, double t1, VectorXd x0) {
     this->N = s_dim;
     this->M = c_dim;
 
@@ -22,7 +22,7 @@ ControlSystem::ControlSystem(uint16_t s_dim, uint16_t c_dim, double t0, double t
     this->t1 = t1; 
 
     this->u = NULL; 
-    this->ode_integrator = NULL; 
+    this->integrator = NULL; 
 }
 
 /* DESTRUCTORS */
@@ -30,8 +30,8 @@ ControlSystem::~ControlSystem() {
     if (this->u != NULL) {
         delete this->u;
     }
-    if (this->ode_integrator != NULL) {
-        delete this->ode_integrator;
+    if (this->integrator != NULL) {
+        delete this->integrator;
     }
 }
 
@@ -63,28 +63,34 @@ void ControlSystem::set_controls(const Controls * cs) {
     this->u = new Controls(*cs); 
 }
 
-void ControlSystem::set_ode_integrator(const ODEInt * odeint)  {
-    if (this->ode_integrator != NULL) {
-        delete this->ode_integrator; 
+void ControlSystem::set_cntrl_system_integrator(const ControlSystemInt * odeint)  {
+    if (this->integrator != NULL) {
+        delete this->integrator; 
     }
-    this->ode_integrator = new ODEInt(*odeint);
+    this->integrator = new ControlSystemInt(*odeint);
 }
 
-void ControlSystem::set_dynamics(std::function<VectorXd(double , VectorXd , Controls )> f) {
-    this->F = f;
+void ControlSystem::set_dynamics(std::function<VectorXd(double , VectorXd , Controls )> func) {
+    this->F = func;
 }    
+
+void ControlSystem::set_dynamics_derivative_x(std::function<MatrixXd(double , VectorXd , Controls )> df_dx) {
+    this->dFdX = df_dx;
+}
+
+void ControlSystem::set_dynamics_derivative_u(std::function<MatrixXd(double , VectorXd , Controls )> df_du) {
+    this->dFdU = df_du;
+}
 
 /* METHODS */
 
 MatrixXd ControlSystem::trajectory() {
-    return this->ode_integrator->ode_int(this->t0, this->t1, this->x0, &dynamics);
+    return this->integrator->integrate(this->t0, this->t1, this->x0, *this->u, this->F);
 }
 
-/*
 VectorXd ControlSystem::inout() {
     return this->trajectory()(Eigen::last, Eigen::seq(1, Eigen::last));
 }
-*/
 
 /* PRIVATE METHODS */
 VectorXd ControlSystem::dynamics(double t, VectorXd x) const{

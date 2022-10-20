@@ -37,6 +37,9 @@ class Controls {
         void set_H(uint16_t ); 
         void set_discretisation_cntrls(double , double , uint16_t ); 
 
+        void set_cntrl(uint8_t , double );
+        void set_cntrl(uint8_t , VectorXd );
+
         void set_interpolation_method(const Interpolator1D * ); 
         void set_integration_method(const Integrator1D * ); 
 

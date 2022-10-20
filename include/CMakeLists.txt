@@ -35,7 +35,7 @@ else()
             endif()
             configure_file(${file} ${NEWFILE} @ONLY)
         else()
-            # FILE HAS NO MODIFICATIONS OR IS NOR NEW
+            # FILE HAS NO MODIFICATIONS OR IS NOT NEW
         endif()
     endforeach()
 endif()
