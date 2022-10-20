@@ -15,6 +15,6 @@ for n in ${names[@]}; do
         inkscape $svg -o "$folder/$n.png" -w $i -h $i 
     done
 
-    convert $res $name.ico
-    identify $name.ico
+    convert $res $n.ico
+    identify $n.ico
 done
