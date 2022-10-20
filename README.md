@@ -1,6 +1,6 @@
 <div id="motion-planning-toolbox-logo" align="center">
     <br />
-    <img src="https://raw.githubusercontent.com/tschmoderer/motion-planning-toolbox/main/docs/img/icons/128x128/rocket.png" alt="Motion Planning ToolBox Logo" width="128"/>
+    <img src="https://raw.githubusercontent.com/tschmoderer/motion-planning-toolbox/main/docs/img/icons/128x128/rocket.png" alt="Motion Planning ToolBox Logo" width="128" id="motion-planning-toolbox-logo-img"/>
     <h1>Motion Planning Toolbox</h1>
     <h3></h3>
 </div>
