@@ -2,7 +2,7 @@
 * @file controlSystemInt.h
 * @author T. Schmoderer (iathena@mailo.com)
 * @version 0.0.3
-* @date 2022-10-20
+* @date 2022-10-21
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -16,7 +16,8 @@
 
 // Additional library
 #include "odeint.h"
-#include "../controls.h"
+#include "../controller/controls.h"
+#include "../types/types.h"
 
 class ControlSystemInt : ODEInt {
     public: 
@@ -28,7 +29,7 @@ class ControlSystemInt : ODEInt {
         ~ControlSystemInt(); 
 
         /* METHODS */
-        MatrixXd integrate(double , double , VectorXd , Controls , std::function<VectorXd(double, VectorXd , Controls )> ); 
+        Trajectory integrate(double , double , VectorXd , Controls , std::function<VectorXd(double, VectorXd , Controls )> ); 
 
     private: 
         /* ATTRIBUTES */

@@ -18,6 +18,14 @@ Trajectory::Trajectory(const Trajectory & traj) {
 
 Trajectory::~Trajectory() {} 
 
+VectorXd Trajectory::get_time() const {
+    return this->time;
+}
+
+MatrixXd Trajectory::get_data() const {
+    return this->data;
+}
+
 void Trajectory::set_interpolation_method(interpolation_method_t im, extend_t el, extend_t er) {
     this->interp_.set_method(im);
     this->interp_.set_exleft(el); 
@@ -35,12 +43,24 @@ VectorXd Trajectory::evaluate(double t) const {
     return res;
 } 
 
+/**
+ * @brief Overload output operator for Trajectory object
+ * The output format of a trajectory is the following : 
+ * \f$t_0\f$ \f$x_1[0]\f$ ... \f$x_n[0]\f$
+ * ...
+ * \f$t_N\f$ \f$x_1[N]\f$ ... \f$x_n[N]\f$
+ * where \f$n\f$ is the dimension of the state space and \f$N\f$ is the numer of time divisions
+ *
+ * @param os An output stream
+ * @param traj A Trajectory obect
+ * @return std::ostream& 
+ */
 std::ostream & operator<<(std::ostream & os, const Trajectory & traj) {
     assert(traj.time_.size() == traj.data_.rows());
     for (int i = 0; i < traj.time_.size(); i++) {
         os << traj.time_(i);
         for (int j = 0; j < traj.data_.cols(); j++) {
-            os << "\t" << traj.data_(i,j);
+            os << " " << traj.data_(i,j);
         }    
         os << std::endl;
     }

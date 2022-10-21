@@ -1,4 +1,4 @@
-#include "../include/header/controlSystem.h"
+#include "../include/header/systems/controlSystem.h"
 
 /* CONSTRUCTORS */
 ControlSystem::ControlSystem(uint16_t s_dim, uint16_t c_dim) {
@@ -70,25 +70,25 @@ void ControlSystem::set_cntrl_system_integrator(const ControlSystemInt * odeint)
     this->integrator = new ControlSystemInt(*odeint);
 }
 
-void ControlSystem::set_dynamics(std::function<VectorXd(double , VectorXd , Controls )> func) {
+void ControlSystem::set_dynamics(std::function<VectorXd(double , State_t , Controls )> func) {
     this->F = func;
 }    
 
-void ControlSystem::set_dynamics_derivative_x(std::function<MatrixXd(double , VectorXd , Controls )> df_dx) {
+void ControlSystem::set_dynamics_derivative_x(std::function<MatrixXd(double , State_t , Controls )> df_dx) {
     this->dFdX = df_dx;
 }
 
-void ControlSystem::set_dynamics_derivative_u(std::function<MatrixXd(double , VectorXd , Controls )> df_du) {
+void ControlSystem::set_dynamics_derivative_u(std::function<MatrixXd(double , State_t , Controls )> df_du) {
     this->dFdU = df_du;
 }
 
 /* METHODS */
 
-MatrixXd ControlSystem::trajectory() {
+Trajectory ControlSystem::trajectory() {
     return this->integrator->integrate(this->t0, this->t1, this->x0, *this->u, this->F);
 }
 
-VectorXd ControlSystem::inout() {
+State_t ControlSystem::inout() {
     return this->trajectory()(Eigen::last, Eigen::seq(1, Eigen::last));
 }
 

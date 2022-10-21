@@ -1,9 +1,9 @@
 /**
-* @file @CURFILENAME@
-* @author @AUTHOR@ (@AUTHOR_MAIL@)
-* @version @PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@
-* @date @TODAY@
-* @copyright Copyright (c) @YEAR@. All rights reserved. This project is released under the @LICENSE@.
+* @file controlSystem.h
+* @author T. Schmoderer (iathena@mailo.com)
+* @version 0.0.3
+* @date 2022-10-21
+* @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
  * @brief Header file for ControlSystem class
@@ -15,9 +15,11 @@
 // Macros definitions
 
 // Additional library
-#include "utils.h"
-#include "controls.h"
-#include "odeint/controlSystemInt.h"
+#include "../utils.h"
+#include "../controller/controls.h"
+#include "../odeint/controlSystemInt.h"
+#include "../types/types.h"
+#include "dynamicalSystem.h"
 
 using Eigen::VectorXd;
 using Eigen::MatrixXd;
@@ -33,7 +35,7 @@ using Eigen::MatrixXd;
  *
  * where \f$ t \f$ the time, \f$ x(t) \f$ is the state, and \f$ u(t) \f$ the control input.
  */
-class ControlSystem {
+class ControlSystem : public DynamicalSystem {
     public: 
         /* CONSTRUCTORS */
         ControlSystem(uint16_t , uint16_t ); 
@@ -50,13 +52,13 @@ class ControlSystem {
         void set_t1(double );
         void set_controls(const Controls * );
         void set_cntrl_system_integrator(const ControlSystemInt * ); 
-        void set_dynamics(std::function<VectorXd(double , VectorXd , Controls )> );
-        void set_dynamics_derivative_x(std::function<MatrixXd(double , VectorXd , Controls )> );
-        void set_dynamics_derivative_u(std::function<MatrixXd(double , VectorXd , Controls )> );
+        void set_dynamics(std::function<VectorXd(double , State_t , Controls )> );
+        void set_dynamics_derivative_x(std::function<MatrixXd(double , State_t , Controls )> );
+        void set_dynamics_derivative_u(std::function<MatrixXd(double , State_t , Controls )> );
 
         /* METHODS */
-        MatrixXd trajectory(); 
-        VectorXd inout();
+        Trajectory trajectory(); 
+        State_t inout();
 
         /* OPERATORS */
 
@@ -70,15 +72,14 @@ class ControlSystem {
 
         Controls * u; 
 
-        std::function<VectorXd(double , VectorXd , Controls )> F;
-        std::function<MatrixXd(double , VectorXd , Controls )> dFdX;
-        std::function<MatrixXd(double , VectorXd , Controls )> dFdU;
+        std::function<VectorXd(double , State_t , Controls )> F;
+        std::function<MatrixXd(double , State_t , Controls )> dFdX;
+        std::function<MatrixXd(double , State_t , Controls )> dFdU;
         
         ControlSystemInt * integrator; 
 
         /* PRIVATE METHODS */
-        VectorXd dynamics(double , VectorXd ) const; 
-
+        State_t dynamics(double , VectorXd ) const; 
 };
 
 #endif

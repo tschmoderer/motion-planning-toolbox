@@ -2,7 +2,7 @@
 * @file controltlbx.h
 * @author T. Schmoderer (iathena@mailo.com)
 * @version 0.0.3
-* @date 2022-10-20
+* @date 2022-10-21
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -13,9 +13,10 @@
 #define CNTRLTLBX_H
 
 #include "utils.h"
-#include "controls.h"
-#include "controlSystem.h"
+#include "controller/controls.h"
+#include "systems/controlSystem.h"
 #include "path/path.h"
+#include "common/outputHelper.h"
 
 /* VERSION MACROS */
 #define VERSION_MPP_TLBX "0.0.3"

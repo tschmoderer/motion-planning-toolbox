@@ -13,9 +13,10 @@
 #define CNTRLTLBX_H
 
 #include "utils.h"
-#include "controls.h"
-#include "controlSystem.h"
+#include "controller/controls.h"
+#include "systems/controlSystem.h"
 #include "path/path.h"
+#include "common/outputHelper.h"
 
 /* VERSION MACROS */
 #define VERSION_MPP_TLBX "@PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@"

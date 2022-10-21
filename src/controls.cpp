@@ -85,6 +85,24 @@ VectorXd Controls::get_control(uint8_t idx) const {
 /**
  * @brief 
  * 
+ * @return VectorXd 
+ */
+VectorXd Controls::get_time() const {
+    return this->time;
+}
+
+/**
+ * @brief 
+ * 
+ * @return MatrixXd 
+ */
+MatrixXd Controls::get_data() const {
+    return this->data;
+}
+
+/**
+ * @brief 
+ * 
  * @param t0 
  * @warning t0 should be less than object attribute t1
  * @warning Does not change data, hence the same data are now evaluated at the new interpolation points defined by the discretisation of the interval \f$[t_0,t_1]\$ into H pieces
@@ -395,7 +413,6 @@ Controls operator-(const Controls & lhs, const Controls & rhs) {
     return res;
 }
 
-
 /**
 * @brief Operator of division of a Controls object with a scalar.
 * 
@@ -410,18 +427,26 @@ Controls operator/(const Controls & lhs, const double d) {
     return (1./d) * lhs;
 }
 
-
+/**
+ * @brief Overload output operator for Controls object
+ * The output format of a trajectory is the following : 
+ * \f$t_0\f$ \f$u_1[0]\f$ ... \f$u_m[0]\f$
+ * ...
+ * \f$t_N\f$ \f$u_1[N]\f$ ... \f$u_m[N]\f$
+ * where \f$m\f$ is the number of controls and \f$N\f$ is the numer of time divisions
+ *
+ * @param os An output stream
+ * @param traj A Controls obect
+ * @return std::ostream& 
+ */
 std::ostream & operator<<(std::ostream & os, const Controls & cs) {
-    VectorXd cntrl;
-    for (int i = 0; i < cs.M; i++) {
-        cntrl = cs.get_control(i);
-
-        os << "Control : #" << i+1 << std::endl; 
-        for (int i = 0; i < cs.H; i++) {
-            os << cs.time(i) << "\t"; 
-            os << cntrl(i) << std::endl; 
-        }   
-        os << std::endl; 
+    assert(cs.time.size() == cs.data.rows());
+    for (int i = 0; i < cs.time.size(); i++) {
+        os << cs.time(i);
+        for (int j = 0; j < cs.data.cols(); j++) {
+            os << " " << cs.data(i,j);
+        }    
+        os << std::endl;
     }
     return os; 
 }

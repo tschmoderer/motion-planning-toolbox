@@ -1,9 +1,9 @@
 /**
-* @file trajectory.h
-* @author T. Schmoderer (iathena@mailo.com)
-* @version 0.0.3
-* @date 2022-10-20
-* @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
+* @file @CURFILENAME@
+* @author @AUTHOR@ (@AUTHOR_MAIL@)
+* @version @PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@
+* @date @TODAY@
+* @copyright Copyright (c) @YEAR@. All rights reserved. This project is released under the @LICENSE@.
 */
 /**
  * @brief Header file for Trajectory class
@@ -43,6 +43,8 @@ class Trajectory {
         ~Trajectory(); 
 
         /* ACCESSORS */
+        VectorXd get_time() const; 
+        MatrixXd get_data() const; 
         void set_interpolation_method(interpolation_method_t , extend_t , extend_t );
 
         /* METHODS */
@@ -55,7 +57,6 @@ class Trajectory {
         VectorXd time_;         /*!< Time Vector */
         MatrixXd data_;         /*!< Data Matrix */
         Interpolator1D interp_; /*!< Interpolation strategy */
-
 }; 
 
 #endif

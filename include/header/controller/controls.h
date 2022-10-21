@@ -2,7 +2,7 @@
 * @file controls.h
 * @author T. Schmoderer (iathena@mailo.com)
 * @version 0.0.3
-* @date 2022-10-20
+* @date 2022-10-21
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -12,9 +12,9 @@
 #ifndef CONTROLTLBX_CONTROLS_H
 #define CONTROLTLBX_CONTROLS_H
 
-#include "utils.h"
-#include "interpol/interpol.h"
-#include "integrator/integrator.h"
+#include "../utils.h"
+#include "../interpol/interpol.h"
+#include "../integrator/integrator.h"
 
 using Eigen::VectorXd;
 using Eigen::MatrixXd;
@@ -31,6 +31,8 @@ class Controls {
         /* ACCESSORS */
         uint8_t get_nb_cntrl() const;
         VectorXd get_control(uint8_t ) const; 
+        VectorXd get_time() const; 
+        MatrixXd get_data() const; 
 
         void set_t0(double ); 
         void set_t1(double ); 

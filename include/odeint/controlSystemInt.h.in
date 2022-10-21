@@ -16,7 +16,8 @@
 
 // Additional library
 #include "odeint.h"
-#include "../controls.h"
+#include "../controller/controls.h"
+#include "../types/types.h"
 
 class ControlSystemInt : ODEInt {
     public: 
@@ -28,7 +29,7 @@ class ControlSystemInt : ODEInt {
         ~ControlSystemInt(); 
 
         /* METHODS */
-        MatrixXd integrate(double , double , VectorXd , Controls , std::function<VectorXd(double, VectorXd , Controls )> ); 
+        Trajectory integrate(double , double , VectorXd , Controls , std::function<VectorXd(double, VectorXd , Controls )> ); 
 
     private: 
         /* ATTRIBUTES */

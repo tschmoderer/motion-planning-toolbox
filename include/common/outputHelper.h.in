@@ -1,0 +1,49 @@
+/**
+* @file @CURFILENAME@
+* @author @AUTHOR@ (@AUTHOR_MAIL@)
+* @version @PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@
+* @date @TODAY@
+* @copyright Copyright (c) @YEAR@. All rights reserved. This project is released under the @LICENSE@.
+*/
+/**
+ * @brief
+*/
+
+#ifndef CONTROLTLBX_OUTPUTHELPER_H
+#define CONTROLTLBX_OUTPUTHELPER_H
+
+#include <Eigen/Dense>
+#include "../controller/controls.h"
+#include "../types/trajectory.h"
+
+using Eigen::VectorXd;
+using Eigen::MatrixXd;
+
+/**
+ * @brief A class to standartize the output format of 
+ * - Controls
+ * - Trajectories
+ * @todo Add more object support
+ */
+class OutputHelper {
+    public: 
+        /* CONSTRUCTORS */
+        OutputHelper(const Controls & ); 
+        OutputHelper(const Trajectory & );
+
+        /* DESTRUCTOR */
+        ~OutputHelper();
+
+        /* ACCESSORS */
+        void format(Eigen::IOFormat ); 
+
+        /* OPERATORS */
+        friend std::ostream & operator<<(std::ostream & , const OutputHelper & );
+
+    private:
+        Eigen::IOFormat fmt = Eigen::IOFormat();
+        VectorXd time_;
+        MatrixXd data_;
+};
+
+#endif

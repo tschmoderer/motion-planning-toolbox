@@ -1,0 +1,20 @@
+/**
+* @file @CURFILENAME@
+* @author @AUTHOR@ (@AUTHOR_MAIL@)
+* @version @PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@
+* @date @TODAY@
+* @copyright Copyright (c) @YEAR@. All rights reserved. This project is released under the @LICENSE@.
+*/
+/**
+ * @brief 
+*/
+
+#ifndef CNTRLTLBX_STATE_H
+#define CNTRLTLBX_STATE_H
+
+// Libraries
+#include <Eigen/Dense>
+
+typedef Eigen::VectorXd State_t;
+
+#endif
