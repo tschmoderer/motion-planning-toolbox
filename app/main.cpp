@@ -1,10 +1,15 @@
 #include <cstdint>
 #include <iostream>
-
+#include <fstream>
+#include <string>
+#include <filesystem> 
+    
 #include "../include/header/controltlbx.h"
 
 using namespace std;
+namespace fs = std::filesystem;
 
+#define EXP_NB "0"
 #define STATE_DIM 3
 #define NB_CNTRL 2
 
@@ -72,7 +77,7 @@ int main(int argc, char **argv) {
     u.set_integration_method(integr_cntrl);
 
     u.set_cntrl(0, 1); 
-    u.set_cntrl(1, 1);
+    //u.set_cntrl(1, 1);
 
     sys.set_controls(&u); 
     sys.set_cntrl_system_integrator(integrator); 
@@ -86,6 +91,37 @@ int main(int argc, char **argv) {
 
     VectorXd XX0 = sys.inout();
     cout << "Error norm on first shot: " << (XX1-XX0).norm() << endl;
+
+    // Output
+    string dir = argv[0];
+    size_t pos = dir.find_last_of('/');
+    dir = dir.substr(0, pos);
+
+    string out_dir = dir;
+
+    if (!fs::is_directory(out_dir) || !fs::exists(out_dir)) { 
+        fs::create_directory(out_dir); 
+    }
+
+    out_dir +=  "/results";
+    if (!fs::is_directory(out_dir) || !fs::exists(out_dir)) { 
+        fs::create_directory(out_dir); 
+    }
+
+    out_dir = out_dir + "/exp_" + EXP_NB;
+    if (!fs::is_directory(out_dir) || !fs::exists(out_dir)) { 
+        fs::create_directory(out_dir); 
+    }
+
+    const static Eigen::IOFormat CSVFormat(Eigen::FullPrecision, Eigen::DontAlignCols, ",", "\n");
+    ofstream myfile;
+    myfile.open(out_dir + "/trajectory.dat");
+    myfile << sys.trajectory().format(CSVFormat);
+    myfile.close();
+
+    myfile.open(out_dir + "/control.dat");
+   // myfile << (*u).format(CSVFormat);
+    myfile.close();
 
     // Define path 
     Path pi(XX0, XX1); 
