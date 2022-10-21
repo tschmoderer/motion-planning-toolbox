@@ -11,11 +11,6 @@
 
 A C++ toolbox for the computation of trajectories of control systems.
 
-# Improvements
-* In *linalg* library use inheritance of class to avoid unecessary code ;
-  * For the moment I do not know how to properly use polymorphism with operators.
-* In *linalg* library bind with a BLAS implementation ;
-
 # Install & Building
 
 ## Requierement 
