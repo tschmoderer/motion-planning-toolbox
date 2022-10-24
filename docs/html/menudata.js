@@ -104,8 +104,10 @@ var menudata={children:[
 {text:"m",url:"globals.html#index_m"},
 {text:"o",url:"globals.html#index_o"},
 {text:"r",url:"globals.html#index_r"},
+{text:"s",url:"globals.html#index_s"},
 {text:"v",url:"globals.html#index_v"}]},
 {text:"Functions",url:"globals_func.html"},
+{text:"Typedefs",url:"globals_type.html"},
 {text:"Enumerations",url:"globals_enum.html"},
 {text:"Enumerator",url:"globals_eval.html"},
 {text:"Macros",url:"globals_defs.html"}]}]}]}

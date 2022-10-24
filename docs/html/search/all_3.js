@@ -11,5 +11,9 @@ var searchData=
   ['documentation_5fmpp_5ftlbx_42',['DOCUMENTATION_MPP_TLBX',['../controltlbx_8h.html#ae99cad39010956165e7620a3248f6d87',1,'controltlbx.h']]],
   ['doglegmethod_43',['DoglegMethod',['../structlsqcpp_1_1_dogleg_method.html',1,'lsqcpp']]],
   ['doglegmethodparameter_44',['DoglegMethodParameter',['../classlsqcpp_1_1_dogleg_method_parameter.html#a115a2d60979fae333c0040acd5e1eb69',1,'lsqcpp::DoglegMethodParameter::DoglegMethodParameter()=default'],['../classlsqcpp_1_1_dogleg_method_parameter.html#a1668d5ff0369e9c4bd6523ffe7401389',1,'lsqcpp::DoglegMethodParameter::DoglegMethodParameter(const Scalar initRadius, const Scalar maxRadius, const Scalar radiusEps, const Scalar acceptFitness, const Index iterations)'],['../classlsqcpp_1_1_dogleg_method_parameter.html',1,'lsqcpp::DoglegMethodParameter&lt; _Scalar &gt;']]],
-  ['dot_5fprod_5fl2_45',['dot_prod_l2',['../class_controls.html#a24e8da253ff9573bd087aa7c87abc53f',1,'Controls']]]
+  ['dot_5fprod_5fl2_45',['dot_prod_l2',['../class_controls.html#a24e8da253ff9573bd087aa7c87abc53f',1,'Controls']]],
+  ['dynamic_5ffunc_46',['dynamic_func',['../class_dynamical_system.html#a903ef1d5dfc4480016591179d83f6b18',1,'DynamicalSystem']]],
+  ['dynamic_5ffunc_5fderivative_47',['dynamic_func_derivative',['../class_dynamical_system.html#a04d4f46627ec434137d14bec20102c5d',1,'DynamicalSystem']]],
+  ['dynamicalsystem_48',['DynamicalSystem',['../class_dynamical_system.html#a79b53a55e5b37ed1bc158af747e17961',1,'DynamicalSystem::DynamicalSystem(uint16_t)'],['../class_dynamical_system.html#aef4e7edd080a45efc2ed1cbcabbaf583',1,'DynamicalSystem::DynamicalSystem(uint16_t, double, double, State_t)'],['../class_dynamical_system.html',1,'DynamicalSystem']]],
+  ['dynamicalsystem_2eh_49',['dynamicalSystem.h',['../dynamical_system_8h.html',1,'']]]
 ];

@@ -7,7 +7,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=9" />
    <meta name="generator" content="Doxygen 1.9.1" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title>CPP Motion Planning ToolBox: include/header/controlSystem.h Source File</title>
+   <title>CPP Motion Planning ToolBox: include/header/systems/controlSystem.h Source File</title>
    <link href="tabs.css" rel="stylesheet" type="text/css" />
    <link rel="shortcut icon" href="rocket-bw.ico" type="image/x-icon" />
    <script type="text/javascript" src="jquery.js"></script>
@@ -111,79 +111,81 @@ $(document).ready(function(){initNavTree('control_system_8h_source.html',''); in
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Macros definitions</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Additional library</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html">utils.h</a>&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="controls_8h.html">controls.h</a>&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="control_system_int_8h.html">odeint/controlSystemInt.h</a>&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">using</span> Eigen::VectorXd;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using</span> Eigen::MatrixXd;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_control_system.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_control_system.html">ControlSystem</a> {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">public</span>: </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">/* CONSTRUCTORS */</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_control_system.html#a469071d66e8aae5cd2d871c459dff365">ControlSystem</a>(uint16_t , uint16_t ); </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_control_system.html#a469071d66e8aae5cd2d871c459dff365">ControlSystem</a>(uint16_t , uint16_t , <span class="keywordtype">double</span> , <span class="keywordtype">double</span> , VectorXd ); </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">/* DESTRUCTORS */</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="class_control_system.html#a449890897411186d4f245a79e8f2d016">~ControlSystem</a>(); </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">/* ACCESSORS */</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        VectorXd <a class="code" href="class_control_system.html#a48dfbf2b1b5ced18ecab68f9091d5532">get_dynamics</a>(<span class="keywordtype">double</span> , VectorXd ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#a09bf57e57e03101d128f31b870edc678">set_x0</a>(VectorXd ); </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#ac4edd7b729f415983f893b5df06629be">set_t0</a>(<span class="keywordtype">double</span> ); </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#abe9267bce557b807aedfaf942f11bc2b">set_t1</a>(<span class="keywordtype">double</span> );</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#a17d3f21bff441bba22af19ed6055c9fd">set_controls</a>(<span class="keyword">const</span> <a class="code" href="class_controls.html">Controls</a> * );</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#adc833b2f8b89d245141aef10082ced0d">set_cntrl_system_integrator</a>(<span class="keyword">const</span> <a class="code" href="class_control_system_int.html">ControlSystemInt</a> * ); </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#af4baf8e6dc26226e609238f919f3c219">set_dynamics</a>(std::function&lt;VectorXd(<span class="keywordtype">double</span> , VectorXd , <a class="code" href="class_controls.html">Controls</a> )&gt; );</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#a5d6f07bd6e6edf8d869d1c39dd7c6798">set_dynamics_derivative_x</a>(std::function&lt;MatrixXd(<span class="keywordtype">double</span> , VectorXd , <a class="code" href="class_controls.html">Controls</a> )&gt; );</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#a70311f643c3aab5ef552ca8bb6e68bda">set_dynamics_derivative_u</a>(std::function&lt;MatrixXd(<span class="keywordtype">double</span> , VectorXd , <a class="code" href="class_controls.html">Controls</a> )&gt; );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">/* METHODS */</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        MatrixXd <a class="code" href="class_control_system.html#a7bc6ac651aaa626395f050ec8e342550">trajectory</a>(); </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        VectorXd <a class="code" href="class_control_system.html#a67d52f332eb923d8530f24f1ab2ed2f5">inout</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">/* OPERATORS */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../utils.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../controller/controls.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;../odeint/controlSystemInt.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;../types/types.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dynamical_system_8h.html">dynamicalSystem.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using</span> Eigen::VectorXd;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using</span> Eigen::MatrixXd;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_control_system.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_control_system.html">ControlSystem</a> : <span class="keyword">public</span> <a class="code" href="class_dynamical_system.html">DynamicalSystem</a> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span>: </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">/* CONSTRUCTORS */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="class_control_system.html#a469071d66e8aae5cd2d871c459dff365">ControlSystem</a>(uint16_t , uint16_t ); </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="class_control_system.html#a469071d66e8aae5cd2d871c459dff365">ControlSystem</a>(uint16_t , uint16_t , <span class="keywordtype">double</span> , <span class="keywordtype">double</span> , VectorXd ); </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">/* DESTRUCTORS */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="class_control_system.html#a449890897411186d4f245a79e8f2d016">~ControlSystem</a>(); </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">/* ACCESSORS */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        VectorXd <a class="code" href="class_control_system.html#a48dfbf2b1b5ced18ecab68f9091d5532">get_dynamics</a>(<span class="keywordtype">double</span> , VectorXd ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#a09bf57e57e03101d128f31b870edc678">set_x0</a>(VectorXd ); </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#ac4edd7b729f415983f893b5df06629be">set_t0</a>(<span class="keywordtype">double</span> ); </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#abe9267bce557b807aedfaf942f11bc2b">set_t1</a>(<span class="keywordtype">double</span> );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#a17d3f21bff441bba22af19ed6055c9fd">set_controls</a>(<span class="keyword">const</span> <a class="code" href="class_controls.html">Controls</a> * );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#adc833b2f8b89d245141aef10082ced0d">set_cntrl_system_integrator</a>(<span class="keyword">const</span> <a class="code" href="class_control_system_int.html">ControlSystemInt</a> * ); </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#afb512bccf29e0b7649407f3cad42fa63">set_dynamics</a>(std::function&lt;VectorXd(<span class="keywordtype">double</span> , <a class="code" href="state_8h.html#a6b37cb371bd30967f4c20f0d254ac7bd">State_t</a> , <a class="code" href="class_controls.html">Controls</a> )&gt; );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#a77053176d37cec713ade64c64442ef6d">set_dynamics_derivative_x</a>(std::function&lt;MatrixXd(<span class="keywordtype">double</span> , <a class="code" href="state_8h.html#a6b37cb371bd30967f4c20f0d254ac7bd">State_t</a> , <a class="code" href="class_controls.html">Controls</a> )&gt; );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_control_system.html#a0a40eeb40bfcb1fbbae1f0fa9b28a103">set_dynamics_derivative_u</a>(std::function&lt;MatrixXd(<span class="keywordtype">double</span> , <a class="code" href="state_8h.html#a6b37cb371bd30967f4c20f0d254ac7bd">State_t</a> , <a class="code" href="class_controls.html">Controls</a> )&gt; );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">/* METHODS */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="class_trajectory.html">Trajectory</a> <a class="code" href="class_control_system.html#a6b928ae5be34412779604a90c066adb7">trajectory</a>(); </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="state_8h.html#a6b37cb371bd30967f4c20f0d254ac7bd">State_t</a> <a class="code" href="class_control_system.html#a289df8acecc00eede0bea688168bda25">inout</a>();</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">private</span>: </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        uint16_t N; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        uint16_t M; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        VectorXd x0; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">double</span> t0;   </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">double</span> t1;   </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="class_controls.html">Controls</a> * u; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        std::function&lt;VectorXd(<span class="keywordtype">double</span> , VectorXd , <a class="code" href="class_controls.html">Controls</a> )&gt; F;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        std::function&lt;MatrixXd(<span class="keywordtype">double</span> , VectorXd , <a class="code" href="class_controls.html">Controls</a> )&gt; dFdX;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::function&lt;MatrixXd(<span class="keywordtype">double</span> , VectorXd , <a class="code" href="class_controls.html">Controls</a> )&gt; dFdU;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="class_control_system_int.html">ControlSystemInt</a> * integrator; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">/* PRIVATE METHODS */</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        VectorXd dynamics(<span class="keywordtype">double</span> , VectorXd ) <span class="keyword">const</span>; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_control_system_html"><div class="ttname"><a href="class_control_system.html">ControlSystem</a></div><div class="ttdoc">This describes a general, non-linear dynamic system described by an Ordinary Differential Equation (O...</div><div class="ttdef"><b>Definition:</b> controlSystem.h:36</div></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">/* OPERATORS */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">private</span>: </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        uint16_t N; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        uint16_t M; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        VectorXd x0; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">double</span> t0;   </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">double</span> t1;   </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="class_controls.html">Controls</a> * u; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::function&lt;VectorXd(<span class="keywordtype">double</span> , <a class="code" href="state_8h.html#a6b37cb371bd30967f4c20f0d254ac7bd">State_t</a> , <a class="code" href="class_controls.html">Controls</a> )&gt; F;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::function&lt;MatrixXd(<span class="keywordtype">double</span> , <a class="code" href="state_8h.html#a6b37cb371bd30967f4c20f0d254ac7bd">State_t</a> , <a class="code" href="class_controls.html">Controls</a> )&gt; dFdX;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        std::function&lt;MatrixXd(<span class="keywordtype">double</span> , <a class="code" href="state_8h.html#a6b37cb371bd30967f4c20f0d254ac7bd">State_t</a> , <a class="code" href="class_controls.html">Controls</a> )&gt; dFdU;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="class_control_system_int.html">ControlSystemInt</a> * integrator; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">/* PRIVATE METHODS */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="state_8h.html#a6b37cb371bd30967f4c20f0d254ac7bd">State_t</a> dynamics(<span class="keywordtype">double</span> , VectorXd ) <span class="keyword">const</span>; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_control_system_html"><div class="ttname"><a href="class_control_system.html">ControlSystem</a></div><div class="ttdoc">This describes a general, non-linear dynamic system described by an Ordinary Differential Equation (O...</div><div class="ttdef"><b>Definition:</b> controlSystem.h:38</div></div>
 <div class="ttc" id="aclass_control_system_html_a09bf57e57e03101d128f31b870edc678"><div class="ttname"><a href="class_control_system.html#a09bf57e57e03101d128f31b870edc678">ControlSystem::set_x0</a></div><div class="ttdeci">void set_x0(VectorXd)</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:43</div></div>
+<div class="ttc" id="aclass_control_system_html_a0a40eeb40bfcb1fbbae1f0fa9b28a103"><div class="ttname"><a href="class_control_system.html#a0a40eeb40bfcb1fbbae1f0fa9b28a103">ControlSystem::set_dynamics_derivative_u</a></div><div class="ttdeci">void set_dynamics_derivative_u(std::function&lt; MatrixXd(double, State_t, Controls)&gt;)</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:81</div></div>
 <div class="ttc" id="aclass_control_system_html_a17d3f21bff441bba22af19ed6055c9fd"><div class="ttname"><a href="class_control_system.html#a17d3f21bff441bba22af19ed6055c9fd">ControlSystem::set_controls</a></div><div class="ttdeci">void set_controls(const Controls *)</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:58</div></div>
+<div class="ttc" id="aclass_control_system_html_a289df8acecc00eede0bea688168bda25"><div class="ttname"><a href="class_control_system.html#a289df8acecc00eede0bea688168bda25">ControlSystem::inout</a></div><div class="ttdeci">State_t inout()</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:91</div></div>
 <div class="ttc" id="aclass_control_system_html_a449890897411186d4f245a79e8f2d016"><div class="ttname"><a href="class_control_system.html#a449890897411186d4f245a79e8f2d016">ControlSystem::~ControlSystem</a></div><div class="ttdeci">~ControlSystem()</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:29</div></div>
 <div class="ttc" id="aclass_control_system_html_a469071d66e8aae5cd2d871c459dff365"><div class="ttname"><a href="class_control_system.html#a469071d66e8aae5cd2d871c459dff365">ControlSystem::ControlSystem</a></div><div class="ttdeci">ControlSystem(uint16_t, uint16_t)</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:4</div></div>
 <div class="ttc" id="aclass_control_system_html_a48dfbf2b1b5ced18ecab68f9091d5532"><div class="ttname"><a href="class_control_system.html#a48dfbf2b1b5ced18ecab68f9091d5532">ControlSystem::get_dynamics</a></div><div class="ttdeci">VectorXd get_dynamics(double, VectorXd) const</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:39</div></div>
-<div class="ttc" id="aclass_control_system_html_a5d6f07bd6e6edf8d869d1c39dd7c6798"><div class="ttname"><a href="class_control_system.html#a5d6f07bd6e6edf8d869d1c39dd7c6798">ControlSystem::set_dynamics_derivative_x</a></div><div class="ttdeci">void set_dynamics_derivative_x(std::function&lt; MatrixXd(double, VectorXd, Controls)&gt;)</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:77</div></div>
-<div class="ttc" id="aclass_control_system_html_a67d52f332eb923d8530f24f1ab2ed2f5"><div class="ttname"><a href="class_control_system.html#a67d52f332eb923d8530f24f1ab2ed2f5">ControlSystem::inout</a></div><div class="ttdeci">VectorXd inout()</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:91</div></div>
-<div class="ttc" id="aclass_control_system_html_a70311f643c3aab5ef552ca8bb6e68bda"><div class="ttname"><a href="class_control_system.html#a70311f643c3aab5ef552ca8bb6e68bda">ControlSystem::set_dynamics_derivative_u</a></div><div class="ttdeci">void set_dynamics_derivative_u(std::function&lt; MatrixXd(double, VectorXd, Controls)&gt;)</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:81</div></div>
-<div class="ttc" id="aclass_control_system_html_a7bc6ac651aaa626395f050ec8e342550"><div class="ttname"><a href="class_control_system.html#a7bc6ac651aaa626395f050ec8e342550">ControlSystem::trajectory</a></div><div class="ttdeci">MatrixXd trajectory()</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:87</div></div>
+<div class="ttc" id="aclass_control_system_html_a6b928ae5be34412779604a90c066adb7"><div class="ttname"><a href="class_control_system.html#a6b928ae5be34412779604a90c066adb7">ControlSystem::trajectory</a></div><div class="ttdeci">Trajectory trajectory()</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:87</div></div>
+<div class="ttc" id="aclass_control_system_html_a77053176d37cec713ade64c64442ef6d"><div class="ttname"><a href="class_control_system.html#a77053176d37cec713ade64c64442ef6d">ControlSystem::set_dynamics_derivative_x</a></div><div class="ttdeci">void set_dynamics_derivative_x(std::function&lt; MatrixXd(double, State_t, Controls)&gt;)</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:77</div></div>
 <div class="ttc" id="aclass_control_system_html_abe9267bce557b807aedfaf942f11bc2b"><div class="ttname"><a href="class_control_system.html#abe9267bce557b807aedfaf942f11bc2b">ControlSystem::set_t1</a></div><div class="ttdeci">void set_t1(double)</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:53</div></div>
 <div class="ttc" id="aclass_control_system_html_ac4edd7b729f415983f893b5df06629be"><div class="ttname"><a href="class_control_system.html#ac4edd7b729f415983f893b5df06629be">ControlSystem::set_t0</a></div><div class="ttdeci">void set_t0(double)</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:48</div></div>
 <div class="ttc" id="aclass_control_system_html_adc833b2f8b89d245141aef10082ced0d"><div class="ttname"><a href="class_control_system.html#adc833b2f8b89d245141aef10082ced0d">ControlSystem::set_cntrl_system_integrator</a></div><div class="ttdeci">void set_cntrl_system_integrator(const ControlSystemInt *)</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:66</div></div>
-<div class="ttc" id="aclass_control_system_html_af4baf8e6dc26226e609238f919f3c219"><div class="ttname"><a href="class_control_system.html#af4baf8e6dc26226e609238f919f3c219">ControlSystem::set_dynamics</a></div><div class="ttdeci">void set_dynamics(std::function&lt; VectorXd(double, VectorXd, Controls)&gt;)</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:73</div></div>
-<div class="ttc" id="aclass_control_system_int_html"><div class="ttname"><a href="class_control_system_int.html">ControlSystemInt</a></div><div class="ttdef"><b>Definition:</b> controlSystemInt.h:21</div></div>
+<div class="ttc" id="aclass_control_system_html_afb512bccf29e0b7649407f3cad42fa63"><div class="ttname"><a href="class_control_system.html#afb512bccf29e0b7649407f3cad42fa63">ControlSystem::set_dynamics</a></div><div class="ttdeci">void set_dynamics(std::function&lt; VectorXd(double, State_t, Controls)&gt;)</div><div class="ttdef"><b>Definition:</b> controlSystem.cpp:73</div></div>
+<div class="ttc" id="aclass_control_system_int_html"><div class="ttname"><a href="class_control_system_int.html">ControlSystemInt</a></div><div class="ttdef"><b>Definition:</b> controlSystemInt.h:22</div></div>
 <div class="ttc" id="aclass_controls_html"><div class="ttname"><a href="class_controls.html">Controls</a></div><div class="ttdef"><b>Definition:</b> controls.h:22</div></div>
-<div class="ttc" id="acontrol_system_int_8h_html"><div class="ttname"><a href="control_system_int_8h.html">controlSystemInt.h</a></div></div>
-<div class="ttc" id="acontrols_8h_html"><div class="ttname"><a href="controls_8h.html">controls.h</a></div></div>
-<div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
+<div class="ttc" id="aclass_dynamical_system_html"><div class="ttname"><a href="class_dynamical_system.html">DynamicalSystem</a></div><div class="ttdoc">A class describig an integrator of ODE.</div><div class="ttdef"><b>Definition:</b> dynamicalSystem.h:17</div></div>
+<div class="ttc" id="aclass_trajectory_html"><div class="ttname"><a href="class_trajectory.html">Trajectory</a></div><div class="ttdoc">This implements a trajectory based on discrete data points which can be evenly or unevenly distribute...</div><div class="ttdef"><b>Definition:</b> trajectory.h:35</div></div>
+<div class="ttc" id="adynamical_system_8h_html"><div class="ttname"><a href="dynamical_system_8h.html">dynamicalSystem.h</a></div></div>
+<div class="ttc" id="astate_8h_html_a6b37cb371bd30967f4c20f0d254ac7bd"><div class="ttname"><a href="state_8h.html#a6b37cb371bd30967f4c20f0d254ac7bd">State_t</a></div><div class="ttdeci">Eigen::VectorXd State_t</div><div class="ttdef"><b>Definition:</b> state.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -195,7 +197,7 @@ $(document).ready(function(){initNavTree('control_system_8h_source.html',''); in
       aria-hidden="true"></i> Email</a></li>
     <li><a href="https://github.com/tschmoderer/cpp-linear-algebra-toolbox" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i>
     Github</a></li>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_22759b2357b28df387ac7f15bd61889c.html">header</a></li><li class="navelem"><a class="el" href="control_system_8h.html">controlSystem.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_22759b2357b28df387ac7f15bd61889c.html">header</a></li><li class="navelem"><a class="el" href="dir_9a00c9733bacd43e3532d8308b793b8c.html">systems</a></li><li class="navelem"><a class="el" href="control_system_8h.html">controlSystem.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer"
           src="doxygen.svg" width="104" height="31" alt="doxygen" /></a> 1.9.1 </li>
   </ul>

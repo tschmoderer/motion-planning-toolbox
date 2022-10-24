@@ -9,11 +9,13 @@ var hierarchy =
     [ "lsqcpp::ConstantStepFactor", "structlsqcpp_1_1_constant_step_factor.html", null ],
     [ "lsqcpp::ConstantStepFactorParameter< _Scalar >", "classlsqcpp_1_1_constant_step_factor_parameter.html", null ],
     [ "Controls", "class_controls.html", null ],
-    [ "ControlSystem", "class_control_system.html", null ],
     [ "lsqcpp::DenseCholeskySolver", "structlsqcpp_1_1_dense_cholesky_solver.html", null ],
     [ "lsqcpp::DenseSVDSolver", "structlsqcpp_1_1_dense_s_v_d_solver.html", null ],
     [ "lsqcpp::DoglegMethod", "structlsqcpp_1_1_dogleg_method.html", null ],
     [ "lsqcpp::DoglegMethodParameter< _Scalar >", "classlsqcpp_1_1_dogleg_method_parameter.html", null ],
+    [ "DynamicalSystem", "class_dynamical_system.html", [
+      [ "ControlSystem", "class_control_system.html", null ]
+    ] ],
     [ "lsqcpp::FiniteDifferencesParameter< _Scalar >", "structlsqcpp_1_1_finite_differences_parameter.html", null ],
     [ "lsqcpp::FiniteDifferencesParameter< Scalar >", "structlsqcpp_1_1_finite_differences_parameter.html", null ],
     [ "lsqcpp::ForwardDifferences", "structlsqcpp_1_1_forward_differences.html", null ],
@@ -43,6 +45,7 @@ var hierarchy =
     [ "ODEInt", "class_o_d_e_int.html", [
       [ "ControlSystemInt", "class_control_system_int.html", null ]
     ] ],
+    [ "OutputHelper", "class_output_helper.html", null ],
     [ "Path", "class_path.html", null ],
     [ "lsqcpp::LeastSquaresAlgorithm< _Scalar, _Inputs, _Outputs, _Objective, _StepMethod, _RefineMethod, _FiniteDifferencesMethod >::Result", "structlsqcpp_1_1_least_squares_algorithm_1_1_result.html", null ],
     [ "Trajectory", "class_trajectory.html", null ],

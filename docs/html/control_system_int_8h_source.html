@@ -112,38 +112,40 @@ $(document).ready(function(){initNavTree('control_system_int_8h_source.html','')
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Additional library</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="odeint_8h.html">odeint.h</a>&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../controls.h&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_control_system_int.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_control_system_int.html">ControlSystemInt</a> : <a class="code" href="class_o_d_e_int.html">ODEInt</a> {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>: </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">/* CONSTRUCTORS */</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_control_system_int.html#a4f46e08ded04c4f429e3525590085f25">ControlSystemInt</a>(<a class="code" href="odeint_8h.html#a0fad15a5c60ef70745faa8780c8f4112">odeint_method_t</a> , uint16_t ); </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_control_system_int.html#a4f46e08ded04c4f429e3525590085f25">ControlSystemInt</a>(<span class="keyword">const</span> <a class="code" href="class_control_system_int.html">ControlSystemInt</a> &amp; ); </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">/* DESTRUCTORS */</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="class_control_system_int.html#aa18dfe3a8c70e05d3c514b0e9e0795d5">~ControlSystemInt</a>(); </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">/* METHODS */</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        MatrixXd <a class="code" href="class_control_system_int.html#ad5cfdb25b5ce5f3d97048bd1ba039b26">integrate</a>(<span class="keywordtype">double</span> , <span class="keywordtype">double</span> , VectorXd , <a class="code" href="class_controls.html">Controls</a> , std::function&lt;VectorXd(<span class="keywordtype">double</span>, VectorXd , <a class="code" href="class_controls.html">Controls</a> )&gt; ); </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">private</span>: </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">/* ATTRIBUTES */</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">/* PRIVATE METHODS */</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        MatrixXd rk1(VectorXd , VectorXd , <a class="code" href="class_controls.html">Controls</a> , std::function&lt;VectorXd(<span class="keywordtype">double</span>, VectorXd , <a class="code" href="class_controls.html">Controls</a> )&gt; ); </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        MatrixXd rk4(VectorXd , VectorXd , <a class="code" href="class_controls.html">Controls</a> , std::function&lt;VectorXd(<span class="keywordtype">double</span>, VectorXd , <a class="code" href="class_controls.html">Controls</a> )&gt; ); </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_control_system_int_html"><div class="ttname"><a href="class_control_system_int.html">ControlSystemInt</a></div><div class="ttdef"><b>Definition:</b> controlSystemInt.h:21</div></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../controller/controls.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;../types/types.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_control_system_int.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_control_system_int.html">ControlSystemInt</a> : <a class="code" href="class_o_d_e_int.html">ODEInt</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span>: </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">/* CONSTRUCTORS */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_control_system_int.html#a4f46e08ded04c4f429e3525590085f25">ControlSystemInt</a>(<a class="code" href="odeint_8h.html#a0fad15a5c60ef70745faa8780c8f4112">odeint_method_t</a> , uint16_t ); </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_control_system_int.html#a4f46e08ded04c4f429e3525590085f25">ControlSystemInt</a>(<span class="keyword">const</span> <a class="code" href="class_control_system_int.html">ControlSystemInt</a> &amp; ); </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">/* DESTRUCTORS */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="class_control_system_int.html#aa18dfe3a8c70e05d3c514b0e9e0795d5">~ControlSystemInt</a>(); </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment">/* METHODS */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="class_trajectory.html">Trajectory</a> <a class="code" href="class_control_system_int.html#ac7c51f812f32a62d7d832bf251a13528">integrate</a>(<span class="keywordtype">double</span> , <span class="keywordtype">double</span> , VectorXd , <a class="code" href="class_controls.html">Controls</a> , std::function&lt;VectorXd(<span class="keywordtype">double</span>, VectorXd , <a class="code" href="class_controls.html">Controls</a> )&gt; ); </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">private</span>: </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">/* ATTRIBUTES */</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">/* PRIVATE METHODS */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        MatrixXd rk1(VectorXd , VectorXd , <a class="code" href="class_controls.html">Controls</a> , std::function&lt;VectorXd(<span class="keywordtype">double</span>, VectorXd , <a class="code" href="class_controls.html">Controls</a> )&gt; ); </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        MatrixXd rk4(VectorXd , VectorXd , <a class="code" href="class_controls.html">Controls</a> , std::function&lt;VectorXd(<span class="keywordtype">double</span>, VectorXd , <a class="code" href="class_controls.html">Controls</a> )&gt; ); </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_control_system_int_html"><div class="ttname"><a href="class_control_system_int.html">ControlSystemInt</a></div><div class="ttdef"><b>Definition:</b> controlSystemInt.h:22</div></div>
 <div class="ttc" id="aclass_control_system_int_html_a4f46e08ded04c4f429e3525590085f25"><div class="ttname"><a href="class_control_system_int.html#a4f46e08ded04c4f429e3525590085f25">ControlSystemInt::ControlSystemInt</a></div><div class="ttdeci">ControlSystemInt(odeint_method_t, uint16_t)</div><div class="ttdef"><b>Definition:</b> controlSystemInt.cpp:4</div></div>
 <div class="ttc" id="aclass_control_system_int_html_aa18dfe3a8c70e05d3c514b0e9e0795d5"><div class="ttname"><a href="class_control_system_int.html#aa18dfe3a8c70e05d3c514b0e9e0795d5">ControlSystemInt::~ControlSystemInt</a></div><div class="ttdeci">~ControlSystemInt()</div><div class="ttdef"><b>Definition:</b> controlSystemInt.cpp:9</div></div>
-<div class="ttc" id="aclass_control_system_int_html_ad5cfdb25b5ce5f3d97048bd1ba039b26"><div class="ttname"><a href="class_control_system_int.html#ad5cfdb25b5ce5f3d97048bd1ba039b26">ControlSystemInt::integrate</a></div><div class="ttdeci">MatrixXd integrate(double, double, VectorXd, Controls, std::function&lt; VectorXd(double, VectorXd, Controls)&gt;)</div><div class="ttdef"><b>Definition:</b> controlSystemInt.cpp:12</div></div>
+<div class="ttc" id="aclass_control_system_int_html_ac7c51f812f32a62d7d832bf251a13528"><div class="ttname"><a href="class_control_system_int.html#ac7c51f812f32a62d7d832bf251a13528">ControlSystemInt::integrate</a></div><div class="ttdeci">Trajectory integrate(double, double, VectorXd, Controls, std::function&lt; VectorXd(double, VectorXd, Controls)&gt;)</div><div class="ttdef"><b>Definition:</b> controlSystemInt.cpp:12</div></div>
 <div class="ttc" id="aclass_controls_html"><div class="ttname"><a href="class_controls.html">Controls</a></div><div class="ttdef"><b>Definition:</b> controls.h:22</div></div>
-<div class="ttc" id="aclass_o_d_e_int_html"><div class="ttname"><a href="class_o_d_e_int.html">ODEInt</a></div><div class="ttdef"><b>Definition:</b> odeint.h:30</div></div>
+<div class="ttc" id="aclass_o_d_e_int_html"><div class="ttname"><a href="class_o_d_e_int.html">ODEInt</a></div><div class="ttdoc">A class describing an intergator of an ordinary differential equation of the form.</div><div class="ttdef"><b>Definition:</b> odeint.h:37</div></div>
+<div class="ttc" id="aclass_trajectory_html"><div class="ttname"><a href="class_trajectory.html">Trajectory</a></div><div class="ttdoc">This implements a trajectory based on discrete data points which can be evenly or unevenly distribute...</div><div class="ttdef"><b>Definition:</b> trajectory.h:35</div></div>
 <div class="ttc" id="aodeint_8h_html"><div class="ttname"><a href="odeint_8h.html">odeint.h</a></div></div>
-<div class="ttc" id="aodeint_8h_html_a0fad15a5c60ef70745faa8780c8f4112"><div class="ttname"><a href="odeint_8h.html#a0fad15a5c60ef70745faa8780c8f4112">odeint_method_t</a></div><div class="ttdeci">odeint_method_t</div><div class="ttdef"><b>Definition:</b> odeint.h:25</div></div>
+<div class="ttc" id="aodeint_8h_html_a0fad15a5c60ef70745faa8780c8f4112"><div class="ttname"><a href="odeint_8h.html#a0fad15a5c60ef70745faa8780c8f4112">odeint_method_t</a></div><div class="ttdeci">odeint_method_t</div><div class="ttdef"><b>Definition:</b> odeint.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

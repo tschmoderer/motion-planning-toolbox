@@ -7,7 +7,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=9" />
    <meta name="generator" content="Doxygen 1.9.1" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title>CPP Motion Planning ToolBox: include/header/controlSystem.h File Reference</title>
+   <title>CPP Motion Planning ToolBox: include/header/systems/controlSystem.h File Reference</title>
    <link href="tabs.css" rel="stylesheet" type="text/css" />
    <link rel="shortcut icon" href="rocket-bw.ico" type="image/x-icon" />
    <script type="text/javascript" src="jquery.js"></script>
@@ -106,42 +106,48 @@ $(document).ready(function(){initNavTree('control_system_8h.html',''); initResiz
 <div class="title">controlSystem.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="controls_8h_source.html">controls.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="control_system_int_8h_source.html">odeint/controlSystemInt.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">../utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="controls_8h_source.html">../controller/controls.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="control_system_int_8h_source.html">../odeint/controlSystemInt.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">../types/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dynamical_system_8h_source.html">dynamicalSystem.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for controlSystem.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="control_system_8h__incl.png" border="0" usemap="#ainclude_2header_2control_system_8h" alt=""/></div>
-<map name="ainclude_2header_2control_system_8h" id="ainclude_2header_2control_system_8h">
-<area shape="rect" title=" " alt="" coords="25,5,253,32"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="111,453,174,480"/>
-<area shape="rect" href="controls_8h.html" title=" " alt="" coords="213,155,299,181"/>
-<area shape="rect" href="control_system_int_8h.html" title=" " alt="" coords="43,80,234,107"/>
-<area shape="rect" title=" " alt="" coords="15,528,84,555"/>
-<area shape="rect" title=" " alt="" coords="108,528,175,555"/>
-<area shape="rect" title=" " alt="" coords="199,528,302,555"/>
-<area shape="rect" href="interpol_8h.html" title=" " alt="" coords="363,229,501,256"/>
-<area shape="rect" href="integrator_8h.html" title=" " alt="" coords="173,229,339,256"/>
-<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="353,304,479,331"/>
-<area shape="rect" href="interpolator_8h.html" title=" " alt="" coords="333,379,443,405"/>
-<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="329,453,391,480"/>
-<area shape="rect" title=" " alt="" coords="326,528,394,555"/>
-<area shape="rect" title=" " alt="" coords="419,528,499,555"/>
-<area shape="rect" title=" " alt="" coords="523,528,594,555"/>
-<area shape="rect" href="integrator1d_8h.html" title=" " alt="" coords="199,304,313,331"/>
-<area shape="rect" href="integrator_2utils_8h.html" title=" " alt="" coords="225,453,287,480"/>
-<area shape="rect" href="odeint_8h.html" title=" " alt="" coords="12,453,87,480"/>
+<div class="center"><img src="control_system_8h__incl.png" border="0" usemap="#ainclude_2header_2systems_2control_system_8h" alt=""/></div>
+<map name="ainclude_2header_2systems_2control_system_8h" id="ainclude_2header_2systems_2control_system_8h">
+<area shape="rect" title=" " alt="" coords="286,5,463,47"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="196,692,271,719"/>
+<area shape="rect" href="controls_8h.html" title=" " alt="" coords="123,393,287,420"/>
+<area shape="rect" href="control_system_int_8h.html" title=" " alt="" coords="273,95,476,121"/>
+<area shape="rect" href="dynamical_system_8h.html" title=" " alt="" coords="447,244,670,271"/>
+<area shape="rect" href="types_8h.html" title=" " alt="" coords="645,319,768,345"/>
+<area shape="rect" title=" " alt="" coords="199,767,268,793"/>
+<area shape="rect" title=" " alt="" coords="292,767,359,793"/>
+<area shape="rect" title=" " alt="" coords="570,767,673,793"/>
+<area shape="rect" href="interpol_8h.html" title=" " alt="" coords="398,468,549,495"/>
+<area shape="rect" href="integrator_8h.html" title=" " alt="" coords="145,468,322,495"/>
+<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="417,543,543,569"/>
+<area shape="rect" href="interpolator_8h.html" title=" " alt="" coords="440,617,549,644"/>
+<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="477,692,539,719"/>
+<area shape="rect" title=" " alt="" coords="383,767,451,793"/>
+<area shape="rect" title=" " alt="" coords="697,767,777,793"/>
+<area shape="rect" title=" " alt="" coords="475,767,546,793"/>
+<area shape="rect" href="integrator1d_8h.html" title=" " alt="" coords="189,543,304,569"/>
+<area shape="rect" href="integrator_2utils_8h.html" title=" " alt="" coords="390,692,453,719"/>
+<area shape="rect" href="odeint_8h.html" title=" " alt="" coords="337,169,412,196"/>
+<area shape="rect" href="trajectory_8h.html" title=" " alt="" coords="687,393,782,420"/>
+<area shape="rect" href="state_8h.html" title=" " alt="" coords="624,468,691,495"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="control_system_8h__dep__incl.png" border="0" usemap="#ainclude_2header_2control_system_8hdep" alt=""/></div>
-<map name="ainclude_2header_2control_system_8hdep" id="ainclude_2header_2control_system_8hdep">
-<area shape="rect" title=" " alt="" coords="79,5,307,32"/>
-<area shape="rect" href="control_system_8cpp.html" title=" " alt="" coords="5,80,172,107"/>
-<area shape="rect" href="controltlbx_8h.html" title=" " alt="" coords="196,80,400,107"/>
+<div class="center"><img src="control_system_8h__dep__incl.png" border="0" usemap="#ainclude_2header_2systems_2control_system_8hdep" alt=""/></div>
+<map name="ainclude_2header_2systems_2control_system_8hdep" id="ainclude_2header_2systems_2control_system_8hdep">
+<area shape="rect" title=" " alt="" coords="104,5,281,47"/>
+<area shape="rect" href="control_system_8cpp.html" title=" " alt="" coords="5,95,172,121"/>
+<area shape="rect" href="controltlbx_8h.html" title=" " alt="" coords="196,95,400,121"/>
 </map>
 </div>
 </div>
@@ -156,7 +162,7 @@ Classes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>T. Schmoderer (<a href="#" onclick="location.href='mai'+'lto:'+'iat'+'he'+'na@'+'ma'+'ilo'+'.c'+'om'; return false;">iathe<span style="display: none;">.nosp@m.</span>na@m<span style="display: none;">.nosp@m.</span>ailo.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.0.3 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2022-10-20 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-10-21 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -169,7 +175,7 @@ Classes</h2></td></tr>
       aria-hidden="true"></i> Email</a></li>
     <li><a href="https://github.com/tschmoderer/cpp-linear-algebra-toolbox" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i>
     Github</a></li>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_22759b2357b28df387ac7f15bd61889c.html">header</a></li><li class="navelem"><a class="el" href="control_system_8h.html">controlSystem.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_22759b2357b28df387ac7f15bd61889c.html">header</a></li><li class="navelem"><a class="el" href="dir_9a00c9733bacd43e3532d8308b793b8c.html">systems</a></li><li class="navelem"><a class="el" href="control_system_8h.html">controlSystem.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer"
           src="doxygen.svg" width="104" height="31" alt="doxygen" /></a> 1.9.1 </li>
   </ul>

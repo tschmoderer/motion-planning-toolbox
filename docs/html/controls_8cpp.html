@@ -106,28 +106,14 @@ $(document).ready(function(){initNavTree('controls_8cpp.html',''); initResizable
 <div class="title">controls.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="controls_8h_source.html">../include/header/controls.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;../include/header/controls.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for controls.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="controls_8cpp__incl.png" border="0" usemap="#asrc_2controls_8cpp" alt=""/></div>
 <map name="asrc_2controls_8cpp" id="asrc_2controls_8cpp">
-<area shape="rect" title=" " alt="" coords="182,5,306,32"/>
-<area shape="rect" href="controls_8h.html" title=" " alt="" coords="145,80,343,107"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="98,379,161,405"/>
-<area shape="rect" href="interpol_8h.html" title=" " alt="" coords="351,155,489,181"/>
-<area shape="rect" href="integrator_8h.html" title=" " alt="" coords="161,155,327,181"/>
-<area shape="rect" title=" " alt="" coords="5,453,75,480"/>
-<area shape="rect" title=" " alt="" coords="99,453,165,480"/>
-<area shape="rect" title=" " alt="" coords="190,453,293,480"/>
-<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="341,229,467,256"/>
-<area shape="rect" href="interpolator_8h.html" title=" " alt="" coords="323,304,432,331"/>
-<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="319,379,382,405"/>
-<area shape="rect" title=" " alt="" coords="317,453,385,480"/>
-<area shape="rect" title=" " alt="" coords="409,453,489,480"/>
-<area shape="rect" title=" " alt="" coords="514,453,585,480"/>
-<area shape="rect" href="integrator1d_8h.html" title=" " alt="" coords="187,229,301,256"/>
-<area shape="rect" href="integrator_2utils_8h.html" title=" " alt="" coords="213,379,275,405"/>
+<area shape="rect" title=" " alt="" coords="43,5,167,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,204,107"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -154,6 +140,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a778e82215e8e66d13aa51fa6de0ab00c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of division of a <a class="el" href="class_controls.html">Controls</a> object with a scalar.  <a href="controls_8cpp.html#a778e82215e8e66d13aa51fa6de0ab00c">More...</a><br /></td></tr>
 <tr class="separator:a778e82215e8e66d13aa51fa6de0ab00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98934ea2d8d30e5329b7368811410511"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controls_8cpp.html#a98934ea2d8d30e5329b7368811410511">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="class_controls.html">Controls</a> &amp;cs)</td></tr>
+<tr class="memdesc:a98934ea2d8d30e5329b7368811410511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload output operator for <a class="el" href="class_controls.html">Controls</a> object The output format of a trajectory is the following : \(t_0\) \(u_1[0]\) ... \(u_m[0]\) ... \(t_N\) \(u_1[N]\) ... \(u_m[N]\) where \(m\) is the number of controls and \(N\) is the numer of time divisions.  <a href="controls_8cpp.html#a98934ea2d8d30e5329b7368811410511">More...</a><br /></td></tr>
 <tr class="separator:a98934ea2d8d30e5329b7368811410511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -414,6 +401,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Overload output operator for <a class="el" href="class_controls.html">Controls</a> object The output format of a trajectory is the following : \(t_0\) \(u_1[0]\) ... \(u_m[0]\) ... \(t_N\) \(u_1[N]\) ... \(u_m[N]\) where \(m\) is the number of controls and \(N\) is the numer of time divisions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>An output stream </td></tr>
+    <tr><td class="paramname">traj</td><td>A <a class="el" href="class_controls.html">Controls</a> obect </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; </dd></dl>
 
 </div>
 </div>

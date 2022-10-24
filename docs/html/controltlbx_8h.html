@@ -108,34 +108,40 @@ $(document).ready(function(){initNavTree('controltlbx_8h.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="controls_8h_source.html">controls.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="control_system_8h_source.html">controlSystem.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="controls_8h_source.html">controller/controls.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="control_system_8h_source.html">systems/controlSystem.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="path_8h_source.html">path/path.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="output_helper_8h_source.html">common/outputHelper.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for controltlbx.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="controltlbx_8h__incl.png" border="0" usemap="#ainclude_2header_2controltlbx_8h" alt=""/></div>
 <map name="ainclude_2header_2controltlbx_8h" id="ainclude_2header_2controltlbx_8h">
-<area shape="rect" title=" " alt="" coords="402,5,606,32"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="477,304,539,331"/>
-<area shape="rect" href="controls_8h.html" title=" " alt="" coords="201,229,287,256"/>
-<area shape="rect" href="control_system_8h.html" title=" " alt="" coords="348,80,476,107"/>
-<area shape="rect" href="path_8h.html" title=" " alt="" coords="592,155,688,181"/>
-<area shape="rect" title=" " alt="" coords="325,603,395,629"/>
-<area shape="rect" title=" " alt="" coords="419,603,485,629"/>
-<area shape="rect" title=" " alt="" coords="510,603,613,629"/>
-<area shape="rect" href="interpol_8h.html" title=" " alt="" coords="5,304,144,331"/>
-<area shape="rect" href="integrator_8h.html" title=" " alt="" coords="168,304,333,331"/>
-<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="30,379,157,405"/>
-<area shape="rect" href="interpolator_8h.html" title=" " alt="" coords="95,453,204,480"/>
-<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="155,528,218,555"/>
-<area shape="rect" title=" " alt="" coords="33,603,101,629"/>
-<area shape="rect" title=" " alt="" coords="125,603,205,629"/>
-<area shape="rect" title=" " alt="" coords="230,603,301,629"/>
-<area shape="rect" href="integrator1d_8h.html" title=" " alt="" coords="200,379,315,405"/>
-<area shape="rect" href="integrator_2utils_8h.html" title=" " alt="" coords="242,528,305,555"/>
-<area shape="rect" href="control_system_int_8h.html" title=" " alt="" coords="275,155,466,181"/>
-<area shape="rect" href="odeint_8h.html" title=" " alt="" coords="399,528,473,555"/>
+<area shape="rect" title=" " alt="" coords="483,5,687,32"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="469,603,531,629"/>
+<area shape="rect" href="controls_8h.html" title=" " alt="" coords="295,453,447,480"/>
+<area shape="rect" href="control_system_8h.html" title=" " alt="" coords="627,80,813,107"/>
+<area shape="rect" href="path_8h.html" title=" " alt="" coords="993,155,1089,181"/>
+<area shape="rect" href="output_helper_8h.html" title=" " alt="" coords="623,379,801,405"/>
+<area shape="rect" title=" " alt="" coords="525,827,595,853"/>
+<area shape="rect" title=" " alt="" coords="247,827,313,853"/>
+<area shape="rect" title=" " alt="" coords="765,827,867,853"/>
+<area shape="rect" href="interpol_8h.html" title=" " alt="" coords="245,528,395,555"/>
+<area shape="rect" href="integrator_8h.html" title=" " alt="" coords="43,528,221,555"/>
+<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="287,603,414,629"/>
+<area shape="rect" href="interpolator_8h.html" title=" " alt="" coords="385,677,495,704"/>
+<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="434,752,497,779"/>
+<area shape="rect" title=" " alt="" coords="338,827,406,853"/>
+<area shape="rect" title=" " alt="" coords="619,827,699,853"/>
+<area shape="rect" title=" " alt="" coords="430,827,501,853"/>
+<area shape="rect" href="integrator1d_8h.html" title=" " alt="" coords="111,603,225,629"/>
+<area shape="rect" href="integrator_2utils_8h.html" title=" " alt="" coords="347,752,410,779"/>
+<area shape="rect" href="control_system_int_8h.html" title=" " alt="" coords="623,155,825,181"/>
+<area shape="rect" href="dynamical_system_8h.html" title=" " alt="" coords="775,304,998,331"/>
+<area shape="rect" href="types_8h.html" title=" " alt="" coords="825,379,948,405"/>
+<area shape="rect" href="odeint_8h.html" title=" " alt="" coords="725,229,800,256"/>
+<area shape="rect" href="trajectory_8h.html" title=" " alt="" coords="665,453,759,480"/>
+<area shape="rect" href="state_8h.html" title=" " alt="" coords="821,528,888,555"/>
 </map>
 </div>
 </div>
@@ -163,7 +169,7 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>T. Schmoderer (<a href="#" onclick="location.href='mai'+'lto:'+'iat'+'he'+'na@'+'ma'+'ilo'+'.c'+'om'; return false;">iathe<span style="display: none;">.nosp@m.</span>na@m<span style="display: none;">.nosp@m.</span>ailo.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.0.3 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2022-10-20 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-10-21 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE. </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a5e599ccabb463fa085c1228f96a1fc57"></a>

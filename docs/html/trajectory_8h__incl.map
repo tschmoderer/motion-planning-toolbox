@@ -1,5 +1,5 @@
-<map id="include/header/trajectory/trajectory.h" name="include/header/trajectory/trajectory.h">
-<area shape="rect" id="node1" title=" " alt="" coords="190,5,375,47"/>
+<map id="include/header/types/trajectory.h" name="include/header/types/trajectory.h">
+<area shape="rect" id="node1" title=" " alt="" coords="203,5,362,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,393,85,420"/>
 <area shape="rect" id="node3" title=" " alt="" coords="483,393,586,420"/>
 <area shape="rect" id="node4" href="$interpol_8h.html" title=" " alt="" coords="207,95,358,121"/>

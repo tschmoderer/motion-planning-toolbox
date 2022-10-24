@@ -5,6 +5,8 @@ var class_trajectory =
     [ "Trajectory", "class_trajectory.html#a5ac386696a765cd0672ae840a9e9f1bc", null ],
     [ "~Trajectory", "class_trajectory.html#ac673c37025ca5353ad99ab41c936e75d", null ],
     [ "evaluate", "class_trajectory.html#a1dafaad311eba85a2cd0d505303ea8b6", null ],
+    [ "get_data", "class_trajectory.html#ae42f3e0732150f6856feba5d0e5ce70d", null ],
+    [ "get_time", "class_trajectory.html#ab2557b7c74f431431fde41a716fbac9a", null ],
     [ "set_interpolation_method", "class_trajectory.html#a99369dc53f2563542c2a54a5dc31da9e", null ],
     [ "operator<<", "class_trajectory.html#a62e9f0a8dc2d16b6ab280d60f5060d79", null ]
 ];

@@ -110,14 +110,27 @@ $(document).ready(function(){initNavTree('class_o_d_e_int.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 
+<p>A class describing an intergator of an ordinary differential equation of the form.  
+ <a href="class_o_d_e_int.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="odeint_8h_source.html">odeint.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ODEInt:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_o_d_e_int__inherit__graph.png" border="0" usemap="#a_o_d_e_int_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_o_d_e_int_inherit__map" id="a_o_d_e_int_inherit__map">
-<area shape="rect" title=" " alt="" coords="39,5,106,32"/>
+<area shape="rect" title="A class describing an intergator of an ordinary differential equation of the form." alt="" coords="39,5,106,32"/>
 <area shape="rect" href="class_control_system_int.html" title=" " alt="" coords="5,80,140,107"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for ODEInt:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_o_d_e_int__coll__graph.png" border="0" usemap="#a_o_d_e_int_coll__map" alt="Collaboration graph"/></div>
+<map name="a_o_d_e_int_coll__map" id="a_o_d_e_int_coll__map">
+<area shape="rect" title="A class describing an intergator of an ordinary differential equation of the form." alt="" coords="43,184,109,211"/>
+<area shape="rect" href="class_dynamical_system.html" title="A class describig an integrator of ODE." alt="" coords="5,95,147,121"/>
+<area shape="rect" title=" " alt="" coords="36,5,116,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -145,8 +158,15 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a59231ed7c63b132a9f4f846cec049c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e82194b2ac11ccba149c83aad1a9f69"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a7e82194b2ac11ccba149c83aad1a9f69">T</a></td></tr>
 <tr class="separator:a7e82194b2ac11ccba149c83aad1a9f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679726a065b7f2b78309b94ef0fea0c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dynamical_system.html">DynamicalSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a679726a065b7f2b78309b94ef0fea0c1">sys</a></td></tr>
+<tr class="separator:a679726a065b7f2b78309b94ef0fea0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class describing an intergator of an ordinary differential equation of the form. </p>
+<p class="formulaDsp">
+\[ \dot{x} = f(t,x) \]
+</p>
+ </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad62d5d1cde664582f8014a1fe66f0719"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad62d5d1cde664582f8014a1fe66f0719">&#9670;&nbsp;</a></span>ODEInt() <span class="overload">[1/2]</span></h2>
 
@@ -347,6 +367,28 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="odeint_8h.html#a0fad15a5c60ef70745faa8780c8f4112">odeint_method_t</a> ODEInt::ode_meth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a679726a065b7f2b78309b94ef0fea0c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a679726a065b7f2b78309b94ef0fea0c1">&#9670;&nbsp;</a></span>sys</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_dynamical_system.html">DynamicalSystem</a>* ODEInt::sys</td>
         </tr>
       </table>
   </td>

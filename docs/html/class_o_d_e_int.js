@@ -7,5 +7,6 @@ var class_o_d_e_int =
     [ "rk1", "class_o_d_e_int.html#a91b3e0d72e57f9b69e9c0f8009785377", null ],
     [ "rk4", "class_o_d_e_int.html#a0935ee1ad1bbfe6d161b7710956d0eb2", null ],
     [ "ode_meth", "class_o_d_e_int.html#a59231ed7c63b132a9f4f846cec049c7d", null ],
+    [ "sys", "class_o_d_e_int.html#a679726a065b7f2b78309b94ef0fea0c1", null ],
     [ "T", "class_o_d_e_int.html#a7e82194b2ac11ccba149c83aad1a9f69", null ]
 ];

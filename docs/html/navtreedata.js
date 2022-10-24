@@ -25,11 +25,10 @@
 var NAVTREE =
 [
   [ "CPP Motion Planning ToolBox", "index.html", [
-    [ "Improvements", "index.html#autotoc_md0", null ],
-    [ "Install & Building", "index.html#autotoc_md1", [
-      [ "Requierement", "index.html#autotoc_md2", null ],
-      [ "Unix", "index.html#autotoc_md3", null ],
-      [ "Credits", "index.html#autotoc_md4", null ]
+    [ "Install & Building", "index.html#autotoc_md0", [
+      [ "Requierement", "index.html#autotoc_md1", null ],
+      [ "Unix", "index.html#autotoc_md2", null ],
+      [ "Credits", "index.html#autotoc_md3", null ]
     ] ],
     [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -58,6 +57,7 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
@@ -69,7 +69,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_wolfe_backtracking_01_4.html#a86dc89b6b99ac77679a2471491287e4b"
+"classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_constant_step_factor_01_4.html#a381eb9f4bfe67ebe418fade7c9da6b24",
+"structlsqcpp_1_1_gauss_newton_method.html#a4f5eebb7ab6d362fe4ac41ad85e0fef2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

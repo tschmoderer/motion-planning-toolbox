@@ -126,6 +126,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a845dc6facd3933e2f2d9cb4314bdb77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b1827b6e1d6ce013100569f65939ac7"><td class="memItemLeft" align="right" valign="top">VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a2b1827b6e1d6ce013100569f65939ac7">get_control</a> (uint8_t) const</td></tr>
 <tr class="separator:a2b1827b6e1d6ce013100569f65939ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf1e37c6dc4e622b90ba9f65ded115f"><td class="memItemLeft" align="right" valign="top">VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#afaf1e37c6dc4e622b90ba9f65ded115f">get_time</a> () const</td></tr>
+<tr class="separator:afaf1e37c6dc4e622b90ba9f65ded115f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c36e78a5b6660a6ab2c89e98fa26dbd"><td class="memItemLeft" align="right" valign="top">MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a7c36e78a5b6660a6ab2c89e98fa26dbd">get_data</a> () const</td></tr>
+<tr class="separator:a7c36e78a5b6660a6ab2c89e98fa26dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66418e4dc4569112a2fbcea26b7a0849"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a66418e4dc4569112a2fbcea26b7a0849">set_t0</a> (double)</td></tr>
 <tr class="separator:a66418e4dc4569112a2fbcea26b7a0849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93525eda0598185fedcfce862067f03c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a93525eda0598185fedcfce862067f03c">set_t1</a> (double)</td></tr>
@@ -182,6 +186,7 @@ Friends</h2></td></tr>
 <tr class="memdesc:abebc430e06b17f56aef8c927be6131a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator of division of a <a class="el" href="class_controls.html">Controls</a> object with a scalar.  <a href="class_controls.html#abebc430e06b17f56aef8c927be6131a2">More...</a><br /></td></tr>
 <tr class="separator:abebc430e06b17f56aef8c927be6131a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15aeb2e13ca7ef6cc4f02bfbcd32ae90"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a15aeb2e13ca7ef6cc4f02bfbcd32ae90">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="class_controls.html">Controls</a> &amp;)</td></tr>
+<tr class="memdesc:a15aeb2e13ca7ef6cc4f02bfbcd32ae90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload output operator for <a class="el" href="class_controls.html">Controls</a> object The output format of a trajectory is the following : \(t_0\) \(u_1[0]\) ... \(u_m[0]\) ... \(t_N\) \(u_1[N]\) ... \(u_m[N]\) where \(m\) is the number of controls and \(N\) is the numer of time divisions.  <a href="class_controls.html#a15aeb2e13ca7ef6cc4f02bfbcd32ae90">More...</a><br /></td></tr>
 <tr class="separator:a15aeb2e13ca7ef6cc4f02bfbcd32ae90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -342,6 +347,24 @@ The integration method of the first <a class="el" href="class_controls.html">Con
 
 </div>
 </div>
+<a id="a7c36e78a5b6660a6ab2c89e98fa26dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c36e78a5b6660a6ab2c89e98fa26dbd">&#9670;&nbsp;</a></span>get_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MatrixXd Controls::get_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>MatrixXd </dd></dl>
+
+</div>
+</div>
 <a id="a845dc6facd3933e2f2d9cb4314bdb77d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a845dc6facd3933e2f2d9cb4314bdb77d">&#9670;&nbsp;</a></span>get_nb_cntrl()</h2>
 
@@ -357,6 +380,24 @@ The integration method of the first <a class="el" href="class_controls.html">Con
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>uint8_t </dd></dl>
+
+</div>
+</div>
+<a id="afaf1e37c6dc4e622b90ba9f65ded115f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf1e37c6dc4e622b90ba9f65ded115f">&#9670;&nbsp;</a></span>get_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VectorXd Controls::get_time </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>VectorXd </dd></dl>
 
 </div>
 </div>
@@ -1021,6 +1062,16 @@ Does not change data, hence the same data are now evaluated at the new interpola
 </table>
 </div><div class="memdoc">
 
+<p>Overload output operator for <a class="el" href="class_controls.html">Controls</a> object The output format of a trajectory is the following : \(t_0\) \(u_1[0]\) ... \(u_m[0]\) ... \(t_N\) \(u_1[N]\) ... \(u_m[N]\) where \(m\) is the number of controls and \(N\) is the numer of time divisions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>An output stream </td></tr>
+    <tr><td class="paramname">traj</td><td>A <a class="el" href="class_controls.html">Controls</a> obect </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; </dd></dl>
+
 </div>
 </div>
 <a id="a998482c3dabe98ff61ada27cad7ebc70"></a>
@@ -1060,7 +1111,7 @@ Does not change data, hence the same data are now evaluated at the new interpola
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/header/<a class="el" href="controls_8h_source.html">controls.h</a></li>
+<li>include/header/controller/<a class="el" href="controls_8h_source.html">controls.h</a></li>
 <li>src/<a class="el" href="controls_8cpp.html">controls.cpp</a></li>
 </ul>
 </div><!-- contents -->

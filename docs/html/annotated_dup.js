@@ -39,12 +39,14 @@ var annotated_dup =
     [ "Controls", "class_controls.html", "class_controls" ],
     [ "ControlSystem", "class_control_system.html", "class_control_system" ],
     [ "ControlSystemInt", "class_control_system_int.html", "class_control_system_int" ],
+    [ "DynamicalSystem", "class_dynamical_system.html", "class_dynamical_system" ],
     [ "Integrator1D", "class_integrator1_d.html", "class_integrator1_d" ],
     [ "Interpolator", "class_interpolator.html", "class_interpolator" ],
     [ "Interpolator1D", "class_interpolator1_d.html", "class_interpolator1_d" ],
     [ "LSQ", "class_l_s_q.html", null ],
     [ "MotionPlanner", "class_motion_planner.html", "class_motion_planner" ],
     [ "ODEInt", "class_o_d_e_int.html", "class_o_d_e_int" ],
+    [ "OutputHelper", "class_output_helper.html", "class_output_helper" ],
     [ "Path", "class_path.html", "class_path" ],
     [ "Trajectory", "class_trajectory.html", "class_trajectory" ]
 ];
