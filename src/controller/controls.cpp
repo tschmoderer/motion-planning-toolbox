@@ -1,22 +1,30 @@
-#include "../include/header/controls.h"
+#include "../../include/header/controller/controls.h"
 
 /* CONSTRUCTORS */
 
 /**
  * @brief Construct a new Controls::Controls object
  * Create a list of nb Control object with domain \f$[t_0,t_1]\f$ and \f$H\f$ step of discretisation
+ * 
  * @param nb Number of controls
  * @param t0 
- * @param t1
- * @param H Number of discretisation time step of \f$[t_0,t_1]\f$
- * @warning nb should takes its values between \f$[0,255]\f$
- * @warning Interpolation method is not set, should be manually added after instanciating a Controls object
- * @warning Integration method is not set, should be manually added after instanciating a Controls object
+ * @param t1 
+ * @param H  Number of discretisation time step of \f$[t_0,t_1]\f$
+ * @param im Interpolation method : default INTERP_LINEAR
+ * @param el Strategy to extend data when \f$t < t_0\f$ : default EXTEND_ZERO
+ * @param er Strategy to extend data when \f$t > t_1\f$ : default EXTEND_ZERO
+ * @param int_nb_step Number of time step to integrate controls : default H
+ * 
+ * @warning H must be at least 2
+ * @warning \f$t_0\f$ must be less than \f$t_1\f$
+ * @warning nb must be greater than 0
+ * @warning Maximum number of control is 255
  */
-Controls::Controls(uint8_t nb, double t0, double t1, uint16_t H) {    
+Controls::Controls(uint8_t nb, double t0, double t1, uint16_t H, interpolation_method_t im=INTERP_LINEAR, extend_t el=EXTEND_ZERO, extend_t er=EXTEND_ZERO, uint16_t int_nb_step=0) {    
+    assert(nb > 0);
     assert(nb < 256);
     assert(t1 > t0);  
-    assert(H > 1); 
+    assert(H  > 1); 
 
     this->M  = nb;     
     this->t0 = t0; 
@@ -26,8 +34,8 @@ Controls::Controls(uint8_t nb, double t0, double t1, uint16_t H) {
     this->construct_discrete_time(); 
     this->default_data();
     
-    this->interpolator = NULL; 
-    this->integrator   = NULL; 
+    this->interpolator = new Interpolator1D(im, el, er); 
+    this->integrator   = new Integrator1D((int_nb_step == 0) ? H : int_nb_step); 
 }
 
 /**
@@ -44,7 +52,16 @@ Controls::Controls(const Controls & cs) {
     this->time = cs.time; 
     this->data = cs.data;
 
+    if (this->interpolator != NULL) {
+        delete this->interpolator; 
+    } 
+
     this->interpolator = new Interpolator1D(*cs.interpolator);  
+
+    if (this->integrator != NULL) {
+        delete this->integrator;
+    } 
+
     this->integrator   = new Integrator1D(*cs.integrator); 
 }
 
@@ -109,9 +126,7 @@ MatrixXd Controls::get_data() const {
  */
 void Controls::set_t0(double t0) {
     assert(t0 < this->t1);
-
     this->t0 = t0;
-
     this->construct_discrete_time();
 } 
 
@@ -124,9 +139,7 @@ void Controls::set_t0(double t0) {
  */
 void Controls::set_t1(double t1) {
     assert(t1 > this->t0); 
-
     this->t1 = t1;
-
     this->construct_discrete_time();
 }
 
@@ -139,9 +152,7 @@ void Controls::set_t1(double t1) {
  */
 void Controls::set_H(uint16_t H) {
     assert(H > 1);
-
     this->H = H;
-
     this->construct_discrete_time();
     this->default_data(); 
 }
@@ -168,11 +179,23 @@ void Controls::set_discretisation_cntrls(double t0, double t1, uint16_t H) {
     this->default_data(); 
 }
 
+/**
+ * @brief 
+ * 
+ * @param idx 
+ * @param d 
+ */
 void Controls::set_cntrl(uint8_t idx, double d) {
     assert(idx < this->M);
     this->data.col(idx) = MatrixXd::Constant(this->H, 1, d);
 }
 
+/**
+ * @brief 
+ * 
+ * @param idx 
+ * @param val 
+ */
 void Controls::set_cntrl(uint8_t idx, VectorXd val) {
     assert(idx < this->M);
     assert(val.size() == this->H);
@@ -184,12 +207,11 @@ void Controls::set_cntrl(uint8_t idx, VectorXd val) {
  * 
  * @param interpol 
  */
-void Controls::set_interpolation_method(const Interpolator1D * interpol) {
+void Controls::set_interpolation_method(interpolation_method_t im=INTERP_LINEAR, extend_t el=EXTEND_ZERO, extend_t  er=EXTEND_ZERO) {
     if (this->interpolator != NULL) {
         delete this->interpolator; 
     }
-
-    this->interpolator = new Interpolator1D(*interpol); 
+    this->interpolator = new Interpolator1D(im, el, er); 
 } 
 
 /**
@@ -197,12 +219,11 @@ void Controls::set_interpolation_method(const Interpolator1D * interpol) {
  * 
  * @param integr 
  */
-void Controls::set_integration_method(const Integrator1D * integr) {
+void Controls::set_integration_method(uint16_t new_h) {
     if (this->integrator != NULL) {
         delete this->integrator; 
     }
-
-    this->integrator = new Integrator1D(*integr); 
+    this->integrator = new Integrator1D(new_h); 
 } 
 
 /* METHODS */
@@ -211,8 +232,6 @@ void Controls::set_integration_method(const Integrator1D * integr) {
  * 
  * @param cs 
  * @return double 
- * @warning The integrator attibute must be set before using this method
- * @warning The integration method of the first Controls object is used.
  */
 double Controls::dot_prod_l2(const Controls & cs) const {
     assert(this->M == cs.M); 
@@ -243,7 +262,6 @@ double Controls::norm2() const {
  * 
  * @param t 
  * @return VectorXd 
- * @warning The interpolator attibute must be set before using this method
  */
 VectorXd Controls::operator()(double t) const {
     assert(this->interpolator != NULL);
