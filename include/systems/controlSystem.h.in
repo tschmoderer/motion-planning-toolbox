@@ -16,13 +16,9 @@
 
 // Additional library
 #include "../utils.h"
-#include "../controller/controls.h"
-#include "../odeint/controlSystemInt.h"
 #include "../types/types.h"
 #include "dynamicalSystem.h"
 
-using Eigen::VectorXd;
-using Eigen::MatrixXd;
 
 /**
  * @class ControlSystem
@@ -39,47 +35,40 @@ class ControlSystem : public DynamicalSystem {
     public: 
         /* CONSTRUCTORS */
         ControlSystem(uint16_t , uint16_t ); 
-        ControlSystem(uint16_t , uint16_t , double , double , VectorXd ); 
+        ControlSystem(uint16_t , uint16_t , Time_t , Time_t , StateVector_t ); 
+        ControlSystem(uint16_t , uint16_t , Time_t , Time_t , StateVector_t , control_func_t , control_func_dx_t , control_func_du_t ); 
+        ControlSystem(uint16_t , uint16_t , Time_t , Time_t , StateVector_t , control_func_t , control_func_dx_t , control_func_du_t , uint16_t , interpolation_method_t , extend_t , extend_t , uint16_t ); 
 
         /* DESTRUCTORS */
-        ~ControlSystem(); 
+        virtual ~ControlSystem(); 
 
         /* ACCESSORS */
-        VectorXd get_dynamics(double , VectorXd ) const;
-
-        void set_x0(VectorXd ); 
-        void set_t0(double ); 
-        void set_t1(double );
+        Controls * ctrls() const;
         void set_controls(const Controls * );
-        void set_cntrl_system_integrator(const ControlSystemInt * ); 
-        void set_dynamics(std::function<VectorXd(double , State_t , Controls )> );
-        void set_dynamics_derivative_x(std::function<MatrixXd(double , State_t , Controls )> );
-        void set_dynamics_derivative_u(std::function<MatrixXd(double , State_t , Controls )> );
+
+        void set_dynamics(control_func_t );
+        void set_dynamics_derivative_x(control_func_dx_t );
+        void set_dynamics_derivative_u(control_func_du_t );
 
         /* METHODS */
-        Trajectory trajectory(); 
-        State_t inout();
+        virtual StateVector_t eval_dynamics(Time_t , StateVector_t ) const; 
 
         /* OPERATORS */
 
-    private: 
-        uint16_t N; /*!< State space dimension */
-        uint16_t M; /*!< Number of controls */
-
-        VectorXd x0; /*!< Initial state */
-        double t0;   /*!< Initial time */
-        double t1;   /*!< Final time */
-
+    protected: 
+        /*
+            from Dynamical System class we get attributes N, x0, t0, t1
+        */
+        uint16_t M;   /*!< Number of controls */
         Controls * u; 
 
-        std::function<VectorXd(double , State_t , Controls )> F;
-        std::function<MatrixXd(double , State_t , Controls )> dFdX;
-        std::function<MatrixXd(double , State_t , Controls )> dFdU;
+    private:
+        control_func_t    dynamic_func;
+        control_func_dx_t dynamic_func_derivative_x;
+        control_func_du_t dynamic_func_derivative_u;
         
-        ControlSystemInt * integrator; 
-
         /* PRIVATE METHODS */
-        State_t dynamics(double , VectorXd ) const; 
+        
 };
 
 #endif
