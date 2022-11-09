@@ -46,3 +46,7 @@ app/bin/exp
 app/assets/datavizscripts/__pycache__/
 
 app/assets/postprocess/__pycache__/
+
+app/bin/exp.hpp
+
+app/results/
