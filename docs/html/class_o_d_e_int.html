@@ -45,7 +45,7 @@
                   <td id="projectlogo"><img alt="Logo" src="rocket.png" /></td>
                   <td id="projectalign" style="padding-left: 0.5em;">
                      <div id="projectname">CPP Motion Planning ToolBox
-                        &#160;<span id="projectnumber">0.0.3</span>
+                        &#160;<span id="projectnumber">0.5.0</span>
                      </div>
                   </td>
                </tr>
@@ -115,15 +115,6 @@ $(document).ready(function(){initNavTree('class_o_d_e_int.html',''); initResizab
 
 <p><code>#include &lt;<a class="el" href="odeint_8h_source.html">odeint.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for ODEInt:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_o_d_e_int__inherit__graph.png" border="0" usemap="#a_o_d_e_int_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_o_d_e_int_inherit__map" id="a_o_d_e_int_inherit__map">
-<area shape="rect" title="A class describing an intergator of an ordinary differential equation of the form." alt="" coords="39,5,106,32"/>
-<area shape="rect" href="class_control_system_int.html" title=" " alt="" coords="5,80,140,107"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
 Collaboration diagram for ODEInt:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_o_d_e_int__coll__graph.png" border="0" usemap="#a_o_d_e_int_coll__map" alt="Collaboration graph"/></div>
@@ -136,39 +127,44 @@ Collaboration diagram for ODEInt:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad62d5d1cde664582f8014a1fe66f0719"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#ad62d5d1cde664582f8014a1fe66f0719">ODEInt</a> (<a class="el" href="odeint_8h.html#a0fad15a5c60ef70745faa8780c8f4112">odeint_method_t</a>, uint16_t)</td></tr>
-<tr class="separator:ad62d5d1cde664582f8014a1fe66f0719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c94c1e49920292b0c7b91326048e7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#ac8c94c1e49920292b0c7b91326048e7c">ODEInt</a> (<a class="el" href="class_dynamical_system.html">DynamicalSystem</a> *, <a class="el" href="odeint_8h.html#a0fad15a5c60ef70745faa8780c8f4112">odeint_method_t</a>, uint16_t)</td></tr>
+<tr class="separator:ac8c94c1e49920292b0c7b91326048e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c2c1eb21fb72ee358d756be5086a26a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a1c2c1eb21fb72ee358d756be5086a26a">ODEInt</a> (const <a class="el" href="class_o_d_e_int.html">ODEInt</a> &amp;)</td></tr>
 <tr class="separator:a1c2c1eb21fb72ee358d756be5086a26a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4eda540c357b15c0f798d8ad59500a95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a4eda540c357b15c0f798d8ad59500a95">~ODEInt</a> ()</td></tr>
+<tr class="memitem:a4eda540c357b15c0f798d8ad59500a95"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a4eda540c357b15c0f798d8ad59500a95">~ODEInt</a> ()</td></tr>
 <tr class="separator:a4eda540c357b15c0f798d8ad59500a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a767098f5628e08cebd9c81db94f9f6f0"><td class="memItemLeft" align="right" valign="top">MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a767098f5628e08cebd9c81db94f9f6f0">ode_int</a> (double, double, VectorXd, std::function&lt; VectorXd(double, VectorXd)&gt;)</td></tr>
-<tr class="separator:a767098f5628e08cebd9c81db94f9f6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa59fe79b92b7aa9f808ebfd629d13ef3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#aa59fe79b92b7aa9f808ebfd629d13ef3">update_integration_method</a> (<a class="el" href="odeint_8h.html#a0fad15a5c60ef70745faa8780c8f4112">odeint_method_t</a>)</td></tr>
+<tr class="separator:aa59fe79b92b7aa9f808ebfd629d13ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0766f5c01845d397da552af63ee99afa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a0766f5c01845d397da552af63ee99afa">update_discretisation_length</a> (uint16_t)</td></tr>
+<tr class="separator:a0766f5c01845d397da552af63ee99afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc98336eff819a14a11de07eefcd7312"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_trajectory.html">Trajectory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#abc98336eff819a14a11de07eefcd7312">integrate</a> () const</td></tr>
+<tr class="separator:abc98336eff819a14a11de07eefcd7312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a91b3e0d72e57f9b69e9c0f8009785377"><td class="memItemLeft" align="right" valign="top">MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a91b3e0d72e57f9b69e9c0f8009785377">rk1</a> (VectorXd, VectorXd, std::function&lt; VectorXd(double, VectorXd)&gt;)</td></tr>
-<tr class="separator:a91b3e0d72e57f9b69e9c0f8009785377"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0935ee1ad1bbfe6d161b7710956d0eb2"><td class="memItemLeft" align="right" valign="top">MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a0935ee1ad1bbfe6d161b7710956d0eb2">rk4</a> (VectorXd, VectorXd, std::function&lt; VectorXd(double, VectorXd)&gt;)</td></tr>
-<tr class="separator:a0935ee1ad1bbfe6d161b7710956d0eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae77918d5969fc061117644fdb4e08ee6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_trajectory.html">Trajectory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#ae77918d5969fc061117644fdb4e08ee6">rk1</a> () const</td></tr>
+<tr class="separator:ae77918d5969fc061117644fdb4e08ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6194be1deec1a4433433fad61262d893"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_trajectory.html">Trajectory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a6194be1deec1a4433433fad61262d893">rk4</a> () const</td></tr>
+<tr class="separator:a6194be1deec1a4433433fad61262d893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a679726a065b7f2b78309b94ef0fea0c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dynamical_system.html">DynamicalSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a679726a065b7f2b78309b94ef0fea0c1">sys</a></td></tr>
+<tr class="separator:a679726a065b7f2b78309b94ef0fea0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59231ed7c63b132a9f4f846cec049c7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="odeint_8h.html#a0fad15a5c60ef70745faa8780c8f4112">odeint_method_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a59231ed7c63b132a9f4f846cec049c7d">ode_meth</a></td></tr>
 <tr class="separator:a59231ed7c63b132a9f4f846cec049c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e82194b2ac11ccba149c83aad1a9f69"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a7e82194b2ac11ccba149c83aad1a9f69">T</a></td></tr>
 <tr class="separator:a7e82194b2ac11ccba149c83aad1a9f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a679726a065b7f2b78309b94ef0fea0c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dynamical_system.html">DynamicalSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_d_e_int.html#a679726a065b7f2b78309b94ef0fea0c1">sys</a></td></tr>
-<tr class="separator:a679726a065b7f2b78309b94ef0fea0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class describing an intergator of an ordinary differential equation of the form. </p>
 <p class="formulaDsp">
 \[ \dot{x} = f(t,x) \]
 </p>
- </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad62d5d1cde664582f8014a1fe66f0719"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad62d5d1cde664582f8014a1fe66f0719">&#9670;&nbsp;</a></span>ODEInt() <span class="overload">[1/2]</span></h2>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Implement other methods </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac8c94c1e49920292b0c7b91326048e7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c94c1e49920292b0c7b91326048e7c">&#9670;&nbsp;</a></span>ODEInt() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,6 +172,12 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">ODEInt::ODEInt </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="class_dynamical_system.html">DynamicalSystem</a> *&#160;</td>
+          <td class="paramname"><em>asys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="odeint_8h.html#a0fad15a5c60ef70745faa8780c8f4112">odeint_method_t</a>&#160;</td>
           <td class="paramname"><em>odeintmeth</em>, </td>
         </tr>
@@ -218,6 +220,9 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ODEInt::~ODEInt </td>
@@ -226,53 +231,35 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a767098f5628e08cebd9c81db94f9f6f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a767098f5628e08cebd9c81db94f9f6f0">&#9670;&nbsp;</a></span>ode_int()</h2>
+<a id="abc98336eff819a14a11de07eefcd7312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc98336eff819a14a11de07eefcd7312">&#9670;&nbsp;</a></span>integrate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">MatrixXd ODEInt::ode_int </td>
+          <td class="memname"><a class="el" href="class_trajectory.html">Trajectory</a> ODEInt::integrate </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>t0</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>t1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">VectorXd&#160;</td>
-          <td class="paramname"><em>x0</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::function&lt; VectorXd(double, VectorXd)&gt;&#160;</td>
-          <td class="paramname"><em>F</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a91b3e0d72e57f9b69e9c0f8009785377"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91b3e0d72e57f9b69e9c0f8009785377">&#9670;&nbsp;</a></span>rk1()</h2>
+<a id="ae77918d5969fc061117644fdb4e08ee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae77918d5969fc061117644fdb4e08ee6">&#9670;&nbsp;</a></span>rk1()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -281,27 +268,10 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MatrixXd ODEInt::rk1 </td>
+          <td class="memname"><a class="el" href="class_trajectory.html">Trajectory</a> ODEInt::rk1 </td>
           <td>(</td>
-          <td class="paramtype">VectorXd&#160;</td>
-          <td class="paramname"><em>tspan</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">VectorXd&#160;</td>
-          <td class="paramname"><em>x0</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::function&lt; VectorXd(double, VectorXd)&gt;&#160;</td>
-          <td class="paramname"><em>F</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -313,8 +283,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0935ee1ad1bbfe6d161b7710956d0eb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0935ee1ad1bbfe6d161b7710956d0eb2">&#9670;&nbsp;</a></span>rk4()</h2>
+<a id="a6194be1deec1a4433433fad61262d893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6194be1deec1a4433433fad61262d893">&#9670;&nbsp;</a></span>rk4()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,27 +293,10 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MatrixXd ODEInt::rk4 </td>
+          <td class="memname"><a class="el" href="class_trajectory.html">Trajectory</a> ODEInt::rk4 </td>
           <td>(</td>
-          <td class="paramtype">VectorXd&#160;</td>
-          <td class="paramname"><em>tspan</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">VectorXd&#160;</td>
-          <td class="paramname"><em>x0</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::function&lt; VectorXd(double, VectorXd)&gt;&#160;</td>
-          <td class="paramname"><em>F</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -351,6 +304,42 @@ Protected Attributes</h2></td></tr>
 <span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0766f5c01845d397da552af63ee99afa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0766f5c01845d397da552af63ee99afa">&#9670;&nbsp;</a></span>update_discretisation_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ODEInt::update_discretisation_length </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>new_step</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa59fe79b92b7aa9f808ebfd629d13ef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa59fe79b92b7aa9f808ebfd629d13ef3">&#9670;&nbsp;</a></span>update_integration_method()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ODEInt::update_integration_method </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="odeint_8h.html#a0fad15a5c60ef70745faa8780c8f4112">odeint_method_t</a>&#160;</td>
+          <td class="paramname"><em>new_meth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
@@ -375,6 +364,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Integration method </p>
 
 </div>
 </div>
@@ -397,6 +387,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Pointer to the dynamical system </p>
 
 </div>
 </div>

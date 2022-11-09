@@ -45,7 +45,7 @@
                   <td id="projectlogo"><img alt="Logo" src="rocket.png" /></td>
                   <td id="projectalign" style="padding-left: 0.5em;">
                      <div id="projectname">CPP Motion Planning ToolBox
-                        &#160;<span id="projectnumber">0.0.3</span>
+                        &#160;<span id="projectnumber">0.5.0</span>
                      </div>
                   </td>
                </tr>
@@ -107,8 +107,6 @@ $(document).ready(function(){initNavTree('control_system_8h.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">../utils.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="controls_8h_source.html">../controller/controls.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="control_system_int_8h_source.html">../odeint/controlSystemInt.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">../types/types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dynamical_system_8h_source.html">dynamicalSystem.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -116,28 +114,28 @@ Include dependency graph for controlSystem.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="control_system_8h__incl.png" border="0" usemap="#ainclude_2header_2systems_2control_system_8h" alt=""/></div>
 <map name="ainclude_2header_2systems_2control_system_8h" id="ainclude_2header_2systems_2control_system_8h">
-<area shape="rect" title=" " alt="" coords="286,5,463,47"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="196,692,271,719"/>
-<area shape="rect" href="controls_8h.html" title=" " alt="" coords="123,393,287,420"/>
-<area shape="rect" href="control_system_int_8h.html" title=" " alt="" coords="273,95,476,121"/>
-<area shape="rect" href="dynamical_system_8h.html" title=" " alt="" coords="447,244,670,271"/>
-<area shape="rect" href="types_8h.html" title=" " alt="" coords="645,319,768,345"/>
-<area shape="rect" title=" " alt="" coords="199,767,268,793"/>
-<area shape="rect" title=" " alt="" coords="292,767,359,793"/>
-<area shape="rect" title=" " alt="" coords="570,767,673,793"/>
-<area shape="rect" href="interpol_8h.html" title=" " alt="" coords="398,468,549,495"/>
-<area shape="rect" href="integrator_8h.html" title=" " alt="" coords="145,468,322,495"/>
-<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="417,543,543,569"/>
-<area shape="rect" href="interpolator_8h.html" title=" " alt="" coords="440,617,549,644"/>
-<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="477,692,539,719"/>
-<area shape="rect" title=" " alt="" coords="383,767,451,793"/>
-<area shape="rect" title=" " alt="" coords="697,767,777,793"/>
-<area shape="rect" title=" " alt="" coords="475,767,546,793"/>
-<area shape="rect" href="integrator1d_8h.html" title=" " alt="" coords="189,543,304,569"/>
-<area shape="rect" href="integrator_2utils_8h.html" title=" " alt="" coords="390,692,453,719"/>
-<area shape="rect" href="odeint_8h.html" title=" " alt="" coords="337,169,412,196"/>
-<area shape="rect" href="trajectory_8h.html" title=" " alt="" coords="687,393,782,420"/>
-<area shape="rect" href="state_8h.html" title=" " alt="" coords="624,468,691,495"/>
+<area shape="rect" title=" " alt="" coords="127,5,304,47"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="225,617,300,644"/>
+<area shape="rect" href="types_8h.html" title=" " alt="" coords="69,169,192,196"/>
+<area shape="rect" href="dynamical_system_8h.html" title=" " alt="" coords="140,95,291,121"/>
+<area shape="rect" title=" " alt="" coords="329,692,398,719"/>
+<area shape="rect" title=" " alt="" coords="238,692,305,719"/>
+<area shape="rect" title=" " alt="" coords="111,692,214,719"/>
+<area shape="rect" href="trajectory_8h.html" title=" " alt="" coords="196,244,291,271"/>
+<area shape="rect" href="time_8h.html" title=" " alt="" coords="129,319,193,345"/>
+<area shape="rect" href="state_8h.html" title=" " alt="" coords="38,319,105,345"/>
+<area shape="rect" href="dynamics_8h.html" title=" " alt="" coords="23,244,120,271"/>
+<area shape="rect" title=" " alt="" coords="610,692,690,719"/>
+<area shape="rect" href="interpol_8h.html" title=" " alt="" coords="502,393,652,420"/>
+<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="491,468,618,495"/>
+<area shape="rect" href="interpolator_8h.html" title=" " alt="" coords="449,543,558,569"/>
+<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="436,617,499,644"/>
+<area shape="rect" title=" " alt="" coords="518,692,586,719"/>
+<area shape="rect" title=" " alt="" coords="423,692,494,719"/>
+<area shape="rect" href="controls_8h.html" title=" " alt="" coords="288,319,452,345"/>
+<area shape="rect" href="integrator_8h.html" title=" " alt="" coords="300,393,478,420"/>
+<area shape="rect" href="integrator1d_8h.html" title=" " alt="" coords="328,468,442,495"/>
+<area shape="rect" href="integrator_2utils_8h.html" title=" " alt="" coords="350,617,412,644"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -145,9 +143,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="control_system_8h__dep__incl.png" border="0" usemap="#ainclude_2header_2systems_2control_system_8hdep" alt=""/></div>
 <map name="ainclude_2header_2systems_2control_system_8hdep" id="ainclude_2header_2systems_2control_system_8hdep">
-<area shape="rect" title=" " alt="" coords="104,5,281,47"/>
-<area shape="rect" href="control_system_8cpp.html" title=" " alt="" coords="5,95,172,121"/>
-<area shape="rect" href="controltlbx_8h.html" title=" " alt="" coords="196,95,400,121"/>
+<area shape="rect" title=" " alt="" coords="275,5,452,47"/>
+<area shape="rect" href="control_system_8cpp.html" title=" " alt="" coords="5,102,231,129"/>
+<area shape="rect" href="motion_planner_8h.html" title=" " alt="" coords="255,95,472,136"/>
+<area shape="rect" href="linear_control_system_8h.html" title=" " alt="" coords="499,95,676,136"/>
+<area shape="rect" href="motion_planner_8cpp.html" title=" " alt="" coords="40,184,231,225"/>
+<area shape="rect" href="motion_planner_r_h_c_m_8h.html" title=" " alt="" coords="255,184,472,225"/>
+<area shape="rect" href="linear_control_system_8cpp.html" title=" " alt="" coords="496,184,684,225"/>
 </map>
 </div>
 </div>
@@ -156,13 +158,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_control_system.html">ControlSystem</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This describes a general, non-linear dynamic system described by an Ordinary Differential Equation (ODE) of the following form.  <a href="class_control_system.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Header file for <a class="el" href="class_control_system.html" title="Header file for ControlSystem class.">ControlSystem</a> class.  <a href="class_control_system.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>T. Schmoderer (<a href="#" onclick="location.href='mai'+'lto:'+'iat'+'he'+'na@'+'ma'+'ilo'+'.c'+'om'; return false;">iathe<span style="display: none;">.nosp@m.</span>na@m<span style="display: none;">.nosp@m.</span>ailo.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.0.3 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2022-10-21 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-11-09 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

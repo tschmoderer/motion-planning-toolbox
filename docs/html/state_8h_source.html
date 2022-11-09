@@ -45,7 +45,7 @@
                   <td id="projectlogo"><img alt="Logo" src="rocket.png" /></td>
                   <td id="projectalign" style="padding-left: 0.5em;">
                      <div id="projectname">CPP Motion Planning ToolBox
-                        &#160;<span id="projectnumber">0.0.3</span>
+                        &#160;<span id="projectnumber">0.5.0</span>
                      </div>
                   </td>
                </tr>
@@ -111,10 +111,27 @@ $(document).ready(function(){initNavTree('state_8h_source.html',''); initResizab
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Libraries</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="state_8h.html#a6b37cb371bd30967f4c20f0d254ac7bd">   18</a></span>&#160;<span class="keyword">typedef</span> Eigen::VectorXd <a class="code" href="state_8h.html#a6b37cb371bd30967f4c20f0d254ac7bd">State_t</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astate_8h_html_a6b37cb371bd30967f4c20f0d254ac7bd"><div class="ttname"><a href="state_8h.html#a6b37cb371bd30967f4c20f0d254ac7bd">State_t</a></div><div class="ttdeci">Eigen::VectorXd State_t</div><div class="ttdef"><b>Definition:</b> state.h:18</div></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="state_8h.html#a32b05ccd7462e4589b374c7cfca5765a">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="state_8h.html#a32b05ccd7462e4589b374c7cfca5765a">State_t</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">class StateVector_t : public Eigen::VectorXd {</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    StateVector_t(uint16_t , double[] );</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    StateVector_t &amp; operator=(const Eigen::VectorXd &amp; other) {</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">        Eigen::VectorXd::operator=(other);</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">        return *this;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">};*/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">   29</a></span>&#160;<span class="keyword">typedef</span> Eigen::VectorXd <a class="code" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="state_8h.html#a30accd8f5f49896f9f73d7c535e7a546">   31</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="state_8h.html#a30accd8f5f49896f9f73d7c535e7a546">norm</a>(<a class="code" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a> x) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> x.norm();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="astate_8h_html_a30accd8f5f49896f9f73d7c535e7a546"><div class="ttname"><a href="state_8h.html#a30accd8f5f49896f9f73d7c535e7a546">norm</a></div><div class="ttdeci">double norm(StateVector_t x)</div><div class="ttdef"><b>Definition:</b> state.h:31</div></div>
+<div class="ttc" id="astate_8h_html_a32b05ccd7462e4589b374c7cfca5765a"><div class="ttname"><a href="state_8h.html#a32b05ccd7462e4589b374c7cfca5765a">State_t</a></div><div class="ttdeci">double State_t</div><div class="ttdef"><b>Definition:</b> state.h:18</div></div>
+<div class="ttc" id="astate_8h_html_a6ad9ef1bf1feb70f40db35bfdfcfb918"><div class="ttname"><a href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a></div><div class="ttdeci">Eigen::VectorXd StateVector_t</div><div class="ttdef"><b>Definition:</b> state.h:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

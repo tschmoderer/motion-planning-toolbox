@@ -1,6 +1,6 @@
 var class_controls =
 [
-    [ "Controls", "class_controls.html#ac33a461920a09622a89bbab50311a77e", null ],
+    [ "Controls", "class_controls.html#af2624a0ef26f9b1281415b5f9ddef0de", null ],
     [ "Controls", "class_controls.html#a9183be3837e9e60de2145c00ce112d82", null ],
     [ "~Controls", "class_controls.html#a546f121f630c5c9db5094f6838d9fed2", null ],
     [ "dot_prod_l2", "class_controls.html#a24e8da253ff9573bd087aa7c87abc53f", null ],
@@ -18,8 +18,8 @@ var class_controls =
     [ "set_cntrl", "class_controls.html#aadef912c4890a4048a45946c34c9d13e", null ],
     [ "set_discretisation_cntrls", "class_controls.html#ac0d010983cce9d62ec4d887e3b16b843", null ],
     [ "set_H", "class_controls.html#ad21e0838e2a0768b02f902bdc222823c", null ],
-    [ "set_integration_method", "class_controls.html#a784ea36ec2117881da9958e26211ae2d", null ],
-    [ "set_interpolation_method", "class_controls.html#acf192afdc526c40183af67ba71b24917", null ],
+    [ "set_integration_method", "class_controls.html#a04b444d5e83f9ea14b804c085e447476", null ],
+    [ "set_interpolation_method", "class_controls.html#a5de52dfa2a96c3a486c404e3e325235e", null ],
     [ "set_t0", "class_controls.html#a66418e4dc4569112a2fbcea26b7a0849", null ],
     [ "set_t1", "class_controls.html#a93525eda0598185fedcfce862067f03c", null ],
     [ "operator*", "class_controls.html#a69287367b7dd5b87f46436e7151f259a", null ],

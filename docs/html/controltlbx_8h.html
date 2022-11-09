@@ -45,7 +45,7 @@
                   <td id="projectlogo"><img alt="Logo" src="rocket.png" /></td>
                   <td id="projectalign" style="padding-left: 0.5em;">
                      <div id="projectname">CPP Motion Planning ToolBox
-                        &#160;<span id="projectnumber">0.0.3</span>
+                        &#160;<span id="projectnumber">0.5.0</span>
                      </div>
                   </td>
                </tr>
@@ -108,40 +108,41 @@ $(document).ready(function(){initNavTree('controltlbx_8h.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="controls_8h_source.html">controller/controls.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="control_system_8h_source.html">systems/controlSystem.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="path_8h_source.html">path/path.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="odeint_8h_source.html">odeint/odeint.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dynamical_system_8h_source.html">systems/dynamicalSystem.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="output_helper_8h_source.html">common/outputHelper.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for controltlbx.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="controltlbx_8h__incl.png" border="0" usemap="#ainclude_2header_2controltlbx_8h" alt=""/></div>
 <map name="ainclude_2header_2controltlbx_8h" id="ainclude_2header_2controltlbx_8h">
-<area shape="rect" title=" " alt="" coords="483,5,687,32"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="469,603,531,629"/>
-<area shape="rect" href="controls_8h.html" title=" " alt="" coords="295,453,447,480"/>
-<area shape="rect" href="control_system_8h.html" title=" " alt="" coords="627,80,813,107"/>
-<area shape="rect" href="path_8h.html" title=" " alt="" coords="993,155,1089,181"/>
-<area shape="rect" href="output_helper_8h.html" title=" " alt="" coords="623,379,801,405"/>
-<area shape="rect" title=" " alt="" coords="525,827,595,853"/>
-<area shape="rect" title=" " alt="" coords="247,827,313,853"/>
-<area shape="rect" title=" " alt="" coords="765,827,867,853"/>
-<area shape="rect" href="interpol_8h.html" title=" " alt="" coords="245,528,395,555"/>
-<area shape="rect" href="integrator_8h.html" title=" " alt="" coords="43,528,221,555"/>
-<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="287,603,414,629"/>
-<area shape="rect" href="interpolator_8h.html" title=" " alt="" coords="385,677,495,704"/>
-<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="434,752,497,779"/>
-<area shape="rect" title=" " alt="" coords="338,827,406,853"/>
-<area shape="rect" title=" " alt="" coords="619,827,699,853"/>
-<area shape="rect" title=" " alt="" coords="430,827,501,853"/>
-<area shape="rect" href="integrator1d_8h.html" title=" " alt="" coords="111,603,225,629"/>
-<area shape="rect" href="integrator_2utils_8h.html" title=" " alt="" coords="347,752,410,779"/>
-<area shape="rect" href="control_system_int_8h.html" title=" " alt="" coords="623,155,825,181"/>
-<area shape="rect" href="dynamical_system_8h.html" title=" " alt="" coords="775,304,998,331"/>
-<area shape="rect" href="types_8h.html" title=" " alt="" coords="825,379,948,405"/>
-<area shape="rect" href="odeint_8h.html" title=" " alt="" coords="725,229,800,256"/>
-<area shape="rect" href="trajectory_8h.html" title=" " alt="" coords="665,453,759,480"/>
-<area shape="rect" href="state_8h.html" title=" " alt="" coords="821,528,888,555"/>
+<area shape="rect" title=" " alt="" coords="497,5,701,32"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="161,677,223,704"/>
+<area shape="rect" href="odeint_8h.html" title=" " alt="" coords="624,80,744,107"/>
+<area shape="rect" href="dynamical_system_8h.html" title=" " alt="" coords="781,155,1003,181"/>
+<area shape="rect" href="output_helper_8h.html" title=" " alt="" coords="452,304,631,331"/>
+<area shape="rect" title=" " alt="" coords="157,752,227,779"/>
+<area shape="rect" title=" " alt="" coords="251,752,317,779"/>
+<area shape="rect" title=" " alt="" coords="642,752,745,779"/>
+<area shape="rect" href="types_8h.html" title=" " alt="" coords="831,229,953,256"/>
+<area shape="rect" href="trajectory_8h.html" title=" " alt="" coords="782,379,877,405"/>
+<area shape="rect" href="time_8h.html" title=" " alt="" coords="821,453,885,480"/>
+<area shape="rect" href="state_8h.html" title=" " alt="" coords="957,453,1024,480"/>
+<area shape="rect" href="dynamics_8h.html" title=" " alt="" coords="931,304,1029,331"/>
+<area shape="rect" title=" " alt="" coords="533,752,613,779"/>
+<area shape="rect" href="interpol_8h.html" title=" " alt="" coords="334,453,485,480"/>
+<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="226,528,353,555"/>
+<area shape="rect" href="interpolator_8h.html" title=" " alt="" coords="255,603,364,629"/>
+<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="345,677,407,704"/>
+<area shape="rect" title=" " alt="" coords="342,752,410,779"/>
+<area shape="rect" title=" " alt="" coords="434,752,505,779"/>
+<area shape="rect" href="controls_8h.html" title=" " alt="" coords="441,379,605,405"/>
+<area shape="rect" href="integrator_8h.html" title=" " alt="" coords="377,528,554,555"/>
+<area shape="rect" href="integrator1d_8h.html" title=" " alt="" coords="408,603,523,629"/>
+<area shape="rect" href="integrator_2utils_8h.html" title=" " alt="" coords="434,677,497,704"/>
+<area shape="rect" title=" " alt="" coords="144,379,203,405"/>
+<area shape="rect" title=" " alt="" coords="227,379,301,405"/>
+<area shape="rect" title=" " alt="" coords="325,379,416,405"/>
 </map>
 </div>
 </div>
@@ -164,12 +165,13 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa444c8fc7b01a2391937130098dfead9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controltlbx_8h.html#aa444c8fc7b01a2391937130098dfead9">hello_world_control_tlbx</a> ()</td></tr>
+<tr class="memdesc:aa444c8fc7b01a2391937130098dfead9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Welcome function.  <a href="controltlbx_8h.html#aa444c8fc7b01a2391937130098dfead9">More...</a><br /></td></tr>
 <tr class="separator:aa444c8fc7b01a2391937130098dfead9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>T. Schmoderer (<a href="#" onclick="location.href='mai'+'lto:'+'iat'+'he'+'na@'+'ma'+'ilo'+'.c'+'om'; return false;">iathe<span style="display: none;">.nosp@m.</span>na@m<span style="display: none;">.nosp@m.</span>ailo.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.0.3 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2022-10-21 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-11-09 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE. </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a5e599ccabb463fa085c1228f96a1fc57"></a>
@@ -259,6 +261,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Welcome function. </p>
 
 </div>
 </div>

@@ -45,7 +45,7 @@
                   <td id="projectlogo"><img alt="Logo" src="rocket.png" /></td>
                   <td id="projectalign" style="padding-left: 0.5em;">
                      <div id="projectname">CPP Motion Planning ToolBox
-                        &#160;<span id="projectnumber">0.0.3</span>
+                        &#160;<span id="projectnumber">0.5.0</span>
                      </div>
                   </td>
                </tr>
@@ -104,20 +104,184 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="title">CPP Motion Planning ToolBox Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a> </p><div id="motion-planning-toolbox-logo" align="center"> <br  />
+<div class="textblock"><p>Van der Pol example configuration file: <em>exp.json</em> <a class="anchor" id="md_README"></a> </p><div id="motion-planning-toolbox-logo" align="center"> <br  />
  <img src="https://raw.githubusercontent.com/tschmoderer/motion-planning-toolbox/main/docs/img/icons/128x128/rocket.png" alt="Motion Planning ToolBox Logo" width="128" id="motion-planning-toolbox-logo-img" class="inline"/> <h1>Motion Planning Toolbox</h1>
 </div><div id="motion-planning-toolbox-logo" align="center"> <h3></h3>
 </div><div id="motion-planning-toolbox-logo" align="center"> </div><p><a href="https://github.com/tschmoderer/motion-planning-toolbox/search?l=c%2B%2B&amp;type=code"><img src="https://img.shields.io/badge/language-C%2B%2B-blue" alt="language-cpp" class="inline"/></a> <a href="https://github.com/tschmoderer/motion-planning-toolbox/actions/workflows/cmake.yml"><img src="https://github.com/tschmoderer/motion-planning-toolbox/actions/workflows/cmake.yml/badge.svg?branch=main" alt="build" style="pointer-events: none;" class="inline"/></a> <a href="https://tschmoderer.github.io/motion-planning-toolbox/html/index.html"><img src="https://github.com/tschmoderer/motion-planning-toolbox/actions/workflows/doxygen.yml/badge.svg?branch=main" alt="docs" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/tschmoderer/motion-planning-toolbox/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" alt="License" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/tschmoderer/motion-planning-toolbox/releases"><img src="https://img.shields.io/github/v/tag/tschmoderer/motion-planning-toolbox?label=Version" alt="GitHub tag (latest by date)" class="inline"/></a></p>
 <p>A C++ toolbox for the computation of trajectories of control systems.</p>
+<p>The library is intended to be used from a single .json file.</p>
+<p>All parameters and functions for one or several experiments are set in a .json file. Then the application will parse and configure the application to run the experiments.</p>
 <h1><a class="anchor" id="autotoc_md0"></a>
+Demo</h1>
+<p>In a simple *.json* file we define all parameters for one or several experiments (i.e. simulation of a dynamical or a control system). We define the dynamics, we set the output variables and the postprocessing options.</p>
+<p>This section describe a configuration file for a simulation of the Van der Pol oscilator</p>
+<div class="fragment"><div class="line">\begin{pmatrix}\dot{x}_1 \\ \dot{x}_2 \end{pmatrix} = \begin{pmatrix}{x}_2 \\ \mu(1-(x_1)^2)x_2-x_1 \end{pmatrix}</div>
+</div><!-- fragment --><p>&lt;details&gt; </p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    &quot;experiences&quot;: [</div>
+<div class="line">        {</div>
+<div class="line">            &quot;type&quot;: &quot;dynamical&quot;,</div>
+<div class="line">            &quot;name&quot;: &quot;vanderpol&quot;,</div>
+<div class="line">            &quot;run&quot;: true,</div>
+<div class="line">            </div>
+<div class="line">            &quot;general&quot;: {    </div>
+<div class="line">                &quot;state_dim&quot;: 2,</div>
+<div class="line">                &quot;start_time&quot;: 0,</div>
+<div class="line">                &quot;end_time&quot;: 20,</div>
+<div class="line">                &quot;x0&quot;: [</div>
+<div class="line">                    [2, 0], </div>
+<div class="line">                    [-4, 1],</div>
+<div class="line">                    [&quot;sqrt(2)&quot;, &quot;1/2&quot;]</div>
+<div class="line">                ]</div>
+<div class="line">            },</div>
+<div class="line">            </div>
+<div class="line">            &quot;dynamics&quot;: {</div>
+<div class="line">                &quot;parameters&quot;: {</div>
+<div class="line">                    &quot;mymu&quot;: 1</div>
+<div class="line">                },</div>
+<div class="line"> </div>
+<div class="line">                &quot;f&quot;: [</div>
+<div class="line">                    &quot;dxdt(0) = x(1);&quot;,</div>
+<div class="line">                    &quot;dxdt(1) = mymu*(1-x(0)*x(0))*x(1)-x(0);&quot;</div>
+<div class="line">                ],</div>
+<div class="line"> </div>
+<div class="line">                &quot;dfdx&quot;: [</div>
+<div class="line">                    &quot;dxdt_dx(0,0) = 0;&quot; ,</div>
+<div class="line">                    &quot;dxdt_dx(0,1) = 1;&quot;,</div>
+<div class="line">                    &quot;dxdt_dx(1,0) = -mymu*x(1)*x(0)/2.-1;&quot;,</div>
+<div class="line">                    &quot;dxdt_dx(1,1) = mymu*(1-x(0)*x(0));&quot;</div>
+<div class="line">                ]</div>
+<div class="line">            },</div>
+<div class="line"> </div>
+<div class="line">            &quot;discretisation&quot;: {</div>
+<div class="line">                &quot;trajectory&quot;: 513</div>
+<div class="line">            },</div>
+<div class="line"> </div>
+<div class="line">            &quot;methods&quot;: { </div>
+<div class="line">                &quot;ode_int&quot;: &quot;RK4&quot;</div>
+<div class="line">            },</div>
+<div class="line">            </div>
+<div class="line">            &quot;output&quot;: {</div>
+<div class="line">                &quot;cli&quot;: false,</div>
+<div class="line">                &quot;file&quot;: {</div>
+<div class="line">                    &quot;yn&quot;: true,</div>
+<div class="line">                    &quot;dir&quot;: &quot;./results/&quot;,</div>
+<div class="line">                    &quot;filename&quot;: &quot;trajectory.dat&quot;</div>
+<div class="line">                }</div>
+<div class="line">            }, </div>
+<div class="line"> </div>
+<div class="line">            &quot;postprocess&quot;: {</div>
+<div class="line">                &quot;plots&quot;: [</div>
+<div class="line">                    {</div>
+<div class="line">                        &quot;data&quot;: {</div>
+<div class="line">                            &quot;x&quot;: 0,</div>
+<div class="line">                            &quot;y&quot;: 1,</div>
+<div class="line">                            &quot;nb&quot;: 1</div>
+<div class="line">                        },</div>
+<div class="line">                        &quot;type&quot;: &quot;line&quot;, </div>
+<div class="line">                        &quot;title&quot;: &quot;Evolution the x_1 coordinate over time for the first initial condition&quot;,</div>
+<div class="line">                        &quot;xlabel&quot;: &quot;Time&quot;,</div>
+<div class="line">                        &quot;ylabel&quot;: &quot;x_1&quot;,</div>
+<div class="line">                        &quot;output&quot;: {</div>
+<div class="line">                            &quot;gui&quot;: false, </div>
+<div class="line">                            &quot;file&quot;: {</div>
+<div class="line">                                &quot;yn&quot;: true, </div>
+<div class="line">                                &quot;dir&quot;: &quot;./results/&quot;, </div>
+<div class="line">                                &quot;filename&quot;: &quot;x1_coordinate.png&quot;</div>
+<div class="line">                            }</div>
+<div class="line">                        }</div>
+<div class="line"> </div>
+<div class="line">                    }, </div>
+<div class="line"> </div>
+<div class="line">                    {</div>
+<div class="line">                        &quot;data&quot;: {</div>
+<div class="line">                            &quot;x&quot;: 1,</div>
+<div class="line">                            &quot;y&quot;: 2,</div>
+<div class="line">                            &quot;nb&quot;: 0</div>
+<div class="line">                        },</div>
+<div class="line">                        &quot;type&quot;: &quot;line&quot;,</div>
+<div class="line">                        &quot;title&quot;: &quot;Phase diagram of all initial conditions&quot;,</div>
+<div class="line">                        &quot;xlabel&quot;: &quot;x_1&quot;,</div>
+<div class="line">                        &quot;ylabel&quot;: &quot;x_2&quot;,</div>
+<div class="line">                        </div>
+<div class="line">                        &quot;output&quot;: {</div>
+<div class="line">                            &quot;gui&quot;: true,</div>
+<div class="line">                            &quot;file&quot;: {</div>
+<div class="line">                                &quot;yn&quot;: true, </div>
+<div class="line">                                &quot;dir&quot;: &quot;./results/&quot;, </div>
+<div class="line">                                &quot;filename&quot;: &quot;phase.png&quot;</div>
+<div class="line">                            }</div>
+<div class="line">                        }</div>
+<div class="line">                    },</div>
+<div class="line"> </div>
+<div class="line">                    {</div>
+<div class="line">                        &quot;data&quot;: {</div>
+<div class="line">                            &quot;x&quot;: 0,</div>
+<div class="line">                            &quot;y&quot;: 2,</div>
+<div class="line">                            &quot;nb&quot;: 0</div>
+<div class="line">                        },</div>
+<div class="line">                        &quot;type&quot;: &quot;line&quot;,</div>
+<div class="line">                        &quot;title&quot;: &quot;Evolution the x_2 coordinate over time for all initial conditions&quot;,</div>
+<div class="line">                        &quot;xlabel&quot;: &quot;time&quot;,</div>
+<div class="line">                        &quot;ylabel&quot;: &quot;x_2&quot;,</div>
+<div class="line">                        </div>
+<div class="line">                        &quot;output&quot;: {</div>
+<div class="line">                            &quot;gui&quot;: true,</div>
+<div class="line">                            &quot;file&quot;: {</div>
+<div class="line">                                &quot;yn&quot;: true, </div>
+<div class="line">                                &quot;dir&quot;: &quot;./results/&quot;, </div>
+<div class="line">                                &quot;filename&quot;: &quot;x2_coordinate_all.png&quot;</div>
+<div class="line">                            }</div>
+<div class="line">                        }</div>
+<div class="line">                    }</div>
+<div class="line">                ]</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    ]</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>&lt;/details&gt;</p>
+<p>Then using the following commands</p>
+<div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake ..</div>
+<div class="line">make </div>
+<div class="line">cd ../app</div>
+<div class="line">./mpp_app ./exp.json </div>
+<div class="line">python3 postprocess.py exp.json</div>
+</div><!-- fragment --><p>produce :</p>
+<table class="doxtable">
+<tr>
+<td><img src="https://github.com/tschmoderer/motion-planning-toolbox/blob/b787af63644cbee5f076f1db201586720262889f/.github/img/vanderpol/phase.png" alt="phase.png" class="inline"/> </td><td><img src="https://github.com/tschmoderer/motion-planning-toolbox/blob/b787af63644cbee5f076f1db201586720262889f/.github/img/vanderpol/x1_coordinate.png" alt="x1_coordinate.png" class="inline"/>  </td></tr>
+<tr>
+</tr>
+</table>
+<p><img src="https://github.com/tschmoderer/motion-planning-toolbox/blob/b787af63644cbee5f076f1db201586720262889f/.github/img/vanderpol/x2_coordinate_all.png" alt="x2_coordinate_all.png" class="inline"/>  </p>
+<p>The workflow of the app is as follows:</p>
+<div class="fragment"><div class="line">flowchart LR</div>
+<div class="line">    A(exp.json) --&gt; B(./app)</div>
+<div class="line">    B --&gt;|Configure| C(exp.hpp)</div>
+<div class="line">    B --&gt;|Compile| D(exp.cpp)</div>
+<div class="line">    C --&gt; D </div>
+<div class="line">    B --&gt;|Run| E(./exp)</div>
+<div class="line">    D --&gt; E</div>
+<div class="line">    E --&gt;|Output| F(data)</div>
+<div class="line">    A --&gt; G(postprocess.py)</div>
+<div class="line">    F --&gt; G</div>
+<div class="line">    G --&gt;|Produce| H(Plots)</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1"></a>
 Install &amp; Building</h1>
-<h2><a class="anchor" id="autotoc_md1"></a>
-Requierement</h2>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Requirement</h2>
 <ul>
 <li>Eigen</li>
 </ul>
 <div class="fragment"><div class="line">sudo apt install libeigen3-dev</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md2"></a>
+</div><!-- fragment --><ul>
+<li>For postprocessing : python3, numpy, matplotlib</li>
+</ul>
+<div class="fragment"><div class="line">sudo apt install python3</div>
+<div class="line">pip3 install numpy matplotlib</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
 Unix</h2>
 <p>Require cmake &amp; g++</p>
 <p>Optional valgrind for memcheck</p>
@@ -129,13 +293,14 @@ Unix</h2>
 <div class="line">make</div>
 <div class="line">make test</div>
 <div class="line">(Opt) make memcheck</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
 Credits</h2>
 <p>Portions of this software are copyright of their respective authors :</p>
 <ul>
 <li>Documentation theme is made by <a href="https://github.com/jothepro/doxygen-awesome-css">jothepro</a> - MIT License</li>
 <li>Icon is <em>rocket.svg</em> distributed by <a href="https://github.com/lucide-icons/lucide">lucide</a> - ISC License</li>
-<li>Linear Algebra library is <a href="https://eigen.tuxfamily.org/">Eigen</a> - Apache License </li>
+<li>Linear Algebra library is <a href="https://eigen.tuxfamily.org/">Eigen</a> - Apache License</li>
+<li>JSON parser is <a href="https://github.com/nlohmann/json">JSON for modern C++</a> - MIT License </li>
 </ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->

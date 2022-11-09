@@ -14,7 +14,9 @@ var hierarchy =
     [ "lsqcpp::DoglegMethod", "structlsqcpp_1_1_dogleg_method.html", null ],
     [ "lsqcpp::DoglegMethodParameter< _Scalar >", "classlsqcpp_1_1_dogleg_method_parameter.html", null ],
     [ "DynamicalSystem", "class_dynamical_system.html", [
-      [ "ControlSystem", "class_control_system.html", null ]
+      [ "ControlSystem", "class_control_system.html", [
+        [ "LinearControlSystem", "class_linear_control_system.html", null ]
+      ] ]
     ] ],
     [ "lsqcpp::FiniteDifferencesParameter< _Scalar >", "structlsqcpp_1_1_finite_differences_parameter.html", null ],
     [ "lsqcpp::FiniteDifferencesParameter< Scalar >", "structlsqcpp_1_1_finite_differences_parameter.html", null ],
@@ -32,7 +34,9 @@ var hierarchy =
     [ "lsqcpp::LevenbergMarquardtParameter< _Scalar >", "classlsqcpp_1_1_levenberg_marquardt_parameter.html", null ],
     [ "lsqcpp::LevenbergMarquardtParameter< Scalar >", "classlsqcpp_1_1_levenberg_marquardt_parameter.html", null ],
     [ "LSQ", "class_l_s_q.html", null ],
-    [ "MotionPlanner", "class_motion_planner.html", null ],
+    [ "MotionPlanner", "class_motion_planner.html", [
+      [ "MotionPlannerRHCM", "class_motion_planner_r_h_c_m.html", null ]
+    ] ],
     [ "lsqcpp::NewtonStepRefiner< Scalar, Inputs, Outputs, Method >", "classlsqcpp_1_1_newton_step_refiner.html", null ],
     [ "lsqcpp::NewtonStepRefiner< _Scalar, _Inputs, _Outputs, ArmijoBacktracking >", "classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_armijo_backtracking_01_4.html", null ],
     [ "lsqcpp::NewtonStepRefiner< _Scalar, _Inputs, _Outputs, BarzilaiBorwein >", "classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_barzilai_borwein_01_4.html", null ],
@@ -42,9 +46,7 @@ var hierarchy =
     [ "lsqcpp::internal::ObjectiveEvaluator< ComputesJacobian >", "structlsqcpp_1_1internal_1_1_objective_evaluator.html", null ],
     [ "lsqcpp::internal::ObjectiveEvaluator< false >", "structlsqcpp_1_1internal_1_1_objective_evaluator_3_01false_01_4.html", null ],
     [ "lsqcpp::internal::ObjectiveEvaluator< true >", "structlsqcpp_1_1internal_1_1_objective_evaluator_3_01true_01_4.html", null ],
-    [ "ODEInt", "class_o_d_e_int.html", [
-      [ "ControlSystemInt", "class_control_system_int.html", null ]
-    ] ],
+    [ "ODEInt", "class_o_d_e_int.html", null ],
     [ "OutputHelper", "class_output_helper.html", null ],
     [ "Path", "class_path.html", null ],
     [ "lsqcpp::LeastSquaresAlgorithm< _Scalar, _Inputs, _Outputs, _Objective, _StepMethod, _RefineMethod, _FiniteDifferencesMethod >::Result", "structlsqcpp_1_1_least_squares_algorithm_1_1_result.html", null ],

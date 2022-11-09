@@ -45,7 +45,7 @@
                   <td id="projectlogo"><img alt="Logo" src="rocket.png" /></td>
                   <td id="projectalign" style="padding-left: 0.5em;">
                      <div id="projectname">CPP Motion Planning ToolBox
-                        &#160;<span id="projectnumber">0.0.3</span>
+                        &#160;<span id="projectnumber">0.5.0</span>
                      </div>
                   </td>
                </tr>
@@ -101,7 +101,8 @@ $(document).ready(function(){initNavTree('output_helper_8h.html',''); initResiza
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">outputHelper.h File Reference</div>  </div>
 </div><!--header-->
@@ -109,28 +110,37 @@ $(document).ready(function(){initNavTree('output_helper_8h.html',''); initResiza
 <div class="textblock"><code>#include &lt;Eigen/Dense&gt;</code><br />
 <code>#include &quot;<a class="el" href="controls_8h_source.html">../controller/controls.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="trajectory_8h_source.html">../types/trajectory.h</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for outputHelper.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="output_helper_8h__incl.png" border="0" usemap="#ainclude_2header_2common_2output_helper_8h" alt=""/></div>
 <map name="ainclude_2header_2common_2output_helper_8h" id="ainclude_2header_2common_2output_helper_8h">
-<area shape="rect" title=" " alt="" coords="80,5,259,47"/>
-<area shape="rect" title=" " alt="" coords="13,468,115,495"/>
-<area shape="rect" href="controls_8h.html" title=" " alt="" coords="87,95,251,121"/>
-<area shape="rect" href="trajectory_8h.html" title=" " alt="" coords="343,95,489,121"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="139,393,213,420"/>
+<area shape="rect" title=" " alt="" coords="580,5,759,47"/>
+<area shape="rect" title=" " alt="" coords="249,468,351,495"/>
+<area shape="rect" href="controls_8h.html" title=" " alt="" coords="182,95,346,121"/>
+<area shape="rect" title=" " alt="" coords="748,468,828,495"/>
+<area shape="rect" href="trajectory_8h.html" title=" " alt="" coords="481,95,628,121"/>
+<area shape="rect" title=" " alt="" coords="707,95,765,121"/>
+<area shape="rect" title=" " alt="" coords="790,95,863,121"/>
+<area shape="rect" title=" " alt="" coords="888,95,979,121"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="383,393,457,420"/>
 <area shape="rect" href="interpol_8h.html" title=" " alt="" coords="94,169,245,196"/>
 <area shape="rect" href="integrator_8h.html" title=" " alt="" coords="269,169,446,196"/>
-<area shape="rect" title=" " alt="" coords="140,468,209,495"/>
-<area shape="rect" title=" " alt="" coords="233,468,300,495"/>
-<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="127,244,254,271"/>
-<area shape="rect" href="interpolator_8h.html" title=" " alt="" coords="173,319,283,345"/>
-<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="238,393,301,420"/>
-<area shape="rect" title=" " alt="" coords="325,468,393,495"/>
-<area shape="rect" title=" " alt="" coords="512,468,592,495"/>
-<area shape="rect" title=" " alt="" coords="417,468,487,495"/>
-<area shape="rect" href="integrator1d_8h.html" title=" " alt="" coords="300,244,415,271"/>
-<area shape="rect" href="integrator_2utils_8h.html" title=" " alt="" coords="326,393,389,420"/>
+<area shape="rect" title=" " alt="" coords="376,468,445,495"/>
+<area shape="rect" title=" " alt="" coords="469,468,536,495"/>
+<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="94,244,221,271"/>
+<area shape="rect" href="interpolator_8h.html" title=" " alt="" coords="103,319,212,345"/>
+<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="482,393,545,420"/>
+<area shape="rect" title=" " alt="" coords="561,468,629,495"/>
+<area shape="rect" title=" " alt="" coords="653,468,723,495"/>
+<area shape="rect" href="integrator1d_8h.html" title=" " alt="" coords="245,244,360,271"/>
+<area shape="rect" href="integrator_2utils_8h.html" title=" " alt="" coords="569,393,631,420"/>
+<area shape="rect" href="time_8h.html" title=" " alt="" coords="384,244,448,271"/>
+<area shape="rect" href="state_8h.html" title=" " alt="" coords="521,169,588,196"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -151,13 +161,61 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output_helper.html">OutputHelper</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class to standartize the output format of.  <a href="class_output_helper.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a050d1178db8d4a7d2cb3476f9c4852c5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5">plot_type_t</a> : uint8_t { <a class="el" href="output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5aa24efab9e87500fc0fb846afe1cc5ffb">phase</a>
+, <a class="el" href="output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5a86aa3b8ff677143b4281589b162546e9">coordinate</a>
+ }</td></tr>
+<tr class="separator:a050d1178db8d4a7d2cb3476f9c4852c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8e4f6d5dd20547c6e880dbb2581f28"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28">out_t</a> : uint8_t { <a class="el" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a50504649054e647de992cf4c0afe076c">trajectory</a>
+, <a class="el" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a5d8add8effb2a9964dbebfd27c9ddd31">control</a>
+ }</td></tr>
+<tr class="separator:a9f8e4f6d5dd20547c6e880dbb2581f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>T. Schmoderer (<a href="#" onclick="location.href='mai'+'lto:'+'iat'+'he'+'na@'+'ma'+'ilo'+'.c'+'om'; return false;">iathe<span style="display: none;">.nosp@m.</span>na@m<span style="display: none;">.nosp@m.</span>ailo.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.0.3 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2022-10-21 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-11-09 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE. </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a9f8e4f6d5dd20547c6e880dbb2581f28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f8e4f6d5dd20547c6e880dbb2581f28">&#9670;&nbsp;</a></span>out_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28">out_t</a> : uint8_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9f8e4f6d5dd20547c6e880dbb2581f28a50504649054e647de992cf4c0afe076c"></a>trajectory&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9f8e4f6d5dd20547c6e880dbb2581f28a5d8add8effb2a9964dbebfd27c9ddd31"></a>control&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a050d1178db8d4a7d2cb3476f9c4852c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a050d1178db8d4a7d2cb3476f9c4852c5">&#9670;&nbsp;</a></span>plot_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5">plot_type_t</a> : uint8_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a050d1178db8d4a7d2cb3476f9c4852c5aa24efab9e87500fc0fb846afe1cc5ffb"></a>phase&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a050d1178db8d4a7d2cb3476f9c4852c5a86aa3b8ff677143b4281589b162546e9"></a>coordinate&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->

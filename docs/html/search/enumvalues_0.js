@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['direct_545',['Direct',['../structlsqcpp_1_1_barzilai_borwein.html#ac3ce8002e89d555c078afc478d0e8932afd1dd0c603be8170f9eae0be9f2f6afb',1,'lsqcpp::BarzilaiBorwein']]]
+  ['control_603',['control',['../output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a5d8add8effb2a9964dbebfd27c9ddd31',1,'outputHelper.h']]],
+  ['coordinate_604',['coordinate',['../output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5a86aa3b8ff677143b4281589b162546e9',1,'outputHelper.h']]]
 ];

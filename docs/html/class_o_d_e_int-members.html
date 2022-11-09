@@ -45,7 +45,7 @@
                   <td id="projectlogo"><img alt="Logo" src="rocket.png" /></td>
                   <td id="projectalign" style="padding-left: 0.5em;">
                      <div id="projectname">CPP Motion Planning ToolBox
-                        &#160;<span id="projectnumber">0.0.3</span>
+                        &#160;<span id="projectnumber">0.5.0</span>
                      </div>
                   </td>
                </tr>
@@ -107,15 +107,17 @@ $(document).ready(function(){initNavTree('class_o_d_e_int.html',''); initResizab
 
 <p>This is the complete list of members for <a class="el" href="class_o_d_e_int.html">ODEInt</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_o_d_e_int.html#a767098f5628e08cebd9c81db94f9f6f0">ode_int</a>(double, double, VectorXd, std::function&lt; VectorXd(double, VectorXd)&gt;)</td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_d_e_int.html#abc98336eff819a14a11de07eefcd7312">integrate</a>() const</td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_d_e_int.html#a59231ed7c63b132a9f4f846cec049c7d">ode_meth</a></td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_o_d_e_int.html#ad62d5d1cde664582f8014a1fe66f0719">ODEInt</a>(odeint_method_t, uint16_t)</td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_d_e_int.html#ac8c94c1e49920292b0c7b91326048e7c">ODEInt</a>(DynamicalSystem *, odeint_method_t, uint16_t)</td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_d_e_int.html#a1c2c1eb21fb72ee358d756be5086a26a">ODEInt</a>(const ODEInt &amp;)</td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_o_d_e_int.html#a91b3e0d72e57f9b69e9c0f8009785377">rk1</a>(VectorXd, VectorXd, std::function&lt; VectorXd(double, VectorXd)&gt;)</td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_o_d_e_int.html#a0935ee1ad1bbfe6d161b7710956d0eb2">rk4</a>(VectorXd, VectorXd, std::function&lt; VectorXd(double, VectorXd)&gt;)</td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_d_e_int.html#ae77918d5969fc061117644fdb4e08ee6">rk1</a>() const</td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_o_d_e_int.html#a6194be1deec1a4433433fad61262d893">rk4</a>() const</td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_o_d_e_int.html#a679726a065b7f2b78309b94ef0fea0c1">sys</a></td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_o_d_e_int.html#a7e82194b2ac11ccba149c83aad1a9f69">T</a></td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_o_d_e_int.html#a4eda540c357b15c0f798d8ad59500a95">~ODEInt</a>()</td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_d_e_int.html#a0766f5c01845d397da552af63ee99afa">update_discretisation_length</a>(uint16_t)</td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_o_d_e_int.html#aa59fe79b92b7aa9f808ebfd629d13ef3">update_integration_method</a>(odeint_method_t)</td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_o_d_e_int.html#a4eda540c357b15c0f798d8ad59500a95">~ODEInt</a>()</td><td class="entry"><a class="el" href="class_o_d_e_int.html">ODEInt</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

@@ -1,13 +1,21 @@
 <map id="include/header/types/state.h" name="include/header/types/state.h">
-<area shape="rect" id="node1" title=" " alt="" coords="408,5,567,47"/>
-<area shape="rect" id="node2" href="$types_8h.html" title=" " alt="" coords="408,95,567,136"/>
-<area shape="rect" id="node3" href="$control_system_int_8h.html" title=" " alt="" coords="209,363,371,404"/>
-<area shape="rect" id="node6" href="$control_system_8h.html" title=" " alt="" coords="504,452,681,493"/>
-<area shape="rect" id="node9" href="$dynamical_system_8h.html" title=" " alt="" coords="399,184,576,225"/>
-<area shape="rect" id="node4" href="$control_system_int_8cpp.html" title=" " alt="" coords="247,452,431,493"/>
-<area shape="rect" id="node5" href="$motion_planner_8h.html" title=" " alt="" coords="5,452,223,493"/>
-<area shape="rect" id="node7" href="$control_system_8cpp.html" title=" " alt="" coords="404,541,571,568"/>
-<area shape="rect" id="node8" href="$controltlbx_8h.html" title=" " alt="" coords="595,541,799,568"/>
-<area shape="rect" id="node10" href="$odeint_8h.html" title=" " alt="" coords="393,273,555,315"/>
-<area shape="rect" id="node11" href="$odeint_8cpp.html" title=" " alt="" coords="396,370,555,397"/>
+<area shape="rect" id="node1" title=" " alt="" coords="611,5,769,47"/>
+<area shape="rect" id="node2" href="$dynamics_8h.html" title=" " alt="" coords="493,95,652,136"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="535,184,693,225"/>
+<area shape="rect" id="node16" href="$trajectory_8h.html" title=" " alt="" coords="728,95,887,136"/>
+<area shape="rect" id="node4" href="$motion_planner_8h.html" title=" " alt="" coords="461,452,679,493"/>
+<area shape="rect" id="node7" href="$odeint_8h.html" title=" " alt="" coords="761,363,923,404"/>
+<area shape="rect" id="node10" href="$control_system_8h.html" title=" " alt="" coords="236,363,413,404"/>
+<area shape="rect" id="node14" href="$dynamical_system_8h.html" title=" " alt="" coords="525,273,703,315"/>
+<area shape="rect" id="node5" href="$motion_planner_8cpp.html" title=" " alt="" coords="588,541,779,583"/>
+<area shape="rect" id="node6" href="$motion_planner_r_h_c_m_8h.html" title=" " alt="" coords="347,541,564,583"/>
+<area shape="rect" id="node8" href="$odeint_8cpp.html" title=" " alt="" coords="715,459,873,486"/>
+<area shape="rect" id="node9" href="$controltlbx_8h.html" title=" " alt="" coords="897,459,1101,486"/>
+<area shape="rect" id="node11" href="$control_system_8cpp.html" title=" " alt="" coords="212,459,437,486"/>
+<area shape="rect" id="node12" href="$linear_control_system_8h.html" title=" " alt="" coords="11,452,188,493"/>
+<area shape="rect" id="node13" href="$linear_control_system_8cpp.html" title=" " alt="" coords="5,541,193,583"/>
+<area shape="rect" id="node15" href="$dynamical_system_8cpp.html" title=" " alt="" coords="489,370,737,397"/>
+<area shape="rect" id="node17" href="$trajectory_8cpp.html" title=" " alt="" coords="721,191,894,218"/>
+<area shape="rect" id="node18" href="$output_helper_8h.html" title=" " alt="" coords="922,184,1101,225"/>
+<area shape="rect" id="node19" href="$output_helper_8cpp.html" title=" " alt="" coords="1049,281,1267,307"/>
 </map>

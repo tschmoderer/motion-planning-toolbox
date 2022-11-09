@@ -45,7 +45,7 @@
                   <td id="projectlogo"><img alt="Logo" src="rocket.png" /></td>
                   <td id="projectalign" style="padding-left: 0.5em;">
                      <div id="projectname">CPP Motion Planning ToolBox
-                        &#160;<span id="projectnumber">0.0.3</span>
+                        &#160;<span id="projectnumber">0.5.0</span>
                      </div>
                   </td>
                </tr>
@@ -108,18 +108,154 @@ $(document).ready(function(){initNavTree('class_motion_planner.html',''); initRe
 </div><!--header-->
 <div class="contents">
 
+<p>Header file for <a class="el" href="class_motion_planner.html" title="Header file for MotionPlanner class.">MotionPlanner</a> class.  
+ <a href="class_motion_planner.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="motion_planner_8h_source.html">motionPlanner.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for MotionPlanner:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motion_planner__inherit__graph.png" border="0" usemap="#a_motion_planner_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_motion_planner_inherit__map" id="a_motion_planner_inherit__map">
+<area shape="rect" title="Header file for MotionPlanner class." alt="" coords="25,5,141,32"/>
+<area shape="rect" href="class_motion_planner_r_h_c_m.html" title="Header file for MotionPlannerRCHM class." alt="" coords="5,80,161,107"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7066a1e46210625d82571c1b8f0c6922"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_planner.html#a7066a1e46210625d82571c1b8f0c6922">MotionPlanner</a> (<a class="el" href="class_control_system.html">ControlSystem</a> *, VectorXd)</td></tr>
-<tr class="separator:a7066a1e46210625d82571c1b8f0c6922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30ed16d352d6961618a5b68eb32f16b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_planner.html#a30ed16d352d6961618a5b68eb32f16b8">MotionPlanner</a> (uint16_t, uint16_t, <a class="el" href="time_8h.html#a80b23eab88362163e2edd1a8b8238ef1">Time_t</a>, <a class="el" href="time_8h.html#a80b23eab88362163e2edd1a8b8238ef1">Time_t</a>, <a class="el" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a>, <a class="el" href="dynamics_8h.html#a598002412373c8c623ad93f81e89662c">control_func_t</a>, <a class="el" href="dynamics_8h.html#a394d78d0b8ef28275b6da4a56850d70b">control_func_dx_t</a>, <a class="el" href="dynamics_8h.html#ad357ae568c430568fadf2f6aabc05d6b">control_func_du_t</a>, <a class="el" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a>, uint16_t, <a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>, uint16_t, <a class="el" href="odeint_8h.html#a0fad15a5c60ef70745faa8780c8f4112">odeint_method_t</a>, uint16_t)</td></tr>
+<tr class="separator:a30ed16d352d6961618a5b68eb32f16b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5cb705732b2655fa5cae1132cb3beb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_planner.html#ad5cb705732b2655fa5cae1132cb3beb9">MotionPlanner</a> (<a class="el" href="class_control_system.html">ControlSystem</a> *, <a class="el" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a>, <a class="el" href="class_o_d_e_int.html">ODEInt</a> *)</td></tr>
+<tr class="separator:ad5cb705732b2655fa5cae1132cb3beb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab441ca4c371c6b383b5af6a41291e46c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_planner.html#ab441ca4c371c6b383b5af6a41291e46c">~MotionPlanner</a> ()</td></tr>
 <tr class="separator:ab441ca4c371c6b383b5af6a41291e46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826b9ffc2617acea54aa1bc5292e16c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_planner.html#a826b9ffc2617acea54aa1bc5292e16c3">init_ctrl</a> (uint8_t, double)</td></tr>
+<tr class="separator:a826b9ffc2617acea54aa1bc5292e16c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a0b612c4384a02c4c81c0025e6dd9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_planner.html#a60a0b612c4384a02c4c81c0025e6dd9a">init_ctrl</a> (uint8_t, VectorXd)</td></tr>
+<tr class="separator:a60a0b612c4384a02c4c81c0025e6dd9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a597348622b4b23079c6d8e3c15aa0118"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_trajectory.html">Trajectory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_planner.html#a597348622b4b23079c6d8e3c15aa0118">trajectory</a> () const</td></tr>
+<tr class="separator:a597348622b4b23079c6d8e3c15aa0118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd3bc1cac74abea0dc056271143a0e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_planner.html#a0dd3bc1cac74abea0dc056271143a0e7">inout</a> () const</td></tr>
+<tr class="separator:a0dd3bc1cac74abea0dc056271143a0e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a7066a1e46210625d82571c1b8f0c6922"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7066a1e46210625d82571c1b8f0c6922">&#9670;&nbsp;</a></span>MotionPlanner()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Header file for <a class="el" href="class_motion_planner.html" title="Header file for MotionPlanner class.">MotionPlanner</a> class. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a30ed16d352d6961618a5b68eb32f16b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30ed16d352d6961618a5b68eb32f16b8">&#9670;&nbsp;</a></span>MotionPlanner() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MotionPlanner::MotionPlanner </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="time_8h.html#a80b23eab88362163e2edd1a8b8238ef1">Time_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="time_8h.html#a80b23eab88362163e2edd1a8b8238ef1">Time_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dynamics_8h.html#a598002412373c8c623ad93f81e89662c">control_func_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dynamics_8h.html#a394d78d0b8ef28275b6da4a56850d70b">control_func_dx_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dynamics_8h.html#ad357ae568c430568fadf2f6aabc05d6b">control_func_du_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="odeint_8h.html#a0fad15a5c60ef70745faa8780c8f4112">odeint_method_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5cb705732b2655fa5cae1132cb3beb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5cb705732b2655fa5cae1132cb3beb9">&#9670;&nbsp;</a></span>MotionPlanner() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,7 +269,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">VectorXd&#160;</td>
+          <td class="paramtype"><a class="el" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_d_e_int.html">ODEInt</a> *&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -163,8 +305,100 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a826b9ffc2617acea54aa1bc5292e16c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a826b9ffc2617acea54aa1bc5292e16c3">&#9670;&nbsp;</a></span>init_ctrl() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionPlanner::init_ctrl </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60a0b612c4384a02c4c81c0025e6dd9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60a0b612c4384a02c4c81c0025e6dd9a">&#9670;&nbsp;</a></span>init_ctrl() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionPlanner::init_ctrl </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VectorXd&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0dd3bc1cac74abea0dc056271143a0e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd3bc1cac74abea0dc056271143a0e7">&#9670;&nbsp;</a></span>inout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a> MotionPlanner::inout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a597348622b4b23079c6d8e3c15aa0118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a597348622b4b23079c6d8e3c15aa0118">&#9670;&nbsp;</a></span>trajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_trajectory.html">Trajectory</a> MotionPlanner::trajectory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/header/motionplanner/<a class="el" href="motion_planner_8h_source.html">motionPlanner.h</a></li>
+<li>src/motionplanner/<a class="el" href="motion_planner_8cpp.html">motionPlanner.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -45,7 +45,7 @@
                   <td id="projectlogo"><img alt="Logo" src="rocket.png" /></td>
                   <td id="projectalign" style="padding-left: 0.5em;">
                      <div id="projectname">CPP Motion Planning ToolBox
-                        &#160;<span id="projectnumber">0.0.3</span>
+                        &#160;<span id="projectnumber">0.5.0</span>
                      </div>
                   </td>
                </tr>
@@ -102,6 +102,7 @@ $(document).ready(function(){initNavTree('class_controls.html',''); initResizabl
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_controls-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -113,14 +114,14 @@ $(document).ready(function(){initNavTree('class_controls.html',''); initResizabl
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac33a461920a09622a89bbab50311a77e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e">Controls</a> (uint8_t, double, double, uint16_t)</td></tr>
-<tr class="memdesc:ac33a461920a09622a89bbab50311a77e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object Create a list of nb Control object with domain \([t_0,t_1]\) and \(H\) step of discretisation.  <a href="class_controls.html#ac33a461920a09622a89bbab50311a77e">More...</a><br /></td></tr>
-<tr class="separator:ac33a461920a09622a89bbab50311a77e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2624a0ef26f9b1281415b5f9ddef0de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#af2624a0ef26f9b1281415b5f9ddef0de">Controls</a> (uint8_t, double, double, uint16_t, <a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>, uint16_t)</td></tr>
+<tr class="memdesc:af2624a0ef26f9b1281415b5f9ddef0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_controls.html#af2624a0ef26f9b1281415b5f9ddef0de" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object Create a list of nb Control object with domain \([t_0,t_1]\) and \(H\) step of discretisation.  <a href="class_controls.html#af2624a0ef26f9b1281415b5f9ddef0de">More...</a><br /></td></tr>
+<tr class="separator:af2624a0ef26f9b1281415b5f9ddef0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9183be3837e9e60de2145c00ce112d82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a9183be3837e9e60de2145c00ce112d82">Controls</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;)</td></tr>
-<tr class="memdesc:a9183be3837e9e60de2145c00ce112d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object Copy constructor.  <a href="class_controls.html#a9183be3837e9e60de2145c00ce112d82">More...</a><br /></td></tr>
+<tr class="memdesc:a9183be3837e9e60de2145c00ce112d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_controls.html#af2624a0ef26f9b1281415b5f9ddef0de" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object Copy constructor.  <a href="class_controls.html#a9183be3837e9e60de2145c00ce112d82">More...</a><br /></td></tr>
 <tr class="separator:a9183be3837e9e60de2145c00ce112d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a546f121f630c5c9db5094f6838d9fed2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a546f121f630c5c9db5094f6838d9fed2">~Controls</a> ()</td></tr>
-<tr class="memdesc:a546f121f630c5c9db5094f6838d9fed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object.  <a href="class_controls.html#a546f121f630c5c9db5094f6838d9fed2">More...</a><br /></td></tr>
+<tr class="memdesc:a546f121f630c5c9db5094f6838d9fed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_controls.html#af2624a0ef26f9b1281415b5f9ddef0de" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object.  <a href="class_controls.html#a546f121f630c5c9db5094f6838d9fed2">More...</a><br /></td></tr>
 <tr class="separator:a546f121f630c5c9db5094f6838d9fed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a845dc6facd3933e2f2d9cb4314bdb77d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a845dc6facd3933e2f2d9cb4314bdb77d">get_nb_cntrl</a> () const</td></tr>
 <tr class="separator:a845dc6facd3933e2f2d9cb4314bdb77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,10 +143,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aeb6a927d6d36555cb3916a2489f1b267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadef912c4890a4048a45946c34c9d13e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#aadef912c4890a4048a45946c34c9d13e">set_cntrl</a> (uint8_t, VectorXd)</td></tr>
 <tr class="separator:aadef912c4890a4048a45946c34c9d13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf192afdc526c40183af67ba71b24917"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#acf192afdc526c40183af67ba71b24917">set_interpolation_method</a> (const <a class="el" href="class_interpolator1_d.html">Interpolator1D</a> *)</td></tr>
-<tr class="separator:acf192afdc526c40183af67ba71b24917"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a784ea36ec2117881da9958e26211ae2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a784ea36ec2117881da9958e26211ae2d">set_integration_method</a> (const <a class="el" href="class_integrator1_d.html">Integrator1D</a> *)</td></tr>
-<tr class="separator:a784ea36ec2117881da9958e26211ae2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de52dfa2a96c3a486c404e3e325235e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a5de52dfa2a96c3a486c404e3e325235e">set_interpolation_method</a> (<a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>)</td></tr>
+<tr class="separator:a5de52dfa2a96c3a486c404e3e325235e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04b444d5e83f9ea14b804c085e447476"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a04b444d5e83f9ea14b804c085e447476">set_integration_method</a> (uint16_t)</td></tr>
+<tr class="separator:a04b444d5e83f9ea14b804c085e447476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24e8da253ff9573bd087aa7c87abc53f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a24e8da253ff9573bd087aa7c87abc53f">dot_prod_l2</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;) const</td></tr>
 <tr class="memdesc:a24e8da253ff9573bd087aa7c87abc53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the \(L^2\) dot product of two <a class="el" href="class_controls.html">Controls</a> object.  <a href="class_controls.html#a24e8da253ff9573bd087aa7c87abc53f">More...</a><br /></td></tr>
 <tr class="separator:a24e8da253ff9573bd087aa7c87abc53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +163,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9ea9e144ef52ac45139efc77905186ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a286a155f30cbe6d472a947b8e29b4847"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_controls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a286a155f30cbe6d472a947b8e29b4847">operator-</a> () const</td></tr>
 <tr class="separator:a286a155f30cbe6d472a947b8e29b4847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4cb6535afdb5dee31263a7d91729d58e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_controls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#a4cb6535afdb5dee31263a7d91729d58e">random</a> ()</td></tr>
+<tr class="separator:a4cb6535afdb5dee31263a7d91729d58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbaeb49dac617d85495f184edcb6d074"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_controls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#adbaeb49dac617d85495f184edcb6d074">zeros</a> ()</td></tr>
+<tr class="separator:adbaeb49dac617d85495f184edcb6d074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbfd2bacb61de96183642074e15e492f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_controls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#afbfd2bacb61de96183642074e15e492f">ones</a> ()</td></tr>
+<tr class="separator:afbfd2bacb61de96183642074e15e492f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af471ae196336ba3e4947e9a673dcf457"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_controls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html#af471ae196336ba3e4947e9a673dcf457">basis</a> (uint8_t, uint16_t)</td></tr>
+<tr class="separator:af471ae196336ba3e4947e9a673dcf457"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -190,8 +202,8 @@ Friends</h2></td></tr>
 <tr class="separator:a15aeb2e13ca7ef6cc4f02bfbcd32ae90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac33a461920a09622a89bbab50311a77e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac33a461920a09622a89bbab50311a77e">&#9670;&nbsp;</a></span>Controls() <span class="overload">[1/2]</span></h2>
+<a id="af2624a0ef26f9b1281415b5f9ddef0de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2624a0ef26f9b1281415b5f9ddef0de">&#9670;&nbsp;</a></span>Controls() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +230,31 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>H</em>&#160;</td>
+          <td class="paramname"><em>H</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>&#160;</td>
+          <td class="paramname"><em>im</em> = <code><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78fa17abedd2e487446bf814c9da0b7791de">INTERP_LINEAR</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>el</em> = <code><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a7f75d51b33702e6ebfbb6f8a6762d731">EXTEND_ZERO</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>er</em> = <code><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a7f75d51b33702e6ebfbb6f8a6762d731">EXTEND_ZERO</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>int_nb_step</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -228,21 +264,27 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object Create a list of nb Control object with domain \([t_0,t_1]\) and \(H\) step of discretisation. </p>
+<p>Construct a new <a class="el" href="class_controls.html#af2624a0ef26f9b1281415b5f9ddef0de" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object Create a list of nb Control object with domain \([t_0,t_1]\) and \(H\) step of discretisation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">nb</td><td>Number of controls </td></tr>
     <tr><td class="paramname">t0</td><td></td></tr>
     <tr><td class="paramname">t1</td><td></td></tr>
     <tr><td class="paramname">H</td><td>Number of discretisation time step of \([t_0,t_1]\) </td></tr>
+    <tr><td class="paramname">im</td><td>Interpolation method : default INTERP_LINEAR </td></tr>
+    <tr><td class="paramname">el</td><td>Strategy to extend data when \(t &lt; t_0\) : default EXTEND_ZERO </td></tr>
+    <tr><td class="paramname">er</td><td>Strategy to extend data when \(t &gt; t_1\) : default EXTEND_ZERO </td></tr>
+    <tr><td class="paramname">int_nb_step</td><td>Number of time step to integrate controls : default H</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>nb should takes its values between \([0,255]\) </dd>
+<dl class="section warning"><dt>Warning</dt><dd>H must be at least 2 </dd>
 <dd>
-Interpolation method is not set, should be manually added after instanciating a <a class="el" href="class_controls.html">Controls</a> object </dd>
+\(t_0\) must be less than \(t_1\) </dd>
 <dd>
-Integration method is not set, should be manually added after instanciating a <a class="el" href="class_controls.html">Controls</a> object </dd></dl>
+nb must be greater than 0 </dd>
+<dd>
+Maximum number of control is 255 </dd></dl>
 
 </div>
 </div>
@@ -262,7 +304,7 @@ Integration method is not set, should be manually added after instanciating a <a
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object Copy constructor. </p>
+<p>Construct a new <a class="el" href="class_controls.html#af2624a0ef26f9b1281415b5f9ddef0de" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object Copy constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cs</td><td>a <a class="el" href="class_controls.html">Controls</a> object to be copied </td></tr>
@@ -287,11 +329,47 @@ Integration method is not set, should be manually added after instanciating a <a
       </table>
 </div><div class="memdoc">
 
-<p>Destroy the <a class="el" href="class_controls.html#ac33a461920a09622a89bbab50311a77e" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object. </p>
+<p>Destroy the <a class="el" href="class_controls.html#af2624a0ef26f9b1281415b5f9ddef0de" title="Construct a new Controls::Controls object Create a list of nb Control object with domain  and  step o...">Controls::Controls</a> object. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="af471ae196336ba3e4947e9a673dcf457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af471ae196336ba3e4947e9a673dcf457">&#9670;&nbsp;</a></span>basis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_controls.html">Controls</a> Controls::basis </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a24e8da253ff9573bd087aa7c87abc53f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a24e8da253ff9573bd087aa7c87abc53f">&#9670;&nbsp;</a></span>dot_prod_l2()</h2>
 
@@ -316,9 +394,6 @@ Integration method is not set, should be manually added after instanciating a <a
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>The integrator attibute must be set before using this method </dd>
-<dd>
-The integration method of the first <a class="el" href="class_controls.html">Controls</a> object is used. </dd></dl>
 
 </div>
 </div>
@@ -418,6 +493,31 @@ The integration method of the first <a class="el" href="class_controls.html">Con
 
 </div>
 </div>
+<a id="afbfd2bacb61de96183642074e15e492f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbfd2bacb61de96183642074e15e492f">&#9670;&nbsp;</a></span>ones()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_controls.html">Controls</a> Controls::ones </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af02681159f2ee734b93d5e1fddc267a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af02681159f2ee734b93d5e1fddc267a7">&#9670;&nbsp;</a></span>operator()()</h2>
 
@@ -440,7 +540,6 @@ The integration method of the first <a class="el" href="class_controls.html">Con
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>VectorXd </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>The interpolator attibute must be set before using this method </dd></dl>
 
 </div>
 </div>
@@ -524,6 +623,31 @@ The integration method of the first <a class="el" href="class_controls.html">Con
 
 </div>
 </div>
+<a id="a4cb6535afdb5dee31263a7d91729d58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb6535afdb5dee31263a7d91729d58e">&#9670;&nbsp;</a></span>random()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_controls.html">Controls</a> Controls::random </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aeb6a927d6d36555cb3916a2489f1b267"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb6a927d6d36555cb3916a2489f1b267">&#9670;&nbsp;</a></span>set_cntrl() <span class="overload">[1/2]</span></h2>
 
@@ -549,6 +673,13 @@ The integration method of the first <a class="el" href="class_controls.html">Con
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td></td></tr>
+    <tr><td class="paramname">d</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -577,6 +708,13 @@ The integration method of the first <a class="el" href="class_controls.html">Con
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td></td></tr>
+    <tr><td class="paramname">val</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -654,8 +792,8 @@ Reiniatlise data to zeros </dd></dl>
 
 </div>
 </div>
-<a id="a784ea36ec2117881da9958e26211ae2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a784ea36ec2117881da9958e26211ae2d">&#9670;&nbsp;</a></span>set_integration_method()</h2>
+<a id="a04b444d5e83f9ea14b804c085e447476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04b444d5e83f9ea14b804c085e447476">&#9670;&nbsp;</a></span>set_integration_method()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -663,8 +801,8 @@ Reiniatlise data to zeros </dd></dl>
         <tr>
           <td class="memname">void Controls::set_integration_method </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_integrator1_d.html">Integrator1D</a> *&#160;</td>
-          <td class="paramname"><em>integr</em></td><td>)</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>new_h</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -678,8 +816,8 @@ Reiniatlise data to zeros </dd></dl>
 
 </div>
 </div>
-<a id="acf192afdc526c40183af67ba71b24917"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf192afdc526c40183af67ba71b24917">&#9670;&nbsp;</a></span>set_interpolation_method()</h2>
+<a id="a5de52dfa2a96c3a486c404e3e325235e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de52dfa2a96c3a486c404e3e325235e">&#9670;&nbsp;</a></span>set_interpolation_method()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -687,9 +825,25 @@ Reiniatlise data to zeros </dd></dl>
         <tr>
           <td class="memname">void Controls::set_interpolation_method </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_interpolator1_d.html">Interpolator1D</a> *&#160;</td>
-          <td class="paramname"><em>interpol</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>&#160;</td>
+          <td class="paramname"><em>im</em> = <code><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78fa17abedd2e487446bf814c9da0b7791de">INTERP_LINEAR</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>el</em> = <code><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a7f75d51b33702e6ebfbb6f8a6762d731">EXTEND_ZERO</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>er</em> = <code><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a7f75d51b33702e6ebfbb6f8a6762d731">EXTEND_ZERO</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -744,6 +898,31 @@ Reiniatlise data to zeros </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>t0 should be less than object attribute t1 </dd>
 <dd>
 Does not change data, hence the same data are now evaluated at the new interpolation points defined by the discretisation of the interval \([t_0,t_1]\$ into H pieces */ void Controls::set_t0(double t0) { assert(t0 &lt; this-&gt;t1); this-&gt;t0 = t0; this-&gt;construct_discrete_time(); } /** @brief @param t1 @warning t1 must be greater than object attribute t0 @warning Does not change data, hence the same data are now evaluated at the new interpolation points defined by the discretisation of the interval \)[t_0,t_1]$ into H pieces </dd></dl>
+
+</div>
+</div>
+<a id="adbaeb49dac617d85495f184edcb6d074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbaeb49dac617d85495f184edcb6d074">&#9670;&nbsp;</a></span>zeros()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_controls.html">Controls</a> Controls::zeros </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1112,7 +1291,7 @@ Does not change data, hence the same data are now evaluated at the new interpola
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/header/controller/<a class="el" href="controls_8h_source.html">controls.h</a></li>
-<li>src/<a class="el" href="controls_8cpp.html">controls.cpp</a></li>
+<li>src/controller/<a class="el" href="controls_8cpp.html">controls.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

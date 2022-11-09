@@ -45,7 +45,7 @@
                   <td id="projectlogo"><img alt="Logo" src="rocket.png" /></td>
                   <td id="projectalign" style="padding-left: 0.5em;">
                      <div id="projectname">CPP Motion Planning ToolBox
-                        &#160;<span id="projectnumber">0.0.3</span>
+                        &#160;<span id="projectnumber">0.5.0</span>
                      </div>
                   </td>
                </tr>
@@ -103,6 +103,9 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>save()
+: <a class="el" href="class_output_helper.html#abde76733c68ccd8af565fb506bf6fe0b">OutputHelper</a>
+</li>
 <li>Scalar
 : <a class="el" href="classlsqcpp_1_1_armijo_backtracking_parameter.html#abe9cc7c727f6238f5a1f06cfce1fa5e1">lsqcpp::ArmijoBacktrackingParameter&lt; _Scalar &gt;</a>
 , <a class="el" href="classlsqcpp_1_1_barzilai_borwein_parameter.html#a532a038c14e55692ef061c9e830251ba">lsqcpp::BarzilaiBorweinParameter&lt; _Scalar &gt;</a>
@@ -122,9 +125,6 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>set_cntrl()
 : <a class="el" href="class_controls.html#aeb6a927d6d36555cb3916a2489f1b267">Controls</a>
 </li>
-<li>set_cntrl_system_integrator()
-: <a class="el" href="class_control_system.html#adc833b2f8b89d245141aef10082ced0d">ControlSystem</a>
-</li>
 <li>set_controls()
 : <a class="el" href="class_control_system.html#a17d3f21bff441bba22af19ed6055c9fd">ControlSystem</a>
 </li>
@@ -135,15 +135,17 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="class_controls.html#ac0d010983cce9d62ec4d887e3b16b843">Controls</a>
 </li>
 <li>set_dynamics()
-: <a class="el" href="class_control_system.html#afb512bccf29e0b7649407f3cad42fa63">ControlSystem</a>
-, <a class="el" href="class_dynamical_system.html#ac51cc124079d74487c61b2b80cb9cafb">DynamicalSystem</a>
+: <a class="el" href="class_control_system.html#a551d5624e26072e6a2aaae84fa55ebd5">ControlSystem</a>
+, <a class="el" href="class_dynamical_system.html#a86c7ee01f7228a77a1e382176502f155">DynamicalSystem</a>
 </li>
 <li>set_dynamics_derivative_u()
-: <a class="el" href="class_control_system.html#a0a40eeb40bfcb1fbbae1f0fa9b28a103">ControlSystem</a>
+: <a class="el" href="class_control_system.html#a6004062bc94240a27dbc628d13f04020">ControlSystem</a>
+, <a class="el" href="class_linear_control_system.html#a7a19f79dddd9e1de103830c63de42205">LinearControlSystem</a>
 </li>
 <li>set_dynamics_derivative_x()
-: <a class="el" href="class_control_system.html#a77053176d37cec713ade64c64442ef6d">ControlSystem</a>
-, <a class="el" href="class_dynamical_system.html#a26752f160e7659481214c321aa06d4be">DynamicalSystem</a>
+: <a class="el" href="class_control_system.html#a699b3ec61014e408e01cdf8900ddd37f">ControlSystem</a>
+, <a class="el" href="class_dynamical_system.html#a7899129628e4645b08f8ddc1af738432">DynamicalSystem</a>
+, <a class="el" href="class_linear_control_system.html#a1aa6ba643ec17898eecc46ed28928371">LinearControlSystem</a>
 </li>
 <li>set_exleft()
 : <a class="el" href="class_interpolator1_d.html#a26b842117fc503df585ebc104662af83">Interpolator1D</a>
@@ -155,10 +157,10 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="class_controls.html#ad21e0838e2a0768b02f902bdc222823c">Controls</a>
 </li>
 <li>set_integration_method()
-: <a class="el" href="class_controls.html#a784ea36ec2117881da9958e26211ae2d">Controls</a>
+: <a class="el" href="class_controls.html#a04b444d5e83f9ea14b804c085e447476">Controls</a>
 </li>
 <li>set_interpolation_method()
-: <a class="el" href="class_controls.html#acf192afdc526c40183af67ba71b24917">Controls</a>
+: <a class="el" href="class_controls.html#a5de52dfa2a96c3a486c404e3e325235e">Controls</a>
 , <a class="el" href="class_trajectory.html#a99369dc53f2563542c2a54a5dc31da9e">Trajectory</a>
 </li>
 <li>set_method()
@@ -169,17 +171,14 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 </li>
 <li>set_t0()
 : <a class="el" href="class_controls.html#a66418e4dc4569112a2fbcea26b7a0849">Controls</a>
-, <a class="el" href="class_control_system.html#ac4edd7b729f415983f893b5df06629be">ControlSystem</a>
-, <a class="el" href="class_dynamical_system.html#a9b5aa0edf0e643c5dd7faf615f2660fb">DynamicalSystem</a>
+, <a class="el" href="class_dynamical_system.html#ae8d6dc97dd0335d03e133606ffe3e8e4">DynamicalSystem</a>
 </li>
 <li>set_t1()
 : <a class="el" href="class_controls.html#a93525eda0598185fedcfce862067f03c">Controls</a>
-, <a class="el" href="class_control_system.html#abe9267bce557b807aedfaf942f11bc2b">ControlSystem</a>
-, <a class="el" href="class_dynamical_system.html#a9d72830b3c0c437d754ef366b96f2d56">DynamicalSystem</a>
+, <a class="el" href="class_dynamical_system.html#ac6acea90b1ac3a5d3e211cc8b0bf991e">DynamicalSystem</a>
 </li>
 <li>set_x0()
-: <a class="el" href="class_control_system.html#a09bf57e57e03101d128f31b870edc678">ControlSystem</a>
-, <a class="el" href="class_dynamical_system.html#a7356995932304570402a0743c7089e8b">DynamicalSystem</a>
+: <a class="el" href="class_dynamical_system.html#aafe31bb262c50b01cf954a48e0f10aa1">DynamicalSystem</a>
 </li>
 <li>setAcceptanceFitness()
 : <a class="el" href="classlsqcpp_1_1_dogleg_method_parameter.html#a60209a561a426e7e96fed7127a4af7df">lsqcpp::DoglegMethodParameter&lt; _Scalar &gt;</a>

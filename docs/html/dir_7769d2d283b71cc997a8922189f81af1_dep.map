@@ -1,11 +1,18 @@
 <map id="include/header/motionplanner" name="include/header/motionplanner">
 <area shape="rect" id="node1" href="dir_14fef9d1d45f57b628968662ce7774a4.html" title="path" alt="" coords="27,148,99,196"/>
-<area shape="rect" id="node2" href="dir_3aa49f4de257b7f5a55c0551869b6e7e.html" title="odeint" alt="" coords="123,148,195,196"/>
-<area shape="rect" id="node3" href="dir_76bcc0babcfe5e4279cbb421fa4fe8d3.html" title="controller" alt="" coords="126,244,210,292"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000008_000003.html" title="1" alt="" coords="168,218,177,232"/>
-<area shape="rect" id="node4" href="dir_7769d2d283b71cc997a8922189f81af1.html" title="motionplanner" alt="" coords="100,52,217,100"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000007_000009.html" title="1" alt="" coords="100,134,110,149"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000007_000008.html" title="1" alt="" coords="162,122,172,137"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000007_000003.html" title="1" alt="" coords="196,225,206,240"/>
-<area shape="rect" id="clust1" href="dir_22759b2357b28df387ac7f15bd61889c.html" title="header" alt="" coords="16,16,232,303"/>
+<area shape="rect" id="node2" href="dir_3aa49f4de257b7f5a55c0551869b6e7e.html" title="odeint" alt="" coords="176,148,248,196"/>
+<area shape="rect" id="node3" href="dir_4e3596c21b83e61c41cd2d6f5eec90e8.html" title="types" alt="" coords="159,340,231,388"/>
+<area shape="rect" id="edge8-headlabel" href="dir_000008_000011.html" title="1" alt="" coords="223,321,232,336"/>
+<area shape="rect" id="node5" href="dir_9a00c9733bacd43e3532d8308b793b8c.html" title="systems" alt="" coords="144,244,221,292"/>
+<area shape="rect" id="edge9-headlabel" href="dir_000008_000010.html" title="1" alt="" coords="199,222,208,236"/>
+<area shape="rect" id="node4" href="dir_76bcc0babcfe5e4279cbb421fa4fe8d3.html" title="controller" alt="" coords="177,436,261,484"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000011_000003.html" title="1" alt="" coords="212,409,221,424"/>
+<area shape="rect" id="edge7-headlabel" href="dir_000010_000011.html" title="2" alt="" coords="193,313,202,328"/>
+<area shape="rect" id="node6" href="dir_7769d2d283b71cc997a8922189f81af1.html" title="motionplanner" alt="" coords="92,52,209,100"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000007_000009.html" title="1" alt="" coords="98,133,107,148"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000007_000008.html" title="1" alt="" coords="189,121,199,135"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000007_000011.html" title="1" alt="" coords="155,313,164,328"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000007_000003.html" title="1" alt="" coords="241,416,250,430"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000007_000010.html" title="1" alt="" coords="174,217,184,232"/>
+<area shape="rect" id="clust1" href="dir_22759b2357b28df387ac7f15bd61889c.html" title="header" alt="" coords="16,16,285,495"/>
 </map>
