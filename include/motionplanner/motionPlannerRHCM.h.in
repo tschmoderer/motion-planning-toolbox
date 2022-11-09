@@ -1,0 +1,29 @@
+/**
+* @file @CURFILENAME@
+* @author @AUTHOR@ (@AUTHOR_MAIL@)
+* @version @PROJECT_VERSION_MAJOR@.@PROJECT_VERSION_MINOR@.@PROJECT_VERSION_PATCH@
+* @date @TODAY@
+* @copyright Copyright (c) @YEAR@. All rights reserved. This project is released under the @LICENSE@.
+*/
+/**
+ * @brief Header file for MotionPlannerRCHM class
+*/
+
+#ifndef CNTRLTLBX_MOTIONPLANNERRHCM_H
+#define CNTRLTLBX_MOTIONPLANNERRHCM_H
+
+#include "motionPlanner.h"
+
+/**
+ * @brief Class to implement the regularised homotopy continuation method
+ * 
+ */
+class MotionPlannerRHCM : MotionPlanner {
+    public: 
+
+    private: 
+        /* ATTRIBUTES */
+        StateVector_t endpoint_first_shot_;
+};
+
+#endif
