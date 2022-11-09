@@ -39,3 +39,10 @@ docs/html/
 docs/doxyfile.conf
 
 .vscode/
+app/mpp_app
+
+app/bin/exp
+
+app/assets/datavizscripts/__pycache__/
+
+app/assets/postprocess/__pycache__/
