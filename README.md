@@ -23,7 +23,7 @@ This section describe a configuration file for a simulation of the Van der Pol o
 \begin{pmatrix}\dot{x}_1 \\ \dot{x}_2 \end{pmatrix} = \begin{pmatrix}{x}_2 \\ \mu(1-(x_1)^2)x_2-x_1 \end{pmatrix}
 ```
 
-<details><summary>Example of a .json configuration file: <i>exp.json</i> </summary>
+<details><summary>Van der Pol example configuration file: <i>exp.json</i> </summary>
 <p>
     
 ```json
