@@ -2,7 +2,7 @@
 * @file interpolator1d.h
 * @author T. Schmoderer (iathena@mailo.com)
 * @version 0.0.3
-* @date 2022-10-20
+* @date 2022-11-09
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -36,7 +36,7 @@ class Interpolator1D : public Interpolator {
     public: 
         /* CONSTRUCTORS */
         Interpolator1D(); 
-        Interpolator1D(interpolation_method_t , extend_t , extend_t) ;
+        Interpolator1D(interpolation_method_t , extend_t , extend_t ) ;
         Interpolator1D(const Interpolator1D & );
 
         /* DESTRUCTOR */
