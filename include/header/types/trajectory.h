@@ -2,7 +2,7 @@
 * @file trajectory.h
 * @author T. Schmoderer (iathena@mailo.com)
 * @version 0.0.3
-* @date 2022-10-21
+* @date 2022-11-09
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -16,7 +16,9 @@
 
 // Additional library
 #include <iostream>
-#include <Eigen/Dense>
+
+#include "time.h"
+#include "state.h"
 #include "../interpol/interpol.h"
 
 using Eigen::VectorXd;
@@ -43,18 +45,19 @@ class Trajectory {
         ~Trajectory(); 
 
         /* ACCESSORS */
-        VectorXd get_time() const; 
+        TimeVector_t get_time() const; 
         MatrixXd get_data() const; 
         void set_interpolation_method(interpolation_method_t , extend_t , extend_t );
 
         /* METHODS */
-        VectorXd evaluate(double ) const; 
+        StateVector_t evaluate(double ) const; 
+        StateVector_t endpoint() const;
 
         /* OPERATORS */
         friend std::ostream & operator<<(std::ostream & , const Trajectory & );
 
     private: 
-        VectorXd time_;         /*!< Time Vector */
+        TimeVector_t time_;     /*!< Time Vector */
         MatrixXd data_;         /*!< Data Matrix */
         Interpolator1D interp_; /*!< Interpolation strategy */
 }; 

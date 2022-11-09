@@ -1,4 +1,4 @@
-#include "../../include/header/trajectory/trajectory.h"
+#include "../../include/header/types/trajectory.h"
 
 Trajectory::Trajectory() {
     this->interp_ = Interpolator1D(INTERP_LINEAR, EXTEND_ZERO, EXTEND_ZERO);
@@ -18,12 +18,12 @@ Trajectory::Trajectory(const Trajectory & traj) {
 
 Trajectory::~Trajectory() {} 
 
-VectorXd Trajectory::get_time() const {
-    return this->time;
+TimeVector_t Trajectory::get_time() const {
+    return this->time_;
 }
 
 MatrixXd Trajectory::get_data() const {
-    return this->data;
+    return this->data_;
 }
 
 void Trajectory::set_interpolation_method(interpolation_method_t im, extend_t el, extend_t er) {
@@ -32,7 +32,7 @@ void Trajectory::set_interpolation_method(interpolation_method_t im, extend_t el
     this->interp_.set_exright(er);
 }
 
-VectorXd Trajectory::evaluate(double t) const {
+StateVector_t Trajectory::evaluate(double t) const {
     assert(this->time_.size() == this->data_.rows()); 
     VectorXd res(this->data_.cols());
     VectorXd col_data(this->data_.rows());
@@ -42,6 +42,13 @@ VectorXd Trajectory::evaluate(double t) const {
     }
     return res;
 } 
+
+StateVector_t Trajectory::endpoint() const {
+    assert(this->time_.size() == this->data_.rows()); 
+    VectorXd res(this->data_.cols()); 
+    res = this->data_.row(this->data_.rows());
+    return res;
+}
 
 /**
  * @brief Overload output operator for Trajectory object
