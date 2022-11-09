@@ -1,0 +1,268 @@
+{
+    /* An array of experiences */
+    "experiences": [
+        {
+            // Type should be "dynamical" or "control"
+            "type": "dynamical",
+            // Name should be unique among all experiement
+            // It will be used to store the results
+            "name": "vanderpol",
+            // a boolean to disable experiment
+            // @warning even if run is set to false, the experiment should be correctly parametrised
+            "run": true,
+            
+            "general": {    
+                // An integer dertermining the dimension of the state space
+                "state_dim": 2,
+
+                // A double to set the start time of the trajectories
+                "start_time": 0,
+                // A double to set the end time of the trajectories
+                "end_time": 20,
+
+                // A list of double that store the initial condition of the system 
+                // x0 should have the same dimension as "state_dim"
+                // a list of initial conditions can be provided, 
+                // in which case all trajectories will be generated and saved 
+                // maximum number of initial condition is 4294967295
+                // element of initial vector can be numerics or string if you need mathematical expression
+                "x0": [
+                    [2, 0], 
+                    [-4, 1],
+                    ["sqrt(2)", "1/2"]
+                ]
+            },
+
+            /* describe the dynamics of your system */
+            "dynamics": {
+                "parameters": {
+                    // define some parameters for your dynamics
+                    // parameters will be resolved has macros expensions
+                    // can be integer, double, or string 
+                    // math expression such as 
+                    // sqrt(2)
+                    // 8/3
+                    // can be used
+                    /* Better use a unique keyword */
+                    "mymu": 1
+                },
+
+                "f": [
+                    "dxdt(0) = x(1);",
+                    "dxdt(1) = mymu*(1-x(0)*x(0))*x(1)-x(0);"
+                ],
+
+                "dfdx": [
+                    "dxdt_dx(0,0) = 0;" ,
+                    "dxdt_dx(0,1) = 1;",
+                    "dxdt_dx(1,0) = -mymu*x(1)*x(0)/2.-1;",
+                    "dxdt_dx(1,1) = mymu*(1-x(0)*x(0));"
+                ]
+            },
+
+            "discretisation": {
+                "trajectory": 513
+            },
+
+            "methods": {
+                // method used to integrate the differential equation 
+                // should be a string in te following list (more coming soon)
+                // - RK4 : 4th order Runge-Kutta 
+                "ode_int": "RK4"
+            },
+            
+            "output": {
+                // console output of the trajectory : true or false
+                "cli": false,
+                // file svg of results
+                "file": {
+                    "yn": true,
+                    /*
+                    Structure of outbut 
+                    app/<dir>/<name>/<subdir>/<filename>-<nb>.<ext>
+                    - <nb> and <ext> are automatically determined
+                    */
+                    // directory to store the results
+                    // is relative to the current app/ folder
+                    // will be put in a subfolder named with experiences name
+                    // MUST finish by a "/"
+                    "dir": "./results/",
+                    // MUST finish by a "/"
+                    "subdir": "data/",
+                    // The actual name of the output file 
+                    // is extrapolated from the filename given below
+                    // <filename>-<initial condition number>.<ext>
+                    "filename": "trajectory.dat"
+                }
+            }, 
+
+            "postprocess": {
+                // postprocessing parameters
+                "plots": [
+                    {
+                        "data": {
+                            // x and y are mandatory 
+                            // z is optional 
+                            // each field contain a nonnegative integer which gives the 
+                            // coordinate dimension 
+                            // use 0 for time 
+                            "x": 0,
+                            "y": 1,
+                            //"z":
+                            // number of initial to take into account (a nonnegative integer)
+                            // use 0 to plot all initial conditions
+                            "nb": 1
+                        },
+                        // plot type can be one of the following: 
+                        // "line" 
+                        // "scatter"
+                        // "scatter3"
+                        "type": "line", 
+                        "title": "Evolution the x_1 coordinate over time for the first initial condition",
+                        "xlabel": "Time",
+                        "ylabel": "x_1",
+                        "output": {
+                            "gui": false, 
+                            "file": {
+                                "yn": true, 
+                                /*
+                                Output structure 
+                                app/<dir>/<name>/<subdir>/<filename>
+                                */
+                                // directory to store the plot
+                                // is relative to the current app/ folder
+                                // will be put in a subfolder named with experiences name
+                                // MUST finish by a "/"                
+                                "dir": "./results/", 
+                                // MUST finish by a "/"  
+                                "subdir": "plots/",
+                                "filename": "x1_coordinate.png"
+                            }
+                        }
+
+                    }, 
+
+                    {
+                        "data": {
+                            "x": 1,
+                            "y": 2,
+                            "nb": 0
+                        },
+                        "type": "line",
+                        "title": "Phase diagram of all initial conditions",
+                        "xlabel": "x_1",
+                        "ylabel": "x_2",
+                        
+                        "output": {
+                            "gui": true,
+                            "file": {
+                                "yn": true, 
+                                "dir": "./results/", 
+                                "subdir": "plots/",
+                                "filename": "phase.png"
+                            }
+                        }
+                    },
+
+                    {
+                        "data": {
+                            "x": 0,
+                            "y": 2,
+                            "nb": 0
+                        },
+                        "type": "line",
+                        "title": "Evolution the x_2 coordinate over time for all initial conditions",
+                        "xlabel": "time",
+                        "ylabel": "x_2",
+                        
+                        "output": {
+                            "gui": true,
+                            "file": {
+                                "yn": true, 
+                                "dir": "./results/", 
+                                "subdir": "plots/",
+                                "filename": "x2_coordinate_all.png"
+                            }
+                        }
+                    }
+                ]
+            }
+        }, 
+        {
+            "type": "dynamical",
+            "name": "lorentz",
+            "run": false,
+            
+            "general": {    
+                "state_dim": 3,
+                "start_time": 0,
+                "end_time": 50,
+                "x0": [
+                    [10, 1, 1]
+                ]
+            },
+
+            "dynamics": {
+                "parameters": {
+                    "mysigma": 10.0,
+                    "myR": 28, 
+                    "myB": "(8./3.)"
+                },
+
+                "f": [
+                    "dxdt(0) = mysigma * ( x(1) - x(0) );",
+                    "dxdt(1) = myR * x(0) - x(1) - x(0) * x(2);",
+                    "dxdt(2) = -myB * x(2) + x(0) * x(1);"
+                ],
+
+                "dfdx": [
+                    "dxdt_dx(0,0) = -mysigma;",
+                    "dxdt_dx(0,1) = mysigma;",
+                    "dxdt_dx(0,2) = 0;",
+
+                    "dxdt_dx(1,0) = myR-x(2);",
+                    "dxdt_dx(1,1) = -1;",
+                    "dxdt_dx(1,2) = -x(0);",
+
+                    "dxdt_dx(2,0) = x(1);",
+                    "dxdt_dx(2,1) = x(0);",
+                    "dxdt_dx(2,2) = -myB;"
+                ]
+            },
+
+            "discretisation": {
+                "trajectory": 8193
+            },
+
+            "methods": {
+                "ode_int": "RK4"
+            },
+            
+            "output": {
+                "cli": false,
+
+                "file": {
+                    "yn": true,
+                    "dir": "./results/",
+                    "subdir": "data/",
+                    "filename": "trajectory.dat"
+                }
+            }
+        }, 
+
+        {
+            "type": "control",
+            "name": "dubin",
+            "run": false,
+            
+            "general": {    
+                "state_dim": 3,
+                "start_time": 0,
+                "end_time": 10,
+                "x0": [
+                    [0, 0, "pi/4"]
+                ]
+            }
+        }
+    ]
+}
