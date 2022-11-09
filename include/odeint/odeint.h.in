@@ -18,14 +18,13 @@
 #include <cassert>
 #include <cstdint>
 #include <Eigen/Dense>
-#include "../systems/dynamicalSystem.h"
 
-using Eigen::VectorXd;
-using Eigen::MatrixXd;
+#include "../systems/dynamicalSystem.h"
+#include "../types/types.h"
 
 enum odeint_method_t : uint8_t {
     EULER_EXPLICIT, 
-    RK4,
+    RK4
 };
 
 /**
@@ -33,28 +32,34 @@ enum odeint_method_t : uint8_t {
  * \f[
  * \dot{x} = f(t,x)
  * \f]
+ * 
+ * @todo Implement other methods
  */
 class ODEInt {
     public: 
         /* CONSTRUCTORS */
-        ODEInt(odeint_method_t , uint16_t ); 
+        ODEInt(DynamicalSystem * , odeint_method_t , uint16_t );
         ODEInt(const ODEInt & ); 
 
         /* DESTRUCTORS */
-        ~ODEInt(); 
+        virtual ~ODEInt(); 
+
+        /* ACCESSORS */
+        void update_integration_method(odeint_method_t );
+        void update_discretisation_length(uint16_t );
 
         /* METHODS */
-        MatrixXd ode_int(double , double , VectorXd , std::function<VectorXd(double, VectorXd )> ); 
+        Trajectory integrate() const;
 
     protected: 
         /* ATTRIBUTES */
-        odeint_method_t ode_meth; 
-        uint16_t T; /*!< Number of time steps */
-        DynamicalSystem * sys;
+        DynamicalSystem * sys;    /*!< Pointer to the dynamical system */
+        odeint_method_t ode_meth; /*!< Integration method */
+        uint16_t T;               /*!< Number of time steps */
         
         /* METHODS */
-        MatrixXd rk1(VectorXd , VectorXd , std::function<VectorXd(double,VectorXd)> );
-        MatrixXd rk4(VectorXd , VectorXd , std::function<VectorXd(double,VectorXd)> );
+        Trajectory rk1() const;
+        Trajectory rk4() const;
 };
 
 #endif

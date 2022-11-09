@@ -1,13 +1,15 @@
 #include "../../include/header/odeint/odeint.h"
 
 /* CONSTRUCTORS */
-ODEInt::ODEInt(odeint_method_t odeintmeth, uint16_t nb_tsteps) {
+ODEInt::ODEInt(DynamicalSystem * asys, odeint_method_t odeintmeth, uint16_t nb_tsteps) {
     assert(nb_tsteps > 1);
+    this->sys = asys;
     this->ode_meth = odeintmeth;
     this->T = nb_tsteps;
 }
 
 ODEInt::ODEInt(const ODEInt & oi) {
+    this->sys = oi.sys;
     this->ode_meth = oi.ode_meth;
     this->T = oi.T;
 }
@@ -15,75 +17,67 @@ ODEInt::ODEInt(const ODEInt & oi) {
 /* DESTRCTORS */
 ODEInt::~ODEInt() {}
 
-/* METHODS */
-MatrixXd ODEInt::ode_int(double t0, double t1, VectorXd x0, std::function<VectorXd(double,VectorXd)> F) {
-    VectorXd tspan = VectorXd::LinSpaced(this->T, t0, t1); 
-    switch (this->ode_meth) {
-    case RK4:
-        return this->rk4(tspan, x0, F);
-        break;
-    
-    default: // rk1 EULER EXPLICIT
-        return this->rk1(tspan, x0, F);
-        break;
-    }
-} 
-
-/* PRIVATE METHODS */
-MatrixXd ODEInt::rk1(VectorXd tspan, VectorXd x0, std::function<VectorXd(double,VectorXd)> F) {
-    MatrixXd res(tspan.size(), x0.size()+1); 
-    VectorXd state(x0.size()); 
-    VectorXd new_state(x0.size()); 
-    double dt = 0.; 
-
-    res(0, 0) = tspan(0); 
-    for (int j = 0; j < x0.size(); j++) {
-        res(0, j+1) = x0(j);
-    }
-
-    for (int i = 1; i < tspan.size(); i++) {
-        res(i, 0) = tspan(i);
-        dt = tspan(i) - tspan(i-1); 
-        state     = res(i-1, Eigen::seq(1, Eigen::last));
-        new_state = state + dt * F(tspan(i), state);
-
-        for (int j = 0; j < x0.size(); j++) {
-            res(i, j+1) = new_state(j);
-        }
-    }
-
-    return res; 
+/* ACCESSORS */
+void ODEInt::update_integration_method(odeint_method_t new_meth) {
+    this->ode_meth = new_meth;
 }
 
-MatrixXd ODEInt::rk4(VectorXd tspan, VectorXd x0, std::function<VectorXd(double,VectorXd)> F) {
-    MatrixXd res(tspan.size(), x0.size()+1); 
-    VectorXd state(x0.size()); 
-    VectorXd new_state(x0.size()); 
-    VectorXd k1(x0.size()), k2(x0.size()), k3(x0.size()), k4(x0.size());
+void ODEInt::update_discretisation_length(uint16_t new_step) {
+    this->T = new_step;
+}
+
+/* METHODS */
+Trajectory ODEInt::integrate() const {
+    switch (this->ode_meth) {
+        case RK4:
+            return this->rk4();
+            break;
+        
+        default: // rk1 EULER EXPLICIT
+            return this->rk1();
+            break;
+    }
+}
+
+/* PRIVATE METHODS */
+Trajectory ODEInt::rk1() const {
+    VectorXd tspan = VectorXd::LinSpaced(this->T, this->sys->get_t0(), this->sys->get_t1()); 
+    MatrixXd res(tspan.size(), this->sys->get_x0().size()); 
+    VectorXd state(this->sys->get_x0()); 
     double dt = 0.; 
 
-    res(0, 0) = tspan(0); 
-    for (int j = 0; j < x0.size(); j++) {
-        res(0, j+1) = x0(j);
-    }
+    res.row(0) = state;
 
     for (int i = 1; i < tspan.size(); i++) {
-        res(i, 0) = tspan(i);
         dt = tspan(i) - tspan(i-1); 
-        state     = res(i-1, Eigen::seq(1, Eigen::last));
-
-        k1 = F(tspan(i), state);
-        k2 = F(tspan(i) + dt/2., state + k1*dt/2.);
-        k3 = F(tspan(i) + dt/2., state + k2*dt/2.);
-        k4 = F(tspan(i) + dt, state + dt*k3);
-
-        new_state = state + dt * (k1 + 2*k2 +2*k3 + k4) / 6.;
-
-        for (int j = 0; j < x0.size(); j++) {
-            res(i, j+1) = new_state(j);
-        }
+        state = res.row(i-1);
+        res.row(i) = state + dt * this->sys->eval_dynamics(tspan(i), state);
     }
 
+    return Trajectory(tspan, res); 
+}
 
-    return res;
+Trajectory ODEInt::rk4() const {
+    VectorXd tspan = VectorXd::LinSpaced(this->T, this->sys->get_t0(), this->sys->get_t1()); 
+    MatrixXd res(tspan.size(), this->sys->get_x0().size()); 
+    VectorXd k1(this->sys->get_x0().size()), k2(this->sys->get_x0().size()), k3(this->sys->get_x0().size()), k4(this->sys->get_x0().size());
+
+    VectorXd state(this->sys->get_x0()); 
+    double dt = 0.; 
+
+    res.row(0) = state;
+
+    for (int i = 1; i < tspan.size(); i++) {
+        dt = tspan(i) - tspan(i-1); 
+        state = res.row(i-1);
+
+        k1 = this->sys->eval_dynamics(tspan(i), state);
+        k2 = this->sys->eval_dynamics(tspan(i) + dt/2., state + k1*dt/2.);
+        k3 = this->sys->eval_dynamics(tspan(i) + dt/2., state + k2*dt/2.);
+        k4 = this->sys->eval_dynamics(tspan(i) + dt, state + dt*k3);
+
+        res.row(i) = state + dt * (k1 + 2*k2 +2*k3 + k4) / 6.;
+    }
+
+    return Trajectory(tspan, res); 
 }
