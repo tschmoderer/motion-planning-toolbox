@@ -7,10 +7,11 @@ def data_has(data, key):
 
 def check_experiment(data): 
     data_has(data, "output")
-    data_has(data["output"], "file")
-    data_has(data["output"]["file"], "yn")
+    data_has(data["output"], "traj")
+    data_has(data["output"]["traj"], "file")
+    data_has(data["output"]["traj"]["file"], "yn")
 
-    if not data["output"]["file"]["yn"]: 
+    if not data["output"]["traj"]["file"]["yn"]: 
         raise Exception("Error: you should provide output files for yur experiment.")
 
     data_has(data, "postprocess")

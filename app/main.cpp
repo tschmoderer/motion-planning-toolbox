@@ -62,14 +62,25 @@ void check_dynamical_exp_data(json data) {
 
     // check output 
     data_has(data, "output"); 
-    if (data["output"]["file"]["yn"]) {
-        data_has(data["output"]["file"], "dir");
-        data_has(data["output"]["file"], "subdir");
-        data_has(data["output"]["file"], "filename");
+    data_has(data["output"], "traj");
+    data_has(data["output"], "cntrl");
+
+    if (data["output"]["traj"]["file"]["yn"]) {
+        data_has(data["output"]["traj"]["file"], "dir");
+        data_has(data["output"]["traj"]["file"], "subdir");
+        data_has(data["output"]["traj"]["file"], "filename");
+        data_has(data["output"]["traj"]["file"], "time-filename");
     }
 }
 
 void check_control_exp_data(json data) {
+    check_dynamical_exp_data(data);
+    data_has(data["general"], "ctrl_dim");
+    if (data["general"]["ctrl_dim"] == 0) {
+        string err = "Error: there should be at least one control.";
+        err += " Consider a dynamical experiment if you don't use controls.";
+        throw runtime_error(err);
+    }
 
 }
 
@@ -89,16 +100,21 @@ void check_exp_data(json exp_data) {
     cout << endl; 
 
     for (int i = 0; i < nb_exp; i++) {
-        cout << "Exp. " << i+1 << " / " << nb_exp << "\t---\t";
-        if (exp_data["experiences"][i]["type"] == "dynamical") {
-            check_dynamical_exp_data(exp_data["experiences"][i]); 
-            cout << "Ok" << endl;
-        } else if (exp_data["experiences"][i]["type"] == "control") {
-            check_control_exp_data(exp_data["experiences"][i]); 
-            cout << "Ok" << endl;
+        if (exp_data["experiences"][i]["run"]) {
+            cout << "Exp. " << i+1 << " / " << nb_exp << "\t---\t";
+            if (exp_data["experiences"][i]["type"] == "dynamical") {
+                check_dynamical_exp_data(exp_data["experiences"][i]); 
+                cout << "Ok" << endl;
+            } else if (exp_data["experiences"][i]["type"] == "control") {
+                check_control_exp_data(exp_data["experiences"][i]); 
+                cout << "Ok" << endl;
+            } else {
+                throw std::runtime_error("Experience type must be dynamical or control.");
+            }
         } else {
-            throw std::runtime_error("Experience type must be dynamical or control.");
-        }
+            cout << "Exp. " << i+1 << " / " << nb_exp << "\t---\t";
+            cout << "not set to run" << endl;
+        }        
     }
 
 }
@@ -204,16 +220,18 @@ void write_header( char **argv, json data) {
     f << "#define EXP_METHODS_ODE_INT " << tmp << endl; 
     f << endl;
 
-    f << "#define EXP_OUTPUT_CLI " << data["output"]["cli"] << endl; 
-    f << "#define EXP_OUTPUT_FILE " << data["output"]["file"]["yn"] << endl; 
-    if (data["output"]["file"]["yn"]) {
-        f << "#define EXP_OUTPUT_FILE_DIR " << data["output"]["file"]["dir"] << endl;
-        f << "#define EXP_OUTPUT_FILE_SUBDIR " << data["output"]["file"]["subdir"] << endl;
-        f << "#define EXP_OUTPUT_FILE_FNAME " << data["output"]["file"]["filename"] << endl;
+    f << "#define EXP_OUTPUT_TRAJ_CLI " << data["output"]["traj"]["cli"] << endl; 
+    f << "#define EXP_OUTPUT_TRAJ_FILE " << data["output"]["traj"]["file"]["yn"] << endl; 
+    if (data["output"]["traj"]["file"]["yn"]) {
+        f << "#define EXP_OUTPUT_TRAJ_FILE_DIR " << data["output"]["traj"]["file"]["dir"] << endl;
+        f << "#define EXP_OUTPUT_TRAJ_FILE_SUBDIR " << data["output"]["traj"]["file"]["subdir"] << endl;
+        f << "#define EXP_OUTPUT_TRAJ_FILE_FNAME " << data["output"]["traj"]["file"]["filename"] << endl;
+        f << "#define EXP_OUTPUT_TRAJ_FILE_TIME_FNAME " << data["output"]["traj"]["file"]["time-filename"] << endl; 
     } else {
-        f << "#define EXP_OUTPUT_FILE_DIR " << "\"\"" << endl;
-        f << "#define EXP_OUTPUT_FILE_SUBDIR " << "\"\"" << endl;
-        f << "#define EXP_OUTPUT_FILE_FNAME " << "\"\"" << endl; 
+        f << "#define EXP_OUTPUT_TRAJ_FILE_DIR " << "\"\"" << endl;
+        f << "#define EXP_OUTPUT_TRAJ_FILE_SUBDIR " << "\"\"" << endl;
+        f << "#define EXP_OUTPUT_TRAJ_FILE_FNAME " << "\"\"" << endl; 
+        f << "#define EXP_OUTPUT_TRAJ_FILE_TIME_FNAME " << "\"\"" << endl; 
     }
 
     f << endl << "#endif";

@@ -2,24 +2,29 @@
     /* An array of experiences */
     "experiences": [
         {
-            // Type should be "dynamical" or "control"
+            /* The type of the experiment
+            Type should be :
+                - "dynamical" 
+                - "control"
+                - "linearControl"
+            */
             "type": "dynamical",
             // Name should be unique among all experiement
             // It will be used to store the results
             "name": "vanderpol",
             // a boolean to disable experiment
-            // @warning even if run is set to false, the experiment should be correctly parametrised
+            // @warning even if run is set to false
             "run": true,
             
             "general": {    
                 // An integer dertermining the dimension of the state space
                 "state_dim": 2,
-
+                // An integer to set the dimension of the controls
+                "ctrl_dim": null,
                 // A double to set the start time of the trajectories
                 "start_time": 0,
                 // A double to set the end time of the trajectories
                 "end_time": 20,
-
                 // A list of double that store the initial condition of the system 
                 // x0 should have the same dimension as "state_dim"
                 // a list of initial conditions can be provided, 
@@ -47,13 +52,15 @@
                     "mymu": 1
                 },
 
+                // only non-zero coefficients can be set
                 "f": [
                     "dxdt(0) = x(1);",
                     "dxdt(1) = mymu*(1-x(0)*x(0))*x(1)-x(0);"
                 ],
 
+                // only non-zero coefficients can be set
                 "dfdx": [
-                    "dxdt_dx(0,0) = 0;" ,
+                    //"dxdt_dx(0,0) = 0;" ,
                     "dxdt_dx(0,1) = 1;",
                     "dxdt_dx(1,0) = -mymu*x(1)*x(0)/2.-1;",
                     "dxdt_dx(1,1) = mymu*(1-x(0)*x(0));"
@@ -71,29 +78,36 @@
                 "ode_int": "RK4"
             },
             
+            // Describe the outputs of the programm
             "output": {
-                // console output of the trajectory : true or false
-                "cli": false,
-                // file svg of results
-                "file": {
-                    "yn": true,
-                    /*
-                    Structure of outbut 
-                    app/<dir>/<name>/<subdir>/<filename>-<nb>.<ext>
-                    - <nb> and <ext> are automatically determined
-                    */
-                    // directory to store the results
-                    // is relative to the current app/ folder
-                    // will be put in a subfolder named with experiences name
-                    // MUST finish by a "/"
-                    "dir": "./results/",
-                    // MUST finish by a "/"
-                    "subdir": "data/",
-                    // The actual name of the output file 
-                    // is extrapolated from the filename given below
-                    // <filename>-<initial condition number>.<ext>
-                    "filename": "trajectory.dat"
-                }
+                "traj": {
+                    // console output of the trajectory : true or false
+                    "cli": false,
+                    // file svg of results
+                    "file": {
+                        "yn": true,
+                        /*
+                        Structure of outbut 
+                        app/<dir>/<name>/<subdir>/<filename>-<nb>.<ext>
+                        - <nb> and <ext> are automatically determined
+                        */
+                        // directory to store the results
+                        // is relative to the current app/ folder
+                        // will be put in a subfolder named with experiences name
+                        // MUST finish by a "/"
+                        "dir": "./results/",
+                        // MUST finish by a "/"
+                        "subdir": "data/",
+                        // The actual name of the output file 
+                        // is extrapolated from the filename given below
+                        // <filename>-<initial condition number>.<ext>
+                        "filename": "trajectory.dat",
+                        // Filename for the timestamps 
+                        "time-filename": "time.dat"
+                    }
+                }, 
+
+                "cntrl": null
             }, 
 
             "postprocess": {
@@ -257,11 +271,71 @@
             
             "general": {    
                 "state_dim": 3,
+                "ctrl_dim": 2,
                 "start_time": 0,
                 "end_time": 10,
                 "x0": [
                     [0, 0, "pi/4"]
                 ]
+            },
+
+            "dynamics": {
+                "parameters": {
+                },
+                // you can use the variable cntrl that will contain the values of u(t)
+                "f": [
+                    "dxdt(0) = cos(x(2)) * cntrl(0);",
+                    "dxdt(1) = sin(x(2)) * cntrl(0);",
+                    "dxdt(2) = cntrl(1);"
+                ],
+
+                "dfdx": [
+                    "dxdt_dx(0,0) = 0;" ,
+                    "dxdt_dx(0,1) = 0;",
+                    "dxdt_dx(0,2) = -sin(x(2)) * cntrl(0);",
+                    "dxdt_dx(1,0) = 0;",
+                    "dxdt_dx(1,1) = 0;",
+                    "dxdt_dx(1,2) = cos(x(2)) * cntrl(0);",
+                    "dxdt_dx(2,0) = 0;",
+                    "dxdt_dx(2,1) = 0;",
+                    "dxdt_dx(2,2) = 0;"
+                ], 
+
+                "dfdu": [
+                    "dxdt_du(0,0) = cos(x(2));", 
+                    "dxdt_du(0,1) = 0;",
+                    "dxdt_du(1,0) = sin(x(2));", 
+                    "dxdt_du(1,1) = 0;",
+                    "dxdt_du(2,0) = 0;", 
+                    "dxdt_du(2,1) = 1;"
+                ]
+            },
+
+            "discretisation": {
+                "trajectory": 513
+            },
+
+            "methods": {
+                // method used to integrate the differential equation 
+                // should be a string in te following list (more coming soon)
+                // - RK4 : 4th order Runge-Kutta 
+                "ode_int": "RK4"
+            }, 
+
+            "output": {
+                "traj": {
+                    "cli": true, 
+                    "file": {
+
+                    }
+                }, 
+
+                "ctrl": {
+                    "cli": true,
+                    "file": {
+
+                    }
+                }
             }
         }
     ]
