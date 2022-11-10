@@ -14,21 +14,23 @@
  * @warning Notice that relative path are relative with respect to where you launch the program 
  * and not where the exe is located
  */
-OutputHelper::OutputHelper(const Controls & c, string out="./control.dat") {
+OutputHelper::OutputHelper(const Controls & c, string out, string tsout) {
     this->time_ = c.get_time();
     this->data_ = c.get_data();
     this->type_t = control;
 
     this->set_output_structure(out); 
+    this->set_output_structure_ts(tsout); 
     this->create_output_dir();
 }
 
-OutputHelper::OutputHelper(const Trajectory & t, string out="./trajectory.dat") {
+OutputHelper::OutputHelper(const Trajectory & t, string out, string tsout) {
     this->time_ = t.get_time();
     this->data_ = t.get_data();
     this->type_t = trajectory;
 
     this->set_output_structure(out); 
+    this->set_output_structure_ts(tsout); 
     this->create_output_dir();
 }
 
@@ -45,9 +47,20 @@ OutputHelper OutputHelper::format(Eigen::IOFormat iof) {
 void OutputHelper::save(int exp_nb) const {
     // a modified save function where a number is added before the extension in the filename
     ofstream myfile;
-    string fname = this->exp_filename(exp_nb);
+    string fname;
+
+    fname = this->exp_filename_ts(exp_nb);
     myfile.open(fname);
-    myfile << this->make_data().format(this->fmt);
+    //myfile << this->make_data().format(this->fmt);
+    myfile << this->time_.format(this->fmt);
+    myfile.close();
+
+    cout << "Timestamps successfully saved in " << fname << endl;
+    
+    fname = this->exp_filename(exp_nb);
+    myfile.open(fname);
+    //myfile << this->make_data().format(this->fmt);
+    myfile << this->data_.format(this->fmt);
     myfile.close();
 
     cout << "Data successfully saved in " << fname << endl;
@@ -82,6 +95,16 @@ void OutputHelper::set_output_structure(string out) {
     this->filename_ = this->filename_.substr(1,pos-1);
 }
 
+void OutputHelper::set_output_structure_ts(string tsout) {
+    this->ts_out_file_ = tsout; 
+    size_t pos = tsout.find_last_of('/');
+
+    this->ts_filename_ = tsout.substr(pos);
+    pos = this->ts_filename_.find_last_of('.');
+    this->ts_fileext_ = this->ts_filename_.substr(pos+1);
+    this->ts_filename_ = this->ts_filename_.substr(1,pos-1);
+}
+
 void OutputHelper::create_output_dir() const {
     fs::create_directories(this->out_dir_);
 }
@@ -91,5 +114,13 @@ string OutputHelper::exp_filename(int exp_nb) const {
     res = this->out_dir_ + "/" + this->filename_ + "-"; 
     res += to_string(exp_nb);
     res += "." + this->fileext_;
+    return res; 
+}
+
+string OutputHelper::exp_filename_ts(int exp_nb) const {
+    string res; 
+    res = this->out_dir_ + "/" + this->ts_filename_ + "-"; 
+    res += to_string(exp_nb);
+    res += "." + this->ts_fileext_;
     return res; 
 }

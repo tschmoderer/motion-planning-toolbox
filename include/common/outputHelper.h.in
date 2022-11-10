@@ -51,8 +51,8 @@ enum out_t : uint8_t {
 class OutputHelper {
     public: 
         /* CONSTRUCTORS */
-        OutputHelper(const Controls & , string ); 
-        OutputHelper(const Trajectory & , string );
+        OutputHelper(const Controls & , string = "./control.dat", string = "./time.dat"); 
+        OutputHelper(const Trajectory & , string = "./trajectory.dat", string = "./time.dat");
 
         /* DESTRUCTOR */
         ~OutputHelper();
@@ -74,16 +74,26 @@ class OutputHelper {
 
         out_t type_t; 
 
+        // output directory
         string out_dir_;
+
+        // data file info
         string out_file_;
         string filename_;
         string fileext_;
 
+        // timestamps data file info
+        string ts_out_file_;
+        string ts_filename_;
+        string ts_fileext_;
+
         /* PRIVATE METHOD */
         MatrixXd make_data() const; 
         void set_output_structure(const string );
+        void set_output_structure_ts(const string );
         void create_output_dir() const; 
         string exp_filename(int ) const;
+        string exp_filename_ts(int ) const;
 };
 
 #endif
