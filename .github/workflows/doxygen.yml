@@ -59,7 +59,9 @@ jobs:
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git config --global user.email "${{ env.CI_COMMIT_EMAIL }}"
           git add --force ./docs/html/
+          git add --force ./docs/doc_coverage.info
           git stash save ./docs/html/
+          git stash save ./docs/doc_coverage.info
           git checkout gh-pages
           if [ -d ./docs/html/ ]; then
             git rm -rf ./docs/html/
@@ -67,6 +69,7 @@ jobs:
           mkdir -p ./docs/html/
           git stash pop
           git add docs/html/*
+          git add docs/doc_coverage.info
           if (! git diff --cached --exit-code --shortstat); then
             git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
             git push
