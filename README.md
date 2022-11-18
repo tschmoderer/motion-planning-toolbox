@@ -2,49 +2,71 @@
     <br />
     <img src="https://raw.githubusercontent.com/tschmoderer/motion-planning-toolbox/main/docs/img/icons/128x128/rocket.png" alt="Motion Planning ToolBox Logo" width="128" id="motion-planning-toolbox-logo-img"/>
     <h1>Motion Planning Toolbox</h1>
-    <h3></h3>
+    <h4>A C++ toolbox for the computation of trajectories of control systems</h4>
 </div>
+
 
 [![language-cpp](https://img.shields.io/badge/language-C%2B%2B-blue)](https://github.com/tschmoderer/motion-planning-toolbox/search?l=c%2B%2B&type=code)  [![build](https://github.com/tschmoderer/motion-planning-toolbox/actions/workflows/cmake.yml/badge.svg?branch=main)](https://github.com/tschmoderer/motion-planning-toolbox/actions/workflows/cmake.yml) [![docs](https://github.com/tschmoderer/motion-planning-toolbox/actions/workflows/doxygen.yml/badge.svg?branch=main)](https://tschmoderer.github.io/motion-planning-toolbox/html/index.html) [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/tschmoderer/motion-planning-toolbox/blob/master/LICENSE) [![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/tschmoderer/motion-planning-toolbox?label=Version)](https://github.com/tschmoderer/motion-planning-toolbox/releases)
 
-A C++ toolbox for the computation of trajectories of control systems.
 
-The library is intended to be used from a single .json file. 
 
-All parameters and functions for one or several experiments are set in a .json file. Then the application will parse and configure the application to run the experiments. 
+This repository contains the code of the **controltlbx ** library that can be used as a standalone library or via the application executable that provides a GUI. 
 
-# Demo
+-- Insert Image of the GUI --
 
-In a simple *.json* file we define all parameters for one or several experiments (i.e. simulation of a dynamical or a control system). We define the dynamics, we set the output variables and the postprocessing options.
+[TOC]
 
-This section describe a configuration file for a simulation of the Van der Pol oscilator
+# Purposes
 
-```math
-\begin{pmatrix}\dot{x}_1 \\ \dot{x}_2 \end{pmatrix} = \begin{pmatrix}{x}_2 \\ \mu(1-(x_1)^2)x_2-x_1 \end{pmatrix}
-```
+## Library 
 
-<details><summary>Van der Pol example configuration file: <i>exp.json</i> </summary>
+The purpose of the **controltlbx** is to provide an efficient way of computing trajectories of control systems.  It's ultimate goal is to be a solver for (optimal) control design, i.e. designing a control that achieve a certain (optimal) trajectory. 
+
+*Features* : 
+
+- Simulation of nonlinear dynamical systems 
+- Simulation of control-nonlinear dynamical systems 
+  - Linear control (a specification of the above) 
+
+*Planned features* : 
+
+* Motion Planing for a state configuration 
+* Motion planning of a full trajectory 
+* Optimal Control problem solver 
+* Delayed ODE
+* Real time control design 
+
+## Application
+
+The application configures and launches experiments (simulations) from a single *.json* file. The GUI is a wrapper around this program that build the *.json* configuration file and post-processes the results . 
+
+# Examples
+
+All examples presented below can be configure in a single *.json* file and will therefore be configured and launched one after another.
+
+## Van-der-Pol Oscillator
+
+This section describe a simulation of the Van derPol oscillator. The dynamical system is as follows: 
+$$
+\begin{pmatrix}\dot{x}_1 \\ \dot{x}_2 \end{pmatrix} = \begin{pmatrix}{x}_2 \\ \mu(1-(x_1)^2)x_2-x_1 \end{pmatrix}.
+$$
+
+<details><summary>Configuration file : <i>exp.json</i> </summary>
 <p>
-    
+
+
 ```json
 {
     "experiences": [
-        {
+   {
             "type": "dynamical",
             "name": "vanderpol",
             "run": true,
             
-            "general": {    
+            "dimensions": {    
                 "state_dim": 2,
-                "start_time": 0,
-                "end_time": 20,
-                "x0": [
-                    [2, 0], 
-                    [-4, 1],
-                    ["sqrt(2)", "1/2"]
-                ]
             },
-            
+
             "dynamics": {
                 "parameters": {
                     "mymu": 1
@@ -56,28 +78,56 @@ This section describe a configuration file for a simulation of the Van der Pol o
                 ],
 
                 "dfdx": [
-                    "dxdt_dx(0,0) = 0;" ,
                     "dxdt_dx(0,1) = 1;",
                     "dxdt_dx(1,0) = -mymu*x(1)*x(0)/2.-1;",
                     "dxdt_dx(1,1) = mymu*(1-x(0)*x(0));"
                 ]
             },
-
-            "discretisation": {
-                "trajectory": 513
+            
+            "trajectories": {
+                "timesteps": {
+                    "method": "linspace", 
+                    "linspace": {
+                        "tmin": 0, 
+                        "tmax": 20, 
+                        "nbT": 513
+                    }
+                }, 
+                "x0": [
+                    [2, 0], 
+                    [-4, 1],
+                    ["sqrt(2)", "1/2"]
+                ]
             },
 
-            "methods": { 
-                "ode_int": "RK4"
+            "methods": {
+                "ode": {
+                    "method": "RK4", 
+                    "parameters": {}
+                }, 
+
+                "interpolation": {
+                    "method": "INTERP_LINEAR", 
+                    "parameters": {
+                        "extend_left": "EXTEND_ZERO", 
+                        "extend_right": "EXTEND_ZERO"
+                    }
+                }
             },
             
-            "output": {
-                "cli": false,
-                "file": {
-                    "yn": true,
-                    "dir": "./results/",
-                    "filename": "trajectory.dat"
-                }
+            "outputs": {
+                "traj": {
+                    "cli": false,
+                    "file": {
+                        "yn": true,
+                        "dir": "./results/",
+                        "subdir": "data/",
+                        "filename": "trajectory.dat",
+                        "time-filename": "time.dat"
+                    }
+                }, 
+
+                "cntrl": null
             }, 
 
             "postprocess": {
@@ -95,8 +145,9 @@ This section describe a configuration file for a simulation of the Van der Pol o
                         "output": {
                             "gui": false, 
                             "file": {
-                                "yn": true, 
+                                "yn": true,              
                                 "dir": "./results/", 
+                                "subdir": "plots/",
                                 "filename": "x1_coordinate.png"
                             }
                         }
@@ -119,6 +170,7 @@ This section describe a configuration file for a simulation of the Van der Pol o
                             "file": {
                                 "yn": true, 
                                 "dir": "./results/", 
+                                "subdir": "plots/",
                                 "filename": "phase.png"
                             }
                         }
@@ -140,17 +192,17 @@ This section describe a configuration file for a simulation of the Van der Pol o
                             "file": {
                                 "yn": true, 
                                 "dir": "./results/", 
+                                "subdir": "plots/",
                                 "filename": "x2_coordinate_all.png"
                             }
                         }
                     }
                 ]
             }
-        }
-    ]
+   }
 }
 ```
-    
+
 </p>
 </details>
 
@@ -196,7 +248,9 @@ flowchart LR
     G -->|Produce| H(Plots)
 ```
 
+# Documentation 
 
+The library documentation is generated with doxygen and automatically served at [link](https://tschmoderer.github.io/motion-planning-toolbox/html/index.html). In particular, you can find the documentation for the structure of the *.json* configuration file at [link](https://tschmoderer.github.io/motion-planning-toolbox/html/index.html/configuration-json).
 
 
 # Install & Building
@@ -233,7 +287,9 @@ make test
 (Opt) make memcheck
 ```
 
-## Credits
+# Credits
+
+A main inspiration for this software (and its architecture) mostly come from the [control-toolbox](https://github.com/ethz-adrl/control-toolbox), copyright by ETH Zurich - BSD-2 License
 
 Portions of this software are copyright of their respective authors :
 
