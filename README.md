@@ -3,6 +3,7 @@
     <img src="https://raw.githubusercontent.com/tschmoderer/motion-planning-toolbox/main/docs/img/icons/128x128/rocket.png" alt="Motion Planning ToolBox Logo" width="128" id="motion-planning-toolbox-logo-img"/>
     <h1>Motion Planning Toolbox</h1>
     <h4>A C++ toolbox for the computation of trajectories of control systems</h4>
+    <hr/>
 </div>
 
 
