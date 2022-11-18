@@ -116,11 +116,11 @@ $(document).ready(function(){initNavTree('class_output_helper.html',''); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7bf9e950c4e3691507af27da2737bbef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output_helper.html#a7bf9e950c4e3691507af27da2737bbef">OutputHelper</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;, string)</td></tr>
-<tr class="memdesc:a7bf9e950c4e3691507af27da2737bbef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Output Helper:: Output Helper object.  <a href="class_output_helper.html#a7bf9e950c4e3691507af27da2737bbef">More...</a><br /></td></tr>
-<tr class="separator:a7bf9e950c4e3691507af27da2737bbef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a700037e83afc002a2e7f45f43e61134f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output_helper.html#a700037e83afc002a2e7f45f43e61134f">OutputHelper</a> (const <a class="el" href="class_trajectory.html">Trajectory</a> &amp;, string)</td></tr>
-<tr class="separator:a700037e83afc002a2e7f45f43e61134f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addbf0d1b19425e66d1a1176e9bf8f309"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output_helper.html#addbf0d1b19425e66d1a1176e9bf8f309">OutputHelper</a> (const <a class="el" href="class_controls.html">Controls</a> &amp;, string=&quot;./control.dat&quot;, string=&quot;./time.dat&quot;)</td></tr>
+<tr class="memdesc:addbf0d1b19425e66d1a1176e9bf8f309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Output Helper:: Output Helper object.  <a href="class_output_helper.html#addbf0d1b19425e66d1a1176e9bf8f309">More...</a><br /></td></tr>
+<tr class="separator:addbf0d1b19425e66d1a1176e9bf8f309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84627258d8f7c8e975ceda39cbdd6a8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output_helper.html#a84627258d8f7c8e975ceda39cbdd6a8a">OutputHelper</a> (const <a class="el" href="class_trajectory.html">Trajectory</a> &amp;, string=&quot;./trajectory.dat&quot;, string=&quot;./time.dat&quot;)</td></tr>
+<tr class="separator:a84627258d8f7c8e975ceda39cbdd6a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab74929594da1af5fa2be5e76d62d4f63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output_helper.html#ab74929594da1af5fa2be5e76d62d4f63">~OutputHelper</a> ()</td></tr>
 <tr class="separator:ab74929594da1af5fa2be5e76d62d4f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a683ceccf81a4ab0941c6a26b5971796a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_output_helper.html">OutputHelper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output_helper.html#a683ceccf81a4ab0941c6a26b5971796a">format</a> (Eigen::IOFormat)</td></tr>
@@ -141,8 +141,8 @@ Friends</h2></td></tr>
 </li>
 </ul>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a7bf9e950c4e3691507af27da2737bbef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bf9e950c4e3691507af27da2737bbef">&#9670;&nbsp;</a></span>OutputHelper() <span class="overload">[1/2]</span></h2>
+<a id="addbf0d1b19425e66d1a1176e9bf8f309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addbf0d1b19425e66d1a1176e9bf8f309">&#9670;&nbsp;</a></span>OutputHelper() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,7 +157,13 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>out</em> = <code>&quot;./control.dat&quot;</code>&#160;</td>
+          <td class="paramname"><em>out</em> = <code>&quot;./control.dat&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tsout</em> = <code>&quot;./time.dat&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -181,8 +187,8 @@ Notice that relative path are relative with respect to where you launch the prog
 
 </div>
 </div>
-<a id="a700037e83afc002a2e7f45f43e61134f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a700037e83afc002a2e7f45f43e61134f">&#9670;&nbsp;</a></span>OutputHelper() <span class="overload">[2/2]</span></h2>
+<a id="a84627258d8f7c8e975ceda39cbdd6a8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84627258d8f7c8e975ceda39cbdd6a8a">&#9670;&nbsp;</a></span>OutputHelper() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,7 +203,13 @@ Notice that relative path are relative with respect to where you launch the prog
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>out</em> = <code>&quot;./trajectory.dat&quot;</code>&#160;</td>
+          <td class="paramname"><em>out</em> = <code>&quot;./trajectory.dat&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tsout</em> = <code>&quot;./time.dat&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

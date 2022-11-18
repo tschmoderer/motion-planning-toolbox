@@ -25,11 +25,12 @@
 var NAVTREE =
 [
   [ "CPP Motion Planning ToolBox", "index.html", [
-    [ "Demo", "index.html#autotoc_md0", null ],
-    [ "Install & Building", "index.html#autotoc_md1", [
-      [ "Requirement", "index.html#autotoc_md2", null ],
-      [ "Unix", "index.html#autotoc_md3", null ],
-      [ "Credits", "index.html#autotoc_md4", null ]
+    [ "Purposes", "index.html#autotoc_md0", [
+      [ "Library", "index.html#autotoc_md1", null ],
+      [ "Application", "index.html#autotoc_md2", null ]
+    ] ],
+    [ "Examples", "index.html#autotoc_md3", [
+      [ "Van-der-Pol Oscillator", "index.html#autotoc_md4", null ]
     ] ],
     [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
