@@ -41,6 +41,13 @@ jobs:
         run: |
           cd build
           make docs
+      
+      - name: Coverxygen
+        shell: bash 
+        run: |
+          cd docs 
+          python3 -m coverxygen --xml-dir xml/ --src-dir . --output - --format summary > doc_coverage.info
+          cat doc_coverage.info
           
       - name: Publish
         env: 
