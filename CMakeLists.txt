@@ -75,3 +75,5 @@ add_subdirectory(${TEST})
 add_subdirectory(${APP})
 #add_subdirectory(${EXAMPLE})
 add_subdirectory(${DOCS})
+
+configure_file("${PROJECT_SOURCE_DIR}/README.md.in" "${PROJECT_SOURCE_DIR}/README.md" @ONLY)
