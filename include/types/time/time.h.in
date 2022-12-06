@@ -6,12 +6,15 @@
 * @copyright Copyright (c) @YEAR@. All rights reserved. This project is released under the @LICENSE@.
 */
 /**
- * @brief
+ * @brief 
 */
-#ifndef INTERPOL_LIB_H
-#define INTERPOL_LIB_H
 
-/* INCLUDE HEADERS */
-#include "interpolator1d.h"
+#ifndef CNTRLTLBX_TIME_H
+#define CNTRLTLBX_TIME_H
+
+//#include "../array/vector.h"
+
+#include "../../utils.h"
+typedef double Time_t;
 
 #endif

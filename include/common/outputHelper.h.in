@@ -14,15 +14,12 @@
 
 #include <Eigen/Dense>
 #include "../controller/controls.h"
-#include "../types/trajectory.h"
+#include "../types/trajectory/trajectory.h"
 
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <filesystem> 
-
-using Eigen::VectorXd;
-using Eigen::MatrixXd;
 
 /* NAMESPACES */
 using namespace std;
@@ -32,11 +29,6 @@ namespace fs = std::filesystem;
 const static Eigen::IOFormat CSVFormat(Eigen::FullPrecision, Eigen::DontAlignCols, ",", "\n");
 
 /* CUSTOM TYPE */
-enum plot_type_t : uint8_t {
-    phase, 
-    coordinate
-};
-
 enum out_t : uint8_t {
     trajectory, 
     control
@@ -50,14 +42,22 @@ enum out_t : uint8_t {
  */
 class OutputHelper {
     public: 
+        /* const values */
+        inline static const string traj_fname = "trajectory.dat";
+        inline static const string ctrl_fname = "controls.dat";
+        inline static const string time_fname = "time.dat";
+
         /* CONSTRUCTORS */
-        OutputHelper(const Controls & , string = "./control.dat", string = "./time.dat"); 
-        OutputHelper(const Trajectory & , string = "./trajectory.dat", string = "./time.dat");
+        OutputHelper(const Controls & , string = "./" ); 
+        OutputHelper(const Trajectory & , string = "./" );
 
         /* DESTRUCTOR */
         ~OutputHelper();
 
         /* ACCESSORS */
+        void set_out_directory(string ); 
+        //void set_DataFile(string ); 
+        //void set_TimeFile(string ); 
         OutputHelper format(Eigen::IOFormat ); 
 
         /* METHODS */
@@ -69,31 +69,32 @@ class OutputHelper {
     private:
         /* ATTRIBUTES */
         Eigen::IOFormat fmt = Eigen::IOFormat();
-        VectorXd time_;
-        MatrixXd data_;
+        TimeVector time_;
+        Matrix<>   data_;
 
-        out_t type_t; 
+        out_t type_; 
 
         // output directory
         string out_dir_;
 
         // data file info
-        string out_file_;
-        string filename_;
-        string fileext_;
+        //string out_file_;
+       // string filename_;
+       // string fileext_;
 
         // timestamps data file info
-        string ts_out_file_;
-        string ts_filename_;
-        string ts_fileext_;
+       // string ts_out_file_;
+       // string ts_filename_;
+       // string ts_fileext_;
 
         /* PRIVATE METHOD */
-        MatrixXd make_data() const; 
-        void set_output_structure(const string );
-        void set_output_structure_ts(const string );
-        void create_output_dir() const; 
-        string exp_filename(int ) const;
-        string exp_filename_ts(int ) const;
+        Matrix<>  make_data() const; 
+        //void set_output_structure(const string );
+        //void set_output_structure_ts(const string );
+        //void create_output_dir() const; 
+        string create_output_dir(int ) const;
+        //string exp_filename(int ) const;
+        //string exp_filename_ts(int ) const;
 };
 
 #endif

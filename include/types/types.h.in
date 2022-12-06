@@ -12,10 +12,22 @@
 #ifndef CNTRLTLBX_TYPES_H
 #define CNTRLTLBX_TYPES_H
 
-// Custom types
-#include "trajectory.h"
-#include "state.h"
-#include "time.h"
+#include "time/time.h"
+#include "time/timeVector.h"
+
+#include "array/dataVector.h"
+#include "array/dataMatrix.h"
+
+#include "state/state.h"
+#include "state/stateVector.h"
+#include "state/stateMatrix.h"
+
+#include "control/control.h"
+#include "control/controlVector.h"
+#include "control/controlMatrix.h"
+
+#include "trajectory/trajectory.h"
 #include "dynamics.h"
+#include "controlDynamics.h"
 
 #endif

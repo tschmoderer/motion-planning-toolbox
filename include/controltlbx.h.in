@@ -13,10 +13,18 @@
 #define CNTRLTLBX_H
 
 #include "utils.h"
+#include "types/types.h"
+
+#include "interpol/interpol.h"
+
 #include "odeint/odeint.h"
 #include "systems/dynamicalSystem.h"
-// #include "controller/controls.h"
-//#include "systems/controlSystem.h"
+
+#include "integrator/integrator1d.h"
+
+#include "controller/controls.h"
+#include "systems/controlSystem.h"
+
 //#include "path/path.h"
 #include "common/outputHelper.h"
 //#include "motionplanner/motionPlanner.h"

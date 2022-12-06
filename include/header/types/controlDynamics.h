@@ -1,0 +1,22 @@
+/**
+* @file controlDynamics.h
+* @author T. Schmoderer (iathena@mailo.com)
+* @version 0.5.0
+* @date 2022-12-06
+* @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
+*/
+/**
+ * @brief
+*/
+
+#ifndef CNTRLTLBX_FUNCTIONS_CONTROL_TYPES_H
+#define CNTRLTLBX_FUNCTIONS_CONTROL_TYPES_H
+
+#include "../controller/controls.h"
+
+// Custom function types for control-nonlinear systems
+typedef std::function<StateVector(Time_t , StateVector , Controls * )> control_func_t;
+typedef std::function<StateMatrix(Time_t , StateVector , Controls * )> control_func_dx_t;
+typedef std::function<ControlMatrix(Time_t , StateVector , Controls * )> control_func_du_t;
+
+#endif

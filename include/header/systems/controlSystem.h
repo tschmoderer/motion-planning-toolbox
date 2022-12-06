@@ -1,8 +1,8 @@
 /**
 * @file controlSystem.h
 * @author T. Schmoderer (iathena@mailo.com)
-* @version 0.0.3
-* @date 2022-11-09
+* @version 0.5.0
+* @date 2022-12-06
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -34,11 +34,16 @@
 class ControlSystem : public DynamicalSystem {
     public: 
         /* CONSTRUCTORS */
-        ControlSystem(uint16_t , uint16_t ); 
-        ControlSystem(uint16_t , uint16_t , Time_t , Time_t , StateVector_t ); 
-        ControlSystem(uint16_t , uint16_t , Time_t , Time_t , StateVector_t , control_func_t , control_func_dx_t , control_func_du_t ); 
-        ControlSystem(uint16_t , uint16_t , Time_t , Time_t , StateVector_t , control_func_t , control_func_dx_t , control_func_du_t , uint16_t , interpolation_method_t , extend_t , extend_t , uint16_t ); 
+        ControlSystem(STATE_VECTOR_DIM_T , CNTRL_VECTOR_DIM_T ); 
+        ControlSystem(STATE_VECTOR_DIM_T , CNTRL_VECTOR_DIM_T , Time_t , Time_t , StateVector ); 
 
+        ControlSystem(STATE_VECTOR_DIM_T , CNTRL_VECTOR_DIM_T , Time_t , Time_t , StateVector , control_func_t ); 
+        ControlSystem(STATE_VECTOR_DIM_T , CNTRL_VECTOR_DIM_T , Time_t , Time_t , StateVector , control_func_t , control_func_dx_t ); 
+        ControlSystem(STATE_VECTOR_DIM_T , CNTRL_VECTOR_DIM_T , Time_t , Time_t , StateVector , control_func_t , control_func_dx_t , control_func_du_t ); 
+
+/*        ControlSystem(STATE_VECTOR_DIM_T , CNTRL_VECTOR_DIM_T , Time_t , Time_t , StateVector , control_func_t , control_func_dx_t , control_func_du_t , uint16_t , 
+                        interpolation_method_t = INTERP_LINEAR, extend_t = EXTEND_ZERO, extend_t = EXTEND_ZERO, uint16_t = 0); 
+*/
         /* DESTRUCTORS */
         virtual ~ControlSystem(); 
 
@@ -51,7 +56,7 @@ class ControlSystem : public DynamicalSystem {
         void set_dynamics_derivative_u(control_func_du_t );
 
         /* METHODS */
-        virtual StateVector_t eval_dynamics(Time_t , StateVector_t ) const; 
+        virtual StateVector eval_dynamics(Time_t , StateVector ) const; 
 
         /* OPERATORS */
 
@@ -59,7 +64,7 @@ class ControlSystem : public DynamicalSystem {
         /*
             from Dynamical System class we get attributes N, x0, t0, t1
         */
-        uint16_t M;   /*!< Number of controls */
+        CNTRL_VECTOR_DIM_T M;   /*!< Number of controls */
         Controls * u; 
 
     private:

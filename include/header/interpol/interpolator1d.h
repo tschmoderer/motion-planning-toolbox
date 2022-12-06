@@ -1,8 +1,8 @@
 /**
 * @file interpolator1d.h
 * @author T. Schmoderer (iathena@mailo.com)
-* @version 0.0.3
-* @date 2022-11-09
+* @version 0.5.0
+* @date 2022-12-06
 * @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
 */
 /**
@@ -12,9 +12,19 @@
 #ifndef INTERPOLATOR_1D_H
 #define INTERPOLATOR_1D_H
 
-#include "interpolator.h"
+#include "../utils.h"
+#include "../types/time/timeVector.h"
 
-using Eigen::VectorXd;
+/**
+ * @brief enumeration of the different interpolation methods in 1D
+ * 
+ */
+enum interpolation_method_t : uint8_t {
+    INTERP_CONSTANT_LEFT, 
+    INTERP_CONSTANT_RIGHT, 
+    INTERP_NEAREST,
+    INTERP_LINEAR
+};
 
 /**
  * @brief Enumeration for the different types of extensions possible 
@@ -30,9 +40,9 @@ enum extend_t : uint8_t {
 /**
  * @class Interpolator1D
  * @brief Class describing a 1D interpolation operator 
- * etend from the general Interpolator class
+ * extend from the general Interpolator class
  */
-class Interpolator1D : public Interpolator {
+class Interpolator1D {
     public: 
         /* CONSTRUCTORS */
         Interpolator1D(); 
@@ -43,28 +53,188 @@ class Interpolator1D : public Interpolator {
         ~Interpolator1D();
 
         /* ACCESSORS */
+        void set_method(interpolation_method_t );
         void set_exleft(extend_t ); 
         void set_exright(extend_t );
 
         extend_t get_exleft() const;
         extend_t get_exright() const;
 
-        /* METHODS */
-        double interp1d(const VectorXd * , const VectorXd * , double ) const;
+        /* METHODS */     
+        /**
+            * @brief 
+            * 
+            * @param times 
+            * @param data 
+            * @param t 
+            * @return U 
+        */
+       template<class T, typename U = SCALAR>
+        U interp1d(const TimeVector * times, const T * data, Time_t t) const {
+            assert(times->size() == data->size());
+            // Case time t is less than minimal interpolation time
+            if (t < (*times)[0]) {
+                return this->interp1D_extend_left<T, U>(times, data , t);
+            }
+
+            // Case time t is bigger than maximal interpolation time
+            if (t > (*times)[times->size()-1]) {
+                return this->interp1D_extend_right<T, U>(times, data, t);
+            }
+
+            // Case time t is equal than minimal interpolation time
+            if (t == (*times)[0]) {
+                return (*data)[0];
+            }
+
+            // Case time t is equal than maximal interpolation time
+            if (t == (*times)[times->size()-1]) {
+                return (*data)[times->size()-1];
+            }
+
+            TIME_VECTOR_DIM_T idx_inf = times->nearest(t); 
+
+            // Case time t is equal than interpolation time at index idx_inf
+            if (t == (*times)[idx_inf]) {
+                return (*data)[idx_inf];
+            }
+
+            switch (this->i_method) {   
+                case INTERP_CONSTANT_LEFT:
+                    return this->interp1d_constant_left<T, U>(times, data, t, idx_inf);
+                    break;
+
+                case INTERP_CONSTANT_RIGHT:
+                    return this->interp1d_constant_right<T, U>(times, data, t, idx_inf);
+                    break;
+
+                case INTERP_NEAREST:
+                    return this->interp1d_nearest<T, U>(times, data, t, idx_inf);
+                    break;    
+                
+                default: // default is linear
+                    return this->interp1d_linear<T, U>(times, data, t, idx_inf);
+                    break;
+            }
+
+            return 0.;
+        }
+
+        template<class T, typename U = SCALAR>
+        T interp1d(const TimeVector * times, const T * data, const TimeVector * t) const {
+            T res(t->size()); 
+            for (int i = 0; i < t->size(); i++) {
+                res(i) = this->interp1d(times, data, (*t)(i)); 
+            }
+            return res;
+        }
 
     private: 
         /* ATTRIBUTES */
+        interpolation_method_t i_method;
         extend_t extend_left_method;  /*!< Method for interpolating left from the interval of prescribed times. */
         extend_t extend_right_method; /*!< Method for interpolating right from the interval of prescribed times. */
 
         /* METHODS */
-        double interp1d_linear(const VectorXd * , const VectorXd * , double , uint16_t ) const;
-        double interp1d_nearest(const VectorXd * , const VectorXd * , double , uint16_t ) const;
-        double interp1d_constant_left(const VectorXd * , const VectorXd * , double , uint16_t ) const;
-        double interp1d_constant_right(const VectorXd * , const VectorXd * , double , uint16_t ) const;
+        /**
+         * @brief Interpolate with a linear interpolation between the values of the prescribed data at the two adjacent neighbours
+         * @param times Prescribed dicrete times
+         * @param data Prescribed data at times 
+         * @param t Interpolation t 
+         * @param idx_inf index i such that $$t\in [t_i, t_{i+1}[
+         * @return double 
+         */
+        template<class T, typename U>
+        U interp1d_linear(const TimeVector * times, const T * data, Time_t t, TIME_VECTOR_DIM_T idx_inf) const {
+            double dx = (*times)[idx_inf+1] - (*times)[idx_inf]; 
+            double a = ((*data)[idx_inf+1] - (*data)[idx_inf]) / dx; 
+            double b = ((*times)[idx_inf+1] * (*data)[idx_inf] -(*times)[idx_inf] * (*data)[idx_inf+1]) / dx;
+            return a*t+b; 
+        }
 
-        double interp1D_extend_left(const VectorXd * , const VectorXd *, double ) const;
-        double interp1D_extend_right(const VectorXd * , const VectorXd *, double ) const;
+        /**
+         * @brief Interpolate with the value at the nearest neighbour
+         * @param times Prescribed dicrete times
+         * @param data Prescribed data at times 
+         * @param t Interpolation t 
+         * @param idx_inf index i such that $$t\in [t_i, t_{i+1}[
+         * @return double 
+         */
+        template<class T, typename U>
+        U interp1d_nearest(const TimeVector * times, const T * data, Time_t t, TIME_VECTOR_DIM_T idx_inf) const {
+            double mid = ((*times)[idx_inf+1] + (*times)[idx_inf]) / 2.; 
+            if (t <= mid) {
+                return this->interp1d_constant_left<T,U>(times, data, t, idx_inf);
+            } else {
+                return this->interp1d_constant_right<T,U>(times, data, t, idx_inf);
+            }
+        }
+
+        /**
+         * @brief Interpolate with the value at the nearest left neighbour
+         * @param times Prescribed dicrete times
+         * @param data Prescribed data at times 
+         * @param t Interpolation t 
+         * @param idx_inf index i such that $$t\in [t_i, t_{i+1}[
+         * @return double 
+         */
+        template<class T, typename U>
+        U interp1d_constant_left(const TimeVector * times, const T * data, Time_t t, TIME_VECTOR_DIM_T idx_inf) const {
+            return (*data)[idx_inf]; 
+        }
+
+        /**
+         * @brief Interpolate with the value at the nearest right neighbour
+         * @param times Prescribed dicrete times
+         * @param data Prescribed data at times 
+         * @param t Interpolation t 
+         * @param idx_inf index i such that $$t\in [t_i, t_{i+1}[
+         * @return double 
+         */
+        template<class T, typename U>
+        U interp1d_constant_right(const TimeVector * times, const T * data, Time_t t, TIME_VECTOR_DIM_T idx_inf) const {
+            return (*data)[idx_inf+1]; 
+        }
+
+       /**
+         * @brief Compute interpolated value for a time t outside (left) of the interval 
+         * @param times Prescribed dicrete times
+         * @param data Prescribed data at times 
+         * @param t Interpolation t 
+         * @return double value interpolated according to the value of the attribute extend_left_method
+         */
+        template<class T, typename U>
+        U interp1D_extend_left(const TimeVector * times, const T * data, Time_t t) const {
+            switch (this->extend_left_method) {
+                case EXTEND_CONSTANT:
+                    return (*data)[0];
+                    break;
+        
+                default: // extend by 0
+                    return 0.;
+                    break;
+            }
+        }
+
+        /**
+         * @brief Compute interpolated value for a time t outside (right) of the interval 
+         * @param times Prescribed dicrete times
+         * @param data Prescribed data at times 
+         * @param t Interpolation t 
+         * @return double value interpolated according to the value of the attribute extend_right_method
+         */
+        template<class T, typename U>
+        U interp1D_extend_right(const TimeVector * times, const T * data, Time_t t) const{
+            switch (this->extend_right_method) {
+                case EXTEND_CONSTANT:
+                    return (*data)[data->size()-1];
+                    break;
+                
+                default: // extend by 0
+                    return 0.;
+                    break;
+            }
+        }
 };
 
 #endif

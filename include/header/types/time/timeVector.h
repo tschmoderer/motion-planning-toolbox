@@ -1,0 +1,68 @@
+/**
+* @file timeVector.h
+* @author T. Schmoderer (iathena@mailo.com)
+* @version 0.5.0
+* @date 2022-12-06
+* @copyright Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE.
+*/
+/**
+ * @brief 
+*/
+
+#ifndef CNTRLTLBX_TIME_VECTOR_H
+#define CNTRLTLBX_TIME_VECTOR_H
+
+#include "time.h"
+
+/**
+ * @brief A class to describe a vector of timestamps. 
+ * This class is used to evaluate trajectories and controls
+ * @warning A TimeVector is always assumed to be sorted in stricly ascending order, 
+ * in Debug mode a function named check() can be used to verify a TimeVector
+ */
+class TimeVector {
+    public: 
+        /* CONSTRUCTORS */
+        TimeVector();
+        TimeVector(TIME_VECTOR_DIM_T , Time_t [] ); 
+        TimeVector(Time_t , Time_t , TIME_VECTOR_DIM_T ); 
+        TimeVector(const TimeVector & );
+
+        /* DESTRUCTOR */
+        ~TimeVector();
+
+        /* ACCESSORS */
+        Time_t get_t0() const; 
+        Time_t get_t1() const; 
+        TIME_VECTOR_DIM_T size() const; 
+        
+        /* METHODS */
+        #ifndef NDEBUG
+        bool check() const; 
+        #endif
+        TIME_VECTOR_DIM_T nearest(Time_t ) const; 
+
+        /* OPERATORS */
+        Time_t operator()(TIME_VECTOR_DIM_T ) const; 
+        Time_t operator[](TIME_VECTOR_DIM_T ) const; 
+
+        TimeVector & operator=(const TimeVector & );
+        friend bool operator==(const TimeVector & , const TimeVector & );
+        friend bool operator!=(const TimeVector & , const TimeVector & );
+        friend std::ostream & operator<<(std::ostream & , const TimeVector & ); 
+
+        /* STATIC METHODS */
+        static TimeVector linspace(Time_t , Time_t , TIME_VECTOR_DIM_T );
+
+    private: 
+        /* ATTRIBUTES */
+        TIME_VECTOR_DIM_T dim_; 
+        Time_t t0_; 
+        Time_t t1_;
+        Eigen::Array<Time_t, Eigen::Dynamic, 1> data_; 
+
+        /* METHODS */
+        void make_linspace(); 
+};
+
+#endif

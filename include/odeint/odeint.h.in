@@ -15,20 +15,17 @@
 // Macros definitions
 
 // Additional library
-#include <cassert>
-#include <cstdint>
-#include <Eigen/Dense>
-
 #include "../systems/dynamicalSystem.h"
 #include "../types/types.h"
 
 enum odeint_method_t : uint8_t {
     EULER_EXPLICIT, 
+    RK1 = EULER_EXPLICIT,
     RK4
 };
 
 /**
- * @brief A class describing an intergator of an ordinary differential equation of the form 
+ * @brief A class describing an integrator of an ordinary differential equation of the form 
  * \f[
  * \dot{x} = f(t,x)
  * \f]
@@ -38,24 +35,22 @@ enum odeint_method_t : uint8_t {
 class ODEInt {
     public: 
         /* CONSTRUCTORS */
-        ODEInt(DynamicalSystem * , odeint_method_t , uint16_t );
+        ODEInt(DynamicalSystem * , odeint_method_t , TimeVector );
         ODEInt(const ODEInt & ); 
 
         /* DESTRUCTORS */
         virtual ~ODEInt(); 
 
         /* ACCESSORS */
-        void update_integration_method(odeint_method_t );
-        void update_discretisation_length(uint16_t );
 
         /* METHODS */
         Trajectory integrate() const;
 
     protected: 
         /* ATTRIBUTES */
-        DynamicalSystem * sys;    /*!< Pointer to the dynamical system */
-        odeint_method_t ode_meth; /*!< Integration method */
-        uint16_t T;               /*!< Number of time steps */
+        DynamicalSystem * sys;     /*!< Pointer to the dynamical system */
+        odeint_method_t ode_meth;  /*!< Integration method */
+        TimeVector      tspan;     /*!< Number of time steps */
         
         /* METHODS */
         Trajectory rk1() const;

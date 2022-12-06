@@ -12,15 +12,19 @@
 #ifndef INTEGRATOR_1D_H
 #define INTEGRATOR_1D_H
 
-#include "utils.h"
+#include "../utils.h"
+#include "../types/time/time.h"
+#include "../types/time/timeVector.h"
 
-using Eigen::VectorXd;
-
+/**
+ * @brief A class to integrate scalar function over time
+ * A function can be defined explicitely or via interpolation points
+ */
 class Integrator1D {
     public:
         /* CONSTRUCTORS */
         Integrator1D(); 
-        Integrator1D(uint16_t ); 
+        Integrator1D(TIME_VECTOR_DIM_T ); 
         Integrator1D(const Integrator1D & );
 
         /* DESTRUCTOR */
@@ -29,11 +33,23 @@ class Integrator1D {
         /* ACCESSORS */
 
         /* METHODS */
-        double integr(double , double , std::function<double(double)> ) const; 
-        double integr(VectorXd , VectorXd ) const; 
+        SCALAR integr(Time_t , Time_t , std::function<SCALAR(Time_t)> ) const; 
+        template<class T>
+        SCALAR integr(const TimeVector * t, const T * d) const {
+            assert(t->size() == d->size()); 
+            SCALAR sum = 0.;
+            SCALAR dx  = 0.;
+
+            for (int i = 0; i < t->size()-1; i++) {
+                dx = (*t)(i+1)-(*t)(i);
+                sum += dx*((*d)(i+1) + (*d)(i));
+            }
+
+            return sum/2.;
+        }
 
     private:
-        uint16_t nb_points; /*!< Number of discretisation points */
+        TIME_VECTOR_DIM_T nb_points; /*!< Number of discretisation points */
 };
 
 #endif
