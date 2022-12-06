@@ -1,0 +1,5 @@
+add_executable(test_time_vector test_time_vector.cpp)
+
+target_link_libraries(test_time_vector LINK_PUBLIC controltlx)
+
+add_test(test_time_vector test_time_vector)

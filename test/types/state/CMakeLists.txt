@@ -1,0 +1,5 @@
+add_executable(test_state_matrix test_state_matrix.cpp)
+
+target_link_libraries(test_state_matrix LINK_PUBLIC controltlx)
+
+add_test(test_state_matrix test_state_matrix)
