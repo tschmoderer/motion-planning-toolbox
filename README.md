@@ -13,7 +13,7 @@
 
 This repository contains the code of the **controltlbx** library that can be used as a standalone library or via the application executable that provides a GUI. 
 
--- Insert Image of the GUI --
+![GUI v0.01](.github/img/gui/gui0.0.1.png)
 
 Table of contents
 =================
