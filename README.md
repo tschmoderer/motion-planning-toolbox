@@ -7,13 +7,13 @@
 </div>
 
 
-[![language-cpp](https://img.shields.io/badge/language-C%2B%2B-blue)](https://github.com/tschmoderer/motion-planning-toolbox/search?l=c%2B%2B&type=code)  [![build](https://github.com/tschmoderer/motion-planning-toolbox/actions/workflows/cmake.yml/badge.svg?branch=main)](https://github.com/tschmoderer/motion-planning-toolbox/actions/workflows/cmake.yml) [![docs](https://github.com/tschmoderer/motion-planning-toolbox/actions/workflows/doxygen.yml/badge.svg?branch=main)](https://tschmoderer.github.io/motion-planning-toolbox/html/index.html) [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/tschmoderer/motion-planning-toolbox/blob/master/LICENSE) [![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/tschmoderer/motion-planning-toolbox?label=Version)](https://github.com/tschmoderer/motion-planning-toolbox/releases)
+[![language-cpp](https://img.shields.io/badge/language-C%2B%2B-blue)](https://github.com/tschmoderer/motion-planning-toolbox/search?l=c%2B%2B&type=code)  [![build](https://github.com/tschmoderer/motion-planning-toolbox/actions/workflows/cmake.yml/badge.svg?branch=main)](https://github.com/tschmoderer/motion-planning-toolbox/actions/workflows/cmake.yml) [![docs](https://github.com/tschmoderer/motion-planning-toolbox/actions/workflows/doxygen.yml/badge.svg?branch=main)](https://tschmoderer.github.io/motion-planning-toolbox/html/index.html) [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/tschmoderer/motion-planning-toolbox/blob/master/LICENSE) [![Lib Version](https://img.shields.io/github/v/tag/tschmoderer/motion-planning-toolbox?label=Version)](https://github.com/tschmoderer/motion-planning-toolbox/releases)
 
 
 
 This repository contains the code of the **controltlbx** library that can be used as a standalone library or via the application executable that provides a GUI. 
 
-![GUI v0.01](.github/img/gui/gui0.0.1.png)
+![GUI v0.0.1](.github/img/gui/gui0.0.1.png)
 
 Table of contents
 =================
@@ -264,25 +264,6 @@ flowchart LR
 # Documentation 
 
 The library documentation is generated with doxygen and automatically served at [link](https://tschmoderer.github.io/motion-planning-toolbox/html/index.html). In particular, you can find the documentation for the structure of the *.json* configuration file at [link](https://tschmoderer.github.io/motion-planning-toolbox/html/index.html/configuration-json).
-
-**Coverage** (v0.5.0) : 
-
-```
-Classes    :  66.7% (6/9)
-Defines    :  21.4% (3/14)
-Enum Values:   0.0% (0/13)
-Enums      :  75.0% (3/4)
-Files      :  67.7% (21/31)
-Friends    :  44.4% (4/9)
-Functions  :  33.9% (41/121)
-Namespaces :   0.0% (0/1)
-Pages      : 100.0% (2/2)
-Typedefs   :   0.0% (0/12)
-Variables  :  82.1% (23/28)
------------------------------------
-Total      :  42.2% (103/244)
-
-```
 
 # Build & Install
 
