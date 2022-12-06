@@ -58,6 +58,7 @@ jobs:
         run: |
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git config --global user.email "${{ env.CI_COMMIT_EMAIL }}"
+          git restore README.md
           git add --force ./docs/html/
           git stash save ./docs/html/
           git checkout gh-pages
