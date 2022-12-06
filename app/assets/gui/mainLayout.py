@@ -85,7 +85,7 @@ class MainLayout(QHBoxLayout):
         else: 
             fname = os.path.join(self.__basedir, 'results', 'vanderpol','trajectories','1', 'trajectory.dat')
             ydata = np.loadtxt(fname, dtype='d', delimiter=',')
-            ydata = xdata[:, yd-1]
+            ydata = ydata[:, yd-1]
 
         self.__rightLayout.update(xdata, ydata)
         
