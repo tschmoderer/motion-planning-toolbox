@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_5fdim_546',['data_dim',['../class_interpolator.html#a37f38a2f17524627609afdb8842d6df5',1,'Interpolator']]]
+  ['m_311',['M',['../class_control_system.html#a316d67f822d246b90c3e9858b6daeb2c',1,'ControlSystem']]]
 ];

@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['densecholeskysolver_314',['DenseCholeskySolver',['../structlsqcpp_1_1_dense_cholesky_solver.html',1,'lsqcpp']]],
-  ['densesvdsolver_315',['DenseSVDSolver',['../structlsqcpp_1_1_dense_s_v_d_solver.html',1,'lsqcpp']]],
-  ['doglegmethod_316',['DoglegMethod',['../structlsqcpp_1_1_dogleg_method.html',1,'lsqcpp']]],
-  ['doglegmethodparameter_317',['DoglegMethodParameter',['../classlsqcpp_1_1_dogleg_method_parameter.html',1,'lsqcpp']]],
-  ['dynamicalsystem_318',['DynamicalSystem',['../class_dynamical_system.html',1,'']]]
+  ['matrix_186',['Matrix',['../class_matrix.html',1,'']]],
+  ['matrix_3c_20cntrl_5ft_2c_20time_5fvector_5fdim_5ft_2c_20cntrl_5fvector_5fdim_5ft_20_3e_187',['Matrix&lt; Cntrl_t, TIME_VECTOR_DIM_T, CNTRL_VECTOR_DIM_T &gt;',['../class_matrix.html',1,'']]],
+  ['matrix_3c_20state_5ft_2c_20state_5fvector_5fdim_5ft_2c_20state_5fvector_5fdim_5ft_20_3e_188',['Matrix&lt; State_t, STATE_VECTOR_DIM_T, STATE_VECTOR_DIM_T &gt;',['../class_matrix.html',1,'']]]
 ];

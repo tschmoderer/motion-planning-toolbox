@@ -1,5 +1,0 @@
-<map id="LinearControlSystem" name="LinearControlSystem">
-<area shape="rect" id="node1" title="Header file for ControlSystem class." alt="" coords="5,155,164,181"/>
-<area shape="rect" id="node2" href="$class_control_system.html" title="Header file for ControlSystem class." alt="" coords="25,80,144,107"/>
-<area shape="rect" id="node3" href="$class_dynamical_system.html" title="A class describig an integrator of ODE." alt="" coords="14,5,155,32"/>
-</map>

@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['radiusepsilon_475',['radiusEpsilon',['../classlsqcpp_1_1_dogleg_method_parameter.html#a214dd1fc214c8450299d69c19e8e7f56',1,'lsqcpp::DoglegMethodParameter']]],
-  ['random_476',['random',['../class_controls.html#a4cb6535afdb5dee31263a7d91729d58e',1,'Controls']]],
-  ['refinementparameters_477',['refinementParameters',['../classlsqcpp_1_1_least_squares_algorithm.html#a8cb6ddf43386391350b5cbf7f650e743',1,'lsqcpp::LeastSquaresAlgorithm']]],
-  ['rk1_478',['rk1',['../class_o_d_e_int.html#ae77918d5969fc061117644fdb4e08ee6',1,'ODEInt']]],
-  ['rk4_479',['rk4',['../class_o_d_e_int.html#a6194be1deec1a4433433fad61262d893',1,'ODEInt']]]
+  ['vector_299',['Vector',['../class_vector.html#a4309fff31a744259ff94d2cc7178c816',1,'Vector::Vector(void)'],['../class_vector.html#ac056d141c9eb971d3351bec30e6825bc',1,'Vector::Vector(U n)'],['../class_vector.html#a13f1d9c830b175a5e161c19bfe522f96',1,'Vector::Vector(const Eigen::MatrixBase&lt; OtherDerived &gt; &amp;other)']]]
 ];

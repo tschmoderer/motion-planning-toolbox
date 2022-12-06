@@ -1,16 +1,18 @@
-<map id="src/types/trajectory.cpp" name="src/types/trajectory.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="311,5,484,32"/>
-<area shape="rect" id="node2" href="$trajectory_8h.html" title=" " alt="" coords="326,80,469,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,468,85,495"/>
-<area shape="rect" id="node4" href="$time_8h.html" title=" " alt="" coords="429,244,493,271"/>
-<area shape="rect" id="node6" href="$state_8h.html" title=" " alt="" coords="500,319,567,345"/>
-<area shape="rect" id="node7" href="$interpol_8h.html" title=" " alt="" coords="266,169,417,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="483,468,586,495"/>
-<area shape="rect" id="node8" href="$interpolator1d_8h.html" title=" " alt="" coords="273,244,399,271"/>
-<area shape="rect" id="node9" href="$interpolator_8h.html" title=" " alt="" coords="279,319,388,345"/>
-<area shape="rect" id="node10" href="$interpol_2utils_8h.html" title=" " alt="" coords="301,393,363,420"/>
-<area shape="rect" id="node11" title=" " alt="" coords="392,468,459,495"/>
-<area shape="rect" id="node12" title=" " alt="" coords="110,468,178,495"/>
-<area shape="rect" id="node13" title=" " alt="" coords="203,468,272,495"/>
-<area shape="rect" id="node14" title=" " alt="" coords="297,468,367,495"/>
+<map id="src/types/trajectory/trajectory.cpp" name="src/types/trajectory/trajectory.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="267,5,415,47"/>
+<area shape="rect" id="node2" href="$trajectory_8h.html" title=" " alt="" coords="238,95,445,136"/>
+<area shape="rect" id="node3" href="$interpol_8h.html" title=" " alt="" coords="89,184,252,211"/>
+<area shape="rect" id="node12" href="$state_vector_8h.html" title=" " alt="" coords="237,333,445,360"/>
+<area shape="rect" id="node15" href="$state_matrix_8h.html" title=" " alt="" coords="469,333,680,360"/>
+<area shape="rect" id="node4" href="$interpolator1d_8h.html" title=" " alt="" coords="54,259,181,285"/>
+<area shape="rect" id="node5" href="$utils_8h.html" title=" " alt="" coords="247,483,321,509"/>
+<area shape="rect" id="node10" href="$time_vector_8h.html" title=" " alt="" coords="22,333,213,360"/>
+<area shape="rect" id="node6" title=" " alt="" coords="103,557,172,584"/>
+<area shape="rect" id="node7" title=" " alt="" coords="196,557,263,584"/>
+<area shape="rect" id="node8" title=" " alt="" coords="287,557,390,584"/>
+<area shape="rect" id="node9" title=" " alt="" coords="415,557,495,584"/>
+<area shape="rect" id="node11" href="$time_8h.html" title=" " alt="" coords="92,408,156,435"/>
+<area shape="rect" id="node13" href="$state_8h.html" title=" " alt="" coords="385,408,452,435"/>
+<area shape="rect" id="node14" href="$data_vector_8h.html" title=" " alt="" coords="207,408,361,435"/>
+<area shape="rect" id="node16" href="$data_matrix_8h.html" title=" " alt="" coords="489,408,644,435"/>
 </map>

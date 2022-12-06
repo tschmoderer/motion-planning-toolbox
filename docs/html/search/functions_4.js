@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['encoderotation_409',['encodeRotation',['../namespacelsqcpp_1_1parameter.html#a710b72613e955b5b2c1faf66dcac5cdc',1,'lsqcpp::parameter']]],
-  ['endpoint_410',['endpoint',['../class_trajectory.html#ad9ab14fd2de0eb5f5e18c0455d34aa50',1,'Trajectory']]],
-  ['epsilon_411',['epsilon',['../structlsqcpp_1_1_finite_differences_parameter.html#ad02c4c71cd99100dd4c7322b2c92c7bc',1,'lsqcpp::FiniteDifferencesParameter']]],
-  ['eval_5fdynamics_412',['eval_dynamics',['../class_control_system.html#aa234e63ece0e79ca870e3ca596a945f1',1,'ControlSystem::eval_dynamics()'],['../class_dynamical_system.html#a6b9936e748d397bdc629d5dc4bd1bb6b',1,'DynamicalSystem::eval_dynamics()'],['../class_linear_control_system.html#aa26d7bbd8d631ab28c73e8bec75d8e82',1,'LinearControlSystem::eval_dynamics()']]],
-  ['eval_5fdynamics_5fderivative_5fx_413',['eval_dynamics_derivative_x',['../class_dynamical_system.html#a244319ae03f189498908fa366ce3de5a',1,'DynamicalSystem']]],
-  ['evaluate_414',['evaluate',['../class_path.html#ae56f17277da4f4cf31f795b25b0c2731',1,'Path::evaluate()'],['../class_trajectory.html#a968337501cbadfb6a6ca0b6ebd455e37',1,'Trajectory::evaluate()']]],
-  ['evaluate_5fderivative_415',['evaluate_derivative',['../class_path.html#a8c3065169cf9451d1f0f78319df1e8a9',1,'Path']]]
+  ['get_5fcontrol_242',['get_control',['../class_controls.html#adfc588deb21de296c26c578a5d020084',1,'Controls']]],
+  ['get_5fdata_243',['get_data',['../class_controls.html#a980c7bebd3ad8929aa072767312c431c',1,'Controls::get_data()'],['../class_trajectory.html#a1f77aac8544233d70b2a290a4300c734',1,'Trajectory::get_data()']]],
+  ['get_5fexleft_244',['get_exleft',['../class_interpolator1_d.html#af59979dcfa6466081674b054cb854cff',1,'Interpolator1D']]],
+  ['get_5fexright_245',['get_exright',['../class_interpolator1_d.html#a77ccdc413689fb7eb441cf31afb2e1e0',1,'Interpolator1D']]],
+  ['get_5fnb_5fcntrl_246',['get_nb_cntrl',['../class_controls.html#a63d0961cc3cc9b832723e260ada2caff',1,'Controls']]],
+  ['get_5ft0_247',['get_t0',['../class_dynamical_system.html#a7100cc6dc6219934e6ba33d07a313fda',1,'DynamicalSystem::get_t0()'],['../class_time_vector.html#a74f8beeb71636201b135b2329db75a9e',1,'TimeVector::get_t0()']]],
+  ['get_5ft1_248',['get_t1',['../class_dynamical_system.html#a1060ad30d38f1253a93cac2e10201212',1,'DynamicalSystem::get_t1()'],['../class_time_vector.html#a52b3c5936eba3526bd67527b2978c5aa',1,'TimeVector::get_t1()']]],
+  ['get_5ftime_249',['get_time',['../class_controls.html#aa68999475c525044c3b2917a2a541080',1,'Controls::get_time()'],['../class_trajectory.html#a55c8aeb6dc188f8697d731a853a20eb1',1,'Trajectory::get_time()']]],
+  ['get_5fx0_250',['get_x0',['../class_dynamical_system.html#ad2716bd793830c8818e3efd9091638e8',1,'DynamicalSystem']]]
 ];

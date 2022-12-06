@@ -1,6 +1,7 @@
 <map id="ControlSystem" name="ControlSystem">
-<area shape="rect" id="node1" title="Header file for ControlSystem class." alt="" coords="83,184,202,211"/>
-<area shape="rect" id="node2" href="$class_dynamical_system.html" title="A class describig an integrator of ODE." alt="" coords="5,95,147,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="36,5,116,32"/>
-<area shape="rect" id="node4" href="$class_controls.html" title=" " alt="" coords="171,95,247,121"/>
+<area shape="rect" id="node1" title="Header file for ControlSystem class." alt="" coords="100,289,219,316"/>
+<area shape="rect" id="node2" href="$class_dynamical_system.html" title="A class describig an integrator of ODE." alt="" coords="22,200,163,227"/>
+<area shape="rect" id="node3" href="$class_vector.html" title=" " alt="" coords="7,96,178,137"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,180,47"/>
+<area shape="rect" id="node5" href="$class_controls.html" title=" " alt="" coords="188,200,264,227"/>
 </map>

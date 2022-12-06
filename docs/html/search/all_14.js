@@ -1,6 +1,12 @@
 var searchData=
 [
-  ['wolfebacktracking_286',['WolfeBacktracking',['../structlsqcpp_1_1_wolfe_backtracking.html',1,'lsqcpp']]],
-  ['wolfebacktrackingparameter_287',['WolfeBacktrackingParameter',['../classlsqcpp_1_1_wolfe_backtracking_parameter.html',1,'lsqcpp::WolfeBacktrackingParameter&lt; _Scalar &gt;'],['../classlsqcpp_1_1_wolfe_backtracking_parameter.html#a77ac998aefa6fc56cf624a2b0cd5d7eb',1,'lsqcpp::WolfeBacktrackingParameter::WolfeBacktrackingParameter()=default'],['../classlsqcpp_1_1_wolfe_backtracking_parameter.html#a1ed1ab73514cd896510af21b593a9b1e',1,'lsqcpp::WolfeBacktrackingParameter::WolfeBacktrackingParameter(const Scalar decrease, const Scalar c1, const Scalar c2, const Scalar minStep, const Scalar maxStep, const Index iterations)']]],
-  ['wolfeconstant_288',['wolfeConstant',['../classlsqcpp_1_1_wolfe_backtracking_parameter.html#a36d7472cff17ea9eb3eda321ae4d1235',1,'lsqcpp::WolfeBacktrackingParameter']]]
+  ['_7econtrols_172',['~Controls',['../class_controls.html#a546f121f630c5c9db5094f6838d9fed2',1,'Controls']]],
+  ['_7econtrolsystem_173',['~ControlSystem',['../class_control_system.html#a449890897411186d4f245a79e8f2d016',1,'ControlSystem']]],
+  ['_7edynamicalsystem_174',['~DynamicalSystem',['../class_dynamical_system.html#a0f5418524cdbc485fb8dc6561b32ab28',1,'DynamicalSystem']]],
+  ['_7eintegrator1d_175',['~Integrator1D',['../class_integrator1_d.html#a8cc71c1e03c9a3442f5b7ebd7ac3bc68',1,'Integrator1D']]],
+  ['_7einterpolator1d_176',['~Interpolator1D',['../class_interpolator1_d.html#a2c5300209805d00e797636720c7ff109',1,'Interpolator1D']]],
+  ['_7eodeint_177',['~ODEInt',['../class_o_d_e_int.html#a4eda540c357b15c0f798d8ad59500a95',1,'ODEInt']]],
+  ['_7eoutputhelper_178',['~OutputHelper',['../class_output_helper.html#ab74929594da1af5fa2be5e76d62d4f63',1,'OutputHelper']]],
+  ['_7etimevector_179',['~TimeVector',['../class_time_vector.html#a687e95b7eed37b49828c687cbb8a0210',1,'TimeVector']]],
+  ['_7etrajectory_180',['~Trajectory',['../class_trajectory.html#ac673c37025ca5353ad99ab41c936e75d',1,'Trajectory']]]
 ];

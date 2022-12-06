@@ -1,0 +1,19 @@
+<map id="include/header/types/controlDynamics.h" name="include/header/types/controlDynamics.h">
+<area shape="rect" id="node1" title=" " alt="" coords="218,5,376,47"/>
+<area shape="rect" id="node2" href="$controls_8h.html" title=" " alt="" coords="215,95,379,121"/>
+<area shape="rect" id="node3" href="$utils_8h.html" title=" " alt="" coords="340,483,414,509"/>
+<area shape="rect" id="node8" href="$time_vector_8h.html" title=" " alt="" coords="98,326,288,353"/>
+<area shape="rect" id="node10" href="$control_vector_8h.html" title=" " alt="" coords="414,319,582,360"/>
+<area shape="rect" id="node13" href="$control_matrix_8h.html" title=" " alt="" coords="606,319,774,360"/>
+<area shape="rect" id="node15" href="$interpol_8h.html" title=" " alt="" coords="44,169,195,196"/>
+<area shape="rect" id="node17" href="$integrator1d_8h.html" title=" " alt="" coords="266,244,461,271"/>
+<area shape="rect" id="node4" title=" " alt="" coords="196,557,265,584"/>
+<area shape="rect" id="node5" title=" " alt="" coords="289,557,356,584"/>
+<area shape="rect" id="node6" title=" " alt="" coords="380,557,483,584"/>
+<area shape="rect" id="node7" title=" " alt="" coords="508,557,588,584"/>
+<area shape="rect" id="node9" href="$time_8h.html" title=" " alt="" coords="276,408,340,435"/>
+<area shape="rect" id="node11" href="$control_8h.html" title=" " alt="" coords="592,408,671,435"/>
+<area shape="rect" id="node12" href="$data_vector_8h.html" title=" " alt="" coords="415,408,568,435"/>
+<area shape="rect" id="node14" href="$data_matrix_8h.html" title=" " alt="" coords="696,408,850,435"/>
+<area shape="rect" id="node16" href="$interpolator1d_8h.html" title=" " alt="" coords="56,244,183,271"/>
+</map>

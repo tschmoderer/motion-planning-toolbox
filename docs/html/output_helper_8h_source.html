@@ -110,44 +110,44 @@ $(document).ready(function(){initNavTree('output_helper_8h_source.html',''); ini
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../controller/controls.h&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../types/trajectory.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../types/trajectory/trajectory.h&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;filesystem&gt;</span> </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using</span> Eigen::VectorXd;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using</span> Eigen::MatrixXd;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/* NAMESPACES */</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>fs = std::filesystem;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* NAMESPACES */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>fs = std::filesystem;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/* COMMON FORMAT */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">const</span> <span class="keyword">static</span> Eigen::IOFormat CSVFormat(Eigen::FullPrecision, Eigen::DontAlignCols, <span class="stringliteral">&quot;,&quot;</span>, <span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/* COMMON FORMAT */</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">const</span> <span class="keyword">static</span> Eigen::IOFormat CSVFormat(Eigen::FullPrecision, Eigen::DontAlignCols, <span class="stringliteral">&quot;,&quot;</span>, <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/* CUSTOM TYPE */</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5">   35</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5">plot_type_t</a> : uint8_t {</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5aa24efab9e87500fc0fb846afe1cc5ffb">   36</a></span>&#160;    <a class="code" href="output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5aa24efab9e87500fc0fb846afe1cc5ffb">phase</a>, </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5a86aa3b8ff677143b4281589b162546e9">coordinate</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5a86aa3b8ff677143b4281589b162546e9">   38</a></span>&#160;};</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28">   40</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28">out_t</a> : uint8_t {</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a50504649054e647de992cf4c0afe076c">   41</a></span>&#160;    <a class="code" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a50504649054e647de992cf4c0afe076c">trajectory</a>, </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a5d8add8effb2a9964dbebfd27c9ddd31">control</a></div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a5d8add8effb2a9964dbebfd27c9ddd31">   43</a></span>&#160;};</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_output_helper.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_output_helper.html">OutputHelper</a> {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">public</span>: </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">/* CONSTRUCTORS */</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="class_output_helper.html">OutputHelper</a>(<span class="keyword">const</span> <a class="code" href="class_controls.html">Controls</a> &amp; , <span class="keywordtype">string</span> = <span class="stringliteral">&quot;./control.dat&quot;</span>, <span class="keywordtype">string</span> = <span class="stringliteral">&quot;./time.dat&quot;</span>); </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="class_output_helper.html">OutputHelper</a>(<span class="keyword">const</span> <a class="code" href="class_trajectory.html">Trajectory</a> &amp; , <span class="keywordtype">string</span> = <span class="stringliteral">&quot;./trajectory.dat&quot;</span>, <span class="keywordtype">string</span> = <span class="stringliteral">&quot;./time.dat&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/* CUSTOM TYPE */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28">   32</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28">out_t</a> : uint8_t {</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a50504649054e647de992cf4c0afe076c">   33</a></span>&#160;    <a class="code" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a50504649054e647de992cf4c0afe076c">trajectory</a>, </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a5d8add8effb2a9964dbebfd27c9ddd31">control</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a5d8add8effb2a9964dbebfd27c9ddd31">   35</a></span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_output_helper.html">   43</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_output_helper.html">OutputHelper</a> {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">public</span>: </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">/* const values */</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_output_helper.html#a45f32e8731211859b892bd2a155ec48a">   46</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">string</span> traj_fname = <span class="stringliteral">&quot;trajectory.dat&quot;</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_output_helper.html#a858d204d4ba5c2db6a79f3b3ba5147c7">   47</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">string</span> ctrl_fname = <span class="stringliteral">&quot;controls.dat&quot;</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_output_helper.html#a32946fe1d41d4ce51f54c42e123495ec">   48</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">string</span> time_fname = <span class="stringliteral">&quot;time.dat&quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">/* CONSTRUCTORS */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="class_output_helper.html">OutputHelper</a>(<span class="keyword">const</span> <a class="code" href="class_controls.html">Controls</a> &amp; , <span class="keywordtype">string</span> = <span class="stringliteral">&quot;./&quot;</span> ); </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="class_output_helper.html">OutputHelper</a>(<span class="keyword">const</span> <a class="code" href="class_trajectory.html">Trajectory</a> &amp; , <span class="keywordtype">string</span> = <span class="stringliteral">&quot;./&quot;</span> );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">/* DESTRUCTOR */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        ~<a class="code" href="class_output_helper.html">OutputHelper</a>();</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">/* DESTRUCTOR */</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        ~<a class="code" href="class_output_helper.html">OutputHelper</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">/* ACCESSORS */</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">/* ACCESSORS */</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> set_out_directory(<span class="keywordtype">string</span> ); </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">//void set_DataFile(string ); </span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">//void set_TimeFile(string ); </span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="class_output_helper.html">OutputHelper</a> format(Eigen::IOFormat ); </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">/* METHODS */</span></div>
@@ -159,44 +159,44 @@ $(document).ready(function(){initNavTree('output_helper_8h_source.html',''); ini
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">/* ATTRIBUTES */</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        Eigen::IOFormat fmt = Eigen::IOFormat();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        VectorXd time_;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        MatrixXd data_;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="class_time_vector.html">TimeVector</a> time_;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="class_matrix.html">Matrix&lt;&gt;</a>   data_;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28">out_t</a> type_t; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28">out_t</a> type_; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">// output directory</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">string</span> out_dir_;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="comment">// data file info</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">string</span> out_file_;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">string</span> filename_;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">string</span> fileext_;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">//string out_file_;</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;       <span class="comment">// string filename_;</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;       <span class="comment">// string fileext_;</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">// timestamps data file info</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">string</span> ts_out_file_;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">string</span> ts_filename_;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">string</span> ts_fileext_;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;       <span class="comment">// string ts_out_file_;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;       <span class="comment">// string ts_filename_;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;       <span class="comment">// string ts_fileext_;</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">/* PRIVATE METHOD */</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        MatrixXd make_data() <span class="keyword">const</span>; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">void</span> set_output_structure(<span class="keyword">const</span> <span class="keywordtype">string</span> );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">void</span> set_output_structure_ts(<span class="keyword">const</span> <span class="keywordtype">string</span> );</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">void</span> create_output_dir() <span class="keyword">const</span>; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">string</span> exp_filename(<span class="keywordtype">int</span> ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">string</span> exp_filename_ts(<span class="keywordtype">int</span> ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_controls_html"><div class="ttname"><a href="class_controls.html">Controls</a></div><div class="ttdef"><b>Definition:</b> controls.h:22</div></div>
-<div class="ttc" id="aclass_output_helper_html"><div class="ttname"><a href="class_output_helper.html">OutputHelper</a></div><div class="ttdoc">A class to standartize the output format of.</div><div class="ttdef"><b>Definition:</b> outputHelper.h:51</div></div>
-<div class="ttc" id="aclass_trajectory_html"><div class="ttname"><a href="class_trajectory.html">Trajectory</a></div><div class="ttdoc">This implements a trajectory based on discrete data points which can be evenly or unevenly distribute...</div><div class="ttdef"><b>Definition:</b> trajectory.h:37</div></div>
-<div class="ttc" id="aoutput_helper_8cpp_html_a7ee5381d64c3d30ce596764b55fba8a5"><div class="ttname"><a href="output_helper_8cpp.html#a7ee5381d64c3d30ce596764b55fba8a5">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const OutputHelper &amp;oh)</div><div class="ttdef"><b>Definition:</b> outputHelper.cpp:70</div></div>
-<div class="ttc" id="aoutput_helper_8h_html_a050d1178db8d4a7d2cb3476f9c4852c5"><div class="ttname"><a href="output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5">plot_type_t</a></div><div class="ttdeci">plot_type_t</div><div class="ttdef"><b>Definition:</b> outputHelper.h:35</div></div>
-<div class="ttc" id="aoutput_helper_8h_html_a050d1178db8d4a7d2cb3476f9c4852c5a86aa3b8ff677143b4281589b162546e9"><div class="ttname"><a href="output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5a86aa3b8ff677143b4281589b162546e9">coordinate</a></div><div class="ttdeci">@ coordinate</div><div class="ttdef"><b>Definition:</b> outputHelper.h:37</div></div>
-<div class="ttc" id="aoutput_helper_8h_html_a050d1178db8d4a7d2cb3476f9c4852c5aa24efab9e87500fc0fb846afe1cc5ffb"><div class="ttname"><a href="output_helper_8h.html#a050d1178db8d4a7d2cb3476f9c4852c5aa24efab9e87500fc0fb846afe1cc5ffb">phase</a></div><div class="ttdeci">@ phase</div><div class="ttdef"><b>Definition:</b> outputHelper.h:36</div></div>
-<div class="ttc" id="aoutput_helper_8h_html_a9f8e4f6d5dd20547c6e880dbb2581f28"><div class="ttname"><a href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28">out_t</a></div><div class="ttdeci">out_t</div><div class="ttdef"><b>Definition:</b> outputHelper.h:40</div></div>
-<div class="ttc" id="aoutput_helper_8h_html_a9f8e4f6d5dd20547c6e880dbb2581f28a50504649054e647de992cf4c0afe076c"><div class="ttname"><a href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a50504649054e647de992cf4c0afe076c">trajectory</a></div><div class="ttdeci">@ trajectory</div><div class="ttdef"><b>Definition:</b> outputHelper.h:41</div></div>
-<div class="ttc" id="aoutput_helper_8h_html_a9f8e4f6d5dd20547c6e880dbb2581f28a5d8add8effb2a9964dbebfd27c9ddd31"><div class="ttname"><a href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a5d8add8effb2a9964dbebfd27c9ddd31">control</a></div><div class="ttdeci">@ control</div><div class="ttdef"><b>Definition:</b> outputHelper.h:42</div></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="class_matrix.html">Matrix&lt;&gt;</a>  make_data() <span class="keyword">const</span>; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="comment">//void set_output_structure(const string );</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="comment">//void set_output_structure_ts(const string );</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">//void create_output_dir() const; </span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">string</span> create_output_dir(<span class="keywordtype">int</span> ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">//string exp_filename(int ) const;</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="comment">//string exp_filename_ts(int ) const;</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_controls_html"><div class="ttname"><a href="class_controls.html">Controls</a></div><div class="ttdef"><b>Definition:</b> controls.h:30</div></div>
+<div class="ttc" id="aclass_matrix_html"><div class="ttname"><a href="class_matrix.html">Matrix</a></div><div class="ttdef"><b>Definition:</b> dataMatrix.h:18</div></div>
+<div class="ttc" id="aclass_output_helper_html"><div class="ttname"><a href="class_output_helper.html">OutputHelper</a></div><div class="ttdoc">A class to standartize the output format of.</div><div class="ttdef"><b>Definition:</b> outputHelper.h:43</div></div>
+<div class="ttc" id="aclass_time_vector_html"><div class="ttname"><a href="class_time_vector.html">TimeVector</a></div><div class="ttdoc">A class to describe a vector of timestamps. This class is used to evaluate trajectories and controls.</div><div class="ttdef"><b>Definition:</b> timeVector.h:23</div></div>
+<div class="ttc" id="aclass_trajectory_html"><div class="ttname"><a href="class_trajectory.html">Trajectory</a></div><div class="ttdoc">Header file for Trajectory class.</div><div class="ttdef"><b>Definition:</b> trajectory.h:29</div></div>
+<div class="ttc" id="aoutput_helper_8cpp_html_a7ee5381d64c3d30ce596764b55fba8a5"><div class="ttname"><a href="output_helper_8cpp.html#a7ee5381d64c3d30ce596764b55fba8a5">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const OutputHelper &amp;oh)</div><div class="ttdef"><b>Definition:</b> outputHelper.cpp:82</div></div>
+<div class="ttc" id="aoutput_helper_8h_html_a9f8e4f6d5dd20547c6e880dbb2581f28"><div class="ttname"><a href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28">out_t</a></div><div class="ttdeci">out_t</div><div class="ttdef"><b>Definition:</b> outputHelper.h:32</div></div>
+<div class="ttc" id="aoutput_helper_8h_html_a9f8e4f6d5dd20547c6e880dbb2581f28a50504649054e647de992cf4c0afe076c"><div class="ttname"><a href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a50504649054e647de992cf4c0afe076c">trajectory</a></div><div class="ttdeci">@ trajectory</div><div class="ttdef"><b>Definition:</b> outputHelper.h:33</div></div>
+<div class="ttc" id="aoutput_helper_8h_html_a9f8e4f6d5dd20547c6e880dbb2581f28a5d8add8effb2a9964dbebfd27c9ddd31"><div class="ttname"><a href="output_helper_8h.html#a9f8e4f6d5dd20547c6e880dbb2581f28a5d8add8effb2a9964dbebfd27c9ddd31">control</a></div><div class="ttdeci">@ control</div><div class="ttdef"><b>Definition:</b> outputHelper.h:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

@@ -108,16 +108,33 @@ $(document).ready(function(){initNavTree('utils_8h_source.html',''); initResizab
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef CONTROLTLBX_UTILS_H</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define CONTROLTLBX_UTILS_H</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Macros definitions</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Additional library</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Additional library</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Macros definitions</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="utils_8h.html#a5365b15e5a6d7a76007d71f1952cf520">   22</a></span>&#160;<span class="preprocessor">#define MAX_NB_STATE 65535</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="utils_8h.html#a0df77a595ceae9b0d2a7b239c5c3f5c3">   23</a></span>&#160;<span class="preprocessor">#define STATE_VECTOR_DIM_T uint16_t</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="utils_8h.html#a70cdd007fed3864d91d175b5f96dc13c">   25</a></span>&#160;<span class="preprocessor">#define MAX_NB_TIME 65535</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="utils_8h.html#a7b8a9ff09eff29d6fecb4e1de3dd2de1">   26</a></span>&#160;<span class="preprocessor">#define TIME_VECTOR_DIM_T uint16_t</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="utils_8h.html#af21637dd926c191273256dcd97f22dbb">   28</a></span>&#160;<span class="preprocessor">#define MAX_NB_CNTRL 255</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="utils_8h.html#a23b24911aa7451e186558a18c5c8fae6">   29</a></span>&#160;<span class="preprocessor">#define CNTRL_VECTOR_DIM_T uint8_t</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="utils_8h.html#aae7e5362e39df9265f4fd78ffa61660a">   31</a></span>&#160;<span class="preprocessor">#define SCALAR double</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifndef M_PI</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="utils_8h.html#ae71449b1cc6e6250b91f539153a7a0d3">   37</a></span>&#160;<span class="preprocessor">    #define M_PI 3.141592653589793238463</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifndef M_E</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="utils_8h.html#a9bf5d952c5c93c70f9e66c9794d406c9">   44</a></span>&#160;<span class="preprocessor">    #define M_E  2.718281828459045235360</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

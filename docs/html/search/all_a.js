@@ -1,19 +1,12 @@
 var searchData=
 [
-  ['internal_128',['internal',['../namespacelsqcpp_1_1internal.html',1,'lsqcpp']]],
-  ['leastsquaresalgorithm_129',['LeastSquaresAlgorithm',['../classlsqcpp_1_1_least_squares_algorithm.html#a088a802d007ecac1c5e2abca825cbdea',1,'lsqcpp::LeastSquaresAlgorithm::LeastSquaresAlgorithm()'],['../classlsqcpp_1_1_least_squares_algorithm.html',1,'lsqcpp::LeastSquaresAlgorithm&lt; _Scalar, _Inputs, _Outputs, _Objective, _StepMethod, _RefineMethod, _FiniteDifferencesMethod &gt;']]],
-  ['levenbergmarquardt_130',['LevenbergMarquardt',['../namespacelsqcpp.html#ad4978ddca96da14838395f7f8fea5b99',1,'lsqcpp']]],
-  ['levenbergmarquardtmethod_131',['LevenbergMarquardtMethod',['../classlsqcpp_1_1_levenberg_marquardt_method.html#a492beffa67b375ea8b7a3b3de9279a87',1,'lsqcpp::LevenbergMarquardtMethod::LevenbergMarquardtMethod()'],['../classlsqcpp_1_1_levenberg_marquardt_method.html',1,'lsqcpp::LevenbergMarquardtMethod&lt; _Scalar, _Solver &gt;']]],
-  ['levenbergmarquardtparameter_132',['LevenbergMarquardtParameter',['../classlsqcpp_1_1_levenberg_marquardt_parameter.html#afe75f9559f8f13d0458866aa0ebd262f',1,'lsqcpp::LevenbergMarquardtParameter::LevenbergMarquardtParameter(const Scalar initialLambda, const Scalar increase, const Scalar decrease, const Index iterations)'],['../classlsqcpp_1_1_levenberg_marquardt_parameter.html#a96b55f4773d5d99610fcfb835d8c8b76',1,'lsqcpp::LevenbergMarquardtParameter::LevenbergMarquardtParameter()=default'],['../classlsqcpp_1_1_levenberg_marquardt_parameter.html',1,'lsqcpp::LevenbergMarquardtParameter&lt; _Scalar &gt;']]],
-  ['levenbergmarquardtparameter_3c_20scalar_20_3e_133',['LevenbergMarquardtParameter&lt; Scalar &gt;',['../classlsqcpp_1_1_levenberg_marquardt_parameter.html',1,'lsqcpp']]],
-  ['levenbergmarquardtx_134',['LevenbergMarquardtX',['../namespacelsqcpp.html#af5984e33d0585b142b6f2c737e3c98bb',1,'lsqcpp']]],
-  ['linearcontrolsystem_135',['LinearControlSystem',['../class_linear_control_system.html#a00291d4a4420aca16179bd7a3fa5abc9',1,'LinearControlSystem::LinearControlSystem(uint16_t, uint16_t)'],['../class_linear_control_system.html#a09f0568edae024c3fb9dad3a00f58352',1,'LinearControlSystem::LinearControlSystem(uint16_t, uint16_t, Time_t, Time_t, StateVector_t)'],['../class_linear_control_system.html',1,'LinearControlSystem']]],
-  ['linearcontrolsystem_2ecpp_136',['linearControlSystem.cpp',['../linear_control_system_8cpp.html',1,'']]],
-  ['linearcontrolsystem_2eh_137',['linearControlSystem.h',['../linear_control_system_8h.html',1,'']]],
-  ['locate_5ftime_138',['locate_time',['../class_interpolator.html#aa1a452ebcf4a00b7e9e6eab45e64afca',1,'Interpolator']]],
-  ['lsq_139',['LSQ',['../class_l_s_q.html',1,'']]],
-  ['lsq_2eh_140',['lsq.h',['../lsq_8h.html',1,'']]],
-  ['lsqcpp_141',['lsqcpp',['../namespacelsqcpp.html',1,'']]],
-  ['lsqcpp_2ehpp_142',['lsqcpp.hpp',['../lsqcpp_8hpp.html',1,'']]],
-  ['parameter_143',['parameter',['../namespacelsqcpp_1_1parameter.html',1,'lsqcpp']]]
+  ['m_79',['M',['../class_control_system.html#a316d67f822d246b90c3e9858b6daeb2c',1,'ControlSystem']]],
+  ['m_5fe_80',['M_E',['../utils_8h.html#a9bf5d952c5c93c70f9e66c9794d406c9',1,'utils.h']]],
+  ['m_5fpi_81',['M_PI',['../utils_8h.html#ae71449b1cc6e6250b91f539153a7a0d3',1,'utils.h']]],
+  ['matrix_82',['Matrix',['../class_matrix.html',1,'Matrix&lt; T, U, V &gt;'],['../class_matrix.html#a7bd19a57c22ab302f6fe0118a37460e8',1,'Matrix::Matrix(void)'],['../class_matrix.html#aac70a321c0fb7040f57989471f982a19',1,'Matrix::Matrix(U nr, V nc)'],['../class_matrix.html#a0370fb654080305ed93b9174edb0deb7',1,'Matrix::Matrix(const Eigen::MatrixBase&lt; OtherDerived &gt; &amp;other)']]],
+  ['matrix_3c_20cntrl_5ft_2c_20time_5fvector_5fdim_5ft_2c_20cntrl_5fvector_5fdim_5ft_20_3e_83',['Matrix&lt; Cntrl_t, TIME_VECTOR_DIM_T, CNTRL_VECTOR_DIM_T &gt;',['../class_matrix.html',1,'']]],
+  ['matrix_3c_20state_5ft_2c_20state_5fvector_5fdim_5ft_2c_20state_5fvector_5fdim_5ft_20_3e_84',['Matrix&lt; State_t, STATE_VECTOR_DIM_T, STATE_VECTOR_DIM_T &gt;',['../class_matrix.html',1,'']]],
+  ['max_5fnb_5fcntrl_85',['MAX_NB_CNTRL',['../utils_8h.html#af21637dd926c191273256dcd97f22dbb',1,'utils.h']]],
+  ['max_5fnb_5fstate_86',['MAX_NB_STATE',['../utils_8h.html#a5365b15e5a6d7a76007d71f1952cf520',1,'utils.h']]],
+  ['max_5fnb_5ftime_87',['MAX_NB_TIME',['../utils_8h.html#a70cdd007fed3864d91d175b5f96dc13c',1,'utils.h']]]
 ];

@@ -7,7 +7,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=9" />
    <meta name="generator" content="Doxygen 1.9.1" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title>CPP Motion Planning ToolBox: src/types/trajectory.cpp File Reference</title>
+   <title>CPP Motion Planning ToolBox: src/types/trajectory/trajectory.cpp File Reference</title>
    <link href="tabs.css" rel="stylesheet" type="text/css" />
    <link rel="shortcut icon" href="rocket-bw.ico" type="image/x-icon" />
    <script type="text/javascript" src="jquery.js"></script>
@@ -100,81 +100,35 @@ $(document).ready(function(){initNavTree('trajectory_8cpp.html',''); initResizab
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">trajectory.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="trajectory_8h_source.html">../../include/header/types/trajectory.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="trajectory_8h_source.html">../../../include/header/types/trajectory/trajectory.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for trajectory.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="trajectory_8cpp__incl.png" border="0" usemap="#asrc_2types_2trajectory_8cpp" alt=""/></div>
-<map name="asrc_2types_2trajectory_8cpp" id="asrc_2types_2trajectory_8cpp">
-<area shape="rect" title=" " alt="" coords="311,5,484,32"/>
-<area shape="rect" href="trajectory_8h.html" title=" " alt="" coords="326,80,469,121"/>
-<area shape="rect" title=" " alt="" coords="5,468,85,495"/>
-<area shape="rect" href="time_8h.html" title=" " alt="" coords="429,244,493,271"/>
-<area shape="rect" href="state_8h.html" title=" " alt="" coords="500,319,567,345"/>
-<area shape="rect" href="interpol_8h.html" title=" " alt="" coords="266,169,417,196"/>
-<area shape="rect" title=" " alt="" coords="483,468,586,495"/>
-<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="273,244,399,271"/>
-<area shape="rect" href="interpolator_8h.html" title=" " alt="" coords="279,319,388,345"/>
-<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="301,393,363,420"/>
-<area shape="rect" title=" " alt="" coords="392,468,459,495"/>
-<area shape="rect" title=" " alt="" coords="110,468,178,495"/>
-<area shape="rect" title=" " alt="" coords="203,468,272,495"/>
-<area shape="rect" title=" " alt="" coords="297,468,367,495"/>
+<div class="center"><img src="trajectory_8cpp__incl.png" border="0" usemap="#asrc_2types_2trajectory_2trajectory_8cpp" alt=""/></div>
+<map name="asrc_2types_2trajectory_2trajectory_8cpp" id="asrc_2types_2trajectory_2trajectory_8cpp">
+<area shape="rect" title=" " alt="" coords="267,5,415,47"/>
+<area shape="rect" href="trajectory_8h.html" title=" " alt="" coords="238,95,445,136"/>
+<area shape="rect" href="interpol_8h.html" title=" " alt="" coords="89,184,252,211"/>
+<area shape="rect" href="state_vector_8h.html" title=" " alt="" coords="237,333,445,360"/>
+<area shape="rect" href="state_matrix_8h.html" title=" " alt="" coords="469,333,680,360"/>
+<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="54,259,181,285"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="247,483,321,509"/>
+<area shape="rect" href="time_vector_8h.html" title=" " alt="" coords="22,333,213,360"/>
+<area shape="rect" title=" " alt="" coords="103,557,172,584"/>
+<area shape="rect" title=" " alt="" coords="196,557,263,584"/>
+<area shape="rect" title=" " alt="" coords="287,557,390,584"/>
+<area shape="rect" title=" " alt="" coords="415,557,495,584"/>
+<area shape="rect" href="time_8h.html" title=" " alt="" coords="92,408,156,435"/>
+<area shape="rect" href="state_8h.html" title=" " alt="" coords="385,408,452,435"/>
+<area shape="rect" href="data_vector_8h.html" title=" " alt="" coords="207,408,361,435"/>
+<area shape="rect" href="data_matrix_8h.html" title=" " alt="" coords="489,408,644,435"/>
 </map>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:abb1cea8ee4b14b32864905f9e0ff1768"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trajectory_8cpp.html#abb1cea8ee4b14b32864905f9e0ff1768">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="class_trajectory.html">Trajectory</a> &amp;traj)</td></tr>
-<tr class="memdesc:abb1cea8ee4b14b32864905f9e0ff1768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload output operator for <a class="el" href="class_trajectory.html" title="This implements a trajectory based on discrete data points which can be evenly or unevenly distribute...">Trajectory</a> object The output format of a trajectory is the following : \(t_0\) \(x_1[0]\) ... \(x_n[0]\) ... \(t_N\) \(x_1[N]\) ... \(x_n[N]\) where \(n\) is the dimension of the state space and \(N\) is the numer of time divisions.  <a href="trajectory_8cpp.html#abb1cea8ee4b14b32864905f9e0ff1768">More...</a><br /></td></tr>
-<tr class="separator:abb1cea8ee4b14b32864905f9e0ff1768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="abb1cea8ee4b14b32864905f9e0ff1768"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb1cea8ee4b14b32864905f9e0ff1768">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="class_trajectory.html">Trajectory</a> &amp;&#160;</td>
-          <td class="paramname"><em>traj</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Overload output operator for <a class="el" href="class_trajectory.html" title="This implements a trajectory based on discrete data points which can be evenly or unevenly distribute...">Trajectory</a> object The output format of a trajectory is the following : \(t_0\) \(x_1[0]\) ... \(x_n[0]\) ... \(t_N\) \(x_1[N]\) ... \(x_n[N]\) where \(n\) is the dimension of the state space and \(N\) is the numer of time divisions. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">os</td><td>An output stream </td></tr>
-    <tr><td class="paramname">traj</td><td>A <a class="el" href="class_trajectory.html" title="This implements a trajectory based on discrete data points which can be evenly or unevenly distribute...">Trajectory</a> obect </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
@@ -185,7 +139,7 @@ Functions</h2></td></tr>
       aria-hidden="true"></i> Email</a></li>
     <li><a href="https://github.com/tschmoderer/cpp-linear-algebra-toolbox" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i>
     Github</a></li>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0c0c9fa8a58db41e576adc3ce68c5ee9.html">types</a></li><li class="navelem"><a class="el" href="trajectory_8cpp.html">trajectory.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0c0c9fa8a58db41e576adc3ce68c5ee9.html">types</a></li><li class="navelem"><a class="el" href="dir_024db7d1e30515204eb800122d41e58d.html">trajectory</a></li><li class="navelem"><a class="el" href="trajectory_8cpp.html">trajectory.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer"
           src="doxygen.svg" width="104" height="31" alt="doxygen" /></a> 1.9.1 </li>
   </ul>

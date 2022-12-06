@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['constantstepfactorparameter_399',['ConstantStepFactorParameter',['../classlsqcpp_1_1_constant_step_factor_parameter.html#a5911c095de36269a5f2275d15c1fbd88',1,'lsqcpp::ConstantStepFactorParameter::ConstantStepFactorParameter()=default'],['../classlsqcpp_1_1_constant_step_factor_parameter.html#af2c0e3fb936ad778f0fffcb2d50005e7',1,'lsqcpp::ConstantStepFactorParameter::ConstantStepFactorParameter(const Scalar factor)']]],
-  ['constantstepsize_400',['constantStepSize',['../classlsqcpp_1_1_barzilai_borwein_parameter.html#a8fd150f6ccce6f0bf2639e304621cb5d',1,'lsqcpp::BarzilaiBorweinParameter']]],
-  ['controls_401',['Controls',['../class_controls.html#af2624a0ef26f9b1281415b5f9ddef0de',1,'Controls::Controls(uint8_t, double, double, uint16_t, interpolation_method_t, extend_t, extend_t, uint16_t)'],['../class_controls.html#a9183be3837e9e60de2145c00ce112d82',1,'Controls::Controls(const Controls &amp;)']]],
-  ['controlsystem_402',['ControlSystem',['../class_control_system.html#a469071d66e8aae5cd2d871c459dff365',1,'ControlSystem::ControlSystem(uint16_t, uint16_t)'],['../class_control_system.html#a7f53dbc9bfecc2a66bd14afa67fd2e2e',1,'ControlSystem::ControlSystem(uint16_t, uint16_t, Time_t, Time_t, StateVector_t)'],['../class_control_system.html#a42d7849618f03cae11d3f506bb81a2ce',1,'ControlSystem::ControlSystem(uint16_t, uint16_t, Time_t, Time_t, StateVector_t, control_func_t, control_func_dx_t, control_func_du_t)'],['../class_control_system.html#a2d44777d46a76bc81e7acee519e5eeaa',1,'ControlSystem::ControlSystem(uint16_t, uint16_t, Time_t, Time_t, StateVector_t, control_func_t, control_func_dx_t, control_func_du_t, uint16_t, interpolation_method_t, extend_t, extend_t, uint16_t)']]],
-  ['ctrls_403',['ctrls',['../class_control_system.html#ab10faf456e1873ad524872d46a8ed3e6',1,'ControlSystem']]]
+  ['endpoint_236',['endpoint',['../class_trajectory.html#a5761678b6f6dd480c4a91ca70a04325c',1,'Trajectory']]],
+  ['eval_5fdynamics_237',['eval_dynamics',['../class_control_system.html#a662e575db48079ebce776c1a167bb603',1,'ControlSystem::eval_dynamics()'],['../class_dynamical_system.html#a08b743d5458abb269e0cd0a577fd08a9',1,'DynamicalSystem::eval_dynamics(Time_t, StateVector) const']]],
+  ['eval_5fdynamics_5fderivative_5fx_238',['eval_dynamics_derivative_x',['../class_dynamical_system.html#af757b1dec1fef4e8c858c187bfc36c35',1,'DynamicalSystem']]],
+  ['evaluate_239',['evaluate',['../class_trajectory.html#ab66dcaf5368243b96fe880767dafc947',1,'Trajectory']]]
 ];

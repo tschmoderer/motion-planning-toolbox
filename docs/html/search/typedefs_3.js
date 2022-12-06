@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['gaussnewton_571',['GaussNewton',['../namespacelsqcpp.html#aeaf120333f1130d1b73c8d30010b92fb',1,'lsqcpp']]],
-  ['gaussnewtonx_572',['GaussNewtonX',['../namespacelsqcpp.html#a12830647a207b42191cd37dd97739aa9',1,'lsqcpp']]],
-  ['gradientdescent_573',['GradientDescent',['../namespacelsqcpp.html#a04043e0c38cc8d754a2020ebbf56de4d',1,'lsqcpp']]],
-  ['gradientdescentx_574',['GradientDescentX',['../namespacelsqcpp.html#a88fef68bdfc474174b9ef15878cff10a',1,'lsqcpp']]],
-  ['gradientvector_575',['GradientVector',['../classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_constant_step_factor_01_4.html#a84c7b795bdeeedcaa2b4d58224bea801',1,'lsqcpp::NewtonStepRefiner&lt; _Scalar, _Inputs, _Outputs, ConstantStepFactor &gt;::GradientVector()'],['../classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_barzilai_borwein_01_4.html#a1379b17614cf226bc1a5710bf8dc9011',1,'lsqcpp::NewtonStepRefiner&lt; _Scalar, _Inputs, _Outputs, BarzilaiBorwein &gt;::GradientVector()'],['../classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_armijo_backtracking_01_4.html#a8c252f0b14a65ec785d4e640aed07aec',1,'lsqcpp::NewtonStepRefiner&lt; _Scalar, _Inputs, _Outputs, ArmijoBacktracking &gt;::GradientVector()'],['../classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_wolfe_backtracking_01_4.html#a7dc5544147f73640171f57ff5d907572',1,'lsqcpp::NewtonStepRefiner&lt; _Scalar, _Inputs, _Outputs, WolfeBacktracking &gt;::GradientVector()'],['../classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_dogleg_method_01_4.html#abf641d00544eb5926ac71163f16ba045',1,'lsqcpp::NewtonStepRefiner&lt; _Scalar, _Inputs, _Outputs, DoglegMethod &gt;::GradientVector()'],['../classlsqcpp_1_1_least_squares_algorithm.html#ac2f4bde3a50cef745774edb71d788242',1,'lsqcpp::LeastSquaresAlgorithm::GradientVector()']]]
+  ['state_5ft_332',['State_t',['../state_8h.html#a90f798d8e3ca3becef478b86607c40fd',1,'state.h']]],
+  ['statematrix_333',['StateMatrix',['../state_matrix_8h.html#abd244289b88a0024692d5dbad6e3b11b',1,'stateMatrix.h']]],
+  ['statevector_334',['StateVector',['../state_vector_8h.html#aa9a687c303d3712059acdf6681be24e2',1,'stateVector.h']]]
 ];

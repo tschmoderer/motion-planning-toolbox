@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['newtonsteprefiner_458',['NewtonStepRefiner',['../classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_constant_step_factor_01_4.html#a66a64d23cfa9f4d67123f7cc34438244',1,'lsqcpp::NewtonStepRefiner&lt; _Scalar, _Inputs, _Outputs, ConstantStepFactor &gt;::NewtonStepRefiner()'],['../classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_barzilai_borwein_01_4.html#aaf94fde7397aec19659a2be5f8ac713d',1,'lsqcpp::NewtonStepRefiner&lt; _Scalar, _Inputs, _Outputs, BarzilaiBorwein &gt;::NewtonStepRefiner()'],['../classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_armijo_backtracking_01_4.html#a96c9fd6941527fb543ffd4016c67a304',1,'lsqcpp::NewtonStepRefiner&lt; _Scalar, _Inputs, _Outputs, ArmijoBacktracking &gt;::NewtonStepRefiner()'],['../classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_wolfe_backtracking_01_4.html#a94a06e4b047d8f8fef8dbf62edb70ae8',1,'lsqcpp::NewtonStepRefiner&lt; _Scalar, _Inputs, _Outputs, WolfeBacktracking &gt;::NewtonStepRefiner()'],['../classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_dogleg_method_01_4.html#abd16f2e9ece5bdb189daeaecdb813d1c',1,'lsqcpp::NewtonStepRefiner&lt; _Scalar, _Inputs, _Outputs, DoglegMethod &gt;::NewtonStepRefiner()']]],
-  ['norm_459',['norm',['../state_8h.html#a30accd8f5f49896f9f73d7c535e7a546',1,'state.h']]],
-  ['norm2_460',['norm2',['../class_controls.html#ab0413be444eef8c468eee11af1ae3a3f',1,'Controls']]]
+  ['random_276',['random',['../class_controls.html#a4cb6535afdb5dee31263a7d91729d58e',1,'Controls']]],
+  ['rk1_277',['rk1',['../class_o_d_e_int.html#ae77918d5969fc061117644fdb4e08ee6',1,'ODEInt']]],
+  ['rk4_278',['rk4',['../class_o_d_e_int.html#a6194be1deec1a4433433fad61262d893',1,'ODEInt']]]
 ];

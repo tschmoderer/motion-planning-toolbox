@@ -102,14 +102,13 @@ $(document).ready(function(){initNavTree('class_trajectory.html',''); initResiza
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="class_trajectory-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Trajectory Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This implements a trajectory based on discrete data points which can be evenly or unevenly distributed in time with time stamps associated with each data point. A basic interpolation strategy can evaluate the trajectory also in between data points.  
+<p>Header file for <a class="el" href="class_trajectory.html" title="Header file for Trajectory class.">Trajectory</a> class.  
  <a href="class_trajectory.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="trajectory_8h_source.html">trajectory.h</a>&gt;</code></p>
@@ -118,31 +117,26 @@ $(document).ready(function(){initNavTree('class_trajectory.html',''); initResiza
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa340ba80f1f4d1aa39f19f069d5d8089"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#aa340ba80f1f4d1aa39f19f069d5d8089">Trajectory</a> ()</td></tr>
 <tr class="separator:aa340ba80f1f4d1aa39f19f069d5d8089"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed713fa797831ad807ea15b24db8488a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#aed713fa797831ad807ea15b24db8488a">Trajectory</a> (VectorXd, MatrixXd)</td></tr>
-<tr class="separator:aed713fa797831ad807ea15b24db8488a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a471a8cb4f4ef301d630855b33109cfa1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#a471a8cb4f4ef301d630855b33109cfa1">Trajectory</a> (<a class="el" href="class_time_vector.html">TimeVector</a>, <a class="el" href="state_matrix_8h.html#abd244289b88a0024692d5dbad6e3b11b">StateMatrix</a>, <a class="el" href="interpolator1d_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>=<a class="el" href="interpolator1d_8h.html#a6fd53b040507bda8a846932e195fa78fa17abedd2e487446bf814c9da0b7791de">INTERP_LINEAR</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>=<a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a7f75d51b33702e6ebfbb6f8a6762d731">EXTEND_ZERO</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>=<a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a7f75d51b33702e6ebfbb6f8a6762d731">EXTEND_ZERO</a>)</td></tr>
+<tr class="separator:a471a8cb4f4ef301d630855b33109cfa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ac386696a765cd0672ae840a9e9f1bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#a5ac386696a765cd0672ae840a9e9f1bc">Trajectory</a> (const <a class="el" href="class_trajectory.html">Trajectory</a> &amp;)</td></tr>
 <tr class="separator:a5ac386696a765cd0672ae840a9e9f1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac673c37025ca5353ad99ab41c936e75d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#ac673c37025ca5353ad99ab41c936e75d">~Trajectory</a> ()</td></tr>
 <tr class="separator:ac673c37025ca5353ad99ab41c936e75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87b6a3558b52a0a08c0da311b3e6f331"><td class="memItemLeft" align="right" valign="top"><a class="el" href="time_8h.html#ac00e1f7ae85fb8a712a6026d7dc37e62">TimeVector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#a87b6a3558b52a0a08c0da311b3e6f331">get_time</a> () const</td></tr>
-<tr class="separator:a87b6a3558b52a0a08c0da311b3e6f331"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae42f3e0732150f6856feba5d0e5ce70d"><td class="memItemLeft" align="right" valign="top">MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#ae42f3e0732150f6856feba5d0e5ce70d">get_data</a> () const</td></tr>
-<tr class="separator:ae42f3e0732150f6856feba5d0e5ce70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99369dc53f2563542c2a54a5dc31da9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#a99369dc53f2563542c2a54a5dc31da9e">set_interpolation_method</a> (<a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>)</td></tr>
+<tr class="memitem:a55c8aeb6dc188f8697d731a853a20eb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_time_vector.html">TimeVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#a55c8aeb6dc188f8697d731a853a20eb1">get_time</a> () const</td></tr>
+<tr class="separator:a55c8aeb6dc188f8697d731a853a20eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f77aac8544233d70b2a290a4300c734"><td class="memItemLeft" align="right" valign="top"><a class="el" href="state_matrix_8h.html#abd244289b88a0024692d5dbad6e3b11b">StateMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#a1f77aac8544233d70b2a290a4300c734">get_data</a> () const</td></tr>
+<tr class="separator:a1f77aac8544233d70b2a290a4300c734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99369dc53f2563542c2a54a5dc31da9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#a99369dc53f2563542c2a54a5dc31da9e">set_interpolation_method</a> (<a class="el" href="interpolator1d_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>, <a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>)</td></tr>
 <tr class="separator:a99369dc53f2563542c2a54a5dc31da9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a968337501cbadfb6a6ca0b6ebd455e37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#a968337501cbadfb6a6ca0b6ebd455e37">evaluate</a> (double) const</td></tr>
-<tr class="separator:a968337501cbadfb6a6ca0b6ebd455e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9ab14fd2de0eb5f5e18c0455d34aa50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#ad9ab14fd2de0eb5f5e18c0455d34aa50">endpoint</a> () const</td></tr>
-<tr class="separator:ad9ab14fd2de0eb5f5e18c0455d34aa50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a62e9f0a8dc2d16b6ab280d60f5060d79"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#a62e9f0a8dc2d16b6ab280d60f5060d79">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="class_trajectory.html">Trajectory</a> &amp;)</td></tr>
-<tr class="memdesc:a62e9f0a8dc2d16b6ab280d60f5060d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload output operator for <a class="el" href="class_trajectory.html" title="This implements a trajectory based on discrete data points which can be evenly or unevenly distribute...">Trajectory</a> object The output format of a trajectory is the following : \(t_0\) \(x_1[0]\) ... \(x_n[0]\) ... \(t_N\) \(x_1[N]\) ... \(x_n[N]\) where \(n\) is the dimension of the state space and \(N\) is the numer of time divisions.  <a href="class_trajectory.html#a62e9f0a8dc2d16b6ab280d60f5060d79">More...</a><br /></td></tr>
-<tr class="separator:a62e9f0a8dc2d16b6ab280d60f5060d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab66dcaf5368243b96fe880767dafc947"><td class="memItemLeft" align="right" valign="top"><a class="el" href="state_vector_8h.html#aa9a687c303d3712059acdf6681be24e2">StateVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#ab66dcaf5368243b96fe880767dafc947">evaluate</a> (<a class="el" href="time_8h.html#a80b23eab88362163e2edd1a8b8238ef1">Time_t</a>) const</td></tr>
+<tr class="separator:ab66dcaf5368243b96fe880767dafc947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5761678b6f6dd480c4a91ca70a04325c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="state_vector_8h.html#aa9a687c303d3712059acdf6681be24e2">StateVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trajectory.html#a5761678b6f6dd480c4a91ca70a04325c">endpoint</a> () const</td></tr>
+<tr class="separator:a5761678b6f6dd480c4a91ca70a04325c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This implements a trajectory based on discrete data points which can be evenly or unevenly distributed in time with time stamps associated with each data point. A basic interpolation strategy can evaluate the trajectory also in between data points. </p>
+<div class="textblock"><p>Header file for <a class="el" href="class_trajectory.html" title="Header file for Trajectory class.">Trajectory</a> class. </p>
+<p>This implements a trajectory based on discrete data points which can be evenly or unevenly distributed in time with time stamps associated with each data point. A basic interpolation strategy can evaluate the trajectory also in between data points.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Interpolation method is set by default to : Interpolation linear, Extend data outside of interval by Zeros. To change this behaviour consider accesor set_interpolation_method </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa340ba80f1f4d1aa39f19f069d5d8089"></a>
@@ -162,8 +156,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aed713fa797831ad807ea15b24db8488a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed713fa797831ad807ea15b24db8488a">&#9670;&nbsp;</a></span>Trajectory() <span class="overload">[2/3]</span></h2>
+<a id="a471a8cb4f4ef301d630855b33109cfa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a471a8cb4f4ef301d630855b33109cfa1">&#9670;&nbsp;</a></span>Trajectory() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,14 +165,32 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">Trajectory::Trajectory </td>
           <td>(</td>
-          <td class="paramtype">VectorXd&#160;</td>
+          <td class="paramtype"><a class="el" href="class_time_vector.html">TimeVector</a>&#160;</td>
           <td class="paramname"><em>t</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MatrixXd&#160;</td>
-          <td class="paramname"><em>d</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="state_matrix_8h.html#abd244289b88a0024692d5dbad6e3b11b">StateMatrix</a>&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>&#160;</td>
+          <td class="paramname"><em>im</em> = <code><a class="el" href="interpolator1d_8h.html#a6fd53b040507bda8a846932e195fa78fa17abedd2e487446bf814c9da0b7791de">INTERP_LINEAR</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>el</em> = <code><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a7f75d51b33702e6ebfbb6f8a6762d731">EXTEND_ZERO</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991">extend_t</a>&#160;</td>
+          <td class="paramname"><em>er</em> = <code><a class="el" href="interpolator1d_8h.html#a70204a2054039e73a20314ee91cfb991a7f75d51b33702e6ebfbb6f8a6762d731">EXTEND_ZERO</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -226,14 +238,14 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad9ab14fd2de0eb5f5e18c0455d34aa50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9ab14fd2de0eb5f5e18c0455d34aa50">&#9670;&nbsp;</a></span>endpoint()</h2>
+<a id="a5761678b6f6dd480c4a91ca70a04325c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5761678b6f6dd480c4a91ca70a04325c">&#9670;&nbsp;</a></span>endpoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a> Trajectory::endpoint </td>
+          <td class="memname"><a class="el" href="state_vector_8h.html#aa9a687c303d3712059acdf6681be24e2">StateVector</a> Trajectory::endpoint </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -243,16 +255,16 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a968337501cbadfb6a6ca0b6ebd455e37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a968337501cbadfb6a6ca0b6ebd455e37">&#9670;&nbsp;</a></span>evaluate()</h2>
+<a id="ab66dcaf5368243b96fe880767dafc947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab66dcaf5368243b96fe880767dafc947">&#9670;&nbsp;</a></span>evaluate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="state_8h.html#a6ad9ef1bf1feb70f40db35bfdfcfb918">StateVector_t</a> Trajectory::evaluate </td>
+          <td class="memname"><a class="el" href="state_vector_8h.html#aa9a687c303d3712059acdf6681be24e2">StateVector</a> Trajectory::evaluate </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype"><a class="el" href="time_8h.html#a80b23eab88362163e2edd1a8b8238ef1">Time_t</a>&#160;</td>
           <td class="paramname"><em>t</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -261,14 +273,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ae42f3e0732150f6856feba5d0e5ce70d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae42f3e0732150f6856feba5d0e5ce70d">&#9670;&nbsp;</a></span>get_data()</h2>
+<a id="a1f77aac8544233d70b2a290a4300c734"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f77aac8544233d70b2a290a4300c734">&#9670;&nbsp;</a></span>get_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">MatrixXd Trajectory::get_data </td>
+          <td class="memname"><a class="el" href="state_matrix_8h.html#abd244289b88a0024692d5dbad6e3b11b">StateMatrix</a> Trajectory::get_data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -278,14 +290,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a87b6a3558b52a0a08c0da311b3e6f331"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87b6a3558b52a0a08c0da311b3e6f331">&#9670;&nbsp;</a></span>get_time()</h2>
+<a id="a55c8aeb6dc188f8697d731a853a20eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55c8aeb6dc188f8697d731a853a20eb1">&#9670;&nbsp;</a></span>get_time()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="time_8h.html#ac00e1f7ae85fb8a712a6026d7dc37e62">TimeVector_t</a> Trajectory::get_time </td>
+          <td class="memname"><a class="el" href="class_time_vector.html">TimeVector</a> Trajectory::get_time </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -304,7 +316,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void Trajectory::set_interpolation_method </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="interpolator_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="interpolator1d_8h.html#a6fd53b040507bda8a846932e195fa78f">interpolation_method_t</a>&#160;</td>
           <td class="paramname"><em>im</em>, </td>
         </tr>
         <tr>
@@ -329,56 +341,9 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="a62e9f0a8dc2d16b6ab280d60f5060d79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62e9f0a8dc2d16b6ab280d60f5060d79">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="class_trajectory.html">Trajectory</a> &amp;&#160;</td>
-          <td class="paramname"><em>traj</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Overload output operator for <a class="el" href="class_trajectory.html" title="This implements a trajectory based on discrete data points which can be evenly or unevenly distribute...">Trajectory</a> object The output format of a trajectory is the following : \(t_0\) \(x_1[0]\) ... \(x_n[0]\) ... \(t_N\) \(x_1[N]\) ... \(x_n[N]\) where \(n\) is the dimension of the state space and \(N\) is the numer of time divisions. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">os</td><td>An output stream </td></tr>
-    <tr><td class="paramname">traj</td><td>A <a class="el" href="class_trajectory.html" title="This implements a trajectory based on discrete data points which can be evenly or unevenly distribute...">Trajectory</a> obect </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; </dd></dl>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/header/types/<a class="el" href="trajectory_8h_source.html">trajectory.h</a></li>
-<li>src/types/<a class="el" href="trajectory_8cpp.html">trajectory.cpp</a></li>
+<li>include/header/types/trajectory/<a class="el" href="trajectory_8h_source.html">trajectory.h</a></li>
+<li>src/types/trajectory/<a class="el" href="trajectory_8cpp.html">trajectory.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

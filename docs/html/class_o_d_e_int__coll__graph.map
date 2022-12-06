@@ -1,5 +1,7 @@
 <map id="ODEInt" name="ODEInt">
-<area shape="rect" id="node1" title="A class describing an intergator of an ordinary differential equation of the form." alt="" coords="43,184,109,211"/>
-<area shape="rect" id="node2" href="$class_dynamical_system.html" title="A class describig an integrator of ODE." alt="" coords="5,95,147,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="36,5,116,32"/>
+<area shape="rect" id="node1" title="A class describing an integrator of an ordinary differential equation of the form." alt="" coords="73,289,140,316"/>
+<area shape="rect" id="node2" href="$class_time_vector.html" title="A class to describe a vector of timestamps. This class is used to evaluate trajectories and controls." alt="" coords="5,200,101,227"/>
+<area shape="rect" id="node3" href="$class_dynamical_system.html" title="A class describig an integrator of ODE." alt="" coords="125,200,267,227"/>
+<area shape="rect" id="node4" href="$class_vector.html" title=" " alt="" coords="111,96,281,137"/>
+<area shape="rect" id="node5" title=" " alt="" coords="109,5,283,47"/>
 </map>

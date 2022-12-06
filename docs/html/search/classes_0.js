@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['armijobacktracking_304',['ArmijoBacktracking',['../structlsqcpp_1_1_armijo_backtracking.html',1,'lsqcpp']]],
-  ['armijobacktrackingparameter_305',['ArmijoBacktrackingParameter',['../classlsqcpp_1_1_armijo_backtracking_parameter.html',1,'lsqcpp']]]
+  ['controls_181',['Controls',['../class_controls.html',1,'']]],
+  ['controlsystem_182',['ControlSystem',['../class_control_system.html',1,'']]]
 ];

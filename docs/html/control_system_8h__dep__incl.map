@@ -1,9 +1,5 @@
 <map id="include/header/systems/controlSystem.h" name="include/header/systems/controlSystem.h">
-<area shape="rect" id="node1" title=" " alt="" coords="275,5,452,47"/>
-<area shape="rect" id="node2" href="$control_system_8cpp.html" title=" " alt="" coords="5,102,231,129"/>
-<area shape="rect" id="node3" href="$motion_planner_8h.html" title=" " alt="" coords="255,95,472,136"/>
-<area shape="rect" id="node6" href="$linear_control_system_8h.html" title=" " alt="" coords="499,95,676,136"/>
-<area shape="rect" id="node4" href="$motion_planner_8cpp.html" title=" " alt="" coords="40,184,231,225"/>
-<area shape="rect" id="node5" href="$motion_planner_r_h_c_m_8h.html" title=" " alt="" coords="255,184,472,225"/>
-<area shape="rect" id="node7" href="$linear_control_system_8cpp.html" title=" " alt="" coords="496,184,684,225"/>
+<area shape="rect" id="node1" title=" " alt="" coords="148,5,325,47"/>
+<area shape="rect" id="node2" href="$control_system_8cpp.html" title=" " alt="" coords="5,95,231,121"/>
+<area shape="rect" id="node3" href="$controltlbx_8h.html" title=" " alt="" coords="255,95,459,121"/>
 </map>

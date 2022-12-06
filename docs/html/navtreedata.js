@@ -25,32 +25,24 @@
 var NAVTREE =
 [
   [ "CPP Motion Planning ToolBox", "index.html", [
-    [ "Purposes", "index.html#autotoc_md0", [
-      [ "Library", "index.html#autotoc_md1", null ],
-      [ "Application", "index.html#autotoc_md2", null ]
+    [ "Table of contents", "index.html#autotoc_md0", null ],
+    [ "Purposes", "index.html#autotoc_md1", [
+      [ "Library", "index.html#autotoc_md2", null ],
+      [ "Application", "index.html#autotoc_md3", null ]
     ] ],
-    [ "Examples", "index.html#autotoc_md3", [
-      [ "Van-der-Pol Oscillator", "index.html#autotoc_md4", null ]
+    [ "Examples", "index.html#autotoc_md4", [
+      [ "Van-der-Pol Oscillator", "index.html#autotoc_md5", null ]
     ] ],
     [ "Todo List", "todo.html", null ],
-    [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ],
-        [ "Typedefs", "namespacemembers_type.html", null ]
-      ] ]
-    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
-        [ "Enumerations", "functions_enum.html", null ],
         [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],
@@ -71,8 +63,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classlsqcpp_1_1_newton_step_refiner_3_01___scalar_00_01___inputs_00_01___outputs_00_01_armijo_backtracking_01_4.html#ab0ebd9a498f1ab010f5b0bd1e87b0d76",
-"namespacemembers.html"
+"interpolator1d_8h.html#a6fd53b040507bda8a846932e195fa78fab7ccea8ae0457c69704c0835f6480e18"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

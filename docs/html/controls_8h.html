@@ -101,34 +101,39 @@ $(document).ready(function(){initNavTree('controls_8h.html',''); initResizable()
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">controls.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">../utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="time_vector_8h_source.html">../types/time/timeVector.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="control_vector_8h_source.html">../types/control/controlVector.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="control_matrix_8h_source.html">../types/control/controlMatrix.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="interpol_8h_source.html">../interpol/interpol.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="integrator_8h_source.html">../integrator/integrator.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="integrator1d_8h_source.html">../integrator/integrator1d.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for controls.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="controls_8h__incl.png" border="0" usemap="#ainclude_2header_2controller_2controls_8h" alt=""/></div>
 <map name="ainclude_2header_2controller_2controls_8h" id="ainclude_2header_2controller_2controls_8h">
-<area shape="rect" title=" " alt="" coords="155,5,339,47"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="91,319,165,345"/>
-<area shape="rect" href="interpol_8h.html" title=" " alt="" coords="359,95,510,121"/>
-<area shape="rect" href="integrator_8h.html" title=" " alt="" coords="158,95,335,121"/>
-<area shape="rect" title=" " alt="" coords="5,393,75,420"/>
-<area shape="rect" title=" " alt="" coords="99,393,165,420"/>
-<area shape="rect" title=" " alt="" coords="190,393,293,420"/>
-<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="350,169,477,196"/>
-<area shape="rect" href="interpolator_8h.html" title=" " alt="" coords="327,244,436,271"/>
-<area shape="rect" href="interpol_2utils_8h.html" title=" " alt="" coords="319,319,382,345"/>
-<area shape="rect" title=" " alt="" coords="317,393,385,420"/>
-<area shape="rect" title=" " alt="" coords="409,393,489,420"/>
-<area shape="rect" title=" " alt="" coords="514,393,585,420"/>
-<area shape="rect" href="integrator1d_8h.html" title=" " alt="" coords="189,169,304,196"/>
-<area shape="rect" href="integrator_2utils_8h.html" title=" " alt="" coords="215,319,278,345"/>
+<area shape="rect" title=" " alt="" coords="205,5,389,47"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="340,408,414,435"/>
+<area shape="rect" href="time_vector_8h.html" title=" " alt="" coords="98,251,288,278"/>
+<area shape="rect" href="control_vector_8h.html" title=" " alt="" coords="414,244,582,285"/>
+<area shape="rect" href="control_matrix_8h.html" title=" " alt="" coords="606,244,774,285"/>
+<area shape="rect" href="interpol_8h.html" title=" " alt="" coords="44,95,195,121"/>
+<area shape="rect" href="integrator1d_8h.html" title=" " alt="" coords="266,169,461,196"/>
+<area shape="rect" title=" " alt="" coords="196,483,265,509"/>
+<area shape="rect" title=" " alt="" coords="289,483,356,509"/>
+<area shape="rect" title=" " alt="" coords="380,483,483,509"/>
+<area shape="rect" title=" " alt="" coords="508,483,588,509"/>
+<area shape="rect" href="time_8h.html" title=" " alt="" coords="276,333,340,360"/>
+<area shape="rect" href="control_8h.html" title=" " alt="" coords="592,333,671,360"/>
+<area shape="rect" href="data_vector_8h.html" title=" " alt="" coords="415,333,568,360"/>
+<area shape="rect" href="data_matrix_8h.html" title=" " alt="" coords="696,333,850,360"/>
+<area shape="rect" href="interpolator1d_8h.html" title=" " alt="" coords="56,169,183,196"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -136,24 +141,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="controls_8h__dep__incl.png" border="0" usemap="#ainclude_2header_2controller_2controls_8hdep" alt=""/></div>
 <map name="ainclude_2header_2controller_2controls_8hdep" id="ainclude_2header_2controller_2controls_8hdep">
-<area shape="rect" title=" " alt="" coords="370,5,554,47"/>
-<area shape="rect" href="controls_8cpp.html" title=" " alt="" coords="145,102,336,129"/>
-<area shape="rect" href="output_helper_8h.html" title=" " alt="" coords="813,95,991,136"/>
-<area shape="rect" href="motion_planner_8h.html" title=" " alt="" coords="220,452,437,493"/>
-<area shape="rect" href="dynamics_8h.html" title=" " alt="" coords="443,95,601,136"/>
-<area shape="rect" href="output_helper_8cpp.html" title=" " alt="" coords="793,191,1011,218"/>
-<area shape="rect" href="controltlbx_8h.html" title=" " alt="" coords="1095,459,1299,486"/>
-<area shape="rect" href="motion_planner_8cpp.html" title=" " alt="" coords="5,541,196,583"/>
-<area shape="rect" href="motion_planner_r_h_c_m_8h.html" title=" " alt="" coords="220,541,437,583"/>
-<area shape="rect" href="types_8h.html" title=" " alt="" coords="472,184,631,225"/>
-<area shape="rect" href="odeint_8h.html" title=" " alt="" coords="665,363,827,404"/>
-<area shape="rect" href="control_system_8h.html" title=" " alt="" coords="463,363,640,404"/>
-<area shape="rect" href="dynamical_system_8h.html" title=" " alt="" coords="657,273,835,315"/>
-<area shape="rect" href="odeint_8cpp.html" title=" " alt="" coords="912,459,1071,486"/>
-<area shape="rect" href="control_system_8cpp.html" title=" " alt="" coords="663,459,888,486"/>
-<area shape="rect" href="linear_control_system_8h.html" title=" " alt="" coords="461,452,639,493"/>
-<area shape="rect" href="linear_control_system_8cpp.html" title=" " alt="" coords="461,541,649,583"/>
-<area shape="rect" href="dynamical_system_8cpp.html" title=" " alt="" coords="851,370,1099,397"/>
+<area shape="rect" title=" " alt="" coords="286,5,470,47"/>
+<area shape="rect" href="controls_8cpp.html" title=" " alt="" coords="5,102,196,129"/>
+<area shape="rect" href="output_helper_8h.html" title=" " alt="" coords="221,95,399,136"/>
+<area shape="rect" href="controltlbx_8h.html" title=" " alt="" coords="395,452,599,479"/>
+<area shape="rect" href="control_dynamics_8h.html" title=" " alt="" coords="539,95,697,136"/>
+<area shape="rect" href="output_helper_8cpp.html" title=" " alt="" coords="191,191,408,218"/>
+<area shape="rect" href="types_8h.html" title=" " alt="" coords="567,184,725,225"/>
+<area shape="rect" href="odeint_8h.html" title=" " alt="" coords="1066,363,1229,404"/>
+<area shape="rect" href="control_system_8h.html" title=" " alt="" coords="585,363,763,404"/>
+<area shape="rect" href="dynamical_system_8h.html" title=" " alt="" coords="684,273,861,315"/>
+<area shape="rect" href="odeint_8cpp.html" title=" " alt="" coords="1068,452,1227,479"/>
+<area shape="rect" href="control_system_8cpp.html" title=" " alt="" coords="623,452,848,479"/>
+<area shape="rect" href="dynamical_systems_8cpp.html" title=" " alt="" coords="787,370,1041,397"/>
 </map>
 </div>
 </div>
@@ -163,13 +163,48 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controls.html">Controls</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a8e892d12ca31c5685b095308150d5713"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controls_8h.html#a8e892d12ca31c5685b095308150d5713">initialisation_method_t</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="controls_8h.html#a8e892d12ca31c5685b095308150d5713a3ddac495fff81df712ad631c4a8e56a5">INIT_CNTRLS_FUNCTION</a>
+, <a class="el" href="controls_8h.html#a8e892d12ca31c5685b095308150d5713a7f9d2ceec6fe1c0324bdce87a1daf50b">INIT_CNTRLS_CONSTANTS</a>
+, <a class="el" href="controls_8h.html#a8e892d12ca31c5685b095308150d5713acaab169a81d765935c8042e1868c2f97">INIT_CNTRLS_DATA</a>
+, <a class="el" href="controls_8h.html#a8e892d12ca31c5685b095308150d5713ad7345031c15752be8dd2bc5f89712a04">INIT_CNTRLS_RANDOM_UNIFORM</a>
+, <br />
+&#160;&#160;<a class="el" href="controls_8h.html#a8e892d12ca31c5685b095308150d5713a07c11b28fe37c9579f77a5a9fa37b3d4">INIT_CNTRLS_RANDOM_NORMAL</a>
+<br />
+ }</td></tr>
+<tr class="separator:a8e892d12ca31c5685b095308150d5713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>T. Schmoderer (<a href="#" onclick="location.href='mai'+'lto:'+'iat'+'he'+'na@'+'ma'+'ilo'+'.c'+'om'; return false;">iathe<span style="display: none;">.nosp@m.</span>na@m<span style="display: none;">.nosp@m.</span>ailo.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.0.3 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2022-11-09 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.5.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-12-06 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022. All rights reserved. This project is released under the GNU GENERAL PUBLIC LICENSE. </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a8e892d12ca31c5685b095308150d5713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e892d12ca31c5685b095308150d5713">&#9670;&nbsp;</a></span>initialisation_method_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="controls_8h.html#a8e892d12ca31c5685b095308150d5713">initialisation_method_t</a> : uint8_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8e892d12ca31c5685b095308150d5713a3ddac495fff81df712ad631c4a8e56a5"></a>INIT_CNTRLS_FUNCTION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8e892d12ca31c5685b095308150d5713a7f9d2ceec6fe1c0324bdce87a1daf50b"></a>INIT_CNTRLS_CONSTANTS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8e892d12ca31c5685b095308150d5713acaab169a81d765935c8042e1868c2f97"></a>INIT_CNTRLS_DATA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8e892d12ca31c5685b095308150d5713ad7345031c15752be8dd2bc5f89712a04"></a>INIT_CNTRLS_RANDOM_UNIFORM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8e892d12ca31c5685b095308150d5713a07c11b28fe37c9579f77a5a9fa37b3d4"></a>INIT_CNTRLS_RANDOM_NORMAL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->

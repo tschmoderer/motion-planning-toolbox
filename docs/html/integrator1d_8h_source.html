@@ -108,36 +108,53 @@ $(document).ready(function(){initNavTree('integrator1d_8h_source.html',''); init
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef INTEGRATOR_1D_H</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define INTEGRATOR_1D_H</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html">utils.h</a>&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> Eigen::VectorXd;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../utils.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../types/time/time.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../types/time/timeVector.h&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_integrator1_d.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_integrator1_d.html">Integrator1D</a> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">/* CONSTRUCTORS */</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_integrator1_d.html#ad7def67dd94fc4e58611caa290cbd4dd">Integrator1D</a>(); </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_integrator1_d.html#ad7def67dd94fc4e58611caa290cbd4dd">Integrator1D</a>(uint16_t ); </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_integrator1_d.html#ad7def67dd94fc4e58611caa290cbd4dd">Integrator1D</a>(<span class="keyword">const</span> <a class="code" href="class_integrator1_d.html">Integrator1D</a> &amp; );</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">/* DESTRUCTOR */</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_integrator1_d.html#a8cc71c1e03c9a3442f5b7ebd7ac3bc68">~Integrator1D</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">/* ACCESSORS */</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment">/* METHODS */</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_integrator1_d.html#a13174ebbb10b7f2d6355d096d0b96d1a">integr</a>(<span class="keywordtype">double</span> , <span class="keywordtype">double</span> , std::function&lt;<span class="keywordtype">double</span>(<span class="keywordtype">double</span>)&gt; ) <span class="keyword">const</span>; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_integrator1_d.html#a13174ebbb10b7f2d6355d096d0b96d1a">integr</a>(VectorXd , VectorXd ) <span class="keyword">const</span>; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_integrator1_d.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_integrator1_d.html">Integrator1D</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">/* CONSTRUCTORS */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_integrator1_d.html#ad7def67dd94fc4e58611caa290cbd4dd">Integrator1D</a>(); </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_integrator1_d.html#ad7def67dd94fc4e58611caa290cbd4dd">Integrator1D</a>(<a class="code" href="utils_8h.html#a7b8a9ff09eff29d6fecb4e1de3dd2de1">TIME_VECTOR_DIM_T</a> ); </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="class_integrator1_d.html#ad7def67dd94fc4e58611caa290cbd4dd">Integrator1D</a>(<span class="keyword">const</span> <a class="code" href="class_integrator1_d.html">Integrator1D</a> &amp; );</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">/* DESTRUCTOR */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="class_integrator1_d.html#a8cc71c1e03c9a3442f5b7ebd7ac3bc68">~Integrator1D</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">/* ACCESSORS */</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        uint16_t nb_points; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_integrator1_d_html"><div class="ttname"><a href="class_integrator1_d.html">Integrator1D</a></div><div class="ttdef"><b>Definition:</b> integrator1d.h:19</div></div>
-<div class="ttc" id="aclass_integrator1_d_html_a13174ebbb10b7f2d6355d096d0b96d1a"><div class="ttname"><a href="class_integrator1_d.html#a13174ebbb10b7f2d6355d096d0b96d1a">Integrator1D::integr</a></div><div class="ttdeci">double integr(double, double, std::function&lt; double(double)&gt;) const</div><div class="ttdef"><b>Definition:</b> integrator1d.cpp:17</div></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">/* METHODS */</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="utils_8h.html#aae7e5362e39df9265f4fd78ffa61660a">SCALAR</a> <a class="code" href="class_integrator1_d.html#ad143671f2e5e6cae6b14641b3a4ddac6">integr</a>(<a class="code" href="time_8h.html#a80b23eab88362163e2edd1a8b8238ef1">Time_t</a> , <a class="code" href="time_8h.html#a80b23eab88362163e2edd1a8b8238ef1">Time_t</a> , std::function&lt;<a class="code" href="utils_8h.html#aae7e5362e39df9265f4fd78ffa61660a">SCALAR</a>(<a class="code" href="time_8h.html#a80b23eab88362163e2edd1a8b8238ef1">Time_t</a>)&gt; ) <span class="keyword">const</span>; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_integrator1_d.html#aff581e4cd814130441d22ee606d292c0">   38</a></span>&#160;        <a class="code" href="utils_8h.html#aae7e5362e39df9265f4fd78ffa61660a">SCALAR</a> <a class="code" href="class_integrator1_d.html#aff581e4cd814130441d22ee606d292c0">integr</a>(<span class="keyword">const</span> <a class="code" href="class_time_vector.html">TimeVector</a> * t, <span class="keyword">const</span> T * d)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            assert(t-&gt;<a class="code" href="class_time_vector.html#ad2d7e51c3e1a172c3418960b28b58c8e">size</a>() == d-&gt;size()); </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <a class="code" href="utils_8h.html#aae7e5362e39df9265f4fd78ffa61660a">SCALAR</a> sum = 0.;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <a class="code" href="utils_8h.html#aae7e5362e39df9265f4fd78ffa61660a">SCALAR</a> dx  = 0.;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; t-&gt;<a class="code" href="class_time_vector.html#ad2d7e51c3e1a172c3418960b28b58c8e">size</a>()-1; i++) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                dx = (*t)(i+1)-(*t)(i);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                sum += dx*((*d)(i+1) + (*d)(i));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span> sum/2.;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="utils_8h.html#a7b8a9ff09eff29d6fecb4e1de3dd2de1">TIME_VECTOR_DIM_T</a> nb_points; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_integrator1_d_html"><div class="ttname"><a href="class_integrator1_d.html">Integrator1D</a></div><div class="ttdoc">A class to integrate scalar function over time A function can be defined explicitely or via interpola...</div><div class="ttdef"><b>Definition:</b> integrator1d.h:23</div></div>
 <div class="ttc" id="aclass_integrator1_d_html_a8cc71c1e03c9a3442f5b7ebd7ac3bc68"><div class="ttname"><a href="class_integrator1_d.html#a8cc71c1e03c9a3442f5b7ebd7ac3bc68">Integrator1D::~Integrator1D</a></div><div class="ttdeci">~Integrator1D()</div><div class="ttdef"><b>Definition:</b> integrator1d.cpp:15</div></div>
+<div class="ttc" id="aclass_integrator1_d_html_ad143671f2e5e6cae6b14641b3a4ddac6"><div class="ttname"><a href="class_integrator1_d.html#ad143671f2e5e6cae6b14641b3a4ddac6">Integrator1D::integr</a></div><div class="ttdeci">SCALAR integr(Time_t, Time_t, std::function&lt; SCALAR(Time_t)&gt;) const</div><div class="ttdef"><b>Definition:</b> integrator1d.cpp:17</div></div>
 <div class="ttc" id="aclass_integrator1_d_html_ad7def67dd94fc4e58611caa290cbd4dd"><div class="ttname"><a href="class_integrator1_d.html#ad7def67dd94fc4e58611caa290cbd4dd">Integrator1D::Integrator1D</a></div><div class="ttdeci">Integrator1D()</div><div class="ttdef"><b>Definition:</b> integrator1d.cpp:3</div></div>
-<div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
+<div class="ttc" id="aclass_integrator1_d_html_aff581e4cd814130441d22ee606d292c0"><div class="ttname"><a href="class_integrator1_d.html#aff581e4cd814130441d22ee606d292c0">Integrator1D::integr</a></div><div class="ttdeci">SCALAR integr(const TimeVector *t, const T *d) const</div><div class="ttdef"><b>Definition:</b> integrator1d.h:38</div></div>
+<div class="ttc" id="aclass_time_vector_html"><div class="ttname"><a href="class_time_vector.html">TimeVector</a></div><div class="ttdoc">A class to describe a vector of timestamps. This class is used to evaluate trajectories and controls.</div><div class="ttdef"><b>Definition:</b> timeVector.h:23</div></div>
+<div class="ttc" id="aclass_time_vector_html_ad2d7e51c3e1a172c3418960b28b58c8e"><div class="ttname"><a href="class_time_vector.html#ad2d7e51c3e1a172c3418960b28b58c8e">TimeVector::size</a></div><div class="ttdeci">TIME_VECTOR_DIM_T size() const</div><div class="ttdef"><b>Definition:</b> timeVector.cpp:58</div></div>
+<div class="ttc" id="atime_8h_html_a80b23eab88362163e2edd1a8b8238ef1"><div class="ttname"><a href="time_8h.html#a80b23eab88362163e2edd1a8b8238ef1">Time_t</a></div><div class="ttdeci">double Time_t</div><div class="ttdef"><b>Definition:</b> time.h:18</div></div>
+<div class="ttc" id="autils_8h_html_a7b8a9ff09eff29d6fecb4e1de3dd2de1"><div class="ttname"><a href="utils_8h.html#a7b8a9ff09eff29d6fecb4e1de3dd2de1">TIME_VECTOR_DIM_T</a></div><div class="ttdeci">#define TIME_VECTOR_DIM_T</div><div class="ttdef"><b>Definition:</b> utils.h:26</div></div>
+<div class="ttc" id="autils_8h_html_aae7e5362e39df9265f4fd78ffa61660a"><div class="ttname"><a href="utils_8h.html#aae7e5362e39df9265f4fd78ffa61660a">SCALAR</a></div><div class="ttdeci">#define SCALAR</div><div class="ttdef"><b>Definition:</b> utils.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
