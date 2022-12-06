@@ -11,7 +11,7 @@
 
 
 
-This repository contains the code of the **controltlbx ** library that can be used as a standalone library or via the application executable that provides a GUI. 
+This repository contains the code of the **controltlbx** library that can be used as a standalone library or via the application executable that provides a GUI. 
 
 -- Insert Image of the GUI --
 
@@ -284,9 +284,7 @@ Total      :  42.2% (103/244)
 
 ```
 
-
-
-# Install & Building
+# Build & Install
 
 ## Requirement 
 * Eigen 
