@@ -43,10 +43,16 @@ app/mpp_app
 
 app/bin/exp
 
-app/assets/datavizscripts/__pycache__/
-
-app/assets/postprocess/__pycache__/
-
 app/bin/exp.hpp
 
 app/results/
+
+app/assets/config.py
+
+docs/xml/
+
+app/assets/gui/ressources/CONTRIBUTORS
+
+app/assets/gui/ressources/LICENSE
+
+**/__pycache__/*
