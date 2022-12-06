@@ -1,7 +1,6 @@
 #include "../../include/header/controller/controls.h"
 
 /* CONSTRUCTORS */
-
 /**
  * @brief Construct a new Controls::Controls object
  * Create a list of nb Control object with domain \f$[t_0,t_1]\f$ and \f$H\f$ step of discretisation
@@ -20,7 +19,7 @@
  * @warning nb must be greater than 0
  * @warning Maximum number of control is 255
  */
-Controls::Controls(uint8_t nb, double t0, double t1, uint16_t H, interpolation_method_t im=INTERP_LINEAR, extend_t el=EXTEND_ZERO, extend_t er=EXTEND_ZERO, uint16_t int_nb_step=0) {    
+Controls::Controls(CNTRL_VECTOR_DIM_T nb, Time_t t0, Time_t t1, TIME_VECTOR_DIM_T H, interpolation_method_t im, extend_t el, extend_t er, TIME_VECTOR_DIM_T int_nb_step) {    
     assert(nb > 0);
     assert(nb < 256);
     assert(t1 > t0);  
@@ -34,8 +33,8 @@ Controls::Controls(uint8_t nb, double t0, double t1, uint16_t H, interpolation_m
     this->construct_discrete_time(); 
     this->default_data();
     
-    this->interpolator = new Interpolator1D(im, el, er); 
-    this->integrator   = new Integrator1D((int_nb_step == 0) ? H : int_nb_step); 
+    this->interpolator = Interpolator1D(im, el, er); 
+   // this->integrator   = new Integrator1D((int_nb_step == 0) ? H : int_nb_step); 
 }
 
 /**
@@ -52,17 +51,17 @@ Controls::Controls(const Controls & cs) {
     this->time = cs.time; 
     this->data = cs.data;
 
-    if (this->interpolator != NULL) {
+    /*if (this->interpolator != NULL) {
         delete this->interpolator; 
-    } 
+    } */
 
-    this->interpolator = new Interpolator1D(*cs.interpolator);  
+    this->interpolator = cs.interpolator;  
 
-    if (this->integrator != NULL) {
+    /*if (this->integrator != NULL) {
         delete this->integrator;
     } 
 
-    this->integrator   = new Integrator1D(*cs.integrator); 
+    this->integrator   = new Integrator1D(*cs.integrator); */
 }
 
 /* DESTRUCTOR */
@@ -70,12 +69,12 @@ Controls::Controls(const Controls & cs) {
  * @brief Destroy the Controls::Controls object
  */
 Controls::~Controls() {
-    if (this->interpolator != NULL) {
+    /*if (this->interpolator != NULL) {
         delete this->interpolator; 
-    } 
-    if (this->integrator != NULL) {
+    } */
+   /*if (this->integrator != NULL) {
         delete this->integrator;
-    } 
+    }*/ 
 }
 
 /* ACCESSORS */
@@ -84,7 +83,7 @@ Controls::~Controls() {
  * 
  * @return uint8_t 
  */
-uint8_t Controls::get_nb_cntrl() const {
+CNTRL_VECTOR_DIM_T Controls::get_nb_cntrl() const {
     return this->M; 
 }
 
@@ -94,9 +93,13 @@ uint8_t Controls::get_nb_cntrl() const {
  * @param idx 
  * @return VectorXd 
  */
-VectorXd Controls::get_control(uint8_t idx) const {
+ControlVector Controls::get_control(CNTRL_VECTOR_DIM_T idx) const {
     assert(idx < this->M); 
-    return this->data.col(idx);
+    ControlVector res(this->H);
+    for (int i = 0; i < this->H; i++) {
+        res(i) = this->data(i, idx); 
+    }
+    return res;
 }
 
 /**
@@ -104,7 +107,7 @@ VectorXd Controls::get_control(uint8_t idx) const {
  * 
  * @return VectorXd 
  */
-VectorXd Controls::get_time() const {
+TimeVector Controls::get_time() const {
     return this->time;
 }
 
@@ -113,7 +116,7 @@ VectorXd Controls::get_time() const {
  * 
  * @return MatrixXd 
  */
-MatrixXd Controls::get_data() const {
+ControlMatrix Controls::get_data() const {
     return this->data;
 }
 
@@ -124,7 +127,7 @@ MatrixXd Controls::get_data() const {
  * @warning t0 should be less than object attribute t1
  * @warning Does not change data, hence the same data are now evaluated at the new interpolation points defined by the discretisation of the interval \f$[t_0,t_1]\$ into H pieces
  */
-void Controls::set_t0(double t0) {
+void Controls::set_t0(Time_t t0) {
     assert(t0 < this->t1);
     this->t0 = t0;
     this->construct_discrete_time();
@@ -137,7 +140,7 @@ void Controls::set_t0(double t0) {
  * @warning t1 must be greater than object attribute t0 
  * @warning Does not change data, hence the same data are now evaluated at the new interpolation points defined by the discretisation of the interval \f$[t_0,t_1]\$ into H pieces
  */
-void Controls::set_t1(double t1) {
+void Controls::set_t1(Time_t t1) {
     assert(t1 > this->t0); 
     this->t1 = t1;
     this->construct_discrete_time();
@@ -150,7 +153,7 @@ void Controls::set_t1(double t1) {
  * @warning H should be at least 2 
  * @warning Reiniatlise data to zeros
  */
-void Controls::set_H(uint16_t H) {
+void Controls::set_H(TIME_VECTOR_DIM_T H) {
     assert(H > 1);
     this->H = H;
     this->construct_discrete_time();
@@ -167,7 +170,7 @@ void Controls::set_H(uint16_t H) {
  * @warning H should be at least 2
  * @warning Reinitialise data to zeros
  */
-void Controls::set_discretisation_cntrls(double t0, double t1, uint16_t H) {
+void Controls::set_discretisation_cntrls(Time_t t0, Time_t t1, TIME_VECTOR_DIM_T H) {
     assert(t1 > t0); 
     assert(H > 1); 
 
@@ -185,9 +188,11 @@ void Controls::set_discretisation_cntrls(double t0, double t1, uint16_t H) {
  * @param idx 
  * @param d 
  */
-void Controls::set_cntrl(uint8_t idx, double d) {
+void Controls::set_cntrl(CNTRL_VECTOR_DIM_T idx, Cntrl_t d) {
     assert(idx < this->M);
-    this->data.col(idx) = MatrixXd::Constant(this->H, 1, d);
+    for (int i = 0; i < this->H; i++) {
+        this->data(i, idx) = d; 
+    }
 }
 
 /**
@@ -196,10 +201,12 @@ void Controls::set_cntrl(uint8_t idx, double d) {
  * @param idx 
  * @param val 
  */
-void Controls::set_cntrl(uint8_t idx, VectorXd val) {
+void Controls::set_cntrl(CNTRL_VECTOR_DIM_T idx, ControlVector val) {
     assert(idx < this->M);
     assert(val.size() == this->H);
-    this->data.col(idx) = val;
+    for (int i = 0; i < this->H; i++) {
+        this->data(i, idx) = val(i); 
+    }
 }
 
 /**
@@ -208,10 +215,12 @@ void Controls::set_cntrl(uint8_t idx, VectorXd val) {
  * @param interpol 
  */
 void Controls::set_interpolation_method(interpolation_method_t im=INTERP_LINEAR, extend_t el=EXTEND_ZERO, extend_t  er=EXTEND_ZERO) {
-    if (this->interpolator != NULL) {
+    /*if (this->interpolator != NULL) {
         delete this->interpolator; 
-    }
-    this->interpolator = new Interpolator1D(im, el, er); 
+    }*/  
+    this->interpolator.set_method(im);
+    this->interpolator.set_exleft(el); 
+    this->interpolator.set_exright(er);
 } 
 
 /**
@@ -219,12 +228,12 @@ void Controls::set_interpolation_method(interpolation_method_t im=INTERP_LINEAR,
  * 
  * @param integr 
  */
-void Controls::set_integration_method(uint16_t new_h) {
+/*void Controls::set_integration_method(TIME_VECTOR_DIM_T new_h) {
     if (this->integrator != NULL) {
         delete this->integrator; 
     }
     this->integrator = new Integrator1D(new_h); 
-} 
+} */
 
 /* METHODS */
 /**
@@ -233,7 +242,7 @@ void Controls::set_integration_method(uint16_t new_h) {
  * @param cs 
  * @return double 
  */
-double Controls::dot_prod_l2(const Controls & cs) const {
+/*SCALAR Controls::dot_prod_l2(const Controls & cs) const {
     assert(this->M == cs.M); 
     assert(this->H == cs.H); 
     assert(this->t0 == cs.t0); 
@@ -241,20 +250,20 @@ double Controls::dot_prod_l2(const Controls & cs) const {
     assert(this->integrator != NULL);
 
     double res = 0.;
-    VectorXd u1(this->H); 
-    VectorXd u2(this->H); 
+    ControlData u1(this->H); 
+    ControlData u2(this->H); 
 
     for (int i = 0; i < this->M; i++) {
         u1 = this->get_control(i); 
-        u2 = cs.get_control(i);
-        res += this->integrator->integr(this->time, u1.array()*u2.array());
+        u2.array() *= cs.get_control(i).array();
+        res += this->integrator->integr<ControlData>(&this->time, &u2);
     }
     return res; 
 }
 
 double Controls::norm2() const {
     return sqrt(this->dot_prod_l2(*this));
-}
+}*/
 
 /* OPERATORS */
 /**
@@ -263,14 +272,16 @@ double Controls::norm2() const {
  * @param t 
  * @return VectorXd 
  */
-VectorXd Controls::operator()(double t) const {
-    assert(this->interpolator != NULL);
+ControlVector Controls::operator()(Time_t t) const {
+    //assert(this->interpolator != NULL);
 
-    VectorXd res(this->M); 
-    VectorXd cntrl;
+    ControlVector res(this->M); 
+    ControlData cntrl(this->H);
     for (int i = 0; i < this->M; i++) {
-        cntrl  = this->get_control(i);
-        res(i) = this->interpolator->interp1d(&this->time, &cntrl, t); 
+        for (int j = 0; j < this->H; j++) {
+            cntrl(j) = this->data(j, i); 
+        }
+        res(i) = this->interpolator.interp1d<ControlData, Cntrl_t>(&this->time, &cntrl, t); 
     }
     return res;
 }
@@ -294,16 +305,16 @@ Controls & Controls::operator=(const Controls & cs) {
     this->time = cs.time; 
     this->data = cs.data; 
 
-    if (this->interpolator != NULL) {
+    /*if (this->interpolator != NULL) {
         delete this->interpolator; 
-    }
+    }*/
 
-    if (this->integrator != NULL) {
+    /*if (this->integrator != NULL) {
         delete this->integrator;
-    }
+    }*/
 
-    this->interpolator = new Interpolator1D(*cs.interpolator);
-    this->integrator   = new Integrator1D(*cs.integrator);
+    this->interpolator = cs.interpolator;
+    //this->integrator   = new Integrator1D(*cs.integrator);
 
     return *this;
 }
@@ -314,7 +325,7 @@ Controls & Controls::operator+=(const Controls & cs) {
     assert(this->t1 == cs.t1);
     assert(this->H  == cs.H);
 
-    this->data += cs.data;
+    this->data = this->data + cs.data;
     return *this;
 }
 
@@ -324,7 +335,7 @@ Controls & Controls::operator-=(const Controls & cs) {
     assert(this->t1 == cs.t1);
     assert(this->H  == cs.H);
 
-    this->data -= cs.data;
+    this->data = this->data - cs.data;
     return *this;
 }
 
@@ -362,14 +373,14 @@ bool operator==(const Controls & lhs, const Controls & rhs) {
  * @return double 
  * @warning Both Controls objects must have the same attributes M, t0, t1, H
  */
-double operator*(const Controls & lhs, const Controls & rhs) {
+/*SCALAR operator*(const Controls & lhs, const Controls & rhs) {
     assert(lhs.M  == rhs.M); 
     assert(lhs.t0 == rhs.t0); 
     assert(lhs.t1 == rhs.t1); 
     assert(lhs.H  == rhs.H); 
 
     return lhs.dot_prod_l2(rhs); 
-}
+}*/
 
 /**
  * @brief Operator, multiplication of a Controls object by a scalar
@@ -378,7 +389,7 @@ double operator*(const Controls & lhs, const Controls & rhs) {
  * @param rhs A Controls object
  * @return Controls object whose data are d*c.data
  */
-Controls operator*(const double d, const Controls & rhs) {
+Controls operator*(const SCALAR d, const Controls & rhs) {
     Controls res(rhs); 
     res.data = d*res.data; 
     return res; 
@@ -409,7 +420,7 @@ Controls operator+(const Controls & lhs, const Controls & rhs) {
     assert(lhs.H  == rhs.H); 
 
     Controls res(lhs); 
-    res.data += rhs.data;
+    res.data = res.data + rhs.data;
     return res;
 }
 
@@ -427,7 +438,7 @@ Controls operator-(const Controls & lhs, const Controls & rhs) {
     assert(lhs.H  == rhs.H); 
 
     Controls res(lhs); 
-    res.data -= rhs.data;
+    res.data = res.data - rhs.data;
     return res;
 }
 
@@ -445,35 +456,11 @@ Controls operator/(const Controls & lhs, const double d) {
     return (1./d) * lhs;
 }
 
-/**
- * @brief Overload output operator for Controls object
- * The output format of a trajectory is the following : 
- * \f$t_0\f$ \f$u_1[0]\f$ ... \f$u_m[0]\f$
- * ...
- * \f$t_N\f$ \f$u_1[N]\f$ ... \f$u_m[N]\f$
- * where \f$m\f$ is the number of controls and \f$N\f$ is the numer of time divisions
- *
- * @param os An output stream
- * @param traj A Controls obect
- * @return std::ostream& 
- */
-std::ostream & operator<<(std::ostream & os, const Controls & cs) {
-    assert(cs.time.size() == cs.data.rows());
-    for (int i = 0; i < cs.time.size(); i++) {
-        os << cs.time(i);
-        for (int j = 0; j < cs.data.cols(); j++) {
-            os << " " << cs.data(i,j);
-        }    
-        os << std::endl;
-    }
-    return os; 
-}
-
 /* PRIVATE METHODS */
 void Controls::construct_discrete_time() {
-    this->time = VectorXd::LinSpaced(this->H, this->t0, this->t1); 
+    this->time = TimeVector::linspace(this->t0, this->t1, this->H); 
 }
 
 void Controls::default_data() {
-    this->data = MatrixXd::Zero(this->H, this->M);
+    this->data = ControlMatrix::Zero(this->H, this->M);
 }
