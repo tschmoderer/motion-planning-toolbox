@@ -30,7 +30,7 @@ class plotData():
         """
         self.type_ = data["type"]
         self.name_ = data["name"]
-        self.nbX0_ = len(data["general"]["x0"])
+        self.nbX0_ = len(data["trajectories"]["x0"])
 
         plotData = data["postprocess"]["plots"][idx]
         self.plotType_ = plotData["type"]
@@ -103,20 +103,20 @@ class plotData():
         else:
             self.zlabel_ = "Default zlabel"   
 
-        if "output" in plotData:
-            if 'gui' in plotData["output"]:
-                self.gui_ = plotData["output"]["gui"]
+        if "outputs" in plotData:
+            if 'gui' in plotData["outputs"]:
+                self.gui_ = plotData["outputs"]["gui"]
             else: 
                 self.gui_ = False
 
-            if "file" in plotData["output"]:
-                self.file_ = plotData["output"]["file"]["yn"]
+            if "file" in plotData["outputs"]:
+                self.file_ = plotData["outputs"]["file"]["yn"]
             else:
                 self.file_ = False
             if self.file_: 
-                self.dir_ = plotData["output"]["file"]["dir"]
-                self.subdir_ = plotData["output"]["file"]["subdir"]
-                self.filename_ = plotData["output"]["file"]["filename"]
+                self.dir_ = plotData["outputs"]["file"]["dir"]
+                self.subdir_ = plotData["outputs"]["file"]["subdir"]
+                self.filename_ = plotData["outputs"]["file"]["filename"]
 
         else:
             self.gui_  = False

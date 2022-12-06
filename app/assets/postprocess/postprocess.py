@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from assets.datavizscripts.plotWindow import *
 from assets.postprocess import *
 import os 
 import sys
@@ -25,7 +24,6 @@ for k in range(len(data["experiences"])):
     
     results = loadData.load_np_data(dir_path, cur_dat)
     output.do(dir_path, plotParam.plots_parameters(cur_dat, results))
-
 
 
 """

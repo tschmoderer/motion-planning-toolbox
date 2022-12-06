@@ -1,0 +1,31 @@
+class OutFile(): 
+    def __init__(self, data): 
+        self.yn = data["yn"]
+        self.subdir = data["subdir"]
+        self.filename = data["filename"]
+        self.time_filename = data["time-filename"]
+    
+    def printHeader(self, file, type):
+        file.write("#define EXP_OUTPUT_"+type.upper()+"_FILE " + str(self.yn).lower() + "\n")
+        file.write("#define EXP_OUTPUT_"+type.upper()+"_FILE_SUBDIR \"" + self.subdir + "\"\n")
+        file.write("#define EXP_OUTPUT_"+type.upper()+"_FILE_TIME_FNAME \"" + self.time_filename + "\"\n")
+        file.write("#define EXP_OUTPUT_"+type.upper()+"_FILE_DATA_FNAME \"" + self.filename + "\"\n")
+
+class OutTraj(): 
+    def __init__(self, data): 
+        self.cli = False
+        if "cli" in data: 
+            self.cli = data["cli"]
+        if "file" in data: 
+            self.file = OutFile(data["file"])
+
+    def printHeader(self, file): 
+        file.write("#define EXP_OUTPUT_TRAJ_CLI " + str(self.cli).lower() + "\n") 
+        self.file.printHeader(file, "traj")
+
+class OutCtrl(): 
+    def __init__(self, data): 
+        pass
+
+    def printHeader(self, file): 
+        pass 

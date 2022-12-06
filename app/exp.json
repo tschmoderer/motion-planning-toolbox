@@ -13,29 +13,18 @@
             // It will be used to store the results
             "name": "vanderpol",
             // a boolean to disable experiment
-            // @warning even if run is set to false
             "run": true,
             
-            "general": {    
+            "dimensions": {    
                 // An integer dertermining the dimension of the state space
                 "state_dim": 2,
                 // An integer to set the dimension of the controls
-                "ctrl_dim": null,
-                // A double to set the start time of the trajectories
-                "start_time": 0,
-                // A double to set the end time of the trajectories
-                "end_time": 20,
-                // A list of double that store the initial condition of the system 
-                // x0 should have the same dimension as "state_dim"
-                // a list of initial conditions can be provided, 
-                // in which case all trajectories will be generated and saved 
-                // maximum number of initial condition is 4294967295
-                // element of initial vector can be numerics or string if you need mathematical expression
-                "x0": [
-                    [2, 0], 
-                    [-4, 1],
-                    ["sqrt(2)", "1/2"]
-                ]
+                "cntrl_dim": null               
+            },
+
+            "times": {
+                "start": 0, 
+                "end": 20
             },
 
             /* describe the dynamics of your system */
@@ -48,7 +37,7 @@
                     // sqrt(2)
                     // 8/3
                     // can be used
-                    /* Better use a unique keyword */
+                    // /!\ Better use a unique keyword 
                     "mymu": 1
                 },
 
@@ -66,49 +55,83 @@
                     "dxdt_dx(1,1) = mymu*(1-x(0)*x(0));"
                 ]
             },
-
-            "discretisation": {
-                "trajectory": 513
+            
+            // t0 and t1 will be deduced from here 
+            "trajectories": {
+                // Time steps to discretize the trajectories
+                "timesteps": {
+                    // Can be "data" , "linspace"
+                    "method": "linspace", 
+                    "data": [],
+                    "linspace": {
+                        "nbT": 513
+                    }
+                }, 
+                // Starting points of the trajectories
+                // A list of double that store the initial condition of the system 
+                // x0 should have the same dimension as "state_dim"
+                // a list of initial conditions can be provided, 
+                // in which case all trajectories will be generated and saved 
+                // maximum number of initial condition is 4294967295
+                // element of initial vector can be numerics or string if you need mathematical expression
+                "x0": [
+                    [2, 0], 
+                    [-4, 1],
+                    ["sqrt(2)", "1/2"]
+                ]
             },
 
             "methods": {
-                // method used to integrate the differential equation 
-                // should be a string in te following list (more coming soon)
-                // - RK4 : 4th order Runge-Kutta 
-                "ode_int": "RK4"
+                "ode": {
+                    // method used to integrate the differential equation 
+                    // should be a string in te following list (more coming soon)
+                    // - EULER_EXPLICIT : 1st order
+                    // - RK4 : 4th order Runge-Kutta 
+                    "method": "RK4", 
+                    // if the method require some parameters
+                    "parameters": {}
+                }, 
+
+                "interpolation": {
+                    // method used to interpolate the trajectory at intermediate point if needed
+                    // one of the following 
+                    // - INTERP_LINEAR 
+                    "method": "INTERP_LINEAR", 
+                    "parameters": {
+                        "extend_left": "EXTEND_ZERO", 
+                        "extend_right": "EXTEND_ZERO"
+                    }
+                }
             },
             
             // Describe the outputs of the programm
-            "output": {
-                "traj": {
-                    // console output of the trajectory : true or false
-                    "cli": false,
-                    // file svg of results
-                    "file": {
-                        "yn": true,
-                        /*
-                        Structure of outbut 
-                        app/<dir>/<name>/<subdir>/<filename>-<nb>.<ext>
-                        - <nb> and <ext> are automatically determined
-                        */
-                        // directory to store the results
-                        // is relative to the current app/ folder
-                        // will be put in a subfolder named with experiences name
-                        // MUST finish by a "/"
-                        "dir": "./results/",
-                        // MUST finish by a "/"
-                        "subdir": "data/",
-                        // The actual name of the output file 
-                        // is extrapolated from the filename given below
-                        // <filename>-<initial condition number>.<ext>
-                        "filename": "trajectory.dat",
-                        // Filename for the timestamps 
-                        "time-filename": "time.dat"
-                    }
-                }, 
+            "outputs": {
+                // The program outputs computed trajectories for all 
+                // types of experiments and controls if availables
+                /* Mandatory parameters */
+                // Output in the console
+                "cli": true,
+                // Output in failes 
+                "file": true,
+                /*
+                    Structure of outbut is 
+                    -- Root directory of app.py : 
+                        -> ./<outputs.where>/
+                        -> trajectories/
+                            - id/ (id = number of initial condition)
+                                trajectory.dat
+                                time.dat
+                        -> controls/
+                            - id/ 
+                                controls.dat
+                                time.dat
+                */
 
-                "cntrl": null
-            }, 
+                // If file is set to yes
+                // MUST finish by a "/"   
+                "where": "./results/"
+            },
+            
 
             "postprocess": {
                 // postprocessing parameters
@@ -275,7 +298,7 @@
                 "start_time": 0,
                 "end_time": 10,
                 "x0": [
-                    [0, 0, "pi/4"]
+                    [0, 0, "M_PI/4"]
                 ]
             },
 
@@ -312,15 +335,91 @@
             },
 
             "discretisation": {
-                "trajectory": 513
+                "trajectory": 513, 
+                "controls": 17
             },
 
             "methods": {
                 // method used to integrate the differential equation 
                 // should be a string in te following list (more coming soon)
                 // - RK4 : 4th order Runge-Kutta 
-                "ode_int": "RK4"
+                "ode_int": "RK4", 
+                // Methods to evaluate controls
+                "cntrl": {
+                    /* interpolation method 
+                        - LINEAR_INTERP
+                    */
+                    "interp": "LINEAR_INTERP",
+                    /*
+                        Method to evaluate controls at time step bigger or smaller than t_1 and t0
+                        - EXTEND_ZERO
+                    */
+                    "ex_left": "EXTEND_ZERO", 
+                    "ex_right": "EXTEND_ZERO",
+                    /*
+                        Number of points to evaluate the integral of controls (for dot product e.g.)
+                        If 0 is given then the same number of points as in the discretisation is used
+                    */
+                    "nb_integration_pts": 0
+                }
             }, 
+
+            /* 
+            Initialise the controller, 
+            Several method are available to set values to the control
+            @warning only ONE method should be set to true
+            otherwise: a random method is picked
+            @warning If no method is set to true, then controls will be initialised to the zero function
+            */
+            "cntrls": {
+                "timesteps": {
+                    // Can be "data" , "linspace" , "default"
+                    "method": "", 
+                    "data": {
+                        "val": []
+                    }, 
+                    "linspace": {
+                        "tmin": 0, 
+                        "tmax": 1, 
+                        "nbT": 17
+                    }
+                },
+                "values": {
+                    //
+                    "method": ""
+                }, 
+                "function": {
+                    "yn": false, 
+                    "expr": [
+                        "u(0) = ;", 
+                        "u(1) = ;"
+                    ]
+                },
+
+                "data": {
+                    "yn": false,
+                    "val": [
+                        [], 
+                        []
+                    ]
+                }, 
+
+                "constant": {
+                    "yn": false, 
+                    "val": [
+                        0, 0
+                    ]
+                }, 
+
+                "random": {
+                    "yn": false, 
+                    "method": {
+                        "name": "uniform", 
+                        "min": -1, 
+                        "max": 1
+                    }
+                }
+            },
 
             "output": {
                 "traj": {

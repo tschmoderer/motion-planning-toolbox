@@ -34,16 +34,16 @@ def load_json_data(fname):
 
 def load_np_data(dir, data):
     res = []
-    nbX0 = len(data["general"]["x0"])
-    fdir = data["output"]["traj"]["file"]["dir"]
-    subfdir = data["output"]["traj"]["file"]["subdir"]
-    fname = data["output"]["traj"]["file"]["filename"]
-    tsfname = data["output"]["traj"]["file"]["time-filename"]
+    nbX0 = len(data["trajectories"]["x0"])
+    fdir = data["outputs"]["structure"]["dir"]
+    subfdir = data["outputs"]["trajectories"]["file"]["subdir"]
+    fname = data["outputs"]["trajectories"]["file"]["filename"]
+    tsfname = data["outputs"]["trajectories"]["file"]["time-filename"]
     for i in range(nbX0):
         tmp = fname.split('.')
         new_fname = dir + "/" + fdir + data["name"] + "/" + subfdir + tmp[0] + '-' + str(i+1) + '.' + tmp[1]
         tmp = tsfname.split('.')
-        new_tsfname = dir + "/" + fdir + data["name"] + "/" + subfdir + tmp[0] + '-' + str(i+1) + '.' + tmp[1]
+        new_tsfname = dir + "/" + fdir + data["name"] + "/" + subfdir + tmp[0] + '-trajectory' + '-' + str(i+1) + '.' + tmp[1]
         time = np.loadtxt(new_tsfname, dtype='d', delimiter=',')
         traj = np.loadtxt(new_fname, dtype='d', delimiter=',')
 
