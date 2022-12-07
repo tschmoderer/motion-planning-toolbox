@@ -2,14 +2,16 @@
 
 import os, sys, argparse, logging
 
+from src.application import AppCLI, AppGUI
+
 from assets.process import experience, loadData
 from assets.utils import log
 
 from assets.config import BUILD_DIR, BIN_DIR
 from assets.gui.gui import AppGui 
 
-logger   = log.setup_custom_logger('main', logging.DEBUG)
-dir_path = os.path.dirname(os.path.realpath(__file__))
+logger  = log.setup_custom_logger('main2', logging.DEBUG)
+basedir = os.path.dirname(os.path.realpath(__file__))
 
 def cli(confFile): 
     ## Load configuration file as dict data
@@ -57,20 +59,28 @@ def gui(confFile = None):
     """
     TODO: implement pass data to gui 
     """
-    AppGui(basedir=dir_path, data = None)
+    AppGui(basedir = dir_path, data = None)
 
-if __name__ == "__main__":
+def parse(argv : list[str]): 
     desc = "A python command Line Interface for the C++ control ToolBox"
     parser = argparse.ArgumentParser(description = desc)
-    
-    parser.add_argument("-g", "--gui", help="GUI Mode", required=False, action='store_true')
 
-    iscli = not (("--gui" in sys.argv) or ("-g" in sys.argv))
-    parser.add_argument("-i", "--input", help="Input configuration file (required in CLI mode)", required=iscli)
+    parser.add_argument("-g", "--gui", help="GUI Mode", required=False, action='store_true')
+    # iscli = not (("--gui" in argv) or ("-g" in argv))
+    parser.add_argument("-i", "--input", help="Input configuration file", required=False)
 
     args = parser.parse_args()
 
+    return args
+
+if __name__ == "__main__":
+
+    args = parse(sys.argv)
+    basedir = os.path.dirname(os.path.realpath(__file__))
+
     if args.gui: 
-        gui()
+        app = AppGUI(rootdir = basedir, configurationFileName = args.input)
     else: 
-        cli(args.input)
+        app = AppCLI(rootdir = basedir, configurationFileName = args.input)
+
+    app.start()
